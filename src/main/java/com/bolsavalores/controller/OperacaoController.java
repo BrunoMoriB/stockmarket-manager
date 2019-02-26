@@ -6,18 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.bolsavalores.models.Balanco;
-import com.bolsavalores.repository.BalancoRepository;
+
+import com.bolsavalores.models.Operacao;
+import com.bolsavalores.repository.OperacaoRepository;
 
 @RestController
-@RequestMapping(value="/balanco")
-public class BalancoController {
+@RequestMapping(value="/operacao")
+public class OperacaoController {
 
 	@Autowired
-	BalancoRepository balancoRepository;
+	public OperacaoRepository operacaoRepository;
 	
-	@GetMapping(value="/listaBalancos")
-	public List<Balanco> listaBalancos(){
-		return balancoRepository.findAll();
+	@GetMapping(value="/listaOperacoes")
+	public List<Operacao> listaOperacoes(){
+		return operacaoRepository.findAll();
 	}
 }

@@ -12,7 +12,7 @@ import com.bolsavalores.models.Acao;
 import com.bolsavalores.repository.AcaoRepository;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value="/acao")
 public class AcaoController {
 
 	@Autowired
