@@ -1,7 +1,6 @@
-package com.bolsavalores.repository;
+package com.bolsavalores.operacao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.bolsavalores.models.Operacao;
 
 public interface OperacaoRepository extends JpaRepository<Operacao, Long>{
 

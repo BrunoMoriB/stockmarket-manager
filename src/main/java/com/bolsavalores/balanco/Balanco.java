@@ -1,4 +1,4 @@
-package com.bolsavalores.models;
+package com.bolsavalores.balanco;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.bolsavalores.acao.Acao;
 
 @Entity
 @Table(name="balanco")

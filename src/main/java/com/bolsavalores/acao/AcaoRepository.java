@@ -1,7 +1,6 @@
-package com.bolsavalores.repository;
+package com.bolsavalores.acao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.bolsavalores.models.Acao;
 
 public interface AcaoRepository extends JpaRepository<Acao, Long>{
 	

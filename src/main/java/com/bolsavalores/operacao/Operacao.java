@@ -1,4 +1,4 @@
-package com.bolsavalores.models;
+package com.bolsavalores.operacao;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

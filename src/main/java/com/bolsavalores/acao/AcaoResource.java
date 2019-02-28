@@ -1,4 +1,4 @@
-package com.bolsavalores.controller;
+package com.bolsavalores.acao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.bolsavalores.models.Acao;
-import com.bolsavalores.repository.AcaoRepository;
 
 @RestController
 @RequestMapping(value="/acao")
-public class AcaoController {
+public class AcaoResource {
 
 	@Autowired
 	AcaoRepository acaoRepository;
@@ -28,7 +26,7 @@ public class AcaoController {
 		return acaoRepository.findById(id);
 	}
 
-	@PostMapping(value="/acao")
+	@PostMapping(value="/save")
 	public Acao salvaAcao(@RequestBody Acao acao) {
 		 return acaoRepository.save(acao);
 	}

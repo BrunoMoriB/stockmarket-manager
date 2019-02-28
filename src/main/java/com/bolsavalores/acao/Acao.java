@@ -1,4 +1,4 @@
-package com.bolsavalores.models;
+package com.bolsavalores.acao;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
