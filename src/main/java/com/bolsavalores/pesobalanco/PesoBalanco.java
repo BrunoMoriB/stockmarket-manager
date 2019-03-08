@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name="table_balanco")
+@Table(name="peso_balanco")
 public class PesoBalanco {
 	
 	@EmbeddedId
