@@ -4,4 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BalancoRepository extends JpaRepository<Balanco, Long>{
 
+	public Balanco findById(long id);
 }

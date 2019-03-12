@@ -16,12 +16,12 @@ public class AcaoResource {
 	@Autowired
 	AcaoRepository acaoRepository;
 	
-	@GetMapping(value="/listaAcoes")
+	@GetMapping(value="/lista")
 	public List<Acao> listaAcoes(){
 		return acaoRepository.findAll();
 	}
 	
-	@GetMapping(value="/acao/{id}")
+	@GetMapping(value="/{id}")
 	public Acao buscaAcao(@PathVariable(value="id") long id) {
 		return acaoRepository.findById(id);
 	}
