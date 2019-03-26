@@ -3,10 +3,10 @@ package com.bolsavalores.balanco;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.bolsavalores.acao.Acao;
 import com.bolsavalores.acao.AcaoRepository;
@@ -26,13 +26,13 @@ public class BalancoResource {
 		return balancoRepository.findAll();
 	}
 	
-	@GetMapping(value="/{id}")
-	public Balanco buscaBalanco(@PathVariable(value="id") long id) {
+	@GetMapping()
+	public Balanco buscaBalanco(@RequestParam(value="id") long id) {
 		return balancoRepository.findById(id);
 	} 
 	
-	@PostMapping(value="/{id}/save")
-	public Balanco salvaBalanco(@PathVariable(value="id") long acaoId, @RequestBody Balanco balanco) {
+	@PostMapping(value="/save")
+	public Balanco salvaBalanco(@RequestParam(value="acaoId") long acaoId, @RequestBody Balanco balanco) {
 		Acao acao = acaoRepository.findById(acaoId);
 		balanco.setAcao(acao);
 		return balancoRepository.save(balanco);
