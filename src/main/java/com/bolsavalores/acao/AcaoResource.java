@@ -25,7 +25,7 @@ public class AcaoResource {
 	public Acao buscaAcao(@PathVariable(value="id") long id) {
 		return acaoRepository.findById(id);
 	}
-
+	
 	@PostMapping(value="/save")
 	public Acao salvaAcao(@RequestBody Acao acao) {
 		 return acaoRepository.save(acao);

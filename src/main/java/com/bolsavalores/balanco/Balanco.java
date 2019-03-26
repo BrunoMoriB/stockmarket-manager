@@ -68,8 +68,7 @@ public class Balanco implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name="id_acao")
-	private Acao idAcao;
-
+	private Acao acao;
 	
 	public long getId() {
 		return id;
@@ -215,11 +214,11 @@ public class Balanco implements Serializable {
 		this.nota = nota;
 	}
 
-	public Acao getIdAcao() {
-		return idAcao;
+	public Acao getAcao() {
+		return acao;
 	}
 
-	public void setIdAcao(Acao idAcao) {
-		this.idAcao = idAcao;
+	public void setAcao(Acao acao) {
+		this.acao = acao;
 	}
 }
