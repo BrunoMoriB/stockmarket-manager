@@ -3,10 +3,10 @@ package com.bolsavalores.acao;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,8 +21,8 @@ public class AcaoResource {
 		return acaoRepository.findAll();
 	}
 	
-	@GetMapping(value="/{id}")
-	public Acao buscaAcao(@PathVariable(value="id") long id) {
+	@GetMapping()
+	public Acao buscaAcao(@RequestParam(value="id") long id) {
 		return acaoRepository.findById(id);
 	}
 	
