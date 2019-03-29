@@ -2,6 +2,7 @@ package com.bolsavalores.acao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,19 +17,24 @@ public class AcaoResource {
 	@Autowired
 	AcaoRepository acaoRepository;
 	
-	@GetMapping(value="/lista")
+	@GetMapping()
 	public List<Acao> listaAcoes(){
 		return acaoRepository.findAll();
 	}
 	
-	@GetMapping()
-	public Acao buscaAcao(@RequestParam(value="id") long id) {
+	@GetMapping("/busca")
+	public Acao buscaAcao(@RequestParam long id) {
 		return acaoRepository.findById(id);
 	}
 	
-	@PostMapping(value="/save")
+	@PostMapping()
 	public Acao salvaAcao(@RequestBody Acao acao) {
 		 return acaoRepository.save(acao);
+	}
+	
+	@DeleteMapping()
+	public void deletaAcao(@RequestParam long id) {
+		acaoRepository.deleteById(id);
 	}
 	
 }

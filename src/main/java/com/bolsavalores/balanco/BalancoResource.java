@@ -2,6 +2,7 @@ package com.bolsavalores.balanco;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,20 +22,25 @@ public class BalancoResource {
 	@Autowired
 	AcaoRepository acaoRepository;
 	
-	@GetMapping(value="/lista")
+	@GetMapping()
 	public List<Balanco> listaBalancos(){
 		return balancoRepository.findAll();
 	}
 	
-	@GetMapping()
+	@GetMapping("/busca")
 	public Balanco buscaBalanco(@RequestParam(value="id") long id) {
 		return balancoRepository.findById(id);
 	} 
 	
-	@PostMapping(value="/save")
+	@PostMapping()
 	public Balanco salvaBalanco(@RequestParam(value="acaoId") long acaoId, @RequestBody Balanco balanco) {
 		Acao acao = acaoRepository.findById(acaoId);
 		balanco.setAcao(acao);
 		return balancoRepository.save(balanco);
+	}
+	
+	@DeleteMapping
+	public void deletaBalanco(@RequestParam long id) {
+		balancoRepository.deleteById(id);
 	}
 }
