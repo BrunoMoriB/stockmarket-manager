@@ -28,7 +28,7 @@ public class BalancoResource {
 	}
 	
 	@GetMapping("/busca")
-	public Balanco buscaBalanco(@RequestParam(value="id") long id) {
+	public Balanco buscaBalanco(@RequestParam long id) {
 		return balancoRepository.findById(id);
 	} 
 	

@@ -2,7 +2,6 @@ package com.bolsavalores.ordem;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import com.bolsavalores.acao.Acao;
 
 @Entity
@@ -32,7 +30,7 @@ public class Ordem implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="id_acao")
-	private Acao idAcao;
+	private Acao acao;
 
 	public long getId() {
 		return id;
@@ -82,11 +80,11 @@ public class Ordem implements Serializable{
 		this.taxaCorretagem = taxaCorretagem;
 	}
 
-	public Acao getIdAcao() {
-		return idAcao;
+	public Acao getAcao() {
+		return acao;
 	}
 
-	public void setIdAcao(Acao idAcao) {
-		this.idAcao = idAcao;
+	public void setAcao(Acao acao) {
+		this.acao = acao;
 	}
 }

@@ -3,11 +3,13 @@ package com.bolsavalores.ordem;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.bolsavalores.acao.Acao;
+import com.bolsavalores.acao.AcaoRepository;
 
 @RestController
 @RequestMapping(value="/ordem")
@@ -16,18 +18,23 @@ public class OrdemResource {
 	@Autowired
 	OrdemRepository ordemRepository;
 	
-	@GetMapping(value="/lista")
-	public List<Ordem> getListOrdem(){
+	@Autowired
+	AcaoRepository acaoRepository;
+	
+	@GetMapping()
+	public List<Ordem> listaOrdens(){
 		return ordemRepository.findAll();
 	}
 	
-	@GetMapping(value="/{id}")
-	public Ordem buscaOrdem(@PathVariable(value="id") long id) {
+	@GetMapping(value="/busca")
+	public Ordem buscaOrdem(@RequestParam long id) {
 		return ordemRepository.findById(id);
 	} 
 	
-	@PostMapping(value="/save")
-	public Ordem salvaOrdem(@RequestBody Ordem ordem) {
+	@PostMapping()
+	public Ordem salvaOrdem(@RequestParam(value="idAcao") long idAcao, @RequestBody Ordem ordem) {
+		Acao acao = acaoRepository.findById(idAcao);
+		ordem.setAcao(acao);
 		return ordemRepository.save(ordem);
 	}
 }
