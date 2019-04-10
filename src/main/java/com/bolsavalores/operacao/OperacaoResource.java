@@ -16,12 +16,12 @@ public class OperacaoResource {
 	@Autowired
 	public OperacaoRepository operacaoRepository;
 	
-	@GetMapping(value="/lista")
+	@GetMapping()
 	public List<Operacao> listaOperacoes(){
 		return operacaoRepository.findAll();
 	} 
 	
-	@GetMapping()
+	@GetMapping(value="/busca")
 	public Operacao buscaOperacao(@RequestParam(value="id") long id) {
 		return operacaoRepository.findById(id);
 	} 
