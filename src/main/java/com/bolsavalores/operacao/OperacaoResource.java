@@ -39,6 +39,7 @@ public class OperacaoResource {
 		Ordem ordemvenda  = ordemRepository.findById(idVenda);
 		operacao.setOrdemCompra(ordemCompra);
 		operacao.setOrdemVenda(ordemvenda);
+		
 		return operacaoRepository.save(operacao);
 	}
 	
