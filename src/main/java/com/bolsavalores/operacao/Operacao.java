@@ -5,7 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.bolsavalores.acao.Acao;
+import com.bolsavalores.ordem.Ordem;
 
 @Entity
 @Table(name="operacao")
@@ -15,11 +21,13 @@ public class Operacao {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name="id_oc")
-	private long idOrdemCompra;
+	@OneToOne
+	@JoinColumn(name="id_oc")
+	private Ordem ordemCompra;
 	
-	@Column(name="id_ov")
-	private long idOrdemVenda;
+	@OneToOne
+	@JoinColumn(name="id_ov")
+	private Ordem ordemVenda;
 	
 	@Column(name="valor_compra")
 	private double valorCompra;
@@ -40,22 +48,6 @@ public class Operacao {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public long getIdOrdemCompra() {
-		return idOrdemCompra;
-	}
-
-	public void setIdOrdemCompra(long idOrdemCompra) {
-		this.idOrdemCompra = idOrdemCompra;
-	}
-
-	public long getIdOrdemVenda() {
-		return idOrdemVenda;
-	}
-
-	public void setIdOrdemVenda(long idOrdemVenda) {
-		this.idOrdemVenda = idOrdemVenda;
 	}
 
 	public double getValorCompra() {
@@ -96,5 +88,21 @@ public class Operacao {
 
 	public void setPeriodo(double periodo) {
 		this.periodo = periodo;
+	}
+
+	public Ordem getOrdemCompra() {
+		return ordemCompra;
+	}
+
+	public void setOrdemCompra(Ordem ordemCompra) {
+		this.ordemCompra = ordemCompra;
+	}
+
+	public Ordem getOrdemVenda() {
+		return ordemVenda;
+	}
+
+	public void setOrdemVenda(Ordem ordemVenda) {
+		this.ordemVenda = ordemVenda;
 	}
 }
