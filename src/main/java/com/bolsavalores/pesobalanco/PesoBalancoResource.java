@@ -30,6 +30,8 @@ public class PesoBalancoResource {
 	
 	@PostMapping()
 	public PesoBalanco savePesoBalanco(@RequestParam String indicador, @RequestParam int peso ,@RequestBody PesoBalanco pesoBalanco) {
+		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
+		pesoBalanco.setPesoBalancoIdentity(pesoBalancoIdentity);
 		return pesoBalancoRepository.save(pesoBalanco);
 	}
 	

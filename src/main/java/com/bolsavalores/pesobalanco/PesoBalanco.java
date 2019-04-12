@@ -20,10 +20,6 @@ public class PesoBalanco {
 	@NotNull
 	private double objetivo;
 	
-	@NotNull
-	private int nota;
-	
-	
 	public String getOperador() {
 		return operador;
 	}
@@ -35,12 +31,6 @@ public class PesoBalanco {
 	}
 	public void setObjetivo(double objetivo) {
 		this.objetivo = objetivo;
-	}
-	public int getNota() {
-		return nota;
-	}
-	public void setNota(int nota) {
-		this.nota = nota;
 	}
 	public PesoBalancoIdentity getPesoBalancoIdentity() {
 		return pesoBalancoIdentity;
