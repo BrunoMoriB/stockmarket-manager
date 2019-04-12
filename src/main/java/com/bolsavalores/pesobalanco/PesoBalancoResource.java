@@ -2,6 +2,7 @@ package com.bolsavalores.pesobalanco;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,12 +23,20 @@ public class PesoBalancoResource {
 	}
 	
 	@GetMapping("/busca")
-	public PesoBalanco buscaPesoBalanco(@RequestParam long id) {
-		return pesoBalancoRepository.findById(id); 
+	public PesoBalanco buscaPesoBalancoByIndicadorEpeso(@RequestParam String indicador, @RequestParam int peso) {
+		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
+		return pesoBalancoRepository.findByPesoBalancoIdentity(pesoBalancoIdentity); 
 	}
 	
-	@PostMapping(value="/save")
-	public PesoBalanco savePesoBalanco(@RequestBody PesoBalanco pesoBalanco) {
+	@PostMapping()
+	public PesoBalanco savePesoBalanco(@RequestParam String indicador, @RequestParam int peso ,@RequestBody PesoBalanco pesoBalanco) {
 		return pesoBalancoRepository.save(pesoBalanco);
+	}
+	
+	@DeleteMapping()
+	public void deletaPesoBalanco(@RequestParam String indicador, @RequestParam int peso) {
+		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
+		PesoBalanco pesoBalanco = pesoBalancoRepository.findByPesoBalancoIdentity(pesoBalancoIdentity); 
+		pesoBalancoRepository.delete(pesoBalanco);
 	}
 }
