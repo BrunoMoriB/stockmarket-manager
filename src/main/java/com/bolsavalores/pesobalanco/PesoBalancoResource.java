@@ -25,6 +25,7 @@ public class PesoBalancoResource {
 	@GetMapping("/busca")
 	public PesoBalanco buscaPesoBalancoByIndicadorEpeso(@RequestParam String indicador, @RequestParam int peso) {
 		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
+		
 		return pesoBalancoRepository.findByPesoBalancoIdentity(pesoBalancoIdentity); 
 	}
 	
@@ -32,13 +33,15 @@ public class PesoBalancoResource {
 	public PesoBalanco savePesoBalanco(@RequestParam String indicador, @RequestParam int peso ,@RequestBody PesoBalanco pesoBalanco) {
 		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
 		pesoBalanco.setPesoBalancoIdentity(pesoBalancoIdentity);
+		
 		return pesoBalancoRepository.save(pesoBalanco);
 	}
 	
 	@DeleteMapping()
 	public void deletaPesoBalanco(@RequestParam String indicador, @RequestParam int peso) {
 		PesoBalancoIdentity pesoBalancoIdentity = new PesoBalancoIdentity(indicador, peso);
-		PesoBalanco pesoBalanco = pesoBalancoRepository.findByPesoBalancoIdentity(pesoBalancoIdentity); 
+		PesoBalanco pesoBalanco 				= pesoBalancoRepository.findByPesoBalancoIdentity(pesoBalancoIdentity); 
+		
 		pesoBalancoRepository.delete(pesoBalanco);
 	}
 }

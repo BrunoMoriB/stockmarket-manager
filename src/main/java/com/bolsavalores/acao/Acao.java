@@ -57,5 +57,9 @@ public class Acao implements Serializable {
 	public void setQuantidade(long quantidade) {
 		this.quantidade = quantidade;
 	}
-	
+
+	@Override
+	public String toString() {
+		return this.nome + " - " + this.codigo;
+	}
 }

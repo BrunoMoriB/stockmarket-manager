@@ -2,6 +2,7 @@ package com.bolsavalores.acao;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value="/acao")
 public class AcaoResource {
@@ -19,12 +21,20 @@ public class AcaoResource {
 	
 	@GetMapping()
 	public List<Acao> listaAcoes(){
-		return acaoRepository.findAll();
+		
+		List<Acao> acoes = acaoRepository.findAll();
+		acoes.forEach(System.out::println);
+		return acoes;
 	}
 	
 	@GetMapping("/busca")
 	public Acao buscaAcao(@RequestParam long id) {
 		return acaoRepository.findById(id);
+	}
+	
+	@GetMapping("/buscaPorNomeOuCodigo")
+	public Acao buscaAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
+		return acaoRepository.findByNomeOrCodigo(nome.toUpperCase(), codigo.toUpperCase());
 	}
 	
 	@PostMapping()
