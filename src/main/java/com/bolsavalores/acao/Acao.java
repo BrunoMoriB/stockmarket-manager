@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="acao")
-public class Acao implements Serializable {
+public class Acao implements Serializable, Comparable<Acao> {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -61,5 +61,11 @@ public class Acao implements Serializable {
 	@Override
 	public String toString() {
 		return this.nome + " - " + this.codigo;
+	}
+	
+	@Override
+	public int compareTo(Acao outraAcao) {
+		// TODO Auto-generated method stub
+		return this.nome.compareTo(outraAcao.nome);
 	}
 }

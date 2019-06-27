@@ -1,5 +1,6 @@
 package com.bolsavalores.acao;
 
+import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,8 +22,8 @@ public class AcaoResource {
 	
 	@GetMapping()
 	public List<Acao> listaAcoes(){
-		
 		List<Acao> acoes = acaoRepository.findAll();
+		Collections.sort(acoes);
 		acoes.forEach(System.out::println);
 		return acoes;
 	}
