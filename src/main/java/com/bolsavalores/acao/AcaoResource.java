@@ -24,7 +24,6 @@ public class AcaoResource {
 	public List<Acao> listaAcoes(){
 		List<Acao> acoes = acaoRepository.findAll();
 		Collections.sort(acoes);
-		acoes.forEach(System.out::println);
 		return acoes;
 	}
 	

@@ -22,14 +22,8 @@ public class Balanco implements Serializable {
 	
 	private Date data;
 	
-	@Column(name="patrimonio_liquido")
-	private long patrimonioLiquido;
-	
-	@Column(name="evolucao_patrimonioliq")
-	private String evolucaoPatrimonioLiq;
-	
 	@Column(name="p_l")
-	private double preçoSobreLucro;
+	private double precoSobreLucro;
 	
 	@Column(name="p_vpa")
 	private double precoSobreValorPatrimonial;
@@ -49,20 +43,10 @@ public class Balanco implements Serializable {
 	private String dividendYield;
 	
 	@Column(name="lucroliq_trimestral")
-	private long LucroLiquidoTrimestral;
+	private long lucroLiquidoTrimestral;
 	
 	@Column(name="evolucao_lucroliq")
 	private String evolucaoLucroLiquido;
-	
-	private long ebitda;
-	
-	private long caixa;
-	
-	@Column(name="divida_bruta")
-	private long dividaBruta;
-	
-	@Column(name="evolucao_dividabru")
-	private String evolucaoDividaBruta;
 	
 	private int nota;
 	
@@ -86,28 +70,12 @@ public class Balanco implements Serializable {
 		this.data = data;
 	}
 
-	public long getPatrimonioLiquido() {
-		return patrimonioLiquido;
-	}
-
-	public void setPatrimonioLiquido(long patrimonioLiquido) {
-		this.patrimonioLiquido = patrimonioLiquido;
-	}
-
-	public String getEvolucaoPatrimonioLiq() {
-		return evolucaoPatrimonioLiq;
-	}
-
-	public void setEvolucaoPatrimonioLiq(String evolucaoPatrimonioLiq) {
-		this.evolucaoPatrimonioLiq = evolucaoPatrimonioLiq;
-	}
-
 	public double getPreçoSobreLucro() {
-		return preçoSobreLucro;
+		return precoSobreLucro;
 	}
 
-	public void setPreçoSobreLucro(double preçoSobreLucro) {
-		this.preçoSobreLucro = preçoSobreLucro;
+	public void setPreçoSobreLucro(double precoSobreLucro) {
+		this.precoSobreLucro = precoSobreLucro;
 	}
 
 	public double getPrecoSobreValorPatrimonial() {
@@ -159,11 +127,11 @@ public class Balanco implements Serializable {
 	}
 
 	public long getLucroLiquidoTrimestral() {
-		return LucroLiquidoTrimestral;
+		return lucroLiquidoTrimestral;
 	}
 
 	public void setLucroLiquidoTrimestral(long lucroLiquidoTrimestral) {
-		LucroLiquidoTrimestral = lucroLiquidoTrimestral;
+		this.lucroLiquidoTrimestral = lucroLiquidoTrimestral;
 	}
 
 	public String getEvolucaoLucroLiquido() {
@@ -172,38 +140,6 @@ public class Balanco implements Serializable {
 
 	public void setEvolucaoLucroLiquido(String evolucaoLucroLiquido) {
 		this.evolucaoLucroLiquido = evolucaoLucroLiquido;
-	}
-
-	public long getEbitda() {
-		return ebitda;
-	}
-
-	public void setEbitda(long ebitda) {
-		this.ebitda = ebitda;
-	}
-
-	public long getCaixa() {
-		return caixa;
-	}
-
-	public void setCaixa(long caixa) {
-		this.caixa = caixa;
-	}
-
-	public long getDividaBruta() {
-		return dividaBruta;
-	}
-
-	public void setDividaBruta(long dividaBruta) {
-		this.dividaBruta = dividaBruta;
-	}
-
-	public String getEvolucaoDividaBruta() {
-		return evolucaoDividaBruta;
-	}
-
-	public void setEvolucaoDividaBruta(String evolucaoDividaBruta) {
-		this.evolucaoDividaBruta = evolucaoDividaBruta;
 	}
 
 	public int getNota() {
