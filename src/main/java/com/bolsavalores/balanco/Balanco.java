@@ -70,11 +70,11 @@ public class Balanco implements Serializable {
 		this.data = data;
 	}
 
-	public double getPreçoSobreLucro() {
+	public double getPrecoSobreLucro() {
 		return precoSobreLucro;
 	}
 
-	public void setPreçoSobreLucro(double precoSobreLucro) {
+	public void setPrecoSobreLucro(double precoSobreLucro) {
 		this.precoSobreLucro = precoSobreLucro;
 	}
 
