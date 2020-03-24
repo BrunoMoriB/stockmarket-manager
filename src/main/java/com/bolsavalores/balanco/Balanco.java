@@ -48,6 +48,12 @@ public class Balanco implements Serializable {
 	@Column(name="evolucao_lucroliq")
 	private String evolucaoLucroLiquido;
 	
+	@Column(name="lucrocrescente_tresmeses")
+	private Boolean lucroCrescenteTresMeses;
+	
+	@Column(name="lucrocrescente_tresanos")
+	private Boolean lucroCrescenteTresAnos;
+	
 	private int nota;
 	
 	@ManyToOne
@@ -156,5 +162,21 @@ public class Balanco implements Serializable {
 
 	public void setAcao(Acao acao) {
 		this.acao = acao;
+	}
+
+	public Boolean getLucroCrescenteTresMeses() {
+		return lucroCrescenteTresMeses;
+	}
+
+	public void setLucroCrescenteTresMeses(Boolean lucroCrescenteTresMeses) {
+		this.lucroCrescenteTresMeses = lucroCrescenteTresMeses;
+	}
+
+	public Boolean getLucroCrescenteTresAnos() {
+		return lucroCrescenteTresAnos;
+	}
+
+	public void setLucroCrescenteTresAnos(Boolean lucroCrescenteTresAnos) {
+		this.lucroCrescenteTresAnos = lucroCrescenteTresAnos;
 	}
 }
