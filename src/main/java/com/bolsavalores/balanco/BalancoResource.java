@@ -39,10 +39,15 @@ public class BalancoResource {
 		return balancoRepository.findByAcaoId(acaoId);
 	}
 	
+//	@PostMapping()
+//	public Balanco salvaBalanco(@RequestParam(value="acaoId") long acaoId, @RequestBody Balanco balanco) {
+//		Acao acao = acaoRepository.findById(acaoId);
+//		balanco.setAcao(acao);
+//		return balancoRepository.save(balanco);
+//	}
+	
 	@PostMapping()
-	public Balanco salvaBalanco(@RequestParam(value="acaoId") long acaoId, @RequestBody Balanco balanco) {
-		Acao acao = acaoRepository.findById(acaoId);
-		balanco.setAcao(acao);
+	public Balanco salvaBalanco(@RequestBody Balanco balanco) {
 		return balancoRepository.save(balanco);
 	}
 	
