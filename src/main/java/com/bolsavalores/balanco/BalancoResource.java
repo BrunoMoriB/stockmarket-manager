@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.bolsavalores.acao.Acao;
 import com.bolsavalores.acao.AcaoRepository;
 
 @CrossOrigin
@@ -38,13 +37,6 @@ public class BalancoResource {
 	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
 		return balancoRepository.findByAcaoId(acaoId);
 	}
-	
-//	@PostMapping()
-//	public Balanco salvaBalanco(@RequestParam(value="acaoId") long acaoId, @RequestBody Balanco balanco) {
-//		Acao acao = acaoRepository.findById(acaoId);
-//		balanco.setAcao(acao);
-//		return balancoRepository.save(balanco);
-//	}
 	
 	@PostMapping()
 	public Balanco salvaBalanco(@RequestBody Balanco balanco) {

@@ -10,6 +10,6 @@ public interface BalancoRepository extends JpaRepository<Balanco, Long>{
 
 	public Balanco findById(long id);
 	
-	@Query("SELECT b FROM Balanco b WHERE b.acao.id = ?1 ")
+	@Query("SELECT b FROM Balanco b WHERE b.acao.id = ?1 ORDER BY b.data  ")
 	public List<Balanco> findByAcaoId(long acaoId);
 }
