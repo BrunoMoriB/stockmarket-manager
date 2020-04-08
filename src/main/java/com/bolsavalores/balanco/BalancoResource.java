@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.bolsavalores.acao.AcaoRepository;
 
 @CrossOrigin
 @RestController
@@ -19,9 +18,6 @@ public class BalancoResource {
 
 	@Autowired
 	BalancoRepository balancoRepository;
-	
-	@Autowired
-	AcaoRepository acaoRepository;
 	
 	@GetMapping()
 	public List<Balanco> listaBalancos(){
@@ -43,7 +39,7 @@ public class BalancoResource {
 		return balancoRepository.save(balanco);
 	}
 	
-	@DeleteMapping
+	@DeleteMapping()
 	public void deletaBalanco(@RequestParam long id) {
 		balancoRepository.deleteById(id);
 	}
