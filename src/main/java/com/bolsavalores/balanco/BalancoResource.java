@@ -19,19 +19,14 @@ public class BalancoResource {
 	@Autowired
 	BalancoRepository balancoRepository;
 	
-	@GetMapping()
-	public List<Balanco> listaBalancos(){
-		return balancoRepository.findAll();
-	}
-	
 	@GetMapping("/busca")
-	public Balanco buscaBalanco(@RequestParam long id) {
+	public Balanco getBalanco(@RequestParam long id) {
 		return balancoRepository.findById(id);
 	} 
 	
-	@GetMapping("/buscaPorAcaoId")
-	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
-		return balancoRepository.findByAcaoId(acaoId);
+	@GetMapping()
+	public List<Balanco> getBalancos(){
+		return balancoRepository.findAll();
 	}
 	
 	@PostMapping()
@@ -42,5 +37,10 @@ public class BalancoResource {
 	@DeleteMapping()
 	public void deletaBalanco(@RequestParam long id) {
 		balancoRepository.deleteById(id);
+	}
+	
+	@GetMapping("/buscaPorAcaoId")
+	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
+		return balancoRepository.findByAcaoId(acaoId);
 	}
 }

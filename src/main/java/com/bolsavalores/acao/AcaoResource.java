@@ -20,21 +20,16 @@ public class AcaoResource {
 	@Autowired
 	AcaoRepository acaoRepository;
 	
-	@GetMapping()
-	public List<Acao> listaAcoes(){
-		List<Acao> acoes = acaoRepository.findAll();
-		Collections.sort(acoes);
-		return acoes;
-	}
-	
 	@GetMapping("/busca")
-	public Acao buscaAcao(@RequestParam long id) {
+	public Acao getAcao(@RequestParam long id) {
 		return acaoRepository.findById(id);
 	}
 	
-	@GetMapping("/buscaPorNomeOuCodigo")
-	public Acao buscaAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
-		return acaoRepository.findByNomeOrCodigo(nome.toUpperCase(), codigo.toUpperCase());
+	@GetMapping()
+	public List<Acao> getAcoes(){
+		List<Acao> acoes = acaoRepository.findAll();
+		Collections.sort(acoes);
+		return acoes;
 	}
 	
 	@PostMapping()
@@ -47,4 +42,8 @@ public class AcaoResource {
 		acaoRepository.deleteById(id);
 	}
 	
+	@GetMapping("/buscaPorNomeOuCodigo")
+	public Acao buscaAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
+		return acaoRepository.findByNomeOrCodigo(nome.toUpperCase(), codigo.toUpperCase());
+	}
 }

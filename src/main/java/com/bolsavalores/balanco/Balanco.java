@@ -1,7 +1,6 @@
 package com.bolsavalores.balanco;
 
 import java.io.Serializable;
-import java.util.BitSet;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
