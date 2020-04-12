@@ -1,5 +1,7 @@
 package com.bolsavalores.setor;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,13 +10,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="setor")
-public class Setor implements Comparable<Setor> {
+public class Setor implements Serializable, Comparable<Setor> {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
 	private String nome;
+	private String subsetor;
 
 	public long getId() {
 		return id;
@@ -30,6 +33,14 @@ public class Setor implements Comparable<Setor> {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getSubsetor() {
+		return subsetor;
+	}
+
+	public void setSubsetor(String subsetor) {
+		this.subsetor = subsetor;
 	}
 
 	@Override
