@@ -1,4 +1,4 @@
-package com.bolsavalores.operacao;
+package com.bolsavalores.resources;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bolsavalores.ordem.Ordem;
-import com.bolsavalores.ordem.OrdemRepository;
+import com.bolsavalores.entities.Operacao;
+import com.bolsavalores.entities.Ordem;
+import com.bolsavalores.repositories.OperacaoRepository;
+import com.bolsavalores.repositories.OrdemRepository;
 
 @RestController
 @RequestMapping(value="/operacao")

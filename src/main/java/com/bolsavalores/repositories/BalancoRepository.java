@@ -1,9 +1,11 @@
-package com.bolsavalores.balanco;
+package com.bolsavalores.repositories;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import com.bolsavalores.entities.Balanco;
 
 
 public interface BalancoRepository extends JpaRepository<Balanco, Long>{

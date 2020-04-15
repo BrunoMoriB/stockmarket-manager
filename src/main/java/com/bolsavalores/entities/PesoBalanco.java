@@ -1,4 +1,4 @@
-package com.bolsavalores.pesobalanco;
+package com.bolsavalores.entities;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;

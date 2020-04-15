@@ -1,4 +1,4 @@
-package com.bolsavalores.setor;
+package com.bolsavalores.entities;
 
 import java.io.Serializable;
 

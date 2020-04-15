@@ -1,7 +1,7 @@
-package com.bolsavalores.balanco;
+package com.bolsavalores.entities;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import com.bolsavalores.acao.Acao;
 
 @Entity
 @Table(name="balanco")
@@ -20,7 +19,7 @@ public class Balanco implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
-	private Date data;
+	private LocalDate data;
 	
 	@Column(name="p_l")
 	private double precoSobreLucro;
@@ -28,7 +27,7 @@ public class Balanco implements Serializable {
 	@Column(name="p_vpa")
 	private double precoSobreValorPatrimonial;
 	
-	private String roe;
+	private double roe;
 	
 	@Column(name="liquidez_corrente")
 	private double liquidezCorrente;
@@ -37,16 +36,22 @@ public class Balanco implements Serializable {
 	private double dividaBrutaSobrePatrimonioLiq;
 	
 	@Column(name="margem_liquida")
-	private String margemLiquida;
+	private double margemLiquida;
 	
 	@Column(name="dy")
-	private String dividendYield;
+	private double dividendYield;
 	
 	@Column(name="lucroliq_trimestral")
 	private long lucroLiquidoTrimestral;
 	
-	@Column(name="evolucao_lucroliq")
-	private String evolucaoLucroLiquido;
+	@Column(name="lucroliq_anual")
+	private long lucroLiquidoAnual;
+	
+	@Column(name="evolucao_lucroliqmeses")
+	private double evolucaoLucroLiquidoMeses;
+	
+	@Column(name="evolucao_lucroliqanos")
+	private double evolucaoLucroLiquidoAnos;
 	
 	@Column(name="lucrocrescente_tresmeses")
 	private Boolean lucroCrescenteTresMeses;
@@ -68,11 +73,11 @@ public class Balanco implements Serializable {
 		this.id = id;
 	}
 
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 
@@ -92,14 +97,6 @@ public class Balanco implements Serializable {
 		this.precoSobreValorPatrimonial = precoSobreValorPatrimonial;
 	}
 
-	public String getRoe() {
-		return roe;
-	}
-
-	public void setRoe(String roe) {
-		this.roe = roe;
-	}
-
 	public double getLiquidezCorrente() {
 		return liquidezCorrente;
 	}
@@ -116,36 +113,12 @@ public class Balanco implements Serializable {
 		this.dividaBrutaSobrePatrimonioLiq = dividaBrutaSobrePatrimonioLiq;
 	}
 
-	public String getMargemLiquida() {
-		return margemLiquida;
-	}
-
-	public void setMargemLiquida(String margemLiquida) {
-		this.margemLiquida = margemLiquida;
-	}
-
-	public String getDividendYield() {
-		return dividendYield;
-	}
-
-	public void setDividendYield(String dividendYield) {
-		this.dividendYield = dividendYield;
-	}
-
 	public long getLucroLiquidoTrimestral() {
 		return lucroLiquidoTrimestral;
 	}
 
 	public void setLucroLiquidoTrimestral(long lucroLiquidoTrimestral) {
 		this.lucroLiquidoTrimestral = lucroLiquidoTrimestral;
-	}
-
-	public String getEvolucaoLucroLiquido() {
-		return evolucaoLucroLiquido;
-	}
-
-	public void setEvolucaoLucroLiquido(String evolucaoLucroLiquido) {
-		this.evolucaoLucroLiquido = evolucaoLucroLiquido;
 	}
 
 	public int getNota() {
@@ -178,5 +151,53 @@ public class Balanco implements Serializable {
 
 	public void setLucroCrescenteTresAnos(Boolean lucroCrescenteTresAnos) {
 		this.lucroCrescenteTresAnos = lucroCrescenteTresAnos;
+	}
+
+	public double getRoe() {
+		return roe;
+	}
+
+	public void setRoe(double roe) {
+		this.roe = roe;
+	}
+
+	public double getMargemLiquida() {
+		return margemLiquida;
+	}
+
+	public void setMargemLiquida(double margemLiquida) {
+		this.margemLiquida = margemLiquida;
+	}
+
+	public double getDividendYield() {
+		return dividendYield;
+	}
+
+	public void setDividendYield(double dividendYield) {
+		this.dividendYield = dividendYield;
+	}
+
+	public double getEvolucaoLucroLiquidoMeses() {
+		return evolucaoLucroLiquidoMeses;
+	}
+
+	public void setEvolucaoLucroLiquidoMeses(double evolucaoLucroLiquidoMeses) {
+		this.evolucaoLucroLiquidoMeses = evolucaoLucroLiquidoMeses;
+	}
+
+	public double getEvolucaoLucroLiquidoAnos() {
+		return evolucaoLucroLiquidoAnos;
+	}
+
+	public void setEvolucaoLucroLiquidoAnos(double evolucaoLucroLiquidoAnos) {
+		this.evolucaoLucroLiquidoAnos = evolucaoLucroLiquidoAnos;
+	}
+
+	public long getLucroLiquidoAnual() {
+		return lucroLiquidoAnual;
+	}
+
+	public void setLucroLiquidoAnual(long lucroLiquidoAnual) {
+		this.lucroLiquidoAnual = lucroLiquidoAnual;
 	}
 }

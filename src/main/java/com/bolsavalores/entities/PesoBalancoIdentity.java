@@ -1,4 +1,4 @@
-package com.bolsavalores.pesobalanco;
+package com.bolsavalores.entities;
 
 import java.io.Serializable;
 import javax.persistence.Embeddable;

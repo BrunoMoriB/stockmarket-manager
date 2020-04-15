@@ -1,4 +1,4 @@
-package com.bolsavalores.acao;
+package com.bolsavalores.entities;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import com.bolsavalores.setor.Setor;
 
 @Entity
 @Table(name="acao")

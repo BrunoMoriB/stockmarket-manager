@@ -1,4 +1,4 @@
-package com.bolsavalores.operacao;
+package com.bolsavalores.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,9 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import com.bolsavalores.acao.Acao;
-import com.bolsavalores.ordem.Ordem;
 
 @Entity
 @Table(name="operacao")

@@ -1,4 +1,4 @@
-package com.bolsavalores.ordem;
+package com.bolsavalores.resources;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.bolsavalores.acao.Acao;
-import com.bolsavalores.acao.AcaoRepository;
+
+import com.bolsavalores.entities.Acao;
+import com.bolsavalores.entities.Ordem;
+import com.bolsavalores.repositories.AcaoRepository;
+import com.bolsavalores.repositories.OrdemRepository;
 
 @RestController
 @RequestMapping(value="/ordem")
