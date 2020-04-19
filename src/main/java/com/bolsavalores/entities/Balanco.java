@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="balanco")
-public class Balanco implements Serializable {
+public class Balanco implements Serializable, Comparable<Balanco> {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -42,22 +42,22 @@ public class Balanco implements Serializable {
 	private double dividendYield;
 	
 	@Column(name="lucroliq_trimestral")
-	private long lucroLiquidoTrimestral;
+	private Long lucroLiquidoTrimestral;
 	
 	@Column(name="lucroliq_anual")
-	private long lucroLiquidoAnual;
+	private Long lucroLiquidoAnual;
 	
 	@Column(name="evolucao_lucroliqmeses")
-	private double evolucaoLucroLiquidoMeses;
+	private Double evolucaoLucroLiquidoMeses;
 	
 	@Column(name="evolucao_lucroliqanos")
-	private double evolucaoLucroLiquidoAnos;
+	private Double evolucaoLucroLiquidoAnos;
 	
 	@Column(name="lucrocrescente_tresmeses")
-	private Boolean lucroCrescenteTresMeses;
+	private Boolean isLucroCrescenteTresMeses;
 	
 	@Column(name="lucrocrescente_tresanos")
-	private Boolean lucroCrescenteTresAnos;
+	private Boolean isLucroCrescenteTresAnos;
 	
 	private int nota;
 	
@@ -113,14 +113,6 @@ public class Balanco implements Serializable {
 		this.dividaBrutaSobrePatrimonioLiq = dividaBrutaSobrePatrimonioLiq;
 	}
 
-	public long getLucroLiquidoTrimestral() {
-		return lucroLiquidoTrimestral;
-	}
-
-	public void setLucroLiquidoTrimestral(long lucroLiquidoTrimestral) {
-		this.lucroLiquidoTrimestral = lucroLiquidoTrimestral;
-	}
-
 	public int getNota() {
 		return nota;
 	}
@@ -135,22 +127,6 @@ public class Balanco implements Serializable {
 
 	public void setAcao(Acao acao) {
 		this.acao = acao;
-	}
-
-	public Boolean getLucroCrescenteTresMeses() {
-		return lucroCrescenteTresMeses;
-	}
-
-	public void setLucroCrescenteTresMeses(Boolean lucroCrescenteTresMeses) {
-		this.lucroCrescenteTresMeses = lucroCrescenteTresMeses;
-	}
-
-	public Boolean getLucroCrescenteTresAnos() {
-		return lucroCrescenteTresAnos;
-	}
-
-	public void setLucroCrescenteTresAnos(Boolean lucroCrescenteTresAnos) {
-		this.lucroCrescenteTresAnos = lucroCrescenteTresAnos;
 	}
 
 	public double getRoe() {
@@ -177,27 +153,57 @@ public class Balanco implements Serializable {
 		this.dividendYield = dividendYield;
 	}
 
-	public double getEvolucaoLucroLiquidoMeses() {
+	public Double getEvolucaoLucroLiquidoMeses() {
 		return evolucaoLucroLiquidoMeses;
 	}
 
-	public void setEvolucaoLucroLiquidoMeses(double evolucaoLucroLiquidoMeses) {
+	public void setEvolucaoLucroLiquidoMeses(Double evolucaoLucroLiquidoMeses) {
 		this.evolucaoLucroLiquidoMeses = evolucaoLucroLiquidoMeses;
 	}
 
-	public double getEvolucaoLucroLiquidoAnos() {
+	public Double getEvolucaoLucroLiquidoAnos() {
 		return evolucaoLucroLiquidoAnos;
 	}
 
-	public void setEvolucaoLucroLiquidoAnos(double evolucaoLucroLiquidoAnos) {
+	public void setEvolucaoLucroLiquidoAnos(Double evolucaoLucroLiquidoAnos) {
 		this.evolucaoLucroLiquidoAnos = evolucaoLucroLiquidoAnos;
 	}
 
-	public long getLucroLiquidoAnual() {
+	public Long getLucroLiquidoTrimestral() {
+		return lucroLiquidoTrimestral;
+	}
+
+	public void setLucroLiquidoTrimestral(Long lucroLiquidoTrimestral) {
+		this.lucroLiquidoTrimestral = lucroLiquidoTrimestral;
+	}
+
+	public Long getLucroLiquidoAnual() {
 		return lucroLiquidoAnual;
 	}
 
-	public void setLucroLiquidoAnual(long lucroLiquidoAnual) {
+	public void setLucroLiquidoAnual(Long lucroLiquidoAnual) {
 		this.lucroLiquidoAnual = lucroLiquidoAnual;
+	}
+
+	public Boolean getIsLucroCrescenteTresMeses() {
+		return isLucroCrescenteTresMeses;
+	}
+
+	public void setIsLucroCrescenteTresMeses(Boolean isLucroCrescenteTresMeses) {
+		this.isLucroCrescenteTresMeses = isLucroCrescenteTresMeses;
+	}
+
+	public Boolean getIsLucroCrescenteTresAnos() {
+		return isLucroCrescenteTresAnos;
+	}
+
+	public void setIsLucroCrescenteTresAnos(Boolean isLucroCrescenteTresAnos) {
+		this.isLucroCrescenteTresAnos = isLucroCrescenteTresAnos;
+	}
+
+	@Override
+	public int compareTo(Balanco outroBalanco) {
+		// TODO Auto-generated method stub
+		return this.data.compareTo(outroBalanco.getData());
 	}
 }
