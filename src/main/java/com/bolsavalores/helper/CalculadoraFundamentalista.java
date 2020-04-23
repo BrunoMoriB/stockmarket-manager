@@ -15,6 +15,38 @@ import com.bolsavalores.entities.Balanco;
 
 public class CalculadoraFundamentalista {
 	
+	public Double getMediaPrecoSobreLucro(Balanco balanco, List<Balanco> balancos) throws ParseException {
+		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
+		List<Balanco> balancosAnteriores = balancos.stream()
+				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
+				.collect(Collectors.toList());
+		
+		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
+			return null;
+		
+		Double precoSobreLucro = balancosAnteriores.stream().mapToDouble(b -> b.getPrecoSobreLucro()).sum();
+		precoSobreLucro+= balanco.getPrecoSobreLucro();
+		precoSobreLucro/=8;
+		
+		return NumberFormat.getInstance().parse(new DecimalFormat("#.##").format(precoSobreLucro)).doubleValue();
+	}
+	
+	public Double getMediaPrecoSobreValorPatrimonial(Balanco balanco, List<Balanco> balancos) throws ParseException {
+		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
+		List<Balanco> balancosAnteriores = balancos.stream()
+				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
+				.collect(Collectors.toList());
+		
+		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
+			return null;
+		
+		Double precoSobreValorPatrimonial = balancosAnteriores.stream().mapToDouble(b -> b.getPrecoSobreValorPatrimonial()).sum();
+		precoSobreValorPatrimonial+= balanco.getPrecoSobreValorPatrimonial();
+		precoSobreValorPatrimonial/=8;
+		
+		return NumberFormat.getInstance().parse(new DecimalFormat("#.##").format(precoSobreValorPatrimonial)).doubleValue();
+	}
+	
 	public int getNota(Balanco balanco) {
 		int nota = 0;
 		
@@ -89,10 +121,10 @@ public class CalculadoraFundamentalista {
 		boolean isLucroCrescenteUm   = false;
 		boolean isLucroCrescenteDois = false;
 		
-		if(balanco.getLucroLiquidoAnual()  == null)
+		if(balanco.getLucroLiquidoAnual()  == null || balancosAnosAnteriores.size() != 2)
 			return null;
 		
-		if(balancosAnosAnteriores.get(1) == null || balancosAnosAnteriores.get(1).getLucroLiquidoAnual()  == null)
+		if(balancosAnosAnteriores.get(1).getLucroLiquidoAnual()  == null)
 			return null;
 		else
 			isLucroCrescenteUm = balanco.getLucroLiquidoAnual() > balancosAnosAnteriores.get(1).getLucroLiquidoAnual();
@@ -109,10 +141,10 @@ public class CalculadoraFundamentalista {
 		
 		Balanco balancoTrimestralAnterior = getBalancoTrimestralAnoAnterior(balanco, balancosAnteriores);
 		  
-		if(balancoTrimestralAnterior == null)
+		if(balancoTrimestralAnterior == null || balancoTrimestralAnterior.getLucroLiquidoAnual() == null)
 			return null;
 		
-		if(balancoTrimestralAnterior.getLucroLiquidoAnual() == null || balancoTrimestralAnterior.getLucroLiquidoAnual() == 0)
+		if(balancoTrimestralAnterior.getLucroLiquidoAnual() == 0)
 			balancoTrimestralAnterior.setLucroLiquidoAnual(1L);
 		
 		double diferencaLucroLiquidoAno = balanco.getLucroLiquidoAnual() - balancoTrimestralAnterior.getLucroLiquidoAnual();

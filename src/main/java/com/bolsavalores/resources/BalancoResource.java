@@ -46,6 +46,8 @@ public class BalancoResource {
 		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores)); 
  		balanco.setEvolucaoLucroLiquidoAnos(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
 		balanco.setIsLucroCrescenteTresAnos(calculadoraFundamentalista.isLucroCrescenteTresAnos(balanco, balancosAnteriores));
+		balanco.setMediaPrecoSobreLucro(calculadoraFundamentalista.getMediaPrecoSobreLucro(balanco, balancosAnteriores));
+		balanco.setMediaPrecoSobreValorPatrimonial(calculadoraFundamentalista.getMediaPrecoSobreValorPatrimonial(balanco, balancosAnteriores));
 		balanco.setNota(calculadoraFundamentalista.getNota(balanco));
 		
 		return balancoRepository.save(balanco);

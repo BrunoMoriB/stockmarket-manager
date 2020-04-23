@@ -59,6 +59,12 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="lucrocrescente_tresanos")
 	private Boolean isLucroCrescenteTresAnos;
 	
+	@Column(name="media_pl")
+	private Double mediaPrecoSobreLucro;
+	
+	@Column(name="media_pvpa")
+	private Double mediaPrecoSobreValorPatrimonial;
+	
 	private int nota;
 	
 	@ManyToOne
@@ -200,10 +206,28 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public void setIsLucroCrescenteTresAnos(Boolean isLucroCrescenteTresAnos) {
 		this.isLucroCrescenteTresAnos = isLucroCrescenteTresAnos;
 	}
+	
+	public Double getMediaPrecoSobreLucro() {
+		return mediaPrecoSobreLucro;
+	}
+
+	public void setMediaPrecoSobreLucro(Double mediaPrecoSobreLucro) {
+		this.mediaPrecoSobreLucro = mediaPrecoSobreLucro;
+	}
+
+	public Double getMediaPrecoSobreValorPatrimonial() {
+		return mediaPrecoSobreValorPatrimonial;
+	}
+
+	public void setMediaPrecoSobreValorPatrimonial(Double mediaPrecoSobreValorPatrimonial) {
+		this.mediaPrecoSobreValorPatrimonial = mediaPrecoSobreValorPatrimonial;
+	}
 
 	@Override
 	public int compareTo(Balanco outroBalanco) {
 		// TODO Auto-generated method stub
 		return this.data.compareTo(outroBalanco.getData());
 	}
+
+	
 }
