@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bolsavalores.entities.Balanco;
-import com.bolsavalores.helper.CalculadoraFundamentalista;
 import com.bolsavalores.repositories.BalancoRepository;
+import com.bolsavalores.services.BalancoService;
 
 @CrossOrigin
 @RestController
@@ -25,7 +25,8 @@ public class BalancoResource {
 	@Autowired
 	BalancoRepository balancoRepository;
 	
-	private CalculadoraFundamentalista calculadoraFundamentalista = new CalculadoraFundamentalista();
+	@Autowired
+	BalancoService balancoService;
 	
 	@GetMapping("/busca")
 	public Balanco getBalanco(@RequestParam long id) {
@@ -36,21 +37,32 @@ public class BalancoResource {
 	public List<Balanco> getBalancos(){
 		return balancoRepository.findAll();
 	}
+
+	@GetMapping("/buscaPorAcaoId")
+	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
+		return balancoRepository.findByAcaoId(acaoId);
+	}
+	
+	@GetMapping("/buscaBalancosRecalculados")
+	public List<Balanco> getBalancosRecalculados(@RequestParam long acaoId){
+		try {
+			return balancoService.getBalancosRecalculadosByAcaoId(acaoId);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
 	
 	@PostMapping()
-	public Balanco salvaBalanco(@RequestBody Balanco balanco) throws ParseException {
-		List<Balanco> balancosAnteriores = balancoRepository.findByAcaoId(balanco.getAcao().getId());
-		
-		balanco.setEvolucaoLucroLiquidoMeses(calculadoraFundamentalista.getEvolucaoLucroLiquidoTrimestral(balanco, balancosAnteriores)); 
-		balanco.setIsLucroCrescenteTresMeses(calculadoraFundamentalista.isLucroCrescenteTresMeses(balanco, balancosAnteriores));
-		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores)); 
- 		balanco.setEvolucaoLucroLiquidoAnos(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
-		balanco.setIsLucroCrescenteTresAnos(calculadoraFundamentalista.isLucroCrescenteTresAnos(balanco, balancosAnteriores));
-		balanco.setMediaPrecoSobreLucro(calculadoraFundamentalista.getMediaPrecoSobreLucro(balanco, balancosAnteriores));
-		balanco.setMediaPrecoSobreValorPatrimonial(calculadoraFundamentalista.getMediaPrecoSobreValorPatrimonial(balanco, balancosAnteriores));
-		balanco.setNota(calculadoraFundamentalista.getNota(balanco));
-		
-		return balancoRepository.save(balanco);
+	public Balanco salvaBalanco(@RequestBody Balanco balanco) {
+		try {
+			return balancoService.salvaBalanco(balanco);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	@DeleteMapping()
@@ -58,10 +70,6 @@ public class BalancoResource {
 		balancoRepository.deleteById(id);
 	}
 	
-	@GetMapping("/buscaPorAcaoId")
-	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
-		return balancoRepository.findByAcaoId(acaoId);
-	}
 	
 	
 }

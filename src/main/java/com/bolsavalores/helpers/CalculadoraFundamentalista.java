@@ -1,4 +1,4 @@
-package com.bolsavalores.helper;
+package com.bolsavalores.helpers;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -11,8 +11,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Component;
+
 import com.bolsavalores.entities.Balanco;
 
+@Component
 public class CalculadoraFundamentalista {
 	
 	public Double getMediaPrecoSobreLucro(Balanco balanco, List<Balanco> balancos) throws ParseException {
