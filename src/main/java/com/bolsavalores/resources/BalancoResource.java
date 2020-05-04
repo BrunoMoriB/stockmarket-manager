@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bolsavalores.entities.Balanco;
+import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 
@@ -27,6 +30,9 @@ public class BalancoResource {
 	
 	@Autowired
 	BalancoService balancoService;
+	
+	@Autowired
+	JsonConverter jsonConverter;
 	
 	@GetMapping("/busca")
 	public Balanco getBalanco(@RequestParam long id) {
@@ -44,13 +50,14 @@ public class BalancoResource {
 	}
 	
 	@GetMapping("/buscaBalancosRecalculados")
-	public List<Balanco> getBalancosRecalculados(@RequestParam long acaoId){
+	public ResponseEntity<String> getBalancosRecalculados(@RequestParam long acaoId){
 		try {
-			return balancoService.getBalancosRecalculadosByAcaoId(acaoId);
-		} catch (ParseException e) {
+			List<Balanco> balancosRecalculados = balancoService.getBalancosRecalculadosByAcaoId(acaoId);
+			return ResponseEntity.ok(jsonConverter.toJson(balancosRecalculados));
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return null;
+			return new ResponseEntity<String>("Não foi possível recalcular os Balancos. ", HttpStatus.BAD_REQUEST);
 		}
 	}
 	

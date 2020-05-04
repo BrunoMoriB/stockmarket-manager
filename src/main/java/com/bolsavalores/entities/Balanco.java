@@ -2,13 +2,17 @@ package com.bolsavalores.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,27 +23,19 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
+	@ManyToOne
+	@JoinColumn(name="id_acao")
+	private Acao acao;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="id_multiplos")
+	private MultiplosFundamentalistas multiplosFundamentalistas;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="id_desempenho")
+	private DesempenhoFinanceiro desempenhoFinanceiro;
+	
 	private LocalDate data;
-	
-	@Column(name="p_l")
-	private double precoSobreLucro;
-	
-	@Column(name="p_vpa")
-	private double precoSobreValorPatrimonial;
-	
-	private double roe;
-	
-	@Column(name="liquidez_corrente")
-	private double liquidezCorrente;
-	
-	@Column(name="divbruta_patrimonioliq")
-	private double dividaBrutaSobrePatrimonioLiq;
-	
-	@Column(name="margem_liquida")
-	private double margemLiquida;
-	
-	@Column(name="dy")
-	private double dividendYield;
 	
 	@Column(name="lucroliq_trimestral")
 	private Long lucroLiquidoTrimestral;
@@ -47,29 +43,23 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="lucroliq_anual")
 	private Long lucroLiquidoAnual;
 	
-	@Column(name="evolucao_lucroliqmeses")
-	private Double evolucaoLucroLiquidoMeses;
+	@Column(name="patrimonioliquido")
+	private Long patrimonioLiquido;
 	
-	@Column(name="evolucao_lucroliqanos")
-	private Double evolucaoLucroLiquidoAnos;
+	@Column(name="dividabruta")
+	private Long dividaBruta;
 	
-	@Column(name="lucrocrescente_tresmeses")
-	private Boolean isLucroCrescenteTresMeses;
+	@Column(name="caixadisponivel")
+	private Long caixaDisponivel;
 	
-	@Column(name="lucrocrescente_tresanos")
-	private Boolean isLucroCrescenteTresAnos;
+	@Column(name="qtdpapeis")
+	private Long qtdPapeis;
 	
-	@Column(name="media_pl")
-	private Double mediaPrecoSobreLucro;
+	private Double cotacao;
 	
-	@Column(name="media_pvpa")
-	private Double mediaPrecoSobreValorPatrimonial;
+	private int trimestre;
 	
 	private int nota;
-	
-	@ManyToOne
-	@JoinColumn(name="id_acao")
-	private Acao acao;
 	
 	public long getId() {
 		return id;
@@ -85,38 +75,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setData(LocalDate data) {
 		this.data = data;
-	}
-
-	public double getPrecoSobreLucro() {
-		return precoSobreLucro;
-	}
-
-	public void setPrecoSobreLucro(double precoSobreLucro) {
-		this.precoSobreLucro = precoSobreLucro;
-	}
-
-	public double getPrecoSobreValorPatrimonial() {
-		return precoSobreValorPatrimonial;
-	}
-
-	public void setPrecoSobreValorPatrimonial(double precoSobreValorPatrimonial) {
-		this.precoSobreValorPatrimonial = precoSobreValorPatrimonial;
-	}
-
-	public double getLiquidezCorrente() {
-		return liquidezCorrente;
-	}
-
-	public void setLiquidezCorrente(double liquidezCorrente) {
-		this.liquidezCorrente = liquidezCorrente;
-	}
-
-	public double getDividaBrutaSobrePatrimonioLiq() {
-		return dividaBrutaSobrePatrimonioLiq;
-	}
-
-	public void setDividaBrutaSobrePatrimonioLiq(double dividaBrutaSobrePatrimonioLiq) {
-		this.dividaBrutaSobrePatrimonioLiq = dividaBrutaSobrePatrimonioLiq;
 	}
 
 	public int getNota() {
@@ -135,46 +93,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.acao = acao;
 	}
 
-	public double getRoe() {
-		return roe;
-	}
-
-	public void setRoe(double roe) {
-		this.roe = roe;
-	}
-
-	public double getMargemLiquida() {
-		return margemLiquida;
-	}
-
-	public void setMargemLiquida(double margemLiquida) {
-		this.margemLiquida = margemLiquida;
-	}
-
-	public double getDividendYield() {
-		return dividendYield;
-	}
-
-	public void setDividendYield(double dividendYield) {
-		this.dividendYield = dividendYield;
-	}
-
-	public Double getEvolucaoLucroLiquidoMeses() {
-		return evolucaoLucroLiquidoMeses;
-	}
-
-	public void setEvolucaoLucroLiquidoMeses(Double evolucaoLucroLiquidoMeses) {
-		this.evolucaoLucroLiquidoMeses = evolucaoLucroLiquidoMeses;
-	}
-
-	public Double getEvolucaoLucroLiquidoAnos() {
-		return evolucaoLucroLiquidoAnos;
-	}
-
-	public void setEvolucaoLucroLiquidoAnos(Double evolucaoLucroLiquidoAnos) {
-		this.evolucaoLucroLiquidoAnos = evolucaoLucroLiquidoAnos;
-	}
-
 	public Long getLucroLiquidoTrimestral() {
 		return lucroLiquidoTrimestral;
 	}
@@ -191,37 +109,70 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.lucroLiquidoAnual = lucroLiquidoAnual;
 	}
 
-	public Boolean getIsLucroCrescenteTresMeses() {
-		return isLucroCrescenteTresMeses;
+	public int getTrimestre() {
+		return trimestre;
 	}
 
-	public void setIsLucroCrescenteTresMeses(Boolean isLucroCrescenteTresMeses) {
-		this.isLucroCrescenteTresMeses = isLucroCrescenteTresMeses;
+	public void setTrimestre(int trimestre) {
+		this.trimestre = trimestre;
 	}
 
-	public Boolean getIsLucroCrescenteTresAnos() {
-		return isLucroCrescenteTresAnos;
+	public MultiplosFundamentalistas getMultiplosFundamentalistas() {
+		return multiplosFundamentalistas;
 	}
 
-	public void setIsLucroCrescenteTresAnos(Boolean isLucroCrescenteTresAnos) {
-		this.isLucroCrescenteTresAnos = isLucroCrescenteTresAnos;
+	public void setMultiplosFundamentalistas(MultiplosFundamentalistas multiplosFundamentalistas) {
+		this.multiplosFundamentalistas = multiplosFundamentalistas;
+	}
+
+	public DesempenhoFinanceiro getDesempenhoFinanceiro() {
+		return desempenhoFinanceiro;
+	}
+
+	public void setDesempenhoFinanceiro(DesempenhoFinanceiro desempenhoFinanceiro) {
+		this.desempenhoFinanceiro = desempenhoFinanceiro;
+	}
+
+	public Long getPatrimonioLiquido() {
+		return patrimonioLiquido;
+	}
+
+	public void setPatrimonioLiquido(Long patrimonioLiquido) {
+		this.patrimonioLiquido = patrimonioLiquido;
+	}
+
+	public Long getDividaBruta() {
+		return dividaBruta;
+	}
+
+	public void setDividaBruta(Long dividaBruta) {
+		this.dividaBruta = dividaBruta;
+	}
+
+	public Long getCaixaDisponivel() {
+		return caixaDisponivel;
+	}
+
+	public void setCaixaDisponivel(Long caixaDisponivel) {
+		this.caixaDisponivel = caixaDisponivel;
+	}
+
+	public Long getQtdPapeis() {
+		return qtdPapeis;
+	}
+
+	public void setQtdPapeis(Long qtdPapeis) {
+		this.qtdPapeis = qtdPapeis;
+	}
+
+	public Double getCotacao() {
+		return cotacao;
+	}
+
+	public void setCotacao(Double cotacao) {
+		this.cotacao = cotacao;
 	}
 	
-	public Double getMediaPrecoSobreLucro() {
-		return mediaPrecoSobreLucro;
-	}
-
-	public void setMediaPrecoSobreLucro(Double mediaPrecoSobreLucro) {
-		this.mediaPrecoSobreLucro = mediaPrecoSobreLucro;
-	}
-
-	public Double getMediaPrecoSobreValorPatrimonial() {
-		return mediaPrecoSobreValorPatrimonial;
-	}
-
-	public void setMediaPrecoSobreValorPatrimonial(Double mediaPrecoSobreValorPatrimonial) {
-		this.mediaPrecoSobreValorPatrimonial = mediaPrecoSobreValorPatrimonial;
-	}
 
 	@Override
 	public int compareTo(Balanco outroBalanco) {
@@ -229,5 +180,4 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return this.data.compareTo(outroBalanco.getData());
 	}
 
-	
 }
