@@ -1,6 +1,8 @@
 package com.bolsavalores.services.impl;
 
 import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,7 +44,7 @@ public class BalancoServiceImpl implements BalancoService{
 	
 		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores));
 		
-		MultiplosFundamentalistas multiplos = new MultiplosFundamentalistas();
+		MultiplosFundamentalistas multiplos = balanco.getMultiplosFundamentalistas() != null ? balanco.getMultiplosFundamentalistas() : new MultiplosFundamentalistas();
 		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getLucroLiquidoAnual()));
 		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getPatrimonioLiquido()));
 		multiplos.setRoe(calculadoraFundamentalista.getRoe(balanco.getLucroLiquidoAnual(), balanco.getPatrimonioLiquido()));
@@ -52,7 +54,7 @@ public class BalancoServiceImpl implements BalancoService{
 		multiplos.setMediaPrecoSobreValorPatrimonial(calculadoraFundamentalista.getMediaPrecoSobreValorPatrimonial(balanco, multiplos.getPrecoSobreValorPatrimonial(), balancosAnteriores));
 		balanco.setMultiplosFundamentalistas(multiplos);
 		
-		DesempenhoFinanceiro desempenho = new DesempenhoFinanceiro();
+		DesempenhoFinanceiro desempenho = balanco.getDesempenhoFinanceiro() != null ? balanco.getDesempenhoFinanceiro() : new DesempenhoFinanceiro();
 		desempenho.setEvolucaoLucroLiquidoTrimestral(calculadoraFundamentalista.getEvolucaoLucroLiquidoTrimestral(balanco, balancosAnteriores));
 		desempenho.setEvolucaoLucroLiquidoAnual(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
 		desempenho.setEvolucaoDividaLiquidaAnual(calculadoraFundamentalista.getEvolucaoDividaLiquidaAnual(balanco, balancosAnteriores));
@@ -62,7 +64,23 @@ public class BalancoServiceImpl implements BalancoService{
 		balanco.setDesempenhoFinanceiro(desempenho);
 		
 		balanco.setNota(calculadoraFundamentalista.getNota(balanco));
+		balanco.setTrimestre(getTrimestre(balanco.getData()));
 		
 		return balancoRepository.save(balanco);
+	}
+	
+	private String getTrimestre(LocalDate data) {
+		Month mes = data.getMonth();
+		
+		if(mes.name().equals(Month.APRIL.name()) || mes.name().equals(Month.MAY.name()))
+			return "1T" + data.getYear();
+		else if(mes.name().equals(Month.JULY.name()) || mes.name().equals(Month.AUGUST.name()))
+			return "2T" + data.getYear();
+		else if(mes.name().equals(Month.OCTOBER.name()) || mes.name().equals(Month.NOVEMBER.name()))
+			return "3T" + data.getYear();
+		else if(mes.name().equals(Month.FEBRUARY.name()) || mes.name().equals(Month.MARCH.name()))
+			return "4T" + (data.getYear() - 1);
+		else
+			return "";
 	}
 }

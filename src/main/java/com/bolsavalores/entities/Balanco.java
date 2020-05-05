@@ -55,9 +55,12 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="qtdpapeis")
 	private Long qtdPapeis;
 	
+	@Column(name="justificativa_nota")
+	private String justificativaNota;
+	
 	private Double cotacao;
 	
-	private int trimestre;
+	private String trimestre;
 	
 	private int nota;
 	
@@ -109,11 +112,11 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.lucroLiquidoAnual = lucroLiquidoAnual;
 	}
 
-	public int getTrimestre() {
+	public String getTrimestre() {
 		return trimestre;
 	}
 
-	public void setTrimestre(int trimestre) {
+	public void setTrimestre(String trimestre) {
 		this.trimestre = trimestre;
 	}
 
@@ -168,12 +171,19 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public Double getCotacao() {
 		return cotacao;
 	}
+	
+	public String getJustificativaNota() {
+		return justificativaNota;
+	}
 
+	public void setJustificativaNota(String justificativaNota) {
+		this.justificativaNota = justificativaNota;
+	}
+	
 	public void setCotacao(Double cotacao) {
 		this.cotacao = cotacao;
 	}
 	
-
 	@Override
 	public int compareTo(Balanco outroBalanco) {
 		// TODO Auto-generated method stub

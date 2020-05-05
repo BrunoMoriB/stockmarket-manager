@@ -84,7 +84,7 @@ public class CalculadoraFundamentalista {
 		
 		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
 		List<Balanco> balancosAnteriores = balancos.stream()
-				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
+				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistas().getPrecoSobreLucro() != null)
 				.collect(Collectors.toList());
 		
 		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
@@ -115,44 +115,70 @@ public class CalculadoraFundamentalista {
 	
 	public int getNota(Balanco balanco) {
 		int nota = 0;
+		String justificativa = "A empresa aprensenta: \r\n";
 		
-		if(!isDadosBalancoValidos(balanco))
+		if(!isDadosBalancoValidos(balanco)) {
+			balanco.setJustificativaNota("Este balanço não possui informações suficientes para darmos uma Nota.");
 			return nota;
+		}
 		
-		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoLucroLiquidoTresTrimestres())
+		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoLucroLiquidoTresTrimestres()) {
+			justificativa+="- Crescimentos do Lucro Líquido nos três últimos trimestres (+2 pts); \r\n";
 			nota+=2;
+		}
 		
-		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoLucroLiquidoTresAnos())
+		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoLucroLiquidoTresAnos()) {
+			justificativa+="- Crescimentos do Lucro Líquido nos últimos três anos (+2 pts); \r\n";
 			nota+=2;
+		}
 		
-		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoDividaLiquidaTresAnos())
+		if(balanco.getDesempenhoFinanceiro().getHasCrescimentoDividaLiquidaTresAnos()) {
+			justificativa+="- Crescimentos da Dívida Líquida nos últimos três anos (-2 pts); \r\n";
 			nota-=2;
+		}
 		
-		if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 10)
+		if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 10) {
+			justificativa+="- Relação entre Preço(cotação) e Lucro Líquido anual excelente, não ultrapassando a faixa de 10 (+2 pts); \r\n";
 			nota+=2;
-		else if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 13)
+		}else if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 13) {
+			justificativa+="- Boa relação entre Preço(cotação) e Lucro Líquido anual, não ultrapassando a faixa de 13 (+1 pts); \r\n";
 			nota+=1;
+		}
 		
-		if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 1.6)
+		if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 1.6) {
+			justificativa+="- Uma excelente relação entre Preço(cotação) e Patrimônio Líquido, não ultrapassando a faixa de 1.6 (+2 pts); \r\n";
 			nota+=2;
-		else if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 2.3)
+		}else if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 2.3) {
+			justificativa+="- Uma boa relação entre Preço(cotação) e Patrimônio Líquido, não ultrapassando a faixa de 2.3 (+1 pts); \r\n";
 			nota+=1;
+		}
 		
-		if(balanco.getMultiplosFundamentalistas().getRoe() >= 20)
+		if(balanco.getMultiplosFundamentalistas().getRoe() >= 20) {
+			justificativa+="- Retorno sobre Patrimônio Líquido(ROE) muito bom, acima de 20% (+2 pts); \r\n";
 			nota+=2;
-		else if(balanco.getMultiplosFundamentalistas().getRoe() >= 10)
+		}else if(balanco.getMultiplosFundamentalistas().getRoe() >= 10) {
+			justificativa+="- Um belo Retorno sobre Patrimônio Líquido(ROE), acima de 10% (+1 pts); \r\n";
 			nota+=1;
+		}
 		
-		if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.4)
+		if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.4) {
+			justificativa+="- Relação entre a Dívida bruta perante o Patrimônio Líquido excelente, ficando abaixo de 40% (+2 pts); \r\n";
 			nota+=2;
-		else if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.8)
+		}else if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.8) {
+			justificativa+="- Boa relação entre a Dívida bruta perante o Patrimônio Líquido, ficando abaixo de 80% (+1 pts); \r\n";
 			nota+=1;
+		}
 		
-		if(balanco.getMultiplosFundamentalistas().getDividaliquida() < 0)
+		if(balanco.getMultiplosFundamentalistas().getDividaliquida() < 0) {
+			justificativa+="- Dívida Líquida negativa, o que significa ter mais dinheiro disponível em Caixa do que em Dívida bruta (+2 pts); \r\n";
 			nota+=2;
-		else if(balanco.getMultiplosFundamentalistas().getDividaliquida() == 0)
+		}else if(balanco.getMultiplosFundamentalistas().getDividaliquida() == 0) {
+			justificativa+="- Uma Dívida Líquida praticamente zerada, o que significa ter um valor disponível em Caixa igual em Dívida bruta (+1 pts); \r\n";
 			nota+=1;
-
+		}
+		
+		balanco.setJustificativaNota(justificativa);
+		
 		return nota;
 	}
 	
@@ -290,15 +316,11 @@ public class CalculadoraFundamentalista {
 	
 	private boolean verificaDatasBalancosAnteriores(Balanco balanco, Set<String> listTrimestres) {
 		String resultado = listTrimestres.stream()
-					.filter(t -> teste(t, balanco))
+					.filter(t -> t.split("/")[0].equals(String.valueOf(balanco.getData().getYear())) && t.split("/")[1].equals(String.valueOf(balanco.getData().getMonthValue())))
 					.findAny()
 					.orElse(null);
 		
 		return resultado != null ? true : false;
-	}
-	
-	private Boolean teste(String t, Balanco balanco) {
-		return t.split("/")[0].equals(String.valueOf(balanco.getData().getYear())) && t.split("/")[1].equals(String.valueOf(balanco.getData().getMonthValue()));
 	}
 	
 	private Set<String> getSetAnosAnteriores(LocalDate data, Set<String> setAno){
@@ -320,7 +342,7 @@ public class CalculadoraFundamentalista {
 		int ano = data.getYear();
 		 
 		if(mes <= 0) {
-			mes = 12;
+			mes = 11;
 			ano = ano - 1;
 		}
 		
