@@ -34,8 +34,8 @@ public class MultiplosFundamentalistas implements Serializable{
 	@Column(name="dividabruta_patrimonioliquido")
 	private Double dividaBrutaSobrePatrimonioLiquido;
 	
-	@Column(name="dividaliquida")
-	private Long dividaliquida;
+	@Column(name="caixadisponivel_dividabruta")
+	private Double caixaDisponivelSobreDividaBruta;
 
 	public Double getPrecoSobreLucro() {
 		return precoSobreLucro;
@@ -85,19 +85,19 @@ public class MultiplosFundamentalistas implements Serializable{
 		this.dividaBrutaSobrePatrimonioLiquido = dividaBrutaSobrePatrimonioLiquido;
 	}
 
-	public Long getDividaliquida() {
-		return dividaliquida;
-	}
-
-	public void setDividaliquida(Long dividaliquida) {
-		this.dividaliquida = dividaliquida;
-	}
-
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Double getCaixaDisponivelSobreDividaBruta() {
+		return caixaDisponivelSobreDividaBruta;
+	}
+
+	public void setCaixaDisponivelSobreDividaBruta(Double caixaDisponivelSobreDividaBruta) {
+		this.caixaDisponivelSobreDividaBruta = caixaDisponivelSobreDividaBruta;
 	}
 }

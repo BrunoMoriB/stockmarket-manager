@@ -58,6 +58,9 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="justificativa_nota")
 	private String justificativaNota;
 	
+	@Column(name="isdailyupdated")
+	private boolean dailyUpdated;
+	
 	private Double cotacao;
 	
 	private String trimestre;
@@ -183,11 +186,23 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public void setCotacao(Double cotacao) {
 		this.cotacao = cotacao;
 	}
+
+	public boolean isDailyUpdated() {
+		return dailyUpdated;
+	}
+
+	public void setDailyUpdated(boolean isDailyUpdated) {
+		this.dailyUpdated = isDailyUpdated;
+	}
 	
 	@Override
 	public int compareTo(Balanco outroBalanco) {
 		// TODO Auto-generated method stub
-		return this.data.compareTo(outroBalanco.getData());
+		if(this.dailyUpdated)
+			return 0;
+		else if(outroBalanco.isDailyUpdated())
+			return 1;
+		else		
+			return this.data.compareTo(outroBalanco.getData());
 	}
-
 }

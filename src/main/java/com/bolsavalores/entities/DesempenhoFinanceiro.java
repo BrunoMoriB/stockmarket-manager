@@ -23,17 +23,11 @@ public class DesempenhoFinanceiro implements Serializable{
 	@Column(name="evolucaolucroliquido_anual")
 	private Double evolucaoLucroLiquidoAnual;
 	
-	@Column(name="evolucaodividaliquida_anual")
-	private Double evolucaoDividaLiquidaAnual;
-	
-	@Column(name="hascrescimentolucroliquido_trestrimestres")
-	private Boolean hasCrescimentoLucroLiquidoTresTrimestres;
+	@Column(name="hasquedalucroliquido_trestrimestres")
+	private Boolean hasQuedaLucroLiquidoTresTrimestres;
 	
 	@Column(name="hascrescimentolucroliquido_tresanos")
 	private Boolean hasCrescimentoLucroLiquidoTresAnos;
-	
-	@Column(name="hascrescimentodividaliquida_tresanos")
-	private Boolean hasCrescimentoDividaLiquidaTresAnos;
 
 	public Double getEvolucaoLucroLiquidoTrimestral() {
 		return evolucaoLucroLiquidoTrimestral;
@@ -51,22 +45,6 @@ public class DesempenhoFinanceiro implements Serializable{
 		this.evolucaoLucroLiquidoAnual = evolucaoLucroLiquidoAnual;
 	}
 
-	public Double getEvolucaoDividaLiquidaAnual() {
-		return evolucaoDividaLiquidaAnual;
-	}
-
-	public void setEvolucaoDividaLiquidaAnual(Double evolucaoDividaLiquidaAnual) {
-		this.evolucaoDividaLiquidaAnual = evolucaoDividaLiquidaAnual;
-	}
-
-	public Boolean getHasCrescimentoLucroLiquidoTresTrimestres() {
-		return hasCrescimentoLucroLiquidoTresTrimestres;
-	}
-
-	public void setHasCrescimentoLucroLiquidoTresTrimestres(Boolean hasCrescimentoLucroLiquidoTresTrimestres) {
-		this.hasCrescimentoLucroLiquidoTresTrimestres = hasCrescimentoLucroLiquidoTresTrimestres;
-	}
-
 	public Boolean getHasCrescimentoLucroLiquidoTresAnos() {
 		return hasCrescimentoLucroLiquidoTresAnos;
 	}
@@ -75,19 +53,19 @@ public class DesempenhoFinanceiro implements Serializable{
 		this.hasCrescimentoLucroLiquidoTresAnos = hasCrescimentoLucroLiquidoTresAnos;
 	}
 
-	public Boolean getHasCrescimentoDividaLiquidaTresAnos() {
-		return hasCrescimentoDividaLiquidaTresAnos;
-	}
-
-	public void setHasCrescimentoDividaLiquidaTresAnos(Boolean hasCrescimentoDividaLiquidaTresAnos) {
-		this.hasCrescimentoDividaLiquidaTresAnos = hasCrescimentoDividaLiquidaTresAnos;
-	}
-
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Boolean getHasQuedaLucroLiquidoTresTrimestres() {
+		return hasQuedaLucroLiquidoTresTrimestres;
+	}
+
+	public void setHasQuedaLucroLiquidoTresTrimestres(Boolean hasQuedaLucroLiquidoTresTrimestres) {
+		this.hasQuedaLucroLiquidoTresTrimestres = hasQuedaLucroLiquidoTresTrimestres;
 	}
 }
