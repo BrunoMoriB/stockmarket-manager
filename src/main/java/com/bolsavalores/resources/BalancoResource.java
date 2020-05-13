@@ -1,6 +1,7 @@
 package com.bolsavalores.resources;
 
 import java.text.ParseException;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import com.bolsavalores.entities.Balanco;
 import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 @CrossOrigin
 @RestController
@@ -45,8 +47,16 @@ public class BalancoResource {
 	}
 
 	@GetMapping("/buscaPorAcaoId")
-	public List<Balanco> buscaBalancosByAcaoId(@RequestParam long acaoId){
-		return balancoRepository.findByAcaoId(acaoId);
+	public ResponseEntity<String> buscaBalancosByAcaoId(@RequestParam long acaoId){
+		try {
+			List<Balanco> balancos = balancoRepository.findByAcaoId(acaoId);
+			Collections.sort(balancos);
+			return ResponseEntity.ok(jsonConverter.toJson(balancos));
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return new ResponseEntity<String>("Não foi possível buscar os Balancos. ", HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	@GetMapping("/buscaBalancosRecalculados")

@@ -3,38 +3,22 @@ package com.bolsavalores.services.impl;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.json.GsonHttpMessageConverter;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import com.bolsavalores.clients.B3Client;
-import com.bolsavalores.entities.Acao;
 import com.bolsavalores.entities.Balanco;
 import com.bolsavalores.entities.DesempenhoFinanceiro;
 import com.bolsavalores.entities.MultiplosFundamentalistas;
-import com.bolsavalores.entities.b3.DailyFluctuationHistory;
 import com.bolsavalores.entities.b3.LstQtn;
 import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 @Service
 public class BalancoServiceImpl implements BalancoService{
@@ -95,7 +79,6 @@ public class BalancoServiceImpl implements BalancoService{
 		DesempenhoFinanceiro desempenho = balanco.getDesempenhoFinanceiro() != null ? balanco.getDesempenhoFinanceiro() : new DesempenhoFinanceiro();
 		desempenho.setEvolucaoLucroLiquidoTrimestral(calculadoraFundamentalista.getEvolucaoLucroLiquidoTrimestral(balanco, balancosAnteriores));
 		desempenho.setEvolucaoLucroLiquidoAnual(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
-		desempenho.setHasQuedaLucroLiquidoTresTrimestres(calculadoraFundamentalista.getHasQuedaLucroLiquidoTresTrimestres(balanco, balancosAnteriores, desempenho.getEvolucaoLucroLiquidoTrimestral()));
 		desempenho.setHasCrescimentoLucroLiquidoTresAnos(calculadoraFundamentalista.hasLucroCrescenteTresAnos(balanco, balancosAnteriores));
 		balanco.setDesempenhoFinanceiro(desempenho);
 		
@@ -127,7 +110,6 @@ public class BalancoServiceImpl implements BalancoService{
 		desempenho.setEvolucaoLucroLiquidoAnual(ultimoBalanco.getDesempenhoFinanceiro().getEvolucaoLucroLiquidoAnual());
 		desempenho.setEvolucaoLucroLiquidoTrimestral(ultimoBalanco.getDesempenhoFinanceiro().getEvolucaoLucroLiquidoTrimestral());
 		desempenho.setHasCrescimentoLucroLiquidoTresAnos(ultimoBalanco.getDesempenhoFinanceiro().getHasCrescimentoLucroLiquidoTresAnos());
-		desempenho.setHasQuedaLucroLiquidoTresTrimestres(ultimoBalanco.getDesempenhoFinanceiro().getHasQuedaLucroLiquidoTresTrimestres());
 		balancoDailyUpdate.setDesempenhoFinanceiro(desempenho);
 		
 		MultiplosFundamentalistas multiplos = balancoDailyUpdate.getMultiplosFundamentalistas() != null ? balancoDailyUpdate.getMultiplosFundamentalistas() : new MultiplosFundamentalistas();

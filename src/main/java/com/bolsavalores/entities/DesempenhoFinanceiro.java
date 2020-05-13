@@ -23,9 +23,6 @@ public class DesempenhoFinanceiro implements Serializable{
 	@Column(name="evolucaolucroliquido_anual")
 	private Double evolucaoLucroLiquidoAnual;
 	
-	@Column(name="hasquedalucroliquido_trestrimestres")
-	private Boolean hasQuedaLucroLiquidoTresTrimestres;
-	
 	@Column(name="hascrescimentolucroliquido_tresanos")
 	private Boolean hasCrescimentoLucroLiquidoTresAnos;
 
@@ -59,13 +56,5 @@ public class DesempenhoFinanceiro implements Serializable{
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public Boolean getHasQuedaLucroLiquidoTresTrimestres() {
-		return hasQuedaLucroLiquidoTresTrimestres;
-	}
-
-	public void setHasQuedaLucroLiquidoTresTrimestres(Boolean hasQuedaLucroLiquidoTresTrimestres) {
-		this.hasQuedaLucroLiquidoTresTrimestres = hasQuedaLucroLiquidoTresTrimestres;
 	}
 }

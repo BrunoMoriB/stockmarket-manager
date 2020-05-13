@@ -63,6 +63,9 @@ public class CalculadoraFundamentalista {
 	}
 	
 	public Double getCaixaDisponivelSobreDividaBruta(long caixaDisponivel, long dividaBruta) throws ParseException{
+		if(dividaBruta == 0)
+			dividaBruta = 1L;
+		
 		double caixaDisponivelDouble = caixaDisponivel;
 		double dividaBrutaDouble     = dividaBruta;
 		
@@ -135,7 +138,7 @@ public class CalculadoraFundamentalista {
 		}
 		
 		if(!validaRequisitosMinimos(balanco.getMultiplosFundamentalistas(), balanco.getDesempenhoFinanceiro())) {
-			balanco.setJustificativaNota("Este balanço não possui os requisítos mínimos (ROE acima de 10%, dívida equilibrada e desempenho do Lucro Líquido dos últimos períodos satisfatório). ");
+			balanco.setJustificativaNota("Este balanço não possui os requisítos mínimos necessários. \r\n - ROE acima de 10%; \r\n - Dívida equilibrada não ultrapassando 80% do valor do Patrimônio; \r\n - Lucro Líquido crescente nos últimos três anos; ");
 			return nota;
 		}
 		
@@ -193,39 +196,8 @@ public class CalculadoraFundamentalista {
 		
 		if(!desempenho.getHasCrescimentoLucroLiquidoTresAnos())
 			return false;
-		
-		if(desempenho.getHasQuedaLucroLiquidoTresTrimestres())
-			return false;
 					
 		return true;
-	}
-	
- 	public Boolean getHasQuedaLucroLiquidoTresTrimestres(Balanco balanco, List<Balanco> balancos, Double evolucaoLucroLiquidoTrimestralCorrente) {
-		Set<String> setTrimestres 	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 2);
-		List<Balanco> balancosAnteriores = balancos.stream()
-					.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
-					.collect(Collectors.toList());
-		
-		boolean isLucroCaindoUm   = false;
-		boolean isLucroCaindoDois = false;
-		boolean isLucroCaindoTres = false; 
-		
-		if(evolucaoLucroLiquidoTrimestralCorrente == null)
-			return null;
-		else
-			isLucroCaindoUm = evolucaoLucroLiquidoTrimestralCorrente < -0.08;
-			
-		if(balancosAnteriores.size() < 1 || balancosAnteriores.get(0).getDesempenhoFinanceiro().getEvolucaoLucroLiquidoTrimestral() == null)
-			return null;
-		else
-			isLucroCaindoDois = balancosAnteriores.get(0).getDesempenhoFinanceiro().getEvolucaoLucroLiquidoTrimestral() < -0.08;
-		
-		if(balancosAnteriores.size() < 2 || balancosAnteriores.get(1).getDesempenhoFinanceiro().getEvolucaoLucroLiquidoTrimestral() == null)
-			return null;
-		else
-			isLucroCaindoTres = balancosAnteriores.get(1).getDesempenhoFinanceiro().getEvolucaoLucroLiquidoTrimestral() < -0.08;
-		
-		return isLucroCaindoUm && isLucroCaindoDois && isLucroCaindoTres;
 	}
 	
 	public Boolean hasLucroCrescenteTresAnos(Balanco balanco, List<Balanco> balancos) {
@@ -344,7 +316,6 @@ public class CalculadoraFundamentalista {
 			   multiplos.getRoe() != null && multiplos.getDividaBrutaSobrePatrimonioLiquido() != null &&
 			   multiplos.getPrecoSobreLucro() != null && multiplos.getPrecoSobreValorPatrimonial() != null &&
 			   multiplos.getCaixaDisponivelSobreDividaBruta() != null &&
-			   desempenho.getHasQuedaLucroLiquidoTresTrimestres() != null &&
 			   desempenho.getHasCrescimentoLucroLiquidoTresAnos() != null ?
 					   true : false;
 	}

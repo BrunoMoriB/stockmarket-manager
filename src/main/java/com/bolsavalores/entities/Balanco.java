@@ -199,9 +199,9 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public int compareTo(Balanco outroBalanco) {
 		// TODO Auto-generated method stub
 		if(this.dailyUpdated)
-			return 0;
-		else if(outroBalanco.isDailyUpdated())
 			return 1;
+		else if(outroBalanco.isDailyUpdated())
+			return -1;
 		else		
 			return this.data.compareTo(outroBalanco.getData());
 	}
