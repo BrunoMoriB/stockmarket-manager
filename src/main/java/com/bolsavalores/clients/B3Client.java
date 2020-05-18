@@ -8,8 +8,8 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.bolsavalores.entities.b3.DailyFluctuationHistory;
-import com.bolsavalores.entities.b3.LstQtn;
+import com.bolsavalores.models.b3.DailyFluctuationHistory;
+import com.bolsavalores.models.b3.LstQtn;
 
 @Component
 public class B3Client {

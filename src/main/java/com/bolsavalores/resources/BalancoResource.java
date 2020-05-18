@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bolsavalores.entities.Balanco;
 import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Balanco;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 import com.fasterxml.jackson.core.JsonProcessingException;

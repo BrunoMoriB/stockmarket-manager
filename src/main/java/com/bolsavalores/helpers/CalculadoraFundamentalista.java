@@ -13,9 +13,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
-import com.bolsavalores.entities.Balanco;
-import com.bolsavalores.entities.DesempenhoFinanceiro;
-import com.bolsavalores.entities.MultiplosFundamentalistas;
+import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.DesempenhoFinanceiro;
+import com.bolsavalores.models.MultiplosFundamentalistas;
 
 @Component
 public class CalculadoraFundamentalista {
