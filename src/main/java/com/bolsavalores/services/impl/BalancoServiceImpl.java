@@ -11,12 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bolsavalores.clients.B3Client;
-import com.bolsavalores.entities.Balanco;
-import com.bolsavalores.entities.DesempenhoFinanceiro;
-import com.bolsavalores.entities.MultiplosFundamentalistas;
-import com.bolsavalores.entities.b3.LstQtn;
 import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.DesempenhoFinanceiro;
+import com.bolsavalores.models.MultiplosFundamentalistas;
+import com.bolsavalores.models.b3.LstQtn;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 

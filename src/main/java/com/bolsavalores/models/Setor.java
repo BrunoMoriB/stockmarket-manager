@@ -1,4 +1,4 @@
-package com.bolsavalores.entities;
+package com.bolsavalores.models;
 
 import java.io.Serializable;
 

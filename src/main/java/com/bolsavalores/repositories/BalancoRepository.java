@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.bolsavalores.entities.Balanco;
+import com.bolsavalores.models.Balanco;
 
 
 public interface BalancoRepository extends JpaRepository<Balanco, Long>{
