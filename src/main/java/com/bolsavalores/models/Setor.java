@@ -17,7 +17,6 @@ public class Setor implements Serializable, Comparable<Setor> {
 	private long id;
 	
 	private String nome;
-	private String subsetor;
 
 	public long getId() {
 		return id;
@@ -35,17 +34,8 @@ public class Setor implements Serializable, Comparable<Setor> {
 		this.nome = nome;
 	}
 	
-	public String getSubsetor() {
-		return subsetor;
-	}
-
-	public void setSubsetor(String subsetor) {
-		this.subsetor = subsetor;
-	}
-
 	@Override
 	public int compareTo(Setor outroSetor) {
-		// TODO Auto-generated method stub
 		return this.nome.compareTo(outroSetor.nome);
 	}
 }

@@ -16,8 +16,6 @@ public class Acao implements Serializable, Comparable<Acao> {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
-
-	private String nome;
 	private String codigo;
 	private long quantidade;
 	
@@ -31,12 +29,6 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	public String getCodigo() {
 		return codigo;
 	}
@@ -49,21 +41,14 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public void setQuantidade(long quantidade) {
 		this.quantidade = quantidade;
 	}
-	public Setor getSetor() {
-		return setor;
-	}
-	public void setSetor(Setor setor) {
-		this.setor = setor;
-	}
 	
 	@Override
 	public String toString() {
-		return this.nome + " - " + this.codigo;
+		return this.codigo;
 	}
 	
 	@Override
 	public int compareTo(Acao outraAcao) {
-		// TODO Auto-generated method stub
-		return this.nome.compareTo(outraAcao.nome);
+		return this.codigo.compareTo(outraAcao.codigo);
 	}
 }

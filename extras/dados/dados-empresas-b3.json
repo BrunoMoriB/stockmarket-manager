@@ -1,0 +1,5704 @@
+[
+    {
+        "razao_social": "ADVANCED DIGITAL HEALTH MEDICINA PREVENTIVA S.A.",
+        "nome_empresa": "ADVANCED-DH",
+        "cnpj": "10.345.009/0001-98",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Serv. de Medicina Preventiva",
+            "Com\u00e9rcio. Distribui\u00e7\u00e3o. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Kits de Teste Laboratorial",
+            "Intermedia\u00e7\u00e3o de Neg.",
+            "Licenciamento de Marcas E Franquias",
+            "Etc."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "ADHM3"
+        ]
+    },
+    {
+        "razao_social": "AES TIETE ENERGIA SA",
+        "nome_empresa": "AES TIETE E",
+        "cnpj": "04.128.563/0001-10",
+        "atividades": [
+            "Gera\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "TIET11",
+            "TIET3",
+            "TIET4"
+        ]
+    },
+    {
+        "razao_social": "AFLUENTE TRANSMISS\u00c3O DE ENERGIA EL\u00c9TRICA S/A",
+        "nome_empresa": "AFLUENTE T",
+        "cnpj": "10.338.320/0001-00",
+        "atividades": [
+            "Transmiss\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "AFLT3"
+        ]
+    },
+    {
+        "razao_social": "ALEF S.A.",
+        "nome_empresa": "ALEF S/A",
+        "cnpj": "02.217.319/0001-07",
+        "atividades": [
+            "Holding - Participa\u00e7\u00e3o em Outras Sociedades"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "ALEF3B"
+        ]
+    },
+    {
+        "razao_social": "ALFA HOLDINGS S.A.",
+        "nome_empresa": "ALFA HOLDING",
+        "cnpj": "17.167.396/0001-69",
+        "atividades": [
+            "Emp. Adm. Part. - Intermedia\u00e7\u00e3o Financeira"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "RPAD3",
+            "RPAD5",
+            "RPAD6"
+        ]
+    },
+    {
+        "razao_social": "ALIANSCE SONAE SHOPPING CENTERS S.A.",
+        "nome_empresa": "ALIANSCSONAE",
+        "cnpj": "05.878.397/0001-32",
+        "atividades": [
+            "Planejamento. Desenvolvimento. Implanta\u00e7\u00e3o E Investimentos Na \u00e1rea Imobili\u00e1ria. Nomeadamente em Shopping Centers E A Participa\u00e7\u00e3o em Outras Sociedades E/ou em Fundos de Investimento Imobili\u00e1rio."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "ALSO3"
+        ]
+    },
+    {
+        "razao_social": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
+        "nome_empresa": "ESTAPAR",
+        "cnpj": "60.537.263/0001-66",
+        "atividades": [
+            "Outras Atividades de Publicidade N\u00e3o Especificadas Anteriormente",
+            "Gest\u00e3o de Ativos Intang\u00edveis N\u00e3o-financeiros",
+            "Outras Atividades de Servi\u00e7os Pessoais N\u00e3o Especificadas Anteriormente."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "ALPK3"
+        ]
+    },
+    {
+        "razao_social": "ALPARGATAS S.A.",
+        "nome_empresa": "ALPARGATAS",
+        "cnpj": "61.079.117/0001-05",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Cal\u00e7ados E Artigos Esportivos"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "ALPA3",
+            "ALPA4"
+        ]
+    },
+    {
+        "razao_social": "ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.",
+        "nome_empresa": "ALPER S.A.",
+        "cnpj": "11.721.921/0001-60",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social A Corretagem E Administra\u00e7\u00e3o de Seguros de Todos Os Ramos. Participa\u00e7\u00e3o No Capital Social de Outras Sociedades E Presta\u00e7\u00e3o de Servi\u00e7os de Consultoria Empresarial."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Corretoras de Seguros"
+        ],
+        "codigos_negociacao": [
+            "APER3"
+        ]
+    },
+    {
+        "razao_social": "ALUPAR INVESTIMENTO S/A",
+        "nome_empresa": "ALUPAR",
+        "cnpj": "08.364.948/0001-38",
+        "atividades": [
+            "A Participa\u00e7\u00e3o em Outras Sociedades Atuantes Nos Setores de Energia E Infra-estrutura. No Brasil Ou No Exterior",
+            "A Gera\u00e7\u00e3o. Transforma\u00e7\u00e3o. Transporte. A Distribui\u00e7\u00e3oe O Com\u00e9rcio de Energia."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ALUP11",
+            "ALUP3",
+            "ALUP4"
+        ]
+    },
+    {
+        "razao_social": "AMBEV S.A.",
+        "nome_empresa": "AMBEV S/A",
+        "cnpj": "07.526.557/0001-00",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Distribui\u00e7\u00e3o de Cervejas. Refrigerantes E Bebidas N\u00e3o Carbonatadas E N\u00e3o Alco\u00f3licas."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Bebidas",
+            "Cervejas e Refrigerantes"
+        ],
+        "codigos_negociacao": [
+            "ABEV3"
+        ]
+    },
+    {
+        "razao_social": "AMPLA ENERGIA E SERVICOS S.A.",
+        "nome_empresa": "AMPLA ENERG",
+        "cnpj": "33.050.071/0001-58",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CBEE3"
+        ]
+    },
+    {
+        "razao_social": "ANIMA HOLDING S.A.",
+        "nome_empresa": "ANIMA",
+        "cnpj": "09.288.252/0001-32",
+        "atividades": [
+            "Administra\u00e7\u00e3o. Direta Ou Indireta. de Atividade de Institui\u00e7\u00f5es de 3\u00ba E 4\u00ba Graus. Educa\u00e7\u00e3o Profissional."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Servi\u00e7os Educacionais"
+        ],
+        "codigos_negociacao": [
+            "ANIM3"
+        ]
+    },
+    {
+        "razao_social": "AREZZO IND\u00daSTRIA E COM\u00c9RCIO S.A.",
+        "nome_empresa": "AREZZO CO",
+        "cnpj": "16.590.234/0001-76",
+        "atividades": [
+            "O Principal Ramo de Atividade Da Companhia \u00c9 A Industrializa\u00e7\u00e3o E A Comercializa\u00e7\u00e3o de Artigos de Couro E de Pl\u00e1stico em Geral. Incluindo Sapatos. Bolsas E Acess\u00f3rios."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "ARZZ3"
+        ]
+    },
+    {
+        "razao_social": "ATACAD\u00c3O S.A.",
+        "nome_empresa": "CARREFOUR BR",
+        "cnpj": "75.315.333/0001-09",
+        "atividades": [
+            "Com\u00e9rcio Varejista E Atacadista de Mercadorias em Geral",
+            "Carga E Descarga",
+            "Correspondentes de Institui\u00e7\u00f5es Financeiras",
+            "Atividades de Teleatendimento",
+            "Servi\u00e7os de Alimenta\u00e7\u00e3o Entre Outros"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Alimentos"
+        ],
+        "codigos_negociacao": [
+            "CRFB3"
+        ]
+    },
+    {
+        "razao_social": "ATMA PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "ATMASA",
+        "cnpj": "04.032.433/0001-80",
+        "atividades": [
+            "A Atma Participa\u00e7\u00f5es S.A.. Nova Denomina\u00e7\u00e3o Da Liq Participa\u00e7\u00f5es S.A. Tem Como Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades Comerciais E Civis. Como S\u00f3cia. Acionista Ou Co"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "ATMP3"
+        ]
+    },
+    {
+        "razao_social": "ATOM EMPREENDIMENTOS E PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "ATOMPAR",
+        "cnpj": "00.359.742/0001-08",
+        "atividades": [
+            "Holding de Institui\u00e7\u00f5es N\u00e3o Financeiras."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "ATOM3"
+        ]
+    },
+    {
+        "razao_social": "AZEVEDO E TRAVASSOS S.A.",
+        "nome_empresa": "AZEVEDO",
+        "cnpj": "61.351.532/0001-68",
+        "atividades": [
+            "Execu\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Pesada Junto A Org\u00e3os P\u00fablicos"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Constru\u00e7\u00e3o Pesada"
+        ],
+        "codigos_negociacao": [
+            "AZEV3",
+            "AZEV4"
+        ]
+    },
+    {
+        "razao_social": "AZUL S.A.",
+        "nome_empresa": "AZUL",
+        "cnpj": "09.305.994/0001-29",
+        "atividades": [
+            "Transporte E Log\u00edstica"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte A\u00e9reo"
+        ],
+        "codigos_negociacao": [
+            "AZUL4"
+        ]
+    },
+    {
+        "razao_social": "B2W - COMPANHIA DIGITAL",
+        "nome_empresa": "B2W DIGITAL",
+        "cnpj": "00.776.574/0001-56",
+        "atividades": [
+            "Com\u00e9rcio Varejista E Atacadista em Geral de Quaisquer Bens E Servi\u00e7os Atrav\u00e9s de Diversos Meios. em Especial Da Internet. Sem Restri\u00e7\u00e3o A Outros Meios."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "codigos_negociacao": [
+            "BTOW3"
+        ]
+    },
+    {
+        "razao_social": "B3 S.A. - BRASIL. BOLSA. BALC\u00c3O",
+        "nome_empresa": "B3",
+        "cnpj": "09.346.601/0001-25",
+        "atividades": [
+            "Principais Atividades: Administrar Mercados Organizados de T\u00edtulos E Valores Mobili\u00e1rios",
+            "Prestar Servi\u00e7os de Registro. Compensa\u00e7\u00e3o E Liquida\u00e7\u00e3o E de Suporte \u00e0 Opera\u00e7\u00f5es de Financiamento"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos"
+        ],
+        "codigos_negociacao": [
+            "B3SA3"
+        ]
+    },
+    {
+        "razao_social": "BAHEMA EDUCA\u00c7\u00c3O S.A.",
+        "nome_empresa": "BAHEMA",
+        "cnpj": "45.987.245/0001-92",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os Educacionais. Diretamente Ou Por Meio de Participa\u00e7\u00e3o em Outras Sociedades. Nas \u00e1reas de Educa\u00e7\u00e3o Pr\u00e9-escolar. Infantil E B\u00e1sica (ensino Fundamental Ao Ensino M\u00e9dio)"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Servi\u00e7os Educacionais"
+        ],
+        "codigos_negociacao": [
+            "BAHI3"
+        ]
+    },
+    {
+        "razao_social": "BANCO BMG S.A.",
+        "nome_empresa": "BANCO BMG",
+        "cnpj": "61.186.680/0001-74",
+        "atividades": [
+            "Pr\u00e1tica de Todas As Opera\u00e7\u00f5es Ativas. Passivas E Acess\u00f3rias Permitidas Nas Normas Legais E Regulamentares Para O Funcionamento Dos Bancos Com Carteira Comercial. de Investimento. Inclusive C\u00e2mbio"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BMGB4"
+        ]
+    },
+    {
+        "razao_social": "BANCO INTER S.A.",
+        "nome_empresa": "BANCO INTER",
+        "cnpj": "00.416.968/0001-01",
+        "atividades": [
+            "Banco M\u00faltiplo Com Carteira de Cr\u00e9dito. Financiamento. Investimento E C\u00e2mbio."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BIDI11",
+            "BIDI3",
+            "BIDI4"
+        ]
+    },
+    {
+        "razao_social": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
+        "nome_empresa": "BANESTES",
+        "cnpj": "28.127.603/0001-78",
+        "atividades": [
+            "Intermedia\u00e7\u00e3o Financeira Inerente Aos Bancos M\u00faltiplos Por Meio Das Carteiras Autorizadas. Inclusive Opera\u00e7\u00f5es de C\u00e2mbio."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BEES3",
+            "BEES4"
+        ]
+    },
+    {
+        "razao_social": "BARDELLA S.A. INDUSTRIAS MECANICAS",
+        "nome_empresa": "BARDELLA",
+        "cnpj": "60.851.615/0001-53",
+        "atividades": [
+            "Bens de Capital. Produtos E Servi\u00e7os Para Os Segmentos de Metalurgia. Movimenta\u00e7\u00e3o de Materiais. \u00f3leo E G\u00e1s. Energia E A\u00e7os Laminados E Trefilados. Para Os Mercados Nacional E Internacional"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "BDLL3",
+            "BDLL4"
+        ]
+    },
+    {
+        "razao_social": "BATTISTELLA ADM PARTICIPACOES S.A.",
+        "nome_empresa": "BATTISTELLA",
+        "cnpj": "42.331.462/0001-31",
+        "atividades": [
+            "Com.de Caminh\u00f5es E \u00f3nibus Scania. Seus Acess\u00f3rios E Prest.serv.assist.t\u00e9cnica",
+            "Industrializ.e Com. de Madeiras",
+            "Presta\u00e7\u00e3o de Servi\u00e7os Sob A Forma de Trading Company",
+            "Partic. em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Com\u00e9rcio",
+            "Material de Transporte"
+        ],
+        "codigos_negociacao": [
+            "BTTL3"
+        ]
+    },
+    {
+        "razao_social": "BAUMER S.A.",
+        "nome_empresa": "BAUMER",
+        "cnpj": "61.374.161/0001-30",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o Aparelhos E Instrumentos P/ Uso Medico Hospitalar E Ortopedia"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Equipamentos"
+        ],
+        "codigos_negociacao": [
+            "BALM3",
+            "BALM4"
+        ]
+    },
+    {
+        "razao_social": "BB SEGURIDADE PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "BBSEGURIDADE",
+        "cnpj": "17.344.597/0001-94",
+        "atividades": [
+            "Participa\u00e7\u00e3o No Capital Social de Outras Sociedades. Que Tenham Por Atividade Opera\u00e7\u00f5es de Seguros. Resseguros. Previd\u00eancias Complementar Ou Capitaliza\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "BBSE3"
+        ]
+    },
+    {
+        "razao_social": "BBM LOGISTICA S.A.",
+        "nome_empresa": "BBMLOGISTICA",
+        "cnpj": "01.107.327/0001-20",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os Log\u00edsticos Atrav\u00e9s de Opera\u00e7\u00f5es Dedicadas E Transporte de Carga Geral Fracionada."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "BBML3"
+        ]
+    },
+    {
+        "razao_social": "BCO ABC BRASIL S.A.",
+        "nome_empresa": "ABC BRASIL",
+        "cnpj": "28.195.667/0001-06",
+        "atividades": [
+            "O Banco Tem Por Objeto A Pr\u00e1tica de Opera\u00e7\u00f5es Ativas. Passivas E Acess\u00f3rias Inerentes \u00e0s Respectivas Carteiras Autorizadas Pelo Banco Central Do Brasil."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "ABCB4"
+        ]
+    },
+    {
+        "razao_social": "BCO ALFA DE INVESTIMENTO S.A.",
+        "nome_empresa": "ALFA INVEST",
+        "cnpj": "60.770.336/0001-65",
+        "atividades": [
+            "Opera\u00e7\u00f5es Permitidas \u00e0 Sociedade Da Esp\u00e9cie em Lei. Atividades de Administra\u00e7\u00e3o de Carteira de Valores Mobili\u00e1rios. Consultoria de Valores Mobili\u00e1rios E Opera\u00e7\u00f5es de C\u00e2mbio."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BRIV3",
+            "BRIV4"
+        ]
+    },
+    {
+        "razao_social": "BCO AMAZONIA S.A.",
+        "nome_empresa": "AMAZONIA",
+        "cnpj": "04.902.979/0001-44",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BAZA3"
+        ]
+    },
+    {
+        "razao_social": "BCO BRADESCO S.A.",
+        "nome_empresa": "BRADESCO",
+        "cnpj": "60.746.948/0001-12",
+        "atividades": [
+            "Pr\u00e1tica de Opera\u00e7\u00f5es Banc\u00e1rias em Geral. Inclusive C\u00e2mbio"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BBDC3",
+            "BBDC4"
+        ]
+    },
+    {
+        "razao_social": "BCO BRASIL S.A.",
+        "nome_empresa": "BRASIL",
+        "cnpj": "00.000.000/0001-91",
+        "atividades": [
+            "Banco M\u00faltiplo"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BBAS11",
+            "BBAS12",
+            "BBAS3"
+        ]
+    },
+    {
+        "razao_social": "BCO BTG PACTUAL S.A.",
+        "nome_empresa": "BTGP BANCO",
+        "cnpj": "30.306.294/0001-45",
+        "atividades": [
+            "A Companhia E Suas Controladas Formam Um Grupo de Presta\u00e7\u00e3o de Servi\u00e7os Financeiros sediado No Brasil. Atuando Como Banco M\u00faltiplo. Com Carteira de Investimento. Nos Termos Da legisla\u00e7\u00e3o Aplic\u00e1vel."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BPAC11",
+            "BPAC3",
+            "BPAC5"
+        ]
+    },
+    {
+        "razao_social": "BCO ESTADO DE SERGIPE S.A. - BANESE",
+        "nome_empresa": "BANESE",
+        "cnpj": "13.009.717/0001-46",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BGIP3",
+            "BGIP4"
+        ]
+    },
+    {
+        "razao_social": "BCO ESTADO DO PARA S.A.",
+        "nome_empresa": "BANPARA",
+        "cnpj": "04.913.711/0001-08",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BPAR3"
+        ]
+    },
+    {
+        "razao_social": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
+        "nome_empresa": "BANRISUL",
+        "cnpj": "92.702.067/0001-96",
+        "atividades": [
+            "Banco M\u00faltiplo Atuante Nas Carteiras Comercial. Cr\u00e9dito. Financiamento E Investimento. Cr\u00e9dito Imobili\u00e1rio. Desenvolvimento E Arrendamento Mercantil E de Investimentos."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BRSR3",
+            "BRSR5",
+            "BRSR6"
+        ]
+    },
+    {
+        "razao_social": "BCO INDUSVAL S.A.",
+        "nome_empresa": "INDUSVAL",
+        "cnpj": "61.024.352/0001-71",
+        "atividades": [
+            "Banco M\u00faltiplo Que Concentra Seus Neg\u00f3cios em Produtos de Cr\u00e9dito Corporativo. em Moeda Nacional E Estrangeira. Bem Como Produtos de Repasse. Tesouraria E Servi\u00e7o de Assessoria Financeira A Empresas."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "IDVL3",
+            "IDVL4"
+        ]
+    },
+    {
+        "razao_social": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
+        "nome_empresa": "MERC INVEST",
+        "cnpj": "34.169.557/0001-72",
+        "atividades": [
+            "Investimentos / Financiamentos"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BMIN3",
+            "BMIN4"
+        ]
+    },
+    {
+        "razao_social": "BCO MERCANTIL DO BRASIL S.A.",
+        "nome_empresa": "MERC BRASIL",
+        "cnpj": "17.184.037/0001-10",
+        "atividades": [
+            "Finan\u00e7as. Banco M\u00faltiplo"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BMEB3",
+            "BMEB4"
+        ]
+    },
+    {
+        "razao_social": "BCO NORDESTE DO BRASIL S.A.",
+        "nome_empresa": "NORD BRASIL",
+        "cnpj": "07.237.373/0001-20",
+        "atividades": [
+            "Banco M\u00faltiplo Com Carteira Comercial"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BNBR3"
+        ]
+    },
+    {
+        "razao_social": "BCO PAN S.A.",
+        "nome_empresa": "BANCO PAN",
+        "cnpj": "59.285.411/0001-13",
+        "atividades": [
+            "Banco M\u00faltiplo Com Carteira Comercial"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BPAN4"
+        ]
+    },
+    {
+        "razao_social": "BCO PINE S.A.",
+        "nome_empresa": "PINE",
+        "cnpj": "62.144.175/0001-20",
+        "atividades": [
+            "Banco Regional Brasileiro. de Capital Aberto. Que H\u00e1 Mais de Vinte Anos Destaca-se em Financiar E Assessorar Grandes E M\u00e9dias Empresas."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "PINE3",
+            "PINE4"
+        ]
+    },
+    {
+        "razao_social": "BCO SANTANDER (BRASIL) S.A.",
+        "nome_empresa": "SANTANDER BR",
+        "cnpj": "90.400.888/0001-42",
+        "atividades": [
+            "Banco M\u00faltiplo Com Carteira Comercial"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "SANB11",
+            "SANB3",
+            "SANB4"
+        ]
+    },
+    {
+        "razao_social": "BETAPART PARTICIPACOES S.A.",
+        "nome_empresa": "BETAPART",
+        "cnpj": "02.762.124/0001-30",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "BETP3B"
+        ]
+    },
+    {
+        "razao_social": "BICICLETAS MONARK S.A.",
+        "nome_empresa": "BIC MONARK",
+        "cnpj": "56.992.423/0001-90",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Bicicletas"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Bicicletas"
+        ],
+        "codigos_negociacao": [
+            "BMKS3"
+        ]
+    },
+    {
+        "razao_social": "BIOMM S.A.",
+        "nome_empresa": "BIOMM",
+        "cnpj": "04.752.991/0001-10",
+        "atividades": [
+            "Licenciamento de Tecnologia Para Produ\u00e7\u00e3o de Prote\u00ednas Terap\u00eauticas Recombinantes. Especialmente Insulina."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "BIOM3",
+            "BIOM11"
+        ]
+    },
+    {
+        "razao_social": "BIOSEV S.A.",
+        "nome_empresa": "BIOSEV",
+        "cnpj": "15.527.906/0001-36",
+        "atividades": [
+            "Produ\u00e7\u00e3o. Processamento. Industrializa\u00e7\u00e3o. Distribui\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Cana\u0096de-a\u00e7\u00facar E seus Derivados. A\u00e7\u00facar E Etanol",
+            "Entre Outros."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "A\u00e7ucar e Alcool"
+        ],
+        "codigos_negociacao": [
+            "BSEV3"
+        ]
+    },
+    {
+        "razao_social": "BIOTOSCANA INVESTMENTS S.A.",
+        "nome_empresa": "BIOTOSCANA",
+        "cnpj": "19.688.956/0001-56",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "GBIO33"
+        ]
+    },
+    {
+        "razao_social": "BK BRASIL OPERA\u00c7\u00c3O E ASSESSORIA A RESTAURANTES SA",
+        "nome_empresa": "BK BRASIL",
+        "cnpj": "13.574.594/0001-96",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Opera\u00e7\u00e3o E Assessoria A Restaurantes"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Hoteis e Restaurantes",
+            "Restaurante e Similares"
+        ],
+        "codigos_negociacao": [
+            "BKBR3"
+        ]
+    },
+    {
+        "razao_social": "BOMBRIL S.A.",
+        "nome_empresa": "BOMBRIL",
+        "cnpj": "50.564.053/0001-03",
+        "atividades": [
+            "1080"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Produtos de Uso Pessoal e de Limpeza",
+            "Produtos de Limpeza"
+        ],
+        "codigos_negociacao": [
+            "BOBR3",
+            "BOBR4"
+        ]
+    },
+    {
+        "razao_social": "BR MALLS PARTICIPACOES S.A.",
+        "nome_empresa": "BR MALLS PAR",
+        "cnpj": "06.977.745/0001-91",
+        "atividades": [
+            "Holding"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "BRML3"
+        ]
+    },
+    {
+        "razao_social": "BR PROPERTIES S.A.",
+        "nome_empresa": "BR PROPERT",
+        "cnpj": "06.977.751/0001-49",
+        "atividades": [
+            "Compra. Venda E Incorp. de Im\u00f3veis Comerciais Prontos Ou A Construir",
+            "Admin de Im\u00f3veis Pr\u00f3prios Ou de Terceiros",
+            "Arrendamento. Explora\u00e7\u00e3o Com. Loca\u00e7\u00e3o Sub-loca\u00e7\u00e3o de Im\u00f3veis Comerciais Pr\u00f3pr. E Outros"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "BRPR3"
+        ]
+    },
+    {
+        "razao_social": "BRADESPAR S.A.",
+        "nome_empresa": "BRADESPAR",
+        "cnpj": "03.847.461/0001-92",
+        "atividades": [
+            "Participa\u00e7\u00e3o Como S\u00f3cia Ou Acionista de Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "codigos_negociacao": [
+            "BRAP3",
+            "BRAP4"
+        ]
+    },
+    {
+        "razao_social": "BRASIL BROKERS PARTICIPACOES S.A.",
+        "nome_empresa": "BR BROKERS",
+        "cnpj": "08.613.550/0001-98",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis",
+            "Intermedia\u00e7\u00e3o Imobili\u00e1ria"
+        ],
+        "codigos_negociacao": [
+            "BBRK3"
+        ]
+    },
+    {
+        "razao_social": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
+        "nome_empresa": "BRASILAGRO",
+        "cnpj": "07.628.528/0001-59",
+        "atividades": [
+            "Empresa de Desenvolvimento Agropecuario"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "AGRO3"
+        ]
+    },
+    {
+        "razao_social": "BRASKEM S.A.",
+        "nome_empresa": "BRASKEM",
+        "cnpj": "42.150.391/0001-70",
+        "atividades": [
+            "Produ\u00e7\u00e3o de Produtos Qu\u00edmicos. Utilidades. Energia El\u00e9trica E Outros",
+            "presta\u00e7\u00e3o de Servi\u00e7os Industriais",
+            "participa\u00e7\u00e3o em Outras Sociedades",
+            "loca\u00e7\u00e3o de Bens",
+            "Representa\u00e7\u00e3o/consigna\u00e7\u00e3o de Produtos Qu\u00edmicos"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Petroqu\u00edmicos"
+        ],
+        "codigos_negociacao": [
+            "BRKM3",
+            "BRKM5",
+            "BRKM6"
+        ]
+    },
+    {
+        "razao_social": "BRB BCO DE BRASILIA S.A.",
+        "nome_empresa": "BRB BANCO",
+        "cnpj": "00.000.208/0001-00",
+        "atividades": [
+            "O Brb \u00c9 Uma Institui\u00e7\u00e3o Financeira de Economia Mista. Controlada Pelo Governo Do Distrito Federal. Organizada Sob A Forma de Banco M\u00faltiplo"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "BSLI3",
+            "BSLI4"
+        ]
+    },
+    {
+        "razao_social": "BRF S.A.",
+        "nome_empresa": "BRF SA",
+        "cnpj": "01.838.723/0001-27",
+        "atividades": [
+            "Holding Operacional"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "BRFS3"
+        ]
+    },
+    {
+        "razao_social": "BRQ SOLUCOES EM INFORMATICA S.A.",
+        "nome_empresa": "BRQ",
+        "cnpj": "36.542.025/0001-64",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Tecnologia Da Informa\u00e7\u00e3o (ti) - Inform\u00e1tica"
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "BRQB3"
+        ]
+    },
+    {
+        "razao_social": "CABINDA PARTICIPACOES S.A.",
+        "nome_empresa": "CABINDA PART",
+        "cnpj": "04.030.182/0001-02",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades. Comerciais E Civis. Como S\u00f3cia. Acionista Ou Quotista. No Pa\u00eds Ou No Exterior."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "CABI3B"
+        ]
+    },
+    {
+        "razao_social": "CACONDE PARTICIPACOES S.A.",
+        "nome_empresa": "CACONDE PART",
+        "cnpj": "04.031.213/0001-31",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades Comerciais E Civis. Como S\u00f3cia. Acionista Ou Quotista. No Pa\u00eds Ou No Exterior."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "CACO3B"
+        ]
+    },
+    {
+        "razao_social": "CAMBUCI S.A.",
+        "nome_empresa": "CAMBUCI",
+        "cnpj": "61.088.894/0001-08",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "CAMB3"
+        ]
+    },
+    {
+        "razao_social": "CAMIL ALIMENTOS S.A.",
+        "nome_empresa": "CAMIL",
+        "cnpj": "64.904.295/0001-03",
+        "atividades": [
+            "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Arroz. Feij\u00e3o. Pescados E A\u00e7\u00facar."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Alimentos Diversos"
+        ],
+        "codigos_negociacao": [
+            "CAML3"
+        ]
+    },
+    {
+        "razao_social": "CAPITALPART PARTICIPACOES S.A.",
+        "nome_empresa": "CAPITALPART",
+        "cnpj": "02.591.787/0001-39",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "CPTP3B"
+        ]
+    },
+    {
+        "razao_social": "CCR S.A.",
+        "nome_empresa": "CCR SA",
+        "cnpj": "02.846.056/0001-97",
+        "atividades": [
+            "Prestadora de Servi\u00e7os P\u00fablicos Por Meio de Concess\u00f5es Rodovi\u00e1ria. Metrovi\u00e1ria E Aeroportu\u00e1ria. Al\u00e9m de Presta\u00e7\u00e3o de Servi\u00e7os de Meio de Pagamentos E Outros."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Explora\u00e7\u00e3o de Rodovias"
+        ],
+        "codigos_negociacao": [
+            "CCRO3"
+        ]
+    },
+    {
+        "razao_social": "CEA MODAS S.A.",
+        "nome_empresa": "CEA MODAS",
+        "cnpj": "45.242.914/0001-05",
+        "atividades": [
+            "Atua\u00e7\u00e3o No Varejo Nos Setores de Vestu\u00e1rio. Acess\u00f3rios. Cal\u00e7ados. Higiene. Eletr\u00f3nicos. Dentre Outros."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "CEAB3"
+        ]
+    },
+    {
+        "razao_social": "CEMEPE INVESTIMENTOS S.A.",
+        "nome_empresa": "CEMEPE",
+        "cnpj": "93.828.986/0001-73",
+        "atividades": [
+            "Holding"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "MAPT3",
+            "MAPT4"
+        ]
+    },
+    {
+        "razao_social": "CENTRAIS ELET BRAS S.A. - ELETROBRAS",
+        "nome_empresa": "ELETROBRAS",
+        "cnpj": "00.001.180/0001-26",
+        "atividades": [
+            "Empresa Holding de Gera\u00e7\u00e3o. Transmiss\u00e3o E Distribui\u00e7\u00e3o de Energia"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ELET3",
+            "ELET5",
+            "ELET6"
+        ]
+    },
+    {
+        "razao_social": "CENTRAIS ELET DE SANTA CATARINA S.A.",
+        "nome_empresa": "CELESC",
+        "cnpj": "83.878.892/0001-55",
+        "atividades": [
+            "Holding Do Setor de Energia"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CLSC3",
+            "CLSC4"
+        ]
+    },
+    {
+        "razao_social": "CENTRO DE IMAGEM DIAGNOSTICOS S.A.",
+        "nome_empresa": "ALLIAR",
+        "cnpj": "42.771.949/0001-35",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Medicina Diagn\u00f3stica."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "AALR3"
+        ]
+    },
+    {
+        "razao_social": "CESP - CIA ENERGETICA DE SAO PAULO",
+        "nome_empresa": "CESP",
+        "cnpj": "60.933.603/0001-78",
+        "atividades": [
+            "Gera\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CESP3",
+            "CESP5",
+            "CESP6"
+        ]
+    },
+    {
+        "razao_social": "CIA BRASILEIRA DE DISTRIBUICAO",
+        "nome_empresa": "P.ACUCAR-CBD",
+        "cnpj": "47.508.411/0001-56",
+        "atividades": [
+            "Com\u00e9rcio Varejista"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Alimentos"
+        ],
+        "codigos_negociacao": [
+            "PCAR3"
+        ]
+    },
+    {
+        "razao_social": "CIA CATARINENSE DE AGUAS E SANEAM.-CASAN",
+        "nome_empresa": "CASAN",
+        "cnpj": "82.508.433/0001-17",
+        "atividades": [
+            "Atuar Como Institui\u00e7\u00e3o Integrante Do Sistema de Saneamento B\u00e1sico E de Sa\u00fade Do Estado de Santa Catarina Atrav\u00e9s Dos Servi\u00e7os de Capta\u00e7\u00e3o. Tratamento E Distribui\u00e7\u00e3o de \u00e1gua E Tratamento de Esgoto."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "codigos_negociacao": [
+            "CASN3",
+            "CASN4"
+        ]
+    },
+    {
+        "razao_social": "CIA CELG DE PARTICIPACOES - CELGPAR",
+        "nome_empresa": "CELGPAR",
+        "cnpj": "08.560.444/0001-93",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades Como Acionista Ou S\u00f3cio-cotista E. Ainda. A Explota\u00e7\u00e3o Direta Ou Indireta de Servi\u00e7os de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "GPAR3"
+        ]
+    },
+    {
+        "razao_social": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
+        "nome_empresa": "CEG",
+        "cnpj": "33.938.119/0001-69",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de G\u00e1s Natural Na Regi\u00e3o Metropolitana Do Estado Do Rio de Janeiro."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "G\u00e1s"
+        ],
+        "codigos_negociacao": [
+            "CEGR3"
+        ]
+    },
+    {
+        "razao_social": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
+        "nome_empresa": "COELBA",
+        "cnpj": "15.139.629/0001-94",
+        "atividades": [
+            "Servi\u00e7o P\u00fablico de Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CEEB3",
+            "CEEB5",
+            "CEEB6"
+        ]
+    },
+    {
+        "razao_social": "CIA ENERGETICA DE BRASILIA",
+        "nome_empresa": "CEB",
+        "cnpj": "00.070.698/0001-11",
+        "atividades": [
+            "Holding/gera\u00e7\u00e3o E Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CEBR3",
+            "CEBR5",
+            "CEBR6"
+        ]
+    },
+    {
+        "razao_social": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
+        "nome_empresa": "CEMIG",
+        "cnpj": "17.155.730/0001-64",
+        "atividades": [
+            "Concession\u00e1ria de Servi\u00e7o P\u00fablico de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CMIG3",
+            "CMIG4"
+        ]
+    },
+    {
+        "razao_social": "CIA ENERGETICA DE PERNAMBUCO - CELPE",
+        "nome_empresa": "CELPE",
+        "cnpj": "10.835.932/0001-08",
+        "atividades": [
+            "Estudar. Projetar. Construir E Explorar Os Sistemas de Distribui\u00e7\u00e3o E Comercializa\u00e7\u00e3o Aos Consumidores Finais de Energia El\u00e9trica. Bem Como A Gera\u00e7\u00e3a de Energia El\u00e9trica em Sistema Isolado."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CEPE3",
+            "CEPE5",
+            "CEPE6"
+        ]
+    },
+    {
+        "razao_social": "CIA ENERGETICA DO CEARA - COELCE",
+        "nome_empresa": "COELCE",
+        "cnpj": "07.047.251/0001-70",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "COCE3",
+            "COCE5",
+            "COCE6"
+        ]
+    },
+    {
+        "razao_social": "CIA ENERGETICA DO RIO GDE NORTE - COSERN",
+        "nome_empresa": "COSERN",
+        "cnpj": "08.324.196/0001-81",
+        "atividades": [
+            "Servi\u00e7o P\u00fablico de Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CSRN3",
+            "CSRN5",
+            "CSRN6"
+        ]
+    },
+    {
+        "razao_social": "CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D",
+        "nome_empresa": "CEEE-D",
+        "cnpj": "08.467.115/0001-00",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Natureza P\u00fablica Ou Privada. No Setor de Distribui\u00e7\u00e3o de Energia el\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CEED3",
+            "CEED4"
+        ]
+    },
+    {
+        "razao_social": "CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT",
+        "nome_empresa": "CEEE-GT",
+        "cnpj": "92.715.812/0001-31",
+        "atividades": [
+            "Gera\u00e7\u00e3o E Transmiss\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EEEL3",
+            "EEEL4"
+        ]
+    },
+    {
+        "razao_social": "CIA FERRO LIGAS DA BAHIA - FERBASA",
+        "nome_empresa": "FERBASA",
+        "cnpj": "15.141.799/0001-03",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Comercializa\u00e7\u00e3o Dos Diversos Tipos de Ferroligas"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Siderurgia"
+        ],
+        "codigos_negociacao": [
+            "FESA3",
+            "FESA4"
+        ]
+    },
+    {
+        "razao_social": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
+        "nome_empresa": "CEDRO",
+        "cnpj": "17.245.234/0001-00",
+        "atividades": [
+            "Ind\u00fastria T\u00eaxtil"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "CEDO3",
+            "CEDO4"
+        ]
+    },
+    {
+        "razao_social": "CIA GAS DE SAO PAULO - COMGAS",
+        "nome_empresa": "COMGAS",
+        "cnpj": "61.856.571/0001-17",
+        "atividades": [
+            "Setor de Atividade: Utilidade P\u00fablica: Distribui\u00e7\u00e3o de G\u00e1s Natural Canalizado."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "G\u00e1s"
+        ],
+        "codigos_negociacao": [
+            "CGAS3",
+            "CGAS5"
+        ]
+    },
+    {
+        "razao_social": "CIA HABITASUL DE PARTICIPACOES",
+        "nome_empresa": "HABITASUL",
+        "cnpj": "87.762.563/0001-03",
+        "atividades": [
+            "Participar em Outras Sociedade. Civis Ou Comerciais",
+            "Prestar Servi\u00e7os T\u00e9cnicos de Planejamento. Organiza\u00e7\u00e3o E Estrutura\u00e7\u00e3o de Empresas Ou Grupos Empresariais"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "HBTS3",
+            "HBTS5",
+            "HBTS6"
+        ]
+    },
+    {
+        "razao_social": "CIA HERING",
+        "nome_empresa": "CIA HERING",
+        "cnpj": "78.876.950/0001-71",
+        "atividades": [
+            "Confec\u00e7\u00e3o de Artigos Do Vestu\u00e1rio E Acess\u00f3rios"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Vestu\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "HGTX3"
+        ]
+    },
+    {
+        "razao_social": "CIA INDUSTRIAL CATAGUASES",
+        "nome_empresa": "IND CATAGUAS",
+        "cnpj": "19.526.748/0001-50",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "CATA3",
+            "CATA4"
+        ]
+    },
+    {
+        "razao_social": "CIA LOCA\u00c7\u00c3O DAS AM\u00c9RICAS",
+        "nome_empresa": "LOCAMERICA",
+        "cnpj": "10.215.988/0001-60",
+        "atividades": [
+            "A Companhia Tem Por Objeto A Atividade de Loca\u00e7\u00e3o de Ve\u00edculos Nacionais E Importados Com Ou Sem Motorista."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Aluguel de carros"
+        ],
+        "codigos_negociacao": [
+            "LCAM3"
+        ]
+    },
+    {
+        "razao_social": "CIA MELHORAMENTOS DE SAO PAULO",
+        "nome_empresa": "MELHOR SP",
+        "cnpj": "60.730.348/0001-66",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Papel e Celulose"
+        ],
+        "codigos_negociacao": [
+            "MSPA3",
+            "MSPA4"
+        ]
+    },
+    {
+        "razao_social": "CIA PARANAENSE DE ENERGIA - COPEL",
+        "nome_empresa": "COPEL",
+        "cnpj": "76.483.817/0001-20",
+        "atividades": [
+            "Gera\u00e7\u00e3o. Transmiss\u00e3o. Comercializa\u00e7\u00e3o E Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CPLE3",
+            "CPLE5",
+            "CPLE6"
+        ]
+    },
+    {
+        "razao_social": "CIA PARTICIPACOES ALIANCA DA BAHIA",
+        "nome_empresa": "PAR AL BAHIA",
+        "cnpj": "01.938.783/0001-11",
+        "atividades": [
+            "Participa\u00e7\u00f5es em Outras Sociedades. Na Qualidade de S\u00f3cia E/ou Quotista E Administra\u00e7\u00e3o de Bnes Pr\u00f3prios"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Holdings Diversificadas"
+        ],
+        "codigos_negociacao": [
+            "PEAB3",
+            "PEAB4"
+        ]
+    },
+    {
+        "razao_social": "CIA SANEAMENTO BASICO EST SAO PAULO",
+        "nome_empresa": "SABESP",
+        "cnpj": "43.776.517/0001-80",
+        "atividades": [
+            "Abastecimento de \u00e1gua. Esgotamento Sanit\u00e1rio. Drenagem E Manejo de \u00e1guas Pluviais Urbanas. Limpeza Urbana. Manejo de Res\u00edduos S\u00f3lidos E Energia."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "codigos_negociacao": [
+            "SBSP3"
+        ]
+    },
+    {
+        "razao_social": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
+        "nome_empresa": "COPASA",
+        "cnpj": "17.281.106/0001-03",
+        "atividades": [
+            "Prestar Servi\u00e7os de Saneamento."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "codigos_negociacao": [
+            "CSMG3"
+        ]
+    },
+    {
+        "razao_social": "CIA SANEAMENTO DO PARANA - SANEPAR",
+        "nome_empresa": "SANEPAR",
+        "cnpj": "76.484.013/0001-45",
+        "atividades": [
+            "Explora\u00e7\u00e3o de Servi\u00e7os P\u00fablicos E de Sistemas Privados de Abastecimento de \u00e1gua. de Coleta. Remo\u00e7\u00e3o E Destina\u00e7\u00e3o Final de Efluentes E Res\u00edduos S\u00f3lidos Dom\u00e9sticos E Industriais E Seus Subprodutos."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "codigos_negociacao": [
+            "SAPR11",
+            "SAPR3",
+            "SAPR4"
+        ]
+    },
+    {
+        "razao_social": "CIA SEGUROS ALIANCA DA BAHIA",
+        "nome_empresa": "SEG AL BAHIA",
+        "cnpj": "15.144.017/0001-90",
+        "atividades": [
+            "Companhia de Seguros"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "CSAB3",
+            "CSAB4"
+        ]
+    },
+    {
+        "razao_social": "CIA SIDERURGICA NACIONAL",
+        "nome_empresa": "SID NACIONAL",
+        "cnpj": "33.042.730/0001-04",
+        "atividades": [
+            "A Companhia Sider\u00fargica Nacional Atua Nos Setores de Minera\u00e7\u00e3o. Siderurgia. Log\u00edstica. Cimento E Energia."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Siderurgia"
+        ],
+        "codigos_negociacao": [
+            "CSNA3"
+        ]
+    },
+    {
+        "razao_social": "CIA TECIDOS NORTE DE MINAS COTEMINAS",
+        "nome_empresa": "COTEMINAS",
+        "cnpj": "22.677.520/0001-76",
+        "atividades": [
+            "Holding"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "CTNM3",
+            "CTNM4"
+        ]
+    },
+    {
+        "razao_social": "CIA TECIDOS SANTANENSE",
+        "nome_empresa": "SANTANENSE",
+        "cnpj": "21.255.567/0001-89",
+        "atividades": [
+            "Ind\u00fastria T\u00eaxtil"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "CTSA3",
+            "CTSA4",
+            "CTSA8"
+        ]
+    },
+    {
+        "razao_social": "CIELO S.A.",
+        "nome_empresa": "CIELO",
+        "cnpj": "01.027.058/0001-91",
+        "atividades": [
+            "Empresa Prestadora de Servi\u00e7os de Adquir\u00eancia E Meios de Pagamento."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos"
+        ],
+        "codigos_negociacao": [
+            "CIEL3"
+        ]
+    },
+    {
+        "razao_social": "CIMS S.A.",
+        "nome_empresa": "CIMS",
+        "cnpj": "00.272.185/0001-93",
+        "atividades": [
+            "Participa\u00e7\u00e3o No Capital de Outras Empresas"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "CMSA3",
+            "CMSA4"
+        ]
+    },
+    {
+        "razao_social": "CINESYSTEM S.A.",
+        "nome_empresa": "CINESYSTEM",
+        "cnpj": "07.437.016/0001-05",
+        "atividades": [
+            "A Companhia Tem Como Principais Atividades A Presta\u00e7\u00e3o de Servi\u00e7os de Cinematografia E A Revenda de Mercadorias de Bomboni\u00e8re."
+        ],
+        "classificacao_setorial": [
+            "Comunica\u00e7\u00f5es",
+            "M\u00eddia",
+            "Produ\u00e7\u00e3o e Difus\u00e3o de Filmes e Programas"
+        ],
+        "codigos_negociacao": [
+            "CNSY3"
+        ]
+    },
+    {
+        "razao_social": "COGNA EDUCA\u00c7\u00c3O S.A.",
+        "nome_empresa": "COGNA ON",
+        "cnpj": "02.800.026/0001-40",
+        "atividades": [
+            "A Companhia Tem Por Objeto A Participa\u00e7\u00e3o. Como S\u00f3cia Ou Acionista. em Sociedades Que Explorem A Administra\u00e7\u00e3o de Atividades de Educa\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Servi\u00e7os Educacionais"
+        ],
+        "codigos_negociacao": [
+            "COGN3"
+        ]
+    },
+    {
+        "razao_social": "CONC RIO-TERESOPOLIS S.A.",
+        "nome_empresa": "CONC RIO TER",
+        "cnpj": "00.938.574/0001-05",
+        "atividades": [
+            "Administra\u00e7\u00e3o. Opera\u00e7\u00e3o E Conserva\u00e7\u00e3o de Rodovia"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Explora\u00e7\u00e3o de Rodovias"
+        ],
+        "codigos_negociacao": [
+            "CRTE3B",
+            "CRTE5B"
+        ]
+    },
+    {
+        "razao_social": "CONSERVAS ODERICH S.A.",
+        "nome_empresa": "ODERICH",
+        "cnpj": "97.191.902/0001-94",
+        "atividades": [
+            "Ind\u00fastria de Alimentos Com Sede Na Cidade de S\u00e3o Sebasti\u00e3o Do Ca\u00ed (rs) E Filiais Nas Cidades de Eldorado Do Sul (rs). Pelotas (rs). Orizona (go) E Salvador (ba)."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Alimentos Diversos"
+        ],
+        "codigos_negociacao": [
+            "ODER3",
+            "ODER4"
+        ]
+    },
+    {
+        "razao_social": "CONSORCIO ALFA DE ADMINISTRACAO S.A.",
+        "nome_empresa": "ALFA CONSORC",
+        "cnpj": "17.193.806/0001-46",
+        "atividades": [
+            "A Sociedade Tem Por Objeto Social: a) todos E Quaisquer Servi\u00e7os de Engenharia Permitidos Pelas Leis E Regulamentos Aplic\u00e1veis \u00e0 Esp\u00e9cie",
+            "b) atuar Como Representante. Administradora Ou Procurad"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "BRGE11",
+            "BRGE12",
+            "BRGE3",
+            "BRGE5",
+            "BRGE6",
+            "BRGE7",
+            "BRGE8"
+        ]
+    },
+    {
+        "razao_social": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
+        "nome_empresa": "CONST A LIND",
+        "cnpj": "61.022.042/0001-18",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "CALI3",
+            "CALI4"
+        ]
+    },
+    {
+        "razao_social": "CONSTRUTORA TENDA S.A.",
+        "nome_empresa": "TENDA",
+        "cnpj": "71.476.527/0001-35",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TEND3"
+        ]
+    },
+    {
+        "razao_social": "CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA",
+        "nome_empresa": "COR RIBEIRO",
+        "cnpj": "15.101.405/0001-93",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "CORR3",
+            "CORR4"
+        ]
+    },
+    {
+        "razao_social": "COSAN LOGISTICA S.A.",
+        "nome_empresa": "COSAN LOG",
+        "cnpj": "17.346.997/0001-39",
+        "atividades": [
+            "Administra\u00e7\u00e3o. Direta Ou Indireta. de Participa\u00e7\u00f5es Societ\u00e1rias em Empresas Do Setor de Infraestrutura."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Ferrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "RLOG3"
+        ]
+    },
+    {
+        "razao_social": "COSAN S.A.",
+        "nome_empresa": "COSAN",
+        "cnpj": "50.746.577/0001-15",
+        "atividades": [
+            "Produ\u00e7\u00e3o de A\u00e7\u00facar. Etanol E Cogera\u00e7\u00e3o de Energia. Distribui\u00e7\u00e3o de Combust\u00edveis.produ\u00e7\u00e3o E Distribui\u00e7\u00e3o de Lubrificantes.tranporte E Carregamento de A\u00e7\u00facar. Operador de Terras E Distribui\u00e7\u00e3o de G\u00e1s."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "CSAN3"
+        ]
+    },
+    {
+        "razao_social": "CPFL ENERGIA S.A.",
+        "nome_empresa": "CPFL ENERGIA",
+        "cnpj": "02.429.144/0001-93",
+        "atividades": [
+            "Gest\u00e3o de Participa\u00e7\u00f5es Societ\u00e1rias (holdings)"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CPFE3"
+        ]
+    },
+    {
+        "razao_social": "CPFL ENERGIAS RENOV\u00c1VEIS S.A.",
+        "nome_empresa": "CPFL RENOVAV",
+        "cnpj": "08.439.659/0001-50",
+        "atividades": [
+            "Gera\u00e7\u00e3o de Energias Renov\u00e1veis."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "CPRE3"
+        ]
+    },
+    {
+        "razao_social": "CR2 EMPREENDIMENTOS IMOBILIARIOS S.A.",
+        "nome_empresa": "CR2",
+        "cnpj": "07.820.907/0001-46",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o Imobili\u00e1ria"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "CRDE3"
+        ]
+    },
+    {
+        "razao_social": "CSU CARDSYSTEM S.A.",
+        "nome_empresa": "CSU CARDSYST",
+        "cnpj": "01.896.779/0001-38",
+        "atividades": [
+            "Terceiriza\u00e7\u00e3o em Administra\u00e7\u00e3o E Processamento de Meios Eletr\u00f3nicos de Pagamento. Infraestrutura E Gest\u00e3o em Terceiriza\u00e7\u00e3o de Contact Center. Desenvolvimento E Gest\u00e3o Operacional de Programas Market"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "CARD3"
+        ]
+    },
+    {
+        "razao_social": "CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.",
+        "nome_empresa": "CTC S.A.",
+        "cnpj": "06.981.381/0001-13",
+        "atividades": [
+            "Com Sua Atua\u00e7\u00e3o em Biotecnologia E Melhoramento Gen\u00e9tico O Ctc Busca Busca Promover O Aumento Da Produtividade. A Redu\u00e7\u00e3o de Custos E Solu\u00e7\u00f5es Agr\u00edcolas E Industriais Para O Setor Sucroenerg\u00e9tico."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "CTCA3"
+        ]
+    },
+    {
+        "razao_social": "CTEEP - CIA TRANSMISS\u00c3O ENERGIA EL\u00c9TRICA PAULISTA",
+        "nome_empresa": "TRAN PAULIST",
+        "cnpj": "02.998.611/0001-04",
+        "atividades": [
+            "Transmiss\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "TRPL3",
+            "TRPL4"
+        ]
+    },
+    {
+        "razao_social": "CVC BRASIL OPERADORA E AG\u00caNCIA DE VIAGENS S.A.",
+        "nome_empresa": "CVC BRASIL",
+        "cnpj": "10.760.260/0001-19",
+        "atividades": [
+            "Servi\u00e7os de Turismo. Compreendendo A Intermedia\u00e7\u00e3o. Individualmente Ou Na Forma Agregada. de Passagens A\u00e9reas. Transporte Terrestre. Reservas de Hot\u00e9is. Passagens de Cruzeiros Mar\u00edtimos. Entre Outros."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Viagens e Turismo"
+        ],
+        "codigos_negociacao": [
+            "CVCB3"
+        ]
+    },
+    {
+        "razao_social": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+        "nome_empresa": "CYRELA REALT",
+        "cnpj": "73.178.600/0001-18",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o Imobili\u00e1ria"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "CYRE3"
+        ]
+    },
+    {
+        "razao_social": "CYRELA COMMERCIAL PROPERT S.A. EMPR PART",
+        "nome_empresa": "CYRE COM-CCP",
+        "cnpj": "08.801.621/0001-86",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "CCPR3"
+        ]
+    },
+    {
+        "razao_social": "DIAGNOSTICOS DA AMERICA S.A.",
+        "nome_empresa": "DASA",
+        "cnpj": "61.486.650/0001-83",
+        "atividades": [
+            "An\u00e1lises Cl\u00ednicas E Medicina Diagn\u00f3stica"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "DASA3"
+        ]
+    },
+    {
+        "razao_social": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
+        "nome_empresa": "DIMED",
+        "cnpj": "92.665.611/0001-77",
+        "atividades": [
+            "Comercio Atacadista E Varejista de Medicamentos E Produtos de Perfumaria E Toucador"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "PNVL3",
+            "PNVL4"
+        ]
+    },
+    {
+        "razao_social": "DIRECIONAL ENGENHARIA S.A.",
+        "nome_empresa": "DIRECIONAL",
+        "cnpj": "16.614.075/0001-00",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o. Constru\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Im\u00f3veis Pr\u00f3prios Ou de Terceiros E Presta\u00e7\u00e3o de Servi\u00e7os de Engenharia."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "DIRR3"
+        ]
+    },
+    {
+        "razao_social": "DOHLER S.A.",
+        "nome_empresa": "DOHLER",
+        "cnpj": "84.683.408/0001-03",
+        "atividades": [
+            "Tecelagem de Fios de Algod\u00e3o E Fibras Sint\u00e9ticas"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "DOHL3",
+            "DOHL4"
+        ]
+    },
+    {
+        "razao_social": "DOMMO ENERGIA S.A.",
+        "nome_empresa": "DOMMO",
+        "cnpj": "08.926.302/0001-05",
+        "atividades": [
+            "A Companhia Ter\u00e1 Por Objeto A Explora\u00e7\u00e3o. Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Petr\u00f3leo E Seus Derivados. G\u00e1s Natural E Outros Hidrocarbonetos Fluidos."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "DMMO3",
+            "DMMO11"
+        ]
+    },
+    {
+        "razao_social": "DTCOM - DIRECT TO COMPANY S.A.",
+        "nome_empresa": "DTCOM-DIRECT",
+        "cnpj": "03.303.999/0001-36",
+        "atividades": [
+            "Treinamento em Desenvolvimento Profissional E Gerencial"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "DTCY3",
+            "DTCY4",
+            "DTCY1"
+        ]
+    },
+    {
+        "razao_social": "DURATEX S.A.",
+        "nome_empresa": "DURATEX",
+        "cnpj": "97.837.181/0001-47",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o. Com\u00e9rcio. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Produtos Derivados de Madeira. de Produtos de Metais E Materiais Cer\u00e2micos"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Madeira"
+        ],
+        "codigos_negociacao": [
+            "DTEX3"
+        ]
+    },
+    {
+        "razao_social": "ECORODOVIAS INFRAESTRUTURA E LOG\u00cdSTICA S.A.",
+        "nome_empresa": "ECORODOVIAS",
+        "cnpj": "04.149.454/0001-80",
+        "atividades": [
+            "Explora\u00e7\u00e3o Direta Ou Indireta de Neg\u00f3cios de Concess\u00e3o de Obras E Servi\u00e7os P\u00fablicos E Organiza\u00e7\u00e3o Log\u00edsitica Do Transporte de Carga."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Explora\u00e7\u00e3o de Rodovias"
+        ],
+        "codigos_negociacao": [
+            "ECOR3"
+        ]
+    },
+    {
+        "razao_social": "EDP - ENERGIAS DO BRASIL S.A.",
+        "nome_empresa": "ENERGIAS BR",
+        "cnpj": "03.983.431/0001-03",
+        "atividades": [
+            "\u00e1rea de Neg\u00f3cios: Gera\u00e7\u00e3o. Distribui\u00e7\u00e3o. Transmiss\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ENBR3"
+        ]
+    },
+    {
+        "razao_social": "ELECTRO ACO ALTONA S.A.",
+        "nome_empresa": "ACO ALTONA",
+        "cnpj": "82.643.537/0001-34",
+        "atividades": [
+            "Fundi\u00e7\u00e3o de Ferro E A\u00e7o"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "EALT3",
+            "EALT4"
+        ]
+    },
+    {
+        "razao_social": "ELEKEIROZ S.A.",
+        "nome_empresa": "ELEKEIROZ",
+        "cnpj": "13.788.120/0001-47",
+        "atividades": [
+            "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Produtos Qu\u00edmicos"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Petroqu\u00edmicos"
+        ],
+        "codigos_negociacao": [
+            "ELEK3",
+            "ELEK4"
+        ]
+    },
+    {
+        "razao_social": "ELEKTRO REDES S.A.",
+        "nome_empresa": "ELEKTRO",
+        "cnpj": "02.328.280/0001-97",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EKTR3",
+            "EKTR4"
+        ]
+    },
+    {
+        "razao_social": "ELETROBR\u00c1S PARTICIPA\u00c7\u00d5ES S.A. - ELETROPAR",
+        "nome_empresa": "ELETROPAR",
+        "cnpj": "01.104.937/0001-70",
+        "atividades": [
+            "A Eletropar Tem Por Objeto Social Principal A Participa\u00e7\u00e3o No Capital Social Da Eletropaulo - Eletricidade de S\u00e3o Paulo S.A.. Concession\u00e1ria de Servi\u00e7os Pub. de Energia El\u00e9t.. E de Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "LIPR3"
+        ]
+    },
+    {
+        "razao_social": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
+        "nome_empresa": "EMAE",
+        "cnpj": "02.302.101/0001-42",
+        "atividades": [
+            "Produ\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EMAE3",
+            "EMAE4"
+        ]
+    },
+    {
+        "razao_social": "EMBRAER S.A.",
+        "nome_empresa": "EMBRAER",
+        "cnpj": "07.689.002/0001-89",
+        "atividades": [
+            "Projeto. Desenvolvimento. Fabrica\u00e7\u00e3o. Comercializa\u00e7\u00e3o de Aeronaves E Sistemas E Fornecimento de Suporte E Servi\u00e7os de P\u00f3s-venda."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Aeron\u00e1utico e de Defesa"
+        ],
+        "codigos_negociacao": [
+            "EMBR3"
+        ]
+    },
+    {
+        "razao_social": "EMPRESA NAC COM REDITO PART S.A.ENCORPAR",
+        "nome_empresa": "ENCORPAR",
+        "cnpj": "01.971.614/0001-83",
+        "atividades": [
+            "Holding"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "ECPR3",
+            "ECPR4"
+        ]
+    },
+    {
+        "razao_social": "ENAUTA PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "ENAUTA PART",
+        "cnpj": "11.669.021/0001-10",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Sociedades Que Se Dediquem \u00e0 Explora\u00e7\u00e3o. Produ\u00e7\u00e3o E comercializa\u00e7\u00e3o de Petr\u00f3leo. G\u00e1s Natural E Seus Derivados. Seja Como S\u00f3cio Ou acionista Ou Outras Formas de Associa\u00e7\u00f5es."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "ENAT3"
+        ]
+    },
+    {
+        "razao_social": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
+        "nome_empresa": "ENERGISA MT",
+        "cnpj": "03.467.321/0001-99",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ENMT3",
+            "ENMT4"
+        ]
+    },
+    {
+        "razao_social": "ENERGISA S.A.",
+        "nome_empresa": "ENERGISA",
+        "cnpj": "00.864.214/0001-06",
+        "atividades": [
+            "Sociedade de Participa\u00e7\u00f5es em Outras Empresas. Predominantemente em Distribuidoras de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ENGI11",
+            "ENGI3",
+            "ENGI4",
+            "ENGI12"
+        ]
+    },
+    {
+        "razao_social": "ENEVA S.A",
+        "nome_empresa": "ENEVA",
+        "cnpj": "04.423.567/0001-21",
+        "atividades": [
+            "Empresa de Recursos Naturais E de Gera\u00e7\u00e3o de Energia El\u00e9trica. Integra\u00e7\u00e3o Vertical Na Gera\u00e7\u00e3o de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "ENEV3"
+        ]
+    },
+    {
+        "razao_social": "ENGIE BRASIL ENERGIA S.A.",
+        "nome_empresa": "ENGIE BRASIL",
+        "cnpj": "02.474.103/0001-19",
+        "atividades": [
+            "Gera\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EGIE3"
+        ]
+    },
+    {
+        "razao_social": "EQUATORIAL ENERGIA S.A.",
+        "nome_empresa": "EQUATORIAL",
+        "cnpj": "03.220.438/0001-73",
+        "atividades": [
+            "Empresa Holding Com Atua\u00e7\u00e3o No Setor El\u00e9trico"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EQTL3"
+        ]
+    },
+    {
+        "razao_social": "EQUATORIAL MARANH\u00c3O DISTRIBUIDORA DE ENERGIA S.A.",
+        "nome_empresa": "EQTLMARANHAO",
+        "cnpj": "06.272.793/0001-84",
+        "atividades": [
+            "Empresa Distribuidora de Energia El\u00e9trica Para Todo O Estado Do Maranh\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EQMA3B",
+            "EQMA5B",
+            "EQMA6B"
+        ]
+    },
+    {
+        "razao_social": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
+        "nome_empresa": "EQTL PARA",
+        "cnpj": "04.895.728/0001-80",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "EQPA3",
+            "EQPA5",
+            "EQPA6",
+            "EQPA7"
+        ]
+    },
+    {
+        "razao_social": "ETERNIT S.A.",
+        "nome_empresa": "ETERNIT",
+        "cnpj": "61.092.037/0001-81",
+        "atividades": [
+            "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Produtos de Fibrocimento. Cimento. Concreto. Gesso. Produtos de Mat\u00e9ria Pl\u00e1stica. Bem Como Outros Materiais de Constru\u00e7\u00e3o E Respectivos Acess\u00f3rios."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Produtos para Constru\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "ETER3",
+            "ETER1"
+        ]
+    },
+    {
+        "razao_social": "EUCATEX S.A. INDUSTRIA E COMERCIO",
+        "nome_empresa": "EUCATEX",
+        "cnpj": "56.643.018/0001-66",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Chapas de Fibra de Madeira"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Madeira"
+        ],
+        "codigos_negociacao": [
+            "EUCA3",
+            "EUCA4"
+        ]
+    },
+    {
+        "razao_social": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
+        "nome_empresa": "EVEN",
+        "cnpj": "43.470.988/0001-65",
+        "atividades": [
+            "Constru\u00e7\u00e3o. Incorpora\u00e7\u00e3o E Loteamento."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "EVEN3"
+        ]
+    },
+    {
+        "razao_social": "EXCELSIOR ALIMENTOS S.A.",
+        "nome_empresa": "EXCELSIOR",
+        "cnpj": "95.426.862/0001-97",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "BAUH3",
+            "BAUH4"
+        ]
+    },
+    {
+        "razao_social": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
+        "nome_empresa": "EZTEC",
+        "cnpj": "08.312.229/0001-73",
+        "atividades": [
+            "(a) Incorpora\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios de Qualquer Natureza. (b) Administra\u00e7\u00e3o E Loca\u00e7\u00e3o de Im\u00f3veis Pr\u00f3rpios. (c) Loteamento de Terrenos. (d) Constru\u00e7\u00e3o de Condom\u00ednios ..."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "EZTC3"
+        ]
+    },
+    {
+        "razao_social": "FERROVIA CENTRO-ATLANTICA S.A.",
+        "nome_empresa": "FER C ATLANT",
+        "cnpj": "00.924.429/0001-75",
+        "atividades": [
+            "Servi\u00e7o de Transporte Ferrovi\u00e1rio"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Ferrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "VSPT3",
+            "VSPT4"
+        ]
+    },
+    {
+        "razao_social": "FERTILIZANTES HERINGER S.A.",
+        "nome_empresa": "FER HERINGER",
+        "cnpj": "22.266.175/0001-88",
+        "atividades": [
+            "Produ\u00e7\u00e3o. Comercializa\u00e7\u00e3o E Distribui\u00e7\u00e3o de Fertilizantes. Com Atua\u00e7\u00e3o Nacional."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Fertilizantes e Defensivos"
+        ],
+        "codigos_negociacao": [
+            "FHER3"
+        ]
+    },
+    {
+        "razao_social": "FINANCEIRA ALFA S.A.- CRED FINANC E INVS",
+        "nome_empresa": "ALFA FINANC",
+        "cnpj": "17.167.412/0001-13",
+        "atividades": [
+            "A Sociedade Tem Por Objeto A Pr\u00e1tica de Todas As Opera\u00e7\u00f5es de Cr\u00e9dito. Financiamento E Investimentos Permitidas Pelas Leis E Regulamentos Aplic\u00e1veis \u00e0 Esp\u00e9cie."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Soc. Cr\u00e9dito e Financiamento"
+        ],
+        "codigos_negociacao": [
+            "CRIV3",
+            "CRIV4"
+        ]
+    },
+    {
+        "razao_social": "FINANSINOS S.A.- CREDITO FINANC E INVEST",
+        "nome_empresa": "FINANSINOS",
+        "cnpj": "91.669.747/0001-92",
+        "atividades": [
+            "Financiamento de Bens E Servi\u00e7os - Intermedia\u00e7\u00e3o Financeira"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Soc. Cr\u00e9dito e Financiamento"
+        ],
+        "codigos_negociacao": [
+            "FNCN3"
+        ]
+    },
+    {
+        "razao_social": "FLEURY S.A.",
+        "nome_empresa": "FLEURY",
+        "cnpj": "60.840.055/0001-31",
+        "atividades": [
+            "(i) A Presta\u00e7\u00e3o de Servi\u00e7os M\u00e9dicos E Medicina Diagn\u00f3stica. (ii) A Consultoria. Assessoria. Cursos E Palestras Na \u00e1rea Da Sa\u00fade. Bem Como A Presta\u00e7\u00e3o de Servi\u00e7os Que Visem A Promo\u00e7\u00e3o de Sa\u00fade"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "FLRY3"
+        ]
+    },
+    {
+        "razao_social": "FLEX GEST\u00c3O DE RELACIONAMENTOS S.A.",
+        "nome_empresa": "FLEX S/A",
+        "cnpj": "10.851.805/0001-00",
+        "atividades": [
+            "A Companhia Atua Na Presta\u00e7\u00e3o de Servi\u00e7os Especializados de Contact Center Ativo E Receptivo E Cobran\u00e7a. Fazendo Gest\u00e3o de Relacionamento Para Clientes E Seus Consumidores."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "FLEX3"
+        ]
+    },
+    {
+        "razao_social": "FRAS-LE S.A.",
+        "nome_empresa": "FRAS-LE",
+        "cnpj": "88.610.126/0001-29",
+        "atividades": [
+            "Ind\u00fastria de Autope\u00e7as E Materiais de Fric\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "FRAS3"
+        ]
+    },
+    {
+        "razao_social": "GAFISA S.A.",
+        "nome_empresa": "GAFISA",
+        "cnpj": "01.545.826/0001-07",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "GFSA3",
+            "GFSA1",
+            "GFSA11",
+            "GFSA12"
+        ]
+    },
+    {
+        "razao_social": "GAMA PARTICIPACOES S.A.",
+        "nome_empresa": "GAMA PART",
+        "cnpj": "02.796.775/0001-40",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "OPGM3B"
+        ]
+    },
+    {
+        "razao_social": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
+        "nome_empresa": "GENERALSHOPP",
+        "cnpj": "08.764.621/0001-53",
+        "atividades": [
+            "Administra\u00e7\u00e3o de Shopping Centers"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "GSHP3"
+        ]
+    },
+    {
+        "razao_social": "GERDAU S.A.",
+        "nome_empresa": "GERDAU",
+        "cnpj": "33.611.500/0001-19",
+        "atividades": [
+            "Participa\u00e7\u00e3o E Administra\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Siderurgia"
+        ],
+        "codigos_negociacao": [
+            "GGBR3",
+            "GGBR4"
+        ]
+    },
+    {
+        "razao_social": "GOL LINHAS AEREAS INTELIGENTES S.A.",
+        "nome_empresa": "GOL",
+        "cnpj": "06.164.253/0001-87",
+        "atividades": [
+            "Gest\u00e3o de Participa\u00e7\u00e3o Societ\u00e1ria"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte A\u00e9reo"
+        ],
+        "codigos_negociacao": [
+            "GOLL4",
+            "GOLL11",
+            "GOLL12"
+        ]
+    },
+    {
+        "razao_social": "GP INVESTMENTS. LTD.",
+        "nome_empresa": "GP INVEST",
+        "cnpj": "07.857.850/0001-50",
+        "atividades": [
+            "Investimentos Alternativos. Principalmente em Private Equity"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos",
+            "Gest\u00e3o de Recursos e Investimentos"
+        ],
+        "codigos_negociacao": [
+            "GPIV33"
+        ]
+    },
+    {
+        "razao_social": "GPC PARTICIPACOES S.A.",
+        "nome_empresa": "GPC PART",
+        "cnpj": "02.193.750/0001-52",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Petroqu\u00edmicos"
+        ],
+        "codigos_negociacao": [
+            "GPCP3",
+            "GPCP4"
+        ]
+    },
+    {
+        "razao_social": "GRAZZIOTIN S.A.",
+        "nome_empresa": "GRAZZIOTIN",
+        "cnpj": "92.012.467/0001-70",
+        "atividades": [
+            "Com\u00e9rcio Varejista de Vesturio E Bazar."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "CGRA3",
+            "CGRA4"
+        ]
+    },
+    {
+        "razao_social": "GRENDENE S.A.",
+        "nome_empresa": "GRENDENE",
+        "cnpj": "89.850.341/0001-60",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Cal\u00e7ados em Geral"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "GRND3"
+        ]
+    },
+    {
+        "razao_social": "GRUPO SBF SA",
+        "nome_empresa": "CENTAURO",
+        "cnpj": "13.217.485/0001-11",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social (a) Administra\u00e7\u00e3o de Bens Pr\u00f3prios",
+            "E. (b) A Participa\u00e7\u00e3o. como S\u00f3cia Ou Acionista. em Outras Empresas."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "codigos_negociacao": [
+            "CNTO3"
+        ]
+    },
+    {
+        "razao_social": "GUARARAPES CONFECCOES S.A.",
+        "nome_empresa": "GUARARAPES",
+        "cnpj": "08.402.943/0001-52",
+        "atividades": [
+            "Confec\u00e7\u00f5es de Roupas E Tecidos em Geral."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "GUAR3"
+        ]
+    },
+    {
+        "razao_social": "HAGA S.A. INDUSTRIA E COMERCIO",
+        "nome_empresa": "HAGA S/A",
+        "cnpj": "30.540.991/0001-66",
+        "atividades": [
+            "Industria Metal\u00fargica - Fab. de Fechaduras P/constru\u00e7\u00e3o Civil"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Produtos para Constru\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "HAGA3",
+            "HAGA4"
+        ]
+    },
+    {
+        "razao_social": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
+        "nome_empresa": "HAPVIDA",
+        "cnpj": "05.197.443/0001-38",
+        "atividades": [
+            "Participa\u00e7\u00e3o. Como S\u00f3cia Ou Acionista. em Outras Empresas. Predominantemente de Assist\u00eancia M\u00e9dica. Bem Como A Realiza\u00e7\u00e3o de Investimentos Diretos E A Explora\u00e7\u00e3o de Atividades de Presta\u00e7\u00e3o de Servi\u00e7os"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "HAPV3"
+        ]
+    },
+    {
+        "razao_social": "HELBOR EMPREENDIMENTOS S.A.",
+        "nome_empresa": "HELBOR",
+        "cnpj": "49.263.189/0001-02",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o de Imoveis"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "HBOR3"
+        ]
+    },
+    {
+        "razao_social": "HERCULES S.A. FABRICA DE TALHERES",
+        "nome_empresa": "HERCULES",
+        "cnpj": "92.749.225/0001-63",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E A Comercializa\u00e7\u00e3o de Toda A Esp\u00e9cie de Talheres E Outros Artigos de Mesa Para Uso Dom\u00e9stico. Artigos de Adorno. Beleza. Higiene. M\u00f3veis. Material Escolar. de Escrit\u00f3rio E Profissional."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Utilidades Dom\u00e9sticas",
+            "Utens\u00edlios Dom\u00e9sticos"
+        ],
+        "codigos_negociacao": [
+            "HETA3",
+            "HETA4"
+        ]
+    },
+    {
+        "razao_social": "HOTEIS OTHON S.A.",
+        "nome_empresa": "HOTEIS OTHON",
+        "cnpj": "33.200.049/0001-47",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os Na Ind\u00fastria Hoteleira"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Hoteis e Restaurantes",
+            "Hotelaria"
+        ],
+        "codigos_negociacao": [
+            "HOOT3",
+            "HOOT4"
+        ]
+    },
+    {
+        "razao_social": "HYPERA S.A.",
+        "nome_empresa": "HYPERA",
+        "cnpj": "02.932.074/0001-91",
+        "atividades": [
+            "Fabricac\u00e3o de Medicamentos Alop\u00e1ticos Para Uso Humano"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "HYPE3"
+        ]
+    },
+    {
+        "razao_social": "IDEIASNET S.A.",
+        "nome_empresa": "IDEIASNET",
+        "cnpj": "02.365.069/0001-44",
+        "atividades": [
+            "Aquisi\u00e7\u00e3o de Participa\u00e7\u00f5es Diretas E Indiretas em Companhias Do Setor de Tecnologia. M\u00eddia E Telecomunica\u00e7\u00f5es",
+            "E Gest\u00e3o de Carteiras de Valores Mobili\u00e1rios E Recursos Pr\u00f3prios E de Terceiros."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos"
+        ],
+        "codigos_negociacao": [
+            "IDNT3"
+        ]
+    },
+    {
+        "razao_social": "IGB ELETR\u00d4NICA S/A",
+        "nome_empresa": "IGB S/A",
+        "cnpj": "43.185.362/0001-07",
+        "atividades": [
+            "Eletroeletr\u00f3nica"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "IGBR3"
+        ]
+    },
+    {
+        "razao_social": "IGUA SANEAMENTO S.A.",
+        "nome_empresa": "IGUA SA",
+        "cnpj": "08.159.965/0001-33",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os P\u00fablicos de \u00e1gua E Esgoto."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "codigos_negociacao": [
+            "IGSN3"
+        ]
+    },
+    {
+        "razao_social": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+        "nome_empresa": "IGUATEMI",
+        "cnpj": "51.218.147/0001-93",
+        "atividades": [
+            "Empresa Full Service No Setor de Shopping Centers. Suas Atividades Englobam A Concep\u00e7\u00e3o. O Planejamento. O Desenvolvimento E A Administra\u00e7\u00e3o de Shopping Centers Regionais E Complexos Imobili\u00e1rios."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "IGTA3"
+        ]
+    },
+    {
+        "razao_social": "INDUSTRIAS J B DUARTE S.A.",
+        "nome_empresa": "J B DUARTE",
+        "cnpj": "60.637.238/0001-54",
+        "atividades": [
+            "Com\u00e9rcio Atacadista Especializado em Outros Produtos Alimenticios. Reflorestamento. Setor Imobiliario. Etc."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "JBDU3",
+            "JBDU4"
+        ]
+    },
+    {
+        "razao_social": "INDUSTRIAS ROMI S.A.",
+        "nome_empresa": "INDS ROMI",
+        "cnpj": "56.720.428/0001-63",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de M\u00e1quinas-ferramenta"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "ROMI3"
+        ]
+    },
+    {
+        "razao_social": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
+        "nome_empresa": "INEPAR",
+        "cnpj": "76.627.504/0001-06",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Equipamentos E Sistemas El\u00e9tricos . Fabrica\u00e7\u00e3o de Torres E Acess\u00f3rios Para Transmiss\u00e3o de Energia E Telecomunica\u00e7\u00f5es. Fabrica\u00e7\u00e3o de Bens de Capital E Sitemas Industriais Sob Encomenda."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "INEP3",
+            "INEP4"
+        ]
+    },
+    {
+        "razao_social": "INNCORP S.A.",
+        "nome_empresa": "SELECTPART",
+        "cnpj": "02.604.860/0001-60",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "SLCT3B"
+        ]
+    },
+    {
+        "razao_social": "INSTITUTO HERMES PARDINI S.A.",
+        "nome_empresa": "IHPARDINI",
+        "cnpj": "19.378.769/0001-76",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Medicina Diagn\u00f3stica."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "PARD3"
+        ]
+    },
+    {
+        "razao_social": "INTER CONSTRUTORA E INCORPORADORA S.A.",
+        "nome_empresa": "INTER SA",
+        "cnpj": "09.611.768/0001-76",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios E Constru\u00e7\u00e3o de Edif\u00edcios"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "INNT3"
+        ]
+    },
+    {
+        "razao_social": "INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.",
+        "nome_empresa": "IMC S/A",
+        "cnpj": "17.314.329/0001-20",
+        "atividades": [
+            "Setor de Varejo de Alimenta\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Hoteis e Restaurantes",
+            "Restaurante e Similares"
+        ],
+        "codigos_negociacao": [
+            "MEAL3"
+        ]
+    },
+    {
+        "razao_social": "INVESTIMENTOS BEMGE S.A.",
+        "nome_empresa": "INVEST BEMGE",
+        "cnpj": "01.548.981/0001-79",
+        "atividades": [
+            "Investimentos"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "FIGE3",
+            "FIGE4"
+        ]
+    },
+    {
+        "razao_social": "INVESTIMENTOS E PARTICIP. EM INFRA S.A. - INVEPAR",
+        "nome_empresa": "INVEPAR",
+        "cnpj": "03.758.318/0001-24",
+        "atividades": [
+            "Foi Constitu\u00edda Sob A Forma de Sociedade An\u00f3nima E Tem Como Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Servi\u00e7os de Apoio e Armazenagem"
+        ],
+        "codigos_negociacao": [
+            "IVPR3B",
+            "IVPR4B"
+        ]
+    },
+    {
+        "razao_social": "IOCHPE MAXION S.A.",
+        "nome_empresa": "IOCHP-MAXION",
+        "cnpj": "61.156.113/0001-75",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Produtos Do Setor Automotivo E Equipamentos Ferrovi\u00e1rios."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Autom\u00f3veis e Motocicletas"
+        ],
+        "codigos_negociacao": [
+            "MYPK3"
+        ]
+    },
+    {
+        "razao_social": "IRANI PAPEL E EMBALAGEM S.A.",
+        "nome_empresa": "IRANI",
+        "cnpj": "92.791.243/0001-03",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Papel Para Embalagem. Embalagens de Papel\u00e3o Ondulado E Resinas."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Papel e Celulose"
+        ],
+        "codigos_negociacao": [
+            "RANI3",
+            "RANI4"
+        ]
+    },
+    {
+        "razao_social": "IRB - BRASIL RESSEGUROS S.A.",
+        "nome_empresa": "IRBBRASIL RE",
+        "cnpj": "33.376.989/0001-91",
+        "atividades": [
+            "Opera\u00e7\u00f5es de Resseguro E Retrocess\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "IRBR3"
+        ]
+    },
+    {
+        "razao_social": "ITAU UNIBANCO HOLDING S.A.",
+        "nome_empresa": "ITAUUNIBANCO",
+        "cnpj": "60.872.504/0001-23",
+        "atividades": [
+            "A Sociedade Tem Por Objeto A Atividade Banc\u00e1ria em Todas As Modalidades Autorizadas. Inclusive A de Opera\u00e7\u00f5es de C\u00e2mbio."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "ITUB3",
+            "ITUB4"
+        ]
+    },
+    {
+        "razao_social": "ITAUSA INVESTIMENTOS ITAU S.A.",
+        "nome_empresa": "ITAUSA",
+        "cnpj": "61.532.644/0001-15",
+        "atividades": [
+            "Gest\u00e3o de Participa\u00e7\u00f5es Societ\u00e1rias (holding)"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Bancos"
+        ],
+        "codigos_negociacao": [
+            "ITSA3",
+            "ITSA4"
+        ]
+    },
+    {
+        "razao_social": "JBS S.A.",
+        "nome_empresa": "JBS",
+        "cnpj": "02.916.265/0001-60",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "JBSS3"
+        ]
+    },
+    {
+        "razao_social": "JEREISSATI PARTICIPACOES S.A.",
+        "nome_empresa": "JEREISSATI",
+        "cnpj": "60.543.816/0001-93",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "JPSA3"
+        ]
+    },
+    {
+        "razao_social": "JHSF PARTICIPACOES S.A.",
+        "nome_empresa": "JHSF PART",
+        "cnpj": "08.294.224/0001-65",
+        "atividades": [
+            "Empresa Que Investe No Brasil em Neg\u00f3cios Voltados A Atender O P\u00fablico de Alta Renda. Focada No Desenvolvimento E Administra\u00e7\u00e3o de Projetos de Shopping Centers. Hot\u00e9is E E Restaurantes E Incorpora\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "JHSF3"
+        ]
+    },
+    {
+        "razao_social": "JOAO FORTES ENGENHARIA S.A.",
+        "nome_empresa": "JOAO FORTES",
+        "cnpj": "33.035.536/0001-00",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o de Im\u00f3veis",
+            "Execu\u00e7\u00e3o Por Administra\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Civil"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "JFEN3"
+        ]
+    },
+    {
+        "razao_social": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
+        "nome_empresa": "JOSAPAR",
+        "cnpj": "87.456.562/0001-22",
+        "atividades": [
+            "Beneficiamento de Arroz E Participa\u00e7\u00f5es"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Alimentos Diversos"
+        ],
+        "codigos_negociacao": [
+            "JOPA3",
+            "JOPA4"
+        ]
+    },
+    {
+        "razao_social": "JSL S.A.",
+        "nome_empresa": "JSL",
+        "cnpj": "52.548.435/0001-79",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "JSLG3"
+        ]
+    },
+    {
+        "razao_social": "KARSTEN S.A.",
+        "nome_empresa": "KARSTEN",
+        "cnpj": "82.640.558/0001-04",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o. Exporta\u00e7\u00e3o. Importa\u00e7\u00e3o E O Com\u00e9rcio Atacadista E Varejista de Fios. Tecidos E Produtos T\u00eaxteis em Geral."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "CTKA3",
+            "CTKA4"
+        ]
+    },
+    {
+        "razao_social": "KEPLER WEBER S.A.",
+        "nome_empresa": "KEPLER WEBER",
+        "cnpj": "91.983.056/0001-69",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Produtos E Mat\u00e9rias Primas Relacionadas A Metalurgia. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o. Presta\u00e7\u00e3o de Servi\u00e7os. Com\u00e9rcio de Produtos Destinados A Agroind\u00fastria."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "KEPL3",
+            "KEPL11"
+        ]
+    },
+    {
+        "razao_social": "KLABIN S.A.",
+        "nome_empresa": "KLABIN S/A",
+        "cnpj": "89.637.490/0001-45",
+        "atividades": [
+            "Empresa Brasileira de Base Florestal. Produtora de Pap\u00e9is E Cart\u00f5es Para Embalagens. Embalagens de Papel\u00e3o Ondulado E Sacos Industriais. Al\u00e9m de Ser Recicladora E Produtora de Toras Para Serrarias."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Papel e Celulose"
+        ],
+        "codigos_negociacao": [
+            "KLBN11",
+            "KLBN3",
+            "KLBN4"
+        ]
+    },
+    {
+        "razao_social": "LIFEMED INDUSTRIAL EQUIP. DE ART. M\u00c9D. HOSP. S.A.",
+        "nome_empresa": "LIFEMED",
+        "cnpj": "02.357.251/0001-53",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Instrumentos N\u00e3o Eletronicos E Utensilios Para Uso M\u00e9dico. Odontol\u00f3gico E De laborat\u00f3rio"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Equipamentos"
+        ],
+        "codigos_negociacao": [
+            "LMED3"
+        ]
+    },
+    {
+        "razao_social": "LIGHT S.A.",
+        "nome_empresa": "LIGHT S/A",
+        "cnpj": "03.378.521/0001-75",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Sociedades P/ Explora\u00e7\u00e3o Servi\u00e7os de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "LIGT3"
+        ]
+    },
+    {
+        "razao_social": "LINX S.A.",
+        "nome_empresa": "LINX",
+        "cnpj": "06.948.969/0001-75",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "LINX3"
+        ]
+    },
+    {
+        "razao_social": "LITEL PARTICIPACOES S.A.",
+        "nome_empresa": "LITEL",
+        "cnpj": "00.743.065/0001-27",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "codigos_negociacao": [
+            "LTEL3B"
+        ]
+    },
+    {
+        "razao_social": "LITELA PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "LITELA",
+        "cnpj": "05.495.546/0001-84",
+        "atividades": [
+            "A Cia Tem Como Atividade A Participa\u00e7\u00e3o. Sob Qualquer Forma. No Capital de Outras Sociedades Civis Ou Comerciais. Atualmente. A Cia Tem Participa\u00e7\u00e3o Somente Na Vale S.A."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "codigos_negociacao": [
+            "LTLA3B"
+        ]
+    },
+    {
+        "razao_social": "LOCALIZA RENT A CAR S.A.",
+        "nome_empresa": "LOCALIZA",
+        "cnpj": "16.670.085/0001-55",
+        "atividades": [
+            "Aluguel de Carros E Gest\u00e3o de Frotas"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Aluguel de carros"
+        ],
+        "codigos_negociacao": [
+            "RENT3"
+        ]
+    },
+    {
+        "razao_social": "LOCAWEB SERVI\u00c7OS DE INTERNET S.A.",
+        "nome_empresa": "LOCAWEB",
+        "cnpj": "02.351.877/0001-52",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "LWSA3"
+        ]
+    },
+    {
+        "razao_social": "LOG COMMERCIAL PROPERTIES",
+        "nome_empresa": "LOG COM PROP",
+        "cnpj": "09.041.168/0001-10",
+        "atividades": [
+            "Administra\u00e7\u00e3o de Bens Pr\u00f3prios. Presta\u00e7\u00e3o de Servi\u00e7os de Engenharia E Constru\u00e7\u00e3o.incorpora\u00e7\u00e3o. Constru\u00e7\u00e3o Comercializa\u00e7\u00e3o E Loca\u00e7\u00e3o de Im\u00f3veis.participa\u00e7\u00e3o em Outras Sociedades Como S\u00f3cia Ou Acionista"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "LOGG3"
+        ]
+    },
+    {
+        "razao_social": "LOG-IN LOGISTICA INTERMODAL S.A.",
+        "nome_empresa": "LOG-IN",
+        "cnpj": "42.278.291/0001-24",
+        "atividades": [
+            "A Log-in Oferece Solu\u00e7\u00f5es Log\u00edsticas Integradas Atrav\u00e9s Do Transporte Aquavi\u00e1rio em Navios Porta-cont\u00eaineres. Terminal Portu\u00e1rio. Terminais Intermodais E Complemento Rodovi\u00e1rio."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Hidrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "LOGN3"
+        ]
+    },
+    {
+        "razao_social": "LOJAS AMERICANAS S.A.",
+        "nome_empresa": "LOJAS AMERIC",
+        "cnpj": "33.014.556/0001-96",
+        "atividades": [
+            "Com\u00e9rcio em Geral. Inclusive Supermercado E Lanchonete. Lojas de Conveni\u00eancia. No Varejo E No Atacado. Atrav\u00e9s de Lojas E Dep\u00f3sitos. de Quaisquer Mercadorias. Bem Como A Realiza\u00e7\u00e3o de Servi\u00e7os."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "codigos_negociacao": [
+            "LAME3",
+            "LAME4"
+        ]
+    },
+    {
+        "razao_social": "LOJAS RENNER S.A.",
+        "nome_empresa": "LOJAS RENNER",
+        "cnpj": "92.754.738/0001-62",
+        "atividades": [
+            "Loja de Departamentos (com\u00e9rcio Varejista)"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "LREN3"
+        ]
+    },
+    {
+        "razao_social": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
+        "nome_empresa": "LOPES BRASIL",
+        "cnpj": "08.078.847/0001-09",
+        "atividades": [
+            "Intermedia\u00e7\u00e3o Na Compra. Venda. Permuta E Loca\u00e7\u00e3o de Im\u00f3veis Ou de Direitos E Obriga\u00e7\u00f5es A Eles Relativos."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis",
+            "Intermedia\u00e7\u00e3o Imobili\u00e1ria"
+        ],
+        "codigos_negociacao": [
+            "LPSB3"
+        ]
+    },
+    {
+        "razao_social": "LUPATECH S.A.",
+        "nome_empresa": "LUPATECH",
+        "cnpj": "89.463.822/0001-12",
+        "atividades": [
+            "Fabricante de Equipamentos E Provedor de Servi\u00e7os Para O Setor de Petr\u00f3leo E G\u00e1s."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Equipamentos e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "LUPA3",
+            "LUPA11"
+        ]
+    },
+    {
+        "razao_social": "M.DIAS BRANCO S.A. IND COM DE ALIMENTOS",
+        "nome_empresa": "M.DIASBRANCO",
+        "cnpj": "07.206.816/0001-15",
+        "atividades": [
+            "Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Biscoitos. Massas. Farinha de Trigo E Farelo. Margarinas E Gorduras. Bolos. Snacks. Mistura Para Bolos E Torradas."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Alimentos Diversos"
+        ],
+        "codigos_negociacao": [
+            "MDIA3"
+        ]
+    },
+    {
+        "razao_social": "MAESTRO LOCADORA DE VEICULOS S.A.",
+        "nome_empresa": "MAESTROLOC",
+        "cnpj": "08.795.211/0001-70",
+        "atividades": [
+            "A Companhia Presta Servi\u00e7os de Loca\u00e7\u00e3o de Ve\u00edculos E Gest\u00e3o de Frotas."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Aluguel de carros"
+        ],
+        "codigos_negociacao": [
+            "MSRO3"
+        ]
+    },
+    {
+        "razao_social": "MAGAZINE LUIZA S.A.",
+        "nome_empresa": "MAGAZ LUIZA",
+        "cnpj": "47.960.950/0001-21",
+        "atividades": [
+            "Somos Uma Rede Varejista E Atuamos Com Foco Na Comercializa\u00e7\u00e3o de Bens Dur\u00e1veis No Brasil."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Eletrodom\u00e9sticos"
+        ],
+        "codigos_negociacao": [
+            "MGLU3"
+        ]
+    },
+    {
+        "razao_social": "MAHLE-METAL LEVE S.A.",
+        "nome_empresa": "METAL LEVE",
+        "cnpj": "60.476.884/0001-87",
+        "atividades": [
+            "Industria E Com\u00e9rcio de Pe\u00e7as E Componentes Para Motores A Combust\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Autom\u00f3veis e Motocicletas"
+        ],
+        "codigos_negociacao": [
+            "LEVE3"
+        ]
+    },
+    {
+        "razao_social": "MANGELS INDUSTRIAL S.A.",
+        "nome_empresa": "MANGELS INDL",
+        "cnpj": "61.065.298/0001-02",
+        "atividades": [
+            "Produ\u00e7\u00e3o de Relaminados. Trefilados E Perfilados de A\u00e7o. Exceto Arames."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Artefatos de Ferro e A\u00e7o"
+        ],
+        "codigos_negociacao": [
+            "MGEL3",
+            "MGEL4"
+        ]
+    },
+    {
+        "razao_social": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
+        "nome_empresa": "ESTRELA",
+        "cnpj": "61.082.004/0001-50",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Brinquedos E Jogos Recreativos"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Brinquedos e Jogos"
+        ],
+        "codigos_negociacao": [
+            "ESTR3",
+            "ESTR4"
+        ]
+    },
+    {
+        "razao_social": "MARCOPOLO S.A.",
+        "nome_empresa": "MARCOPOLO",
+        "cnpj": "88.611.835/0001-29",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de \u00f3nibus E Carrocerias Para \u00f3nibus. Suas Partes. Pe\u00e7as E Componentes"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "POMO3",
+            "POMO4"
+        ]
+    },
+    {
+        "razao_social": "MARFRIG GLOBAL FOODS S.A.",
+        "nome_empresa": "MARFRIG",
+        "cnpj": "03.853.896/0001-40",
+        "atividades": [
+            "Produ\u00e7\u00e3o E Distribui\u00e7\u00e3o de Alimentos \u00e0 Base de Carne Bovina. Su\u00edna. Ovina E Av\u00edcola. In Natura. Elaborados E Processados. Couros Semi-terminados E Terminados. Al\u00e9m de Outros Produtos Aliment\u00edcios."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "MRFG3"
+        ]
+    },
+    {
+        "razao_social": "MARISA LOJAS S.A.",
+        "nome_empresa": "LOJAS MARISA",
+        "cnpj": "61.189.288/0001-89",
+        "atividades": [
+            "Com\u00e9rcio Varejista de Artigos Do Vestu\u00e1rio E Acess\u00f3rios. Presta\u00e7\u00e3o de Servi\u00e7os de Correspondente Banc\u00e1rio. Intermedia\u00e7\u00e3o de Neg\u00f3cios E Cong\u00eaneres. Atua\u00e7\u00e3o Como Representante de Seguros."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "AMAR3"
+        ]
+    },
+    {
+        "razao_social": "MERCANTIL BRASIL FINANC S.A. C.F.I.",
+        "nome_empresa": "MERC FINANC",
+        "cnpj": "33.040.601/0001-87",
+        "atividades": [
+            "Cr\u00e9dito. Financiamento E Investimentos."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Intermedi\u00e1rios Financeiros",
+            "Soc. Cr\u00e9dito e Financiamento"
+        ],
+        "codigos_negociacao": [
+            "MERC3",
+            "MERC4"
+        ]
+    },
+    {
+        "razao_social": "METALFRIO SOLUTIONS S.A.",
+        "nome_empresa": "METALFRIO",
+        "cnpj": "04.821.041/0001-08",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Comercialiaza\u00e7\u00e3o de Geladeiras E Similares. de M\u00e1quinas de Vendas Autom\u00e1ticas. Componentes E Pe\u00e7as"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "FRIO3"
+        ]
+    },
+    {
+        "razao_social": "METALGRAFICA IGUACU S.A.",
+        "nome_empresa": "METAL IGUACU",
+        "cnpj": "80.227.184/0001-66",
+        "atividades": [
+            "F\u00e1brica de Embalagens Met\u00e1licas Para Alimentos"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Embalagens"
+        ],
+        "codigos_negociacao": [
+            "MTIG3",
+            "MTIG4"
+        ]
+    },
+    {
+        "razao_social": "METALURGICA GERDAU S.A.",
+        "nome_empresa": "GERDAU MET",
+        "cnpj": "92.690.783/0001-09",
+        "atividades": [
+            "Participa\u00e7\u00e3o E Administra\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Siderurgia"
+        ],
+        "codigos_negociacao": [
+            "GOAU3",
+            "GOAU4"
+        ]
+    },
+    {
+        "razao_social": "METALURGICA RIOSULENSE S.A.",
+        "nome_empresa": "RIOSULENSE",
+        "cnpj": "85.778.074/0001-06",
+        "atividades": [
+            "Industria Mec\u00e2no Metal\u00fargica"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "RSUL3",
+            "RSUL4"
+        ]
+    },
+    {
+        "razao_social": "METISA METALURGICA TIMBOENSE S.A.",
+        "nome_empresa": "METISA",
+        "cnpj": "86.375.425/0001-09",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de M\u00e1quinas E Equipamentos Para A Agricultura E Pecu\u00e1ria. Pe\u00e7as E Acess\u00f3rios. Exceto Para Irriga\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Constru\u00e7\u00e3o e Agr\u00edcolas"
+        ],
+        "codigos_negociacao": [
+            "MTSA3",
+            "MTSA4"
+        ]
+    },
+    {
+        "razao_social": "MILLS ESTRUTURAS E SERVI\u00c7OS DE ENGENHARIA S.A.",
+        "nome_empresa": "MILLS",
+        "cnpj": "27.093.558/0001-15",
+        "atividades": [
+            "Servi\u00e7os Especiais de Engenharia E Loca\u00e7\u00e3o de Plataforma"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "MILS3"
+        ]
+    },
+    {
+        "razao_social": "MINASMAQUINAS S.A.",
+        "nome_empresa": "MINASMAQUINA",
+        "cnpj": "17.161.241/0001-15",
+        "atividades": [
+            "Com\u00e9rcio de Ve\u00edculos. Pe\u00e7as E Servi\u00e7os (concession\u00e1ria Mercedes-benz)"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Com\u00e9rcio",
+            "Material de Transporte"
+        ],
+        "codigos_negociacao": [
+            "MMAQ3",
+            "MMAQ4"
+        ]
+    },
+    {
+        "razao_social": "MINERVA S.A.",
+        "nome_empresa": "MINERVA",
+        "cnpj": "67.620.377/0001-14",
+        "atividades": [
+            "L\u00edder Na Am\u00e9rica Do Sul Na Exporta\u00e7\u00e3o de Carne Bovina In Natura E Seus Derivados. E Que Atua Tamb\u00e9m No Segmento de Processados."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "BEEF3",
+            "BEEF11"
+        ]
+    },
+    {
+        "razao_social": "MINUPAR PARTICIPACOES S.A.",
+        "nome_empresa": "MINUPAR",
+        "cnpj": "90.076.886/0001-40",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Empresas. Bem Como Cria\u00e7\u00e3o. Abate. Industrializa\u00e7\u00e3o. Comercializa\u00e7\u00e3o. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Carnes E Produtos Derivados de Aves. E Presta\u00e7\u00e3o de Servi\u00e7os A Terceiros."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "Carnes e Derivados"
+        ],
+        "codigos_negociacao": [
+            "MNPR3"
+        ]
+    },
+    {
+        "razao_social": "MITRE REALTY EMPREENDIMENTOS E PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "MITRE REALTY",
+        "cnpj": "07.882.930/0001-65",
+        "atividades": [
+            "(a) Incorpora\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios de Qualquer Natureza. (b) Loteamento de Terrenos. (c) Constru\u00e7\u00e3o de Condom\u00ednios"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "MTRE3"
+        ]
+    },
+    {
+        "razao_social": "MMX MINERACAO E METALICOS S.A.",
+        "nome_empresa": "MMX MINER",
+        "cnpj": "02.762.115/0001-49",
+        "atividades": [
+            "Minera\u00e7\u00e3o de Min\u00e9rio de Ferro"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "codigos_negociacao": [
+            "MMXM3",
+            "MMXM11"
+        ]
+    },
+    {
+        "razao_social": "MONTEIRO ARANHA S.A.",
+        "nome_empresa": "MONT ARANHA",
+        "cnpj": "33.102.476/0001-92",
+        "atividades": [
+            "Holding - Participa\u00e7\u00e3o Societ\u00e1ria"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Holdings Diversificadas"
+        ],
+        "codigos_negociacao": [
+            "MOAR3"
+        ]
+    },
+    {
+        "razao_social": "MOURA DUBEUX ENGENHARIA S/A",
+        "nome_empresa": "MOURA DUBEUX",
+        "cnpj": "12.049.631/0001-84",
+        "atividades": [
+            "Compra E Venda de Im\u00f3veis. Loca\u00e7\u00e3o. Desmembramento Ou Loteamento de Terrenos. incorpora\u00e7\u00e3o Imobili\u00e1ria Ou Constru\u00e7\u00e3o de Im\u00f3veis Destinados \u00e0 Venda. Participa\u00e7\u00e3o em Outras sociedades."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "MDNE3"
+        ]
+    },
+    {
+        "razao_social": "MOVIDA PARTICIPACOES SA",
+        "nome_empresa": "MOVIDA",
+        "cnpj": "21.314.559/0001-66",
+        "atividades": [
+            "Aluguel de Carros E Gest\u00e3o de Frotas"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Aluguel de carros"
+        ],
+        "codigos_negociacao": [
+            "MOVI3"
+        ]
+    },
+    {
+        "razao_social": "MRS LOGISTICA S.A.",
+        "nome_empresa": "MRS LOGIST",
+        "cnpj": "01.417.222/0001-77",
+        "atividades": [
+            "Servi\u00e7os de Transporte Ferrovi\u00e1rio de Cargas"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Ferrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "MRSA3B",
+            "MRSA5B",
+            "MRSA6B"
+        ]
+    },
+    {
+        "razao_social": "MRV ENGENHARIA E PARTICIPACOES S.A.",
+        "nome_empresa": "MRV",
+        "cnpj": "08.343.492/0001-20",
+        "atividades": [
+            "Atividades de Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o atividades de Log\u00edstica"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "MRVE3"
+        ]
+    },
+    {
+        "razao_social": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+        "nome_empresa": "MULTIPLAN",
+        "cnpj": "07.816.890/0001-53",
+        "atividades": [
+            "Administra\u00e7\u00e3o de Shopping Centers"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "MULT3"
+        ]
+    },
+    {
+        "razao_social": "MUNDIAL S.A. - PRODUTOS DE CONSUMO",
+        "nome_empresa": "MUNDIAL",
+        "cnpj": "88.610.191/0001-54",
+        "atividades": [
+            "Componentes Diversos Para Ind\u00fastria de Cal\u00e7ados Confec\u00e7\u00f5es. Artigos de Cuidados Pessoais E de Cultelaria."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Acess\u00f3rios"
+        ],
+        "codigos_negociacao": [
+            "MNDL3"
+        ]
+    },
+    {
+        "razao_social": "NATURA &CO HOLDING S.A.",
+        "nome_empresa": "GRUPO NATURA",
+        "cnpj": "32.785.497/0001-97",
+        "atividades": [
+            "Gest\u00e3o de Participa\u00e7\u00f5es Societ\u00e1rias em Sociedades Que Desenvolvam Suas Atividades Principais No Ramo de Beleza."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Produtos de Uso Pessoal e de Limpeza",
+            "Produtos de Uso Pessoal"
+        ],
+        "codigos_negociacao": [
+            "NTCO3",
+            "NTCO1"
+        ]
+    },
+    {
+        "razao_social": "NEOENERGIA S.A.",
+        "nome_empresa": "NEOENERGIA",
+        "cnpj": "01.083.200/0001-18",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "NEOE3"
+        ]
+    },
+    {
+        "razao_social": "NORDON INDUSTRIAS METALURGICAS S.A.",
+        "nome_empresa": "NORDON MET",
+        "cnpj": "60.884.319/0001-59",
+        "atividades": [
+            "A Sociedade Tem Como Atividade Operacional Preponderante A Produ\u00e7\u00e3o de Bens de Capital Destinados Ao Mercado Interno E Externo Para Os Setores Qu\u00edmico. Petrol\u00edfero. Petroqu\u00edmico. Criogenia. Aliment\u00edci"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "NORD3"
+        ]
+    },
+    {
+        "razao_social": "NORTEC QU\u00cdMICA S.A.",
+        "nome_empresa": "NORTCQUIMICA",
+        "cnpj": "29.950.060/0001-57",
+        "atividades": [
+            "Qu\u00edmica Fina. Ci\u00eancias Da Vida. Fabricantes de Insumos Farmac\u00eauticos Ativos - Mat\u00e9ria-prima Para A Ind\u00fastria Farmac\u00eautica"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "NRTQ3"
+        ]
+    },
+    {
+        "razao_social": "NOTRE DAME INTERMEDICA PARTICIPACOES SA",
+        "nome_empresa": "INTERMEDICA",
+        "cnpj": "19.853.511/0001-84",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Assist\u00eancia \u00e0 Sa\u00fade E Odontol\u00f3gica."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "GNDI3"
+        ]
+    },
+    {
+        "razao_social": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
+        "nome_empresa": "NUTRIPLANT",
+        "cnpj": "51.128.999/0001-90",
+        "atividades": [
+            "Industria E Com\u00e9rcio de Fertilizantes Para Agricultura."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Fertilizantes e Defensivos"
+        ],
+        "codigos_negociacao": [
+            "NUTR3"
+        ]
+    },
+    {
+        "razao_social": "ODONTOPREV S.A.",
+        "nome_empresa": "ODONTOPREV",
+        "cnpj": "58.119.199/0001-51",
+        "atividades": [
+            "Operadora de Planos Odontol\u00f3gicos"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "ODPV3"
+        ]
+    },
+    {
+        "razao_social": "OI S.A.",
+        "nome_empresa": "OI",
+        "cnpj": "76.535.764/0001-43",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Comunica\u00e7\u00f5es",
+            "Telecomunica\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "OIBR3",
+            "OIBR4"
+        ]
+    },
+    {
+        "razao_social": "OMEGA GERA\u00c7\u00c3O S.A.",
+        "nome_empresa": "OMEGA GER",
+        "cnpj": "09.149.503/0001-06",
+        "atividades": [
+            "Participa\u00e7\u00e3o. Direta Ou Por Meio de Joint Venture (parceria). Cons\u00f3rcio Ou Qualquer Outra Sociedade. em Ativos de Energia El\u00e9trica Que J\u00e1 Tenham Atingido A Fase Operacional"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "OMGE3"
+        ]
+    },
+    {
+        "razao_social": "OPPORTUNITY ENERGIA E PARTICIPACOES S.A.",
+        "nome_empresa": "OPPORT ENERG",
+        "cnpj": "02.318.346/0001-68",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "OPHE3B"
+        ]
+    },
+    {
+        "razao_social": "OSX BRASIL S.A.",
+        "nome_empresa": "OSX BRASIL",
+        "cnpj": "09.112.685/0001-32",
+        "atividades": [
+            "Equipamentos E Servi\u00e7os Para A Ind\u00fastria Offshore de Petr\u00f3leo E G\u00e1s Natural."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Equipamentos e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "OSXB3"
+        ]
+    },
+    {
+        "razao_social": "OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.",
+        "nome_empresa": "OUROFINO S/A",
+        "cnpj": "20.258.278/0001-70",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades Que Execer\u00e7am Atividades de Desenvolvimento. Fabrica\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Produtos Destinados Ao Setor de Sa\u00fade Animal."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "OFSA3"
+        ]
+    },
+    {
+        "razao_social": "PANATLANTICA S.A.",
+        "nome_empresa": "PANATLANTICA",
+        "cnpj": "92.693.019/0001-89",
+        "atividades": [
+            "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de A\u00e7os Planos."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Artefatos de Ferro e A\u00e7o"
+        ],
+        "codigos_negociacao": [
+            "PATI3",
+            "PATI4"
+        ]
+    },
+    {
+        "razao_social": "PARANAPANEMA S.A.",
+        "nome_empresa": "PARANAPANEMA",
+        "cnpj": "60.398.369/0004-79",
+        "atividades": [
+            "Metalurgia Do Cobre E Suas Ligas"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Artefatos de Cobre"
+        ],
+        "codigos_negociacao": [
+            "PMAM3"
+        ]
+    },
+    {
+        "razao_social": "PBG S/A",
+        "nome_empresa": "PORTOBELLO",
+        "cnpj": "83.475.913/0001-91",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Produtos para Constru\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "PTBL3"
+        ]
+    },
+    {
+        "razao_social": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
+        "nome_empresa": "PDG REALT",
+        "cnpj": "02.950.811/0001-89",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "PDGR3"
+        ]
+    },
+    {
+        "razao_social": "PETRO RIO S.A.",
+        "nome_empresa": "PETRORIO",
+        "cnpj": "10.629.105/0001-68",
+        "atividades": [
+            "Constitui Objeto Da Companhia A Participa\u00e7\u00e3o em Outras Sociedades Como S\u00f3cia. Acionista Ou Quotista. Independentemente de Sua Atividade."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "PRIO3"
+        ]
+    },
+    {
+        "razao_social": "PETROBRAS DISTRIBUIDORA S/A",
+        "nome_empresa": "PETROBRAS BR",
+        "cnpj": "34.274.233/0001-02",
+        "atividades": [
+            "Distribui\u00e7\u00e3o E Venda de \u00e1lcool Carburante. Biod\u00edsel. Gasolina E Demais Derivados de Petr\u00f3leo. Incluindo Lubrificantes. Assim Como G\u00e1s Natural."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "BRDT3"
+        ]
+    },
+    {
+        "razao_social": "PETROLEO BRASILEIRO S.A. PETROBRAS",
+        "nome_empresa": "PETROBRAS",
+        "cnpj": "33.000.167/0001-01",
+        "atividades": [
+            "Petr\u00f3leo. G\u00e1s E Energia"
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "PETR3",
+            "PETR4"
+        ]
+    },
+    {
+        "razao_social": "PETTENATI S.A. INDUSTRIA TEXTIL",
+        "nome_empresa": "PETTENATI",
+        "cnpj": "88.613.658/0001-10",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "PTNT3",
+            "PTNT4"
+        ]
+    },
+    {
+        "razao_social": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
+        "nome_empresa": "PLASCAR PART",
+        "cnpj": "51.928.174/0001-50",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Empresas"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Autom\u00f3veis e Motocicletas"
+        ],
+        "codigos_negociacao": [
+            "PLAS3",
+            "PLAS11"
+        ]
+    },
+    {
+        "razao_social": "POLPAR S.A.",
+        "nome_empresa": "POLPAR",
+        "cnpj": "59.789.545/0001-71",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Empresas"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "PPAR3"
+        ]
+    },
+    {
+        "razao_social": "POMIFRUTAS S/A",
+        "nome_empresa": "POMIFRUTAS",
+        "cnpj": "86.550.951/0001-50",
+        "atividades": [
+            "Pomicultura Produ\u00e7\u00e3o. Comercializa\u00e7\u00e3o E Exporta\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "FRTA3"
+        ]
+    },
+    {
+        "razao_social": "PORTO SEGURO S.A.",
+        "nome_empresa": "PORTO SEGURO",
+        "cnpj": "02.149.205/0001-69",
+        "atividades": [
+            "Gest\u00e3o de Participa\u00e7\u00f5es Societ\u00e1rias (holding)"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "PSSA3"
+        ]
+    },
+    {
+        "razao_social": "PORTO SUDESTE V.M. S.A.",
+        "nome_empresa": "PORTO VM",
+        "cnpj": "18.494.485/0001-82",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Servi\u00e7os de Apoio e Armazenagem"
+        ],
+        "codigos_negociacao": [
+            "PSVM11"
+        ]
+    },
+    {
+        "razao_social": "POSITIVO TECNOLOGIA S.A.",
+        "nome_empresa": "POSITIVO TEC",
+        "cnpj": "81.243.735/0001-48",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Hardware."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Computadores e Equipamentos"
+        ],
+        "codigos_negociacao": [
+            "POSI3"
+        ]
+    },
+    {
+        "razao_social": "PPLA PARTICIPATIONS LTD.",
+        "nome_empresa": "PPLA",
+        "cnpj": "15.073.274/0001-88",
+        "atividades": [
+            "Holding de Companhias Que Atuam Como Ve\u00edculos de Investimento."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos",
+            "Gest\u00e3o de Recursos e Investimentos"
+        ],
+        "codigos_negociacao": [
+            "PPLA11"
+        ]
+    },
+    {
+        "razao_social": "PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA",
+        "nome_empresa": "PRATICA",
+        "cnpj": "08.574.411/0001-00",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social: (i) A Fabrica\u00e7\u00e3o de Fornos E Equipamentos Voltados Para Os Mercados de Panifica\u00e7\u00e3o E Gastron\u00f3mico",
+            "E (ii) A Participa\u00e7\u00e3o Societ\u00e1ria em Outras Companhias."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "codigos_negociacao": [
+            "PTCA11",
+            "PTCA3"
+        ]
+    },
+    {
+        "razao_social": "PRINER SERVI\u00c7OS INDUSTRIAIS S.A.",
+        "nome_empresa": "PRINER",
+        "cnpj": "18.593.815/0001-97",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os Industriais. Principalmente Nos Segmentos Petroqu\u00edmico. \u00f3leo E G\u00e1s. Siderurgia. Papel E Celulose E Qu\u00edmico."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "PRNR3"
+        ]
+    },
+    {
+        "razao_social": "PRODUTORES ENERGET.DE MANSO S.A.- PROMAN",
+        "nome_empresa": "PROMAN",
+        "cnpj": "02.291.077/0001-93",
+        "atividades": [
+            "Gera\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "PRMN3B"
+        ]
+    },
+    {
+        "razao_social": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
+        "nome_empresa": "PROFARMA",
+        "cnpj": "45.453.214/0001-51",
+        "atividades": [
+            "Profarma Atua Na Distribui\u00e7\u00e3o de Produtos Farmac\u00eauticos. Higiene Pessoal E Cosm\u00e9ticos. Nos Mais Populosos Estados Brasileiros."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "PFRM3"
+        ]
+    },
+    {
+        "razao_social": "PROMPT PARTICIPACOES S.A.",
+        "nome_empresa": "PROMPT PART",
+        "cnpj": "02.992.449/0001-09",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "PRPT3B"
+        ]
+    },
+    {
+        "razao_social": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
+        "nome_empresa": "QUALICORP",
+        "cnpj": "11.992.680/0001-93",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os E Gest\u00e3o de Benef\u00edcios de Assist\u00eancia \u00e0 Sa\u00fade."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "codigos_negociacao": [
+            "QUAL3"
+        ]
+    },
+    {
+        "razao_social": "QUALITY SOFTWARE S.A.",
+        "nome_empresa": "QUALITY SOFT",
+        "cnpj": "35.791.391/0001-94",
+        "atividades": [
+            "Servi\u00e7os Nos Setores de Inform\u00e1tica. Auditoria de Sistemas Softwares",
+            "Treinamento.desenvolvimento de Sistemas de Suporte T\u00e9cnico. Hardware E Software em Geral",
+            "Design Gr\u00e1fico E Editora\u00e7\u00e3o Eletr\u00f3nica."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "QUSW3"
+        ]
+    },
+    {
+        "razao_social": "RAIA DROGASIL S.A.",
+        "nome_empresa": "RAIADROGASIL",
+        "cnpj": "61.585.865/0001-51",
+        "atividades": [
+            "Com\u00e9rcio de Produtos Farmac\u00eauticos. Perfumarias E Afins"
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "codigos_negociacao": [
+            "RADL3"
+        ]
+    },
+    {
+        "razao_social": "RANDON S.A. IMPLEMENTOS E PARTICIPACOES",
+        "nome_empresa": "RANDON PART",
+        "cnpj": "89.086.144/0001-16",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Ve\u00edc. Automotores E Rebocados Para A Movimenta\u00e7\u00e3o E O de Transporte de Materiais",
+            "de Implem Para O Transp Rodovi\u00e1rio E Ferrovi\u00e1rio E de Aparelhos Mec\u00e2nicos. Pe\u00e7as"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "RAPT3",
+            "RAPT4"
+        ]
+    },
+    {
+        "razao_social": "RECRUSUL S.A.",
+        "nome_empresa": "RECRUSUL",
+        "cnpj": "91.333.666/0001-17",
+        "atividades": [
+            "Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Implementos Rodovi\u00e1rios E Equipamentos Para Refrigera\u00e7\u00e3o Industrial."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "RCSL3",
+            "RCSL4"
+        ]
+    },
+    {
+        "razao_social": "REDE ENERGIA PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "REDE ENERGIA",
+        "cnpj": "61.584.140/0001-49",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Empresas (a Rede Energia Participa\u00e7\u00f5es \u00c9 Uma Holding)"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "REDE3"
+        ]
+    },
+    {
+        "razao_social": "REFINARIA DE PETROLEOS MANGUINHOS S.A.",
+        "nome_empresa": "PET MANGUINH",
+        "cnpj": "33.412.081/0001-96",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Produtos de Refino de Petr\u00f3leo."
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "RPMG3"
+        ]
+    },
+    {
+        "razao_social": "RENOVA ENERGIA S.A.",
+        "nome_empresa": "RENOVA",
+        "cnpj": "08.534.605/0001-74",
+        "atividades": [
+            "Gera\u00e7\u00e3o de Energia Por Meio de Fontes Renov\u00e1veis."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "RNEW11",
+            "RNEW3",
+            "RNEW4"
+        ]
+    },
+    {
+        "razao_social": "RESTOQUE COM\u00c9RCIO E CONFEC\u00c7\u00d5ES DE ROUPAS S.A.",
+        "nome_empresa": "LE LIS BLANC",
+        "cnpj": "49.669.856/0001-43",
+        "atividades": [
+            "(a) Confec\u00e7\u00e3o de Produtos em Geral. Atrav\u00e9s de Terceiros",
+            "(b) Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o",
+            "(c) Explora\u00e7\u00e3o de Com\u00e9rcio E Ind\u00fastria de Confec\u00e7\u00e3o de Produtos em Geral."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "LLIS3"
+        ]
+    },
+    {
+        "razao_social": "RIO PARANAPANEMA ENERGIA S.A.",
+        "nome_empresa": "GER PARANAP",
+        "cnpj": "02.998.301/0001-81",
+        "atividades": [
+            "Gera\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Energia El\u00e9trica"
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "GEPA3",
+            "GEPA4"
+        ]
+    },
+    {
+        "razao_social": "RNI NEG\u00d3CIOS IMOBILI\u00c1RIOS S.A.",
+        "nome_empresa": "RNI",
+        "cnpj": "67.010.660/0001-24",
+        "atividades": [
+            "(i) A Compra E Venda de Im\u00f3veis",
+            "(ii) O Desmembramento Ou Loteamento de Terrenos",
+            "(iii) A Incorpora\u00e7\u00e3o Imobili\u00e1ria Ou Constru\u00e7\u00e3o de Im\u00f3veis Destinados \u00e0 Venda",
+            "(iv) A Presta\u00e7\u00e3o de Servi\u00e7os A Terceiros"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "RDNI3"
+        ]
+    },
+    {
+        "razao_social": "ROSSI RESIDENCIAL S.A.",
+        "nome_empresa": "ROSSI RESID",
+        "cnpj": "61.065.751/0001-80",
+        "atividades": [
+            "Compra E Venda de Im\u00f3veis. Desmembramento E Loteamento de Terrenos. Incorpora\u00e7\u00e3o Imobili\u00e1ria. Constru\u00e7\u00e3o de Im\u00f3veis Destinados \u00e0 Venda. E A Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "RSID3"
+        ]
+    },
+    {
+        "razao_social": "RUMO MALHA NORTE S.A.",
+        "nome_empresa": "ALL NORTE",
+        "cnpj": "24.962.466/0001-36",
+        "atividades": [
+            "(i) Constru\u00e7\u00e3o E Explora\u00e7\u00e3o de Sistemas de Transporte Ferrovi\u00e1rio de Carga. Rodovias E Hidrovias",
+            "(ii) Presta\u00e7\u00e3o de Servi\u00e7os de Transporte de Carga em Ferrovias. Rodovias E Hidrovias",
+            "Etc."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Ferrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "FRRN3B",
+            "FRRN5B",
+            "FRRN6B"
+        ]
+    },
+    {
+        "razao_social": "RUMO S.A.",
+        "nome_empresa": "RUMO S.A.",
+        "cnpj": "02.387.241/0001-60",
+        "atividades": [
+            "Prestar Servi\u00e7os de Transporte de Cargas Atrav\u00e9s Dos Modais Ferrovi\u00e1rio E Rodovi\u00e1rio. Dentre Outros. Isoladamente Ou Combinados Entre Si de Forma Intermodal Ou Multimodal. Entre Outros."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Ferrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "RAIL3"
+        ]
+    },
+    {
+        "razao_social": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
+        "nome_empresa": "SANSUY",
+        "cnpj": "14.807.945/0001-24",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Artefatos Pl\u00e1sticos"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Materiais Diversos"
+        ],
+        "codigos_negociacao": [
+            "SNSY3",
+            "SNSY5",
+            "SNSY6"
+        ]
+    },
+    {
+        "razao_social": "SANTOS BRASIL PARTICIPACOES S.A.",
+        "nome_empresa": "SANTOS BRP",
+        "cnpj": "02.762.121/0001-04",
+        "atividades": [
+            "A Companhia Tem Por Objeto A Explora\u00e7\u00e3o Comercial de Instala\u00e7\u00e3o Portu\u00e1ria Atrav\u00e9s de Opera\u00e7\u00f5es Com Cont\u00eaineres. Carga Geral Ou Afins E A Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Servi\u00e7os de Apoio e Armazenagem"
+        ],
+        "codigos_negociacao": [
+            "STBP3"
+        ]
+    },
+    {
+        "razao_social": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
+        "nome_empresa": "SAO CARLOS",
+        "cnpj": "29.780.061/0001-09",
+        "atividades": [
+            "Compra E Venda de Im\u00f3veis Prontos Ou A Construir",
+            "Loca\u00e7\u00e3o de Bens Im\u00f3veis",
+            "Administra\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios Pr\u00f3prios Ou de Terceiros",
+            "Exerc\u00edcio de Outras Atividades Correlatas",
+            "E Outros"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "SCAR3"
+        ]
+    },
+    {
+        "razao_social": "SAO MARTINHO S.A.",
+        "nome_empresa": "SAO MARTINHO",
+        "cnpj": "51.466.860/0001-56",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Com\u00e9rcio de A\u00e7\u00facar. \u00e1lcool E Derivados."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Alimentos Processados",
+            "A\u00e7ucar e Alcool"
+        ],
+        "codigos_negociacao": [
+            "SMTO3"
+        ]
+    },
+    {
+        "razao_social": "SAO PAULO TURISMO S.A.",
+        "nome_empresa": "SPTURIS",
+        "cnpj": "62.002.886/0001-60",
+        "atividades": [
+            "Cess\u00e3o de \u00e1reas Para Eventos"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Produ\u00e7\u00e3o de Eventos e Shows"
+        ],
+        "codigos_negociacao": [
+            "AHEB3",
+            "AHEB5",
+            "AHEB6"
+        ]
+    },
+    {
+        "razao_social": "SARAIVA LIVREIROS S.A. - EM RECUPERA\u00c7\u00c3O JUDICIAL",
+        "nome_empresa": "SARAIVA LIVR",
+        "cnpj": "60.500.139/0001-26",
+        "atividades": [
+            "Edi\u00e7\u00e3o. Ind\u00fastria E Com\u00e9rcio de Livros E Publica\u00e7\u00f5es em Geral."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "codigos_negociacao": [
+            "SLED3",
+            "SLED4",
+            "SLED11",
+            "SLED12"
+        ]
+    },
+    {
+        "razao_social": "SCHULZ S.A.",
+        "nome_empresa": "SCHULZ",
+        "cnpj": "84.693.183/0001-68",
+        "atividades": [
+            "Ind\u00fastria Metal\u00fargica"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "Motores . Compressores e Outros"
+        ],
+        "codigos_negociacao": [
+            "SHUL3",
+            "SHUL4"
+        ]
+    },
+    {
+        "razao_social": "SER EDUCACIONAL S.A.",
+        "nome_empresa": "SER EDUCA",
+        "cnpj": "04.986.320/0001-13",
+        "atividades": [
+            "Desenvolvimento E A Administra\u00e7\u00e3o de Atividades E Institui\u00e7\u00f5es No Setor de Educa\u00e7\u00e3o E Outras \u00e1reas Associadas",
+            "Administra\u00e7\u00e3o de Bens E Neg\u00f3cios Pr\u00f3prios",
+            "E Participa\u00e7\u00e3o em Outras sociedades."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Servi\u00e7os Educacionais"
+        ],
+        "codigos_negociacao": [
+            "SEER3"
+        ]
+    },
+    {
+        "razao_social": "SIDERURGICA J. L. ALIPERTI S.A.",
+        "nome_empresa": "ALIPERTI",
+        "cnpj": "61.156.931/0001-78",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Pe\u00e7as E Acess\u00f3rios Para O Sistema de Dire\u00e7\u00e3o E Suspens\u00e3o de Ve\u00edculos Automotores"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "APTI3",
+            "APTI4"
+        ]
+    },
+    {
+        "razao_social": "SINQIA S.A.",
+        "nome_empresa": "SINQIA",
+        "cnpj": "04.065.791/0001-99",
+        "atividades": [
+            "Produ\u00e7\u00e3o. Desenvolvimento. Licenciamento. Sublicenciamento E Distribui\u00e7\u00e3o de Programas de Computador (\"software\") E Outras Atividades. Conforme Descritas No Estatuto Social Da Companhia."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "SQIA3"
+        ]
+    },
+    {
+        "razao_social": "SLC AGRICOLA S.A.",
+        "nome_empresa": "SLC AGRICOLA",
+        "cnpj": "89.096.457/0001-55",
+        "atividades": [
+            "Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Algod\u00e3o. Soja. Milho. Caf\u00e9. Entre Outros."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "SLCE3"
+        ]
+    },
+    {
+        "razao_social": "SMARTFIT ESCOLA DE GIN\u00c1STICA E DAN\u00c7A S.A.",
+        "nome_empresa": "SMART FIT",
+        "cnpj": "07.594.978/0001-78",
+        "atividades": [
+            "A Companhia Tem Como Atividade Preponderante A Presta\u00e7\u00e3o de Servi\u00e7os de Condicionamento F\u00edsico. Por Meio de Academias de Gin\u00e1stica. Muscula\u00e7\u00e3o. Dan\u00e7a E Nata\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Atividades Esportivas"
+        ],
+        "codigos_negociacao": [
+            "SMFT3"
+        ]
+    },
+    {
+        "razao_social": "SMILES FIDELIDADE S.A.",
+        "nome_empresa": "SMILES",
+        "cnpj": "05.730.375/0001-20",
+        "atividades": [
+            "Programa de Fideliza\u00e7\u00e3o Que Re\u00fane. em \u00danico Ambiente Ou Plataforma. Diversos Parceiros E/ou Outros Programas de Fideliza\u00e7\u00e3o. Permitindo Que Seus Clientes Possam Acumular Bem Como Trocar Milhas."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Programas de Fideliza\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "SMLS3"
+        ]
+    },
+    {
+        "razao_social": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
+        "nome_empresa": "SONDOTECNICA",
+        "cnpj": "33.386.210/0001-19",
+        "atividades": [
+            "Consultoria T\u00e9cnica E Econ\u00f3mica Na \u00e1rea de Engenharia E Arquitetura"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Engenharia Consultiva"
+        ],
+        "codigos_negociacao": [
+            "SOND3",
+            "SOND5",
+            "SOND6"
+        ]
+    },
+    {
+        "razao_social": "SPRINGER S.A.",
+        "nome_empresa": "SPRINGER",
+        "cnpj": "92.929.520/0001-00",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Eletrodom\u00e9sticos"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Holdings Diversificadas"
+        ],
+        "codigos_negociacao": [
+            "SPRI3",
+            "SPRI5",
+            "SPRI6"
+        ]
+    },
+    {
+        "razao_social": "SPRINGS GLOBAL PARTICIPACOES S.A.",
+        "nome_empresa": "SPRINGS",
+        "cnpj": "07.718.269/0001-57",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "SGPS3"
+        ]
+    },
+    {
+        "razao_social": "STARA S.A. - IND\u00daSTRIA DE IMPLEMENTOS AGR\u00cdCOLAS",
+        "nome_empresa": "STARA",
+        "cnpj": "91.495.499/0001-00",
+        "atividades": [
+            "Ind\u00fastria. Com\u00e9rcio. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de M\u00e1quinas E Implementos Agr\u00edcolas."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Constru\u00e7\u00e3o e Agr\u00edcolas"
+        ],
+        "codigos_negociacao": [
+            "STTR3"
+        ]
+    },
+    {
+        "razao_social": "STATKRAFT ENERGIAS RENOVAVEIS S.A.",
+        "nome_empresa": "STATKRAFT",
+        "cnpj": "00.622.416/0001-41",
+        "atividades": [
+            "A Companhia Atua No Ramo de Gera\u00e7\u00e3o de Energia El\u00e9trica Por Meio de Fontes Renov\u00e1veis."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "STKF3"
+        ]
+    },
+    {
+        "razao_social": "SUDESTE S.A.",
+        "nome_empresa": "SUDESTE S/A",
+        "cnpj": "02.062.747/0001-08",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "OPSE3B"
+        ]
+    },
+    {
+        "razao_social": "SUL 116 PARTICIPACOES S.A.",
+        "nome_empresa": "SUL 116 PART",
+        "cnpj": "01.957.772/0001-89",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades. Comerciais Ou Civis. Nacionais Ou Estrangeiras. Como S\u00f3cia. Acionista Ou Quotista",
+            "E A Participa\u00e7\u00e3o. Como Quotista. em Fundos de Investimento Constuidos Regularmente"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "OPTS3B"
+        ]
+    },
+    {
+        "razao_social": "SUL AMERICA S.A.",
+        "nome_empresa": "SUL AMERICA",
+        "cnpj": "29.978.814/0001-87",
+        "atividades": [
+            "A Sul Am\u00e9rica S.A. \u00c9 Uma Sociedade de Participa\u00e7\u00e3o E Suas Controladas Atuam Nos Setores de Seguros. Previd\u00eancia Complementar. Administra\u00e7\u00e3o de Recursos E Assist\u00eancia \u00e0 Sa\u00fade."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Seguradoras"
+        ],
+        "codigos_negociacao": [
+            "SULA11",
+            "SULA3",
+            "SULA4"
+        ]
+    },
+    {
+        "razao_social": "SUZANO HOLDING S.A.",
+        "nome_empresa": "SUZANO HOLD",
+        "cnpj": "60.651.809/0001-05",
+        "atividades": [
+            "Sociedade Holding - Participa\u00e7\u00e3o Como Acionista Ou Quotista No Capital Social de Outras Sociedades"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Papel e Celulose"
+        ],
+        "codigos_negociacao": [
+            "NEMO3",
+            "NEMO5",
+            "NEMO6"
+        ]
+    },
+    {
+        "razao_social": "SUZANO S.A.",
+        "nome_empresa": "SUZANO S.A.",
+        "cnpj": "16.404.287/0001-55",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Papel E Celulose"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Madeira e Papel",
+            "Papel e Celulose"
+        ],
+        "codigos_negociacao": [
+            "SUZB3"
+        ]
+    },
+    {
+        "razao_social": "T4F ENTRETENIMENTO S.A.",
+        "nome_empresa": "TIME FOR FUN",
+        "cnpj": "02.860.694/0001-62",
+        "atividades": [
+            "Atua\u00e7\u00e3o No Setor de Entretenimento Ao Vivo. Atrav\u00e9s Da Opera\u00e7\u00e3o de Casas de Espet\u00e1culos E de Bilheterias. Da Comercializa\u00e7\u00e3o de Alimentos. Bebidas E Produtos Promocionais E Da Negocia\u00e7\u00e3o de Patroc\u00ednio"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Viagens e Lazer",
+            "Produ\u00e7\u00e3o de Eventos e Shows"
+        ],
+        "codigos_negociacao": [
+            "SHOW3"
+        ]
+    },
+    {
+        "razao_social": "TAURUS ARMAS S.A.",
+        "nome_empresa": "TAURUS ARMAS",
+        "cnpj": "92.781.335/0001-02",
+        "atividades": [
+            "Ind\u00fastria E Com\u00e9rcio de Armas"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "Armas e Muni\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TASA3",
+            "TASA4",
+            "TASA13",
+            "TASA15",
+            "TASA17"
+        ]
+    },
+    {
+        "razao_social": "TECHNOS S.A.",
+        "nome_empresa": "TECHNOS",
+        "cnpj": "09.295.063/0001-97",
+        "atividades": [
+            "A Companhia Tem Por Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades. Como S\u00f3cia Ou Acionista. No Pa\u00eds Ou No Exterior."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Acess\u00f3rios"
+        ],
+        "codigos_negociacao": [
+            "TECN3"
+        ]
+    },
+    {
+        "razao_social": "TECNISA S.A.",
+        "nome_empresa": "TECNISA",
+        "cnpj": "08.065.557/0001-12",
+        "atividades": [
+            "Incorpora\u00e7\u00e3o. Compra E Venda de Im\u00f3veis Prontos E A Construir A Loca\u00e7\u00e3o E Administra\u00e7\u00e3o de Bens Im\u00f3veis. Constru\u00e7\u00e3o de Im\u00f3veis E A Presta\u00e7\u00e3o de Servi\u00e7o de Consultoria Imobiliaria."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TCSA3"
+        ]
+    },
+    {
+        "razao_social": "TECNOSOLO ENGENHARIA S.A.",
+        "nome_empresa": "TECNOSOLO",
+        "cnpj": "33.111.246/0001-90",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Constru\u00e7\u00e3o e Engenharia",
+            "Engenharia Consultiva"
+        ],
+        "codigos_negociacao": [
+            "TCNO3",
+            "TCNO4"
+        ]
+    },
+    {
+        "razao_social": "TEGMA GESTAO LOGISTICA S.A.",
+        "nome_empresa": "TEGMA",
+        "cnpj": "02.351.144/0001-18",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Log\u00edstica Para A Ind\u00fastria Automotiva. Gerenciamento de Estoques E P\u00e1tios. Atividades de Armaz\u00e9m Geral. Pdi. Dentre Outras."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "TGMA3"
+        ]
+    },
+    {
+        "razao_social": "TEKA-TECELAGEM KUEHNRICH S.A.",
+        "nome_empresa": "TEKA",
+        "cnpj": "82.636.986/0001-55",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Artigos de Cama. Mesa E Banho"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "TEKA3",
+            "TEKA4"
+        ]
+    },
+    {
+        "razao_social": "TEKNO S.A. - INDUSTRIA E COMERCIO",
+        "nome_empresa": "TEKNO",
+        "cnpj": "33.467.572/0001-34",
+        "atividades": [
+            "Pintura de Bobinas E Chapas Met\u00e1licas"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Artefatos de Ferro e A\u00e7o"
+        ],
+        "codigos_negociacao": [
+            "TKNO3",
+            "TKNO4"
+        ]
+    },
+    {
+        "razao_social": "TELEC BRASILEIRAS S.A. TELEBRAS",
+        "nome_empresa": "TELEBRAS",
+        "cnpj": "00.336.701/0001-04",
+        "atividades": [
+            "Consecu\u00e7\u00e3o Dos Objetivos Previstos No Programa Nacional de Banda Larga - (dec. 7.175 de 12/05/2010)"
+        ],
+        "classificacao_setorial": [
+            "Comunica\u00e7\u00f5es",
+            "Telecomunica\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TELB3",
+            "TELB4"
+        ]
+    },
+    {
+        "razao_social": "TELEF\u00d4NICA BRASIL S.A",
+        "nome_empresa": "TELEF BRASIL",
+        "cnpj": "02.558.157/0001-62",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os P\u00fablicos de Telecomunica\u00e7\u00f5es"
+        ],
+        "classificacao_setorial": [
+            "Comunica\u00e7\u00f5es",
+            "Telecomunica\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "VIVT3",
+            "VIVT4"
+        ]
+    },
+    {
+        "razao_social": "TERMINAL GARAGEM MENEZES CORTES S.A.",
+        "nome_empresa": "MENEZES CORT",
+        "cnpj": "02.664.042/0001-52",
+        "atividades": [
+            "Estacionamento E Loca\u00e7\u00e3o de Lojas E Espa\u00e7os"
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "MNZC3B"
+        ]
+    },
+    {
+        "razao_social": "TERRA SANTA AGRO S.A.",
+        "nome_empresa": "TERRA SANTA",
+        "cnpj": "05.799.312/0001-20",
+        "atividades": [
+            "- Produ\u00e7\u00e3o E Com\u00e9rcio de Produtos Vegetais (soja. Milho E Algod\u00e3o) - Industrializa\u00e7\u00e3o E Com\u00e9rcio de Biocombust\u00edveis. \u00f3leo Vegetal E Subprodutos"
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Agropecu\u00e1ria",
+            "Agricultura"
+        ],
+        "codigos_negociacao": [
+            "TESA3",
+            "TESA12"
+        ]
+    },
+    {
+        "razao_social": "TEXTIL RENAUXVIEW S.A.",
+        "nome_empresa": "TEX RENAUX",
+        "cnpj": "82.982.075/0001-80",
+        "atividades": [
+            "Fia\u00e7\u00e3o E Tecelagem de Algod\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Fios e Tecidos"
+        ],
+        "codigos_negociacao": [
+            "TXRX3"
+        ]
+    },
+    {
+        "razao_social": "TIM PARTICIPACOES S.A.",
+        "nome_empresa": "TIM PART S/A",
+        "cnpj": "02.558.115/0001-21",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Comunica\u00e7\u00f5es",
+            "Telecomunica\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TIMP3"
+        ]
+    },
+    {
+        "razao_social": "TOTVS S.A.",
+        "nome_empresa": "TOTVS",
+        "cnpj": "53.113.791/0001-22",
+        "atividades": [
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Consultoria. Assessoria E Desenvolvimento de Sistemas Informatizados (software). Atividades de Pesquisa E Inova\u00e7\u00e3o Tecnol\u00f3gica. Presta\u00e7\u00e3o de Servi\u00e7os Relacionados \u00e0 Gest\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "codigos_negociacao": [
+            "TOTS3"
+        ]
+    },
+    {
+        "razao_social": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
+        "nome_empresa": "TRIUNFO PART",
+        "cnpj": "03.014.553/0001-91",
+        "atividades": [
+            "A Triunfo Atua Nos Segmentos de Concess\u00f5es Rodovi\u00e1rias. Aeroportu\u00e1ria. Gera\u00e7\u00e3o de Energia E administra\u00e7\u00e3o Portu\u00e1ria."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Explora\u00e7\u00e3o de Rodovias"
+        ],
+        "codigos_negociacao": [
+            "TPIS3"
+        ]
+    },
+    {
+        "razao_social": "TRANSMISSORA ALIAN\u00c7A DE ENERGIA EL\u00c9TRICA S.A.",
+        "nome_empresa": "TAESA",
+        "cnpj": "07.859.971/0001-30",
+        "atividades": [
+            "Transmiss\u00e3o de Energia El\u00e9trica."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "TAEE11",
+            "TAEE3",
+            "TAEE4"
+        ]
+    },
+    {
+        "razao_social": "TREVISA INVESTIMENTOS S.A.",
+        "nome_empresa": "TREVISA",
+        "cnpj": "92.660.570/0001-26",
+        "atividades": [
+            "Part. Capital Outras Empresas Qualquer Setor Econ\u00f3mico. loca\u00e7\u00e3o de Conjuntos Comerciais."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Hidrovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "LUXM3",
+            "LUXM4"
+        ]
+    },
+    {
+        "razao_social": "TRISUL S.A.",
+        "nome_empresa": "TRISUL",
+        "cnpj": "08.811.643/0001-27",
+        "atividades": [
+            "Incorporadora E Construtora"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "TRIS3"
+        ]
+    },
+    {
+        "razao_social": "TRONOX PIGMENTOS DO BRASIL S.A.",
+        "nome_empresa": "CRISTAL",
+        "cnpj": "15.115.504/0001-24",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Qu\u00edmicos Diversos"
+        ],
+        "codigos_negociacao": [
+            "CRPG3",
+            "CRPG5",
+            "CRPG6"
+        ]
+    },
+    {
+        "razao_social": "TUPY S.A.",
+        "nome_empresa": "TUPY",
+        "cnpj": "84.683.374/0001-49",
+        "atividades": [
+            "Produtos Fundidos Para Os Setores de Transporte de Carga. Infraestrutura E Agricultura / Conex\u00f5es em Ferro Fundido Para Aplica\u00e7\u00f5es em Redes Hidr\u00e1ulicas E de G\u00e1s / Perfis"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "TUPY3"
+        ]
+    },
+    {
+        "razao_social": "ULTRAPAR PARTICIPACOES S.A.",
+        "nome_empresa": "ULTRAPAR",
+        "cnpj": "33.256.439/0001-39",
+        "atividades": [
+            "Distribui\u00e7\u00e3o de Combust\u00edveis. Qu\u00edmicos. Armazenagem Para Gran\u00e9is L\u00edquidos E Varejo Farmac\u00eautico"
+        ],
+        "classificacao_setorial": [
+            "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
+            "Explora\u00e7\u00e3o. Refino e Distribui\u00e7\u00e3o"
+        ],
+        "codigos_negociacao": [
+            "UGPA3"
+        ]
+    },
+    {
+        "razao_social": "UNICASA IND\u00daSTRIA DE M\u00d3VEIS S.A.",
+        "nome_empresa": "UNICASA",
+        "cnpj": "90.441.460/0001-48",
+        "atividades": [
+            "Ind\u00fastria. Com\u00e9rcio. Presta\u00e7\u00e3o de Servi\u00e7os. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Produtos Relacionados Ao Ramo de Mobili\u00e1rio em Geral. Planejado E Modulado de Madeira. Ferro. A\u00e7o. Alum\u00ednio E Outros Materiais."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Utilidades Dom\u00e9sticas",
+            "M\u00f3veis"
+        ],
+        "codigos_negociacao": [
+            "UCAS3"
+        ]
+    },
+    {
+        "razao_social": "UNIPAR CARBOCLORO S.A.",
+        "nome_empresa": "UNIPAR",
+        "cnpj": "33.958.695/0001-78",
+        "atividades": [
+            "Atuar No Setor de Soda. Cloro E Derivados. Podendo Participar Como S\u00f3cia Ou Acionista de Outras Sociedades. Direta Ou Indiretamente. Inclusive Por Meio de Fundos de Investimentos."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Qu\u00edmicos",
+            "Qu\u00edmicos Diversos"
+        ],
+        "codigos_negociacao": [
+            "UNIP3",
+            "UNIP5",
+            "UNIP6"
+        ]
+    },
+    {
+        "razao_social": "UPTICK PARTICIPACOES S.A.",
+        "nome_empresa": "UPTICK",
+        "cnpj": "02.162.616/0001-94",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "Energia El\u00e9trica"
+        ],
+        "codigos_negociacao": [
+            "UPKP3B"
+        ]
+    },
+    {
+        "razao_social": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+        "nome_empresa": "USIMINAS",
+        "cnpj": "60.894.730/0001-05",
+        "atividades": [
+            "Venda de Produtos Sider\u00fargicos. Como Chapas Grossas. Laminados A Quente. A Frio. Placas. Galvanizados. Entre Outros."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Siderurgia e Metalurgia",
+            "Siderurgia"
+        ],
+        "codigos_negociacao": [
+            "USIM3",
+            "USIM5",
+            "USIM6"
+        ]
+    },
+    {
+        "razao_social": "VALE S.A.",
+        "nome_empresa": "VALE",
+        "cnpj": "33.592.510/0001-54",
+        "atividades": [
+            "Minera\u00e7\u00e3o"
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "codigos_negociacao": [
+            "VALE3"
+        ]
+    },
+    {
+        "razao_social": "VALID SOLU\u00c7\u00d5ES S.A.",
+        "nome_empresa": "VALID",
+        "cnpj": "33.113.309/0001-47",
+        "atividades": [
+            "Impress\u00e3o de Documentos de Seguran\u00e7a."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "codigos_negociacao": [
+            "VLID3"
+        ]
+    },
+    {
+        "razao_social": "VIA VAREJO S.A.",
+        "nome_empresa": "VIAVAREJO",
+        "cnpj": "33.041.260/0652-90",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Eletrodom\u00e9sticos"
+        ],
+        "codigos_negociacao": [
+            "VVAR3"
+        ]
+    },
+    {
+        "razao_social": "VIVARA PARTICIPA\u00c7OES S.A",
+        "nome_empresa": "VIVARA S.A.",
+        "cnpj": "33.839.910/0001-11",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades. Na Qualidade de Quotistas. Ou Acionistas",
+            "Holding de Institui\u00e7\u00f5es N\u00e3o-financeiras",
+            "E Agente de Propriedade Intelectual."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Acess\u00f3rios"
+        ],
+        "codigos_negociacao": [
+            "VIVA3"
+        ]
+    },
+    {
+        "razao_social": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
+        "nome_empresa": "VIVER",
+        "cnpj": "67.571.414/0001-41",
+        "atividades": [
+            "Incorporadora E Construtora Presente em Todas As Regi\u00f5es Do Pa\u00eds E Com Foco de Atua\u00e7\u00e3o No Mercado Residencial. Particularmente Nos Segmentos de M\u00e9dia E Baixa Renda."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "codigos_negociacao": [
+            "VIVR3",
+            "VIVR1"
+        ]
+    },
+    {
+        "razao_social": "VULCABRAS/AZALEIA S.A.",
+        "nome_empresa": "VULCABRAS",
+        "cnpj": "50.926.955/0001-42",
+        "atividades": [
+            "Representantes Comerciais E Agentes Do Com\u00e9rcio de T\u00eaxteis. Vestu\u00e1rio. Cal\u00e7ados E Artigos de Viagem."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Cal\u00e7ados"
+        ],
+        "codigos_negociacao": [
+            "VULC3"
+        ]
+    },
+    {
+        "razao_social": "WEG S.A.",
+        "nome_empresa": "WEG",
+        "cnpj": "84.429.695/0001-11",
+        "atividades": [
+            "A Weg Sa \u00c9 Uma Sociedade de Participa\u00e7\u00e3o N\u00e3o Operacional (holding) E tamb\u00e9m Sociedade de Comando Do Grupo Weg."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "Motores . Compressores e Outros"
+        ],
+        "codigos_negociacao": [
+            "WEGE3"
+        ]
+    },
+    {
+        "razao_social": "WETZEL S.A.",
+        "nome_empresa": "WETZEL S/A",
+        "cnpj": "84.683.671/0001-94",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o de Pe\u00e7as E Acess\u00f3rios Para Sistema Motor de Ve\u00edculos Automotores"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Material de Transporte",
+            "Material Rodovi\u00e1rio"
+        ],
+        "codigos_negociacao": [
+            "MWET3",
+            "MWET4"
+        ]
+    },
+    {
+        "razao_social": "WHIRLPOOL S.A.",
+        "nome_empresa": "WHIRLPOOL",
+        "cnpj": "59.105.999/0001-86",
+        "atividades": [
+            "Fabrica\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Eletrodom\u00e9sticos E Compressores"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Utilidades Dom\u00e9sticas",
+            "Eletrodom\u00e9sticos"
+        ],
+        "codigos_negociacao": [
+            "WHRL3",
+            "WHRL4"
+        ]
+    },
+    {
+        "razao_social": "WILSON SONS LTD.",
+        "nome_empresa": "WILSON SONS",
+        "cnpj": "05.721.735/0001-28",
+        "atividades": [
+            "Terminais Portu\u00e1rios. Rebocagem. Offshore. Log\u00edstica. Agenciamento Mar\u00edtimo E Estaleiros."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Servi\u00e7os de Apoio e Armazenagem"
+        ],
+        "codigos_negociacao": [
+            "WSON33"
+        ]
+    },
+    {
+        "razao_social": "WIZ SOLU\u00c7\u00d5ES E CORRETAGEM DE SEGUROS S.A.",
+        "nome_empresa": "WIZ S.A.",
+        "cnpj": "42.278.473/0001-03",
+        "atividades": [
+            "Corretagem de Seguros de Todos Os Ramos. Assessoria E Consultoria Na \u00e1rea de Seguros em Geral. Intermedia\u00e7\u00e3o E Desenvolvimento de Solu\u00e7\u00f5es em Neg\u00f3cios. Sem Especifica\u00e7\u00e3o Definida. Dentre Outros."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Previd\u00eancia e Seguros",
+            "Corretoras de Seguros"
+        ],
+        "codigos_negociacao": [
+            "WIZS3"
+        ]
+    },
+    {
+        "razao_social": "WLM PART. E COM\u00c9RCIO DE M\u00c1QUINAS E VE\u00cdCULOS S.A.",
+        "nome_empresa": "WLM IND COM",
+        "cnpj": "33.228.024/0001-51",
+        "atividades": [
+            "Com\u00e9rcio A Varejo E Por Atacado de Caminh\u00f5es. Autom\u00f3veis. Camionetas E Utilit\u00e1rios Novos E Usados. holding de Institui\u00e7\u00f5es N\u00e3o-financeira."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Com\u00e9rcio",
+            "Material de Transporte"
+        ],
+        "codigos_negociacao": [
+            "WLMM3",
+            "WLMM4"
+        ]
+    },
+    {
+        "razao_social": "YDUQS PARTICIPACOES S.A.",
+        "nome_empresa": "YDUQS PART",
+        "cnpj": "08.807.432/0001-10",
+        "atividades": [
+            "Desenvolve Principalmente Nas \u00e1reas de Educa\u00e7\u00e3o de N\u00edvel Superior. Nas Modalidades Presencial E A Dist\u00e2ncia. Educa\u00e7\u00e3o Profissional E/ou Outras \u00e1reas Associadas \u00e0 Educa\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Diversos",
+            "Servi\u00e7os Educacionais"
+        ],
+        "codigos_negociacao": [
+            "YDUQ3"
+        ]
+    },
+    {
+        "razao_social": "524 PARTICIPACOES S.A.",
+        "nome_empresa": "524 PARTICIP",
+        "cnpj": "01.851.771/0001-55",
+        "atividades": [
+            "Holding - Participa\u00e7\u00e3o em Outras Sociedades"
+        ],
+        "classificacao_setorial": [
+            "Outros"
+        ],
+        "codigos_negociacao": [
+            "QVQP3B"
+        ]
+    }
+]

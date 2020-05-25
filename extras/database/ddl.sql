@@ -2,18 +2,31 @@
 CREATE SEQUENCE setor_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Setor(
 	id INTEGER PRIMARY KEY,
-	nome VARCHAR(50) NOT NULL,
-	subsetor VARCHAR(50)
+	nome VARCHAR(50) NOT NULL
 );
 ALTER TABLE Setor ALTER COLUMN id SET DEFAULT nextval('setor_id_seq');
 
+CREATE SEQUENCE empresa_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Empresa(
+	id INTEGER PRIMARY KEY,
+	razao_social VARCHAR(70) NOT NULL CONSTRAINT empresa_razao_social_unq UNIQUE,
+    nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
+    cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE
+);
+ALTER TABLE Empresa ALTER COLUMN id SET DEFAULT nextval('empresa_id_seq');
+
+CREATE TABLE EmpresaSetor(
+    id_empresa INTEGER REFERENCES Empresa(id),
+    id_setor INTEGER REFERENCES Setor(id),
+    PRIMARY KEY(id_empresa, id_setor)
+);
+
 CREATE SEQUENCE acao_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Acao (
-	nome VARCHAR(75),
 	codigo VARCHAR(6),
 	quantidade BIGINT,
 	id INTEGER PRIMARY KEY,
-	id_setor INTEGER REFERENCES Setor(id)
+	id_empresa INTEGER REFERENCES Empresa(id)
 );
 ALTER TABLE Acao ALTER COLUMN id SET DEFAULT nextval('acao_id_seq');
 
