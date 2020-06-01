@@ -1,7 +1,5 @@
 package com.bolsavalores.models.b3;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 public class Msg {
 	
 	private String dtTm;
