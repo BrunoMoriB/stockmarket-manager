@@ -59,3 +59,13 @@ CREATE TABLE Balanco (
 	isdailyupdated BOOLEAN
 );
 ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
+
+CREATE SEQUENCE usuario_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Usuario (
+	id INTEGER PRIMARY KEY,
+	apelido VARCHAR(30) NOT NULL,
+	email VARCHAR(70) NOT NULL,
+	senha VARCHAR(100) NOT NULL,
+	papel VARCHAR (13) NOT NULL
+);
+ALTER TABLE Usuario ALTER COLUMN id SET DEFAULT nextval('usuario_id_seq');
