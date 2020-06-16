@@ -9,7 +9,7 @@ ALTER TABLE Setor ALTER COLUMN id SET DEFAULT nextval('setor_id_seq');
 CREATE SEQUENCE empresa_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Empresa(
 	id INTEGER PRIMARY KEY,
-	razao_social VARCHAR(70) NOT NULL CONSTRAINT empresa_razao_social_unq UNIQUE,
+	razao_social VARCHAR(70) NOT NULL,
     nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
     cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE
 );
@@ -24,7 +24,6 @@ CREATE TABLE EmpresaSetor(
 CREATE SEQUENCE acao_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Acao (
 	codigo VARCHAR(6),
-	quantidade BIGINT,
 	id INTEGER PRIMARY KEY,
 	id_empresa INTEGER REFERENCES Empresa(id)
 );

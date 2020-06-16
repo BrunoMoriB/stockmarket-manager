@@ -19,7 +19,7 @@ def gen_acoes_empresa(empresa):
     inserts = ['\n/* Popular a tabela de acao */\n']
     for c in empresa['codigos_negociacao']:
         inserts.append("""insert into Acao (codigo, id_empresa)
-            values ('%s', (select id from Empresa where nome_pregao = '%s'));\n""" % (c, empresa["nome_empresa"]))
+            values ('%s', (select id from Empresa where cnpj = '%s'));\n""" % (c, empresa["cnpj"]))
     return inserts
 
 def gen_setores_empresa(empresa):
@@ -27,8 +27,8 @@ def gen_setores_empresa(empresa):
     inserts = ['\n/* Popular a tabela de EmpresaSetor */\n']
     for s in empresa['classificacao_setorial']:
         query_empresa_setor = """insert into EmpresaSetor (id_empresa, id_setor)
-            values ((select id from Empresa where nome_pregao = '%s'),
-                    (select id from Setor where nome = '%s'));\n""" % (empresa["nome_empresa"], s)
+            values ((select id from Empresa where cnpj = '%s'),
+                    (select id from Setor where nome = '%s'));\n""" % (empresa["cnpj"], s)
         inserts.append(query_empresa_setor)
     return inserts
 
@@ -37,13 +37,18 @@ def gen_empresas(empresas):
     for e in empresas:
         inserts.append('\n/* Popular a tabela de empresa */\n')
         query_empresa = "insert into Empresa (razao_social, nome_pregao, cnpj) values ('%s', '%s', '%s');\n"
-        inserts.append(query_empresa % (e['razao_social'], e['nome_empresa'], re.sub('[^0-9]', '', e['cnpj'])) )
+        inserts.append(query_empresa % (e['razao_social'], e['nome_empresa'], e['cnpj']))
         inserts.extend(gen_setores_empresa(e))      
         inserts.extend(gen_acoes_empresa(e))
     return inserts
 
+def corrigir_valores(empresas):
+    for e in empresas:
+        e['cnpj'] = re.sub('[^0-9]', '', e['cnpj'])
+
 jsonfile = open(ARQUIVO_DADOS_B3, "r")
 empresas = json.loads(jsonfile.read())
+corrigir_valores(empresas)
 inserts = ['\connect bolsa_valores;\n']
 inserts.extend(gen_setores(empresas))
 inserts.extend(gen_empresas(empresas))
