@@ -6,4 +6,5 @@ import com.bolsavalores.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	
+	public Usuario findByEmail(String email);
 }

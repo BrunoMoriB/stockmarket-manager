@@ -1,6 +1,6 @@
 package com.bolsavalores.models.exceptions;
 
-public class InvalidPapelUsuarioException extends Exception{
+public class InvalidPapelUsuarioException extends StockmarketException{
 
 	/**
 	 * 
