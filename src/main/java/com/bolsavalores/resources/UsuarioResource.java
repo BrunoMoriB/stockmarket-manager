@@ -41,6 +41,7 @@ public class UsuarioResource {
 	public ResponseEntity<String> salvaUsuario(@RequestBody Usuario usuario) {
 		try {
 			usuario = usuarioRepository.save(usuario);
+			LOG.info("Usuário criando com sucesso: " + usuario.getEmail());
 			return ResponseEntity.ok(jsonConverter.toJson(usuario));
 		}catch(JsonProcessingException e) {
 			LOG.error("Não foi possível salvar o Usuário. " + e.getMessage());
@@ -52,6 +53,7 @@ public class UsuarioResource {
 	public ResponseEntity<String> autentica(@RequestParam("email") String email, @RequestParam("senha") String senha){
 		try {
 			Token token = usuarioService.autentica(email, senha);
+			LOG.info("Autenticação realizada com sucesso: " + token.getUsuario().getEmail());
 			return ResponseEntity.ok(jsonConverter.toJson(token));
 		}catch(AuthenticationException e) {
 			LOG.error("Não foi possível realizar a Autenticação, email ou senha inválidos! " + e.getMessage());

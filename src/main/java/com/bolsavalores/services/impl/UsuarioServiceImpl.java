@@ -1,6 +1,6 @@
 package com.bolsavalores.services.impl;
 
-import java.util.Collections;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import com.bolsavalores.models.Usuario;
 import com.bolsavalores.models.exceptions.StockmarketException;
 import com.bolsavalores.repositories.UsuarioRepository;
+import com.bolsavalores.security.Permissao;
 import com.bolsavalores.security.Token;
 import com.bolsavalores.services.TokenService;
 import com.bolsavalores.services.UsuarioService;
@@ -42,7 +43,7 @@ public class UsuarioServiceImpl implements UsuarioService, UserDetailsService{
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 //		if (Validador.formatoEmailEhValido(username)) {
         Usuario usuario = UsuarioRepository.findByEmail(username);
-        return new User(usuario.getEmail(), usuario.getSenha(), Collections.emptyList());
+        return new User(usuario.getEmail(), usuario.getSenha(), Arrays.asList(new Permissao(usuario.getPapel().name())));
 //        }
 	}
 

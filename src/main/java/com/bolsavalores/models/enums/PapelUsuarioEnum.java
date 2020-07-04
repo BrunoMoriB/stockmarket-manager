@@ -2,6 +2,7 @@ package com.bolsavalores.models.enums;
 
 public enum PapelUsuarioEnum {
 	COMUM("Comum"),
+	PREMIUM("Premium"),
 	ADMINISTRADOR("Administrador");
 	
 	private String descricao;

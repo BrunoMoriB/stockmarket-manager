@@ -22,6 +22,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import com.bolsavalores.models.enums.PapelUsuarioEnum;
 import com.google.common.collect.ImmutableList;
 
 @Configuration
@@ -32,7 +33,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final RequestMatcher PUBLIC_ACCESS = new OrRequestMatcher(new RequestMatcher[] {
 		new AntPathRequestMatcher("/acao/**", String.valueOf(HttpMethod.GET)),
 		new AntPathRequestMatcher("/balanco/**", String.valueOf(HttpMethod.GET)),
-		new AntPathRequestMatcher("/balanco/**", String.valueOf(HttpMethod.POST)),
 		new AntPathRequestMatcher("/setor/**", String.valueOf(HttpMethod.GET)),
 		new AntPathRequestMatcher("/usuario/**", String.valueOf(HttpMethod.POST))
 	});
@@ -76,11 +76,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
-		 http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().
-	        authorizeRequests().anyRequest().authenticated().and().
-	        httpBasic().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().
-	        cors().and().
-	        csrf().disable();
+		 http.cors().and().csrf().disable()
+		 	.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.POST, "/acao/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.DELETE, "/acao/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.POST, "/balanco/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.DELETE, "/balanco/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.POST, "/setor/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+		 	.authorizeRequests().antMatchers(HttpMethod.DELETE, "/setor/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name()).and()
+			.authorizeRequests().antMatchers(HttpMethod.GET, "/usuario/**").hasAuthority(PapelUsuarioEnum.ADMINISTRADOR.name())
+	        .anyRequest().authenticated().and()
+	        .httpBasic().authenticationEntryPoint(jwtAuthenticationEntryPoint);
 		
 		http.addFilterBefore(tokenAuthFilter, UsernamePasswordAuthenticationFilter.class);
     }	
