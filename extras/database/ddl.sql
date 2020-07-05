@@ -49,7 +49,6 @@ CREATE TABLE Balanco (
 	trimestre VARCHAR(55),
 	id_multiplos INTEGER REFERENCES Multiplosfundamentalistas(id),
 	id_desempenho INTEGER REFERENCES Desempenhofinanceiro(id),
-	qtdpapeis BIGINT,
 	lucroliq_anual BIGINT,
 	cotacao NUMERIC,
 	patrimonioliquido BIGINT,

@@ -67,8 +67,8 @@ public class BalancoServiceImpl implements BalancoService{
 		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores));
 		
 		MultiplosFundamentalistas multiplos = balanco.getMultiplosFundamentalistas() != null ? balanco.getMultiplosFundamentalistas() : new MultiplosFundamentalistas();
-		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getLucroLiquidoAnual()));
-		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getPatrimonioLiquido()));
+		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getAcao().getQuantidade(), balanco.getLucroLiquidoAnual()));
+		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getAcao().getQuantidade(), balanco.getPatrimonioLiquido()));
 		multiplos.setRoe(calculadoraFundamentalista.getRoe(balanco.getLucroLiquidoAnual(), balanco.getPatrimonioLiquido()));
 		multiplos.setDividaBrutaSobrePatrimonioLiquido(calculadoraFundamentalista.getDividaBrutaSobrePatrimonioLiquido(balanco.getDividaBruta(), balanco.getPatrimonioLiquido()));
 		multiplos.setCaixaDisponivelSobreDividaBruta(calculadoraFundamentalista.getCaixaDisponivelSobreDividaBruta(balanco.getCaixaDisponivel(), balanco.getDividaBruta()));
@@ -103,7 +103,6 @@ public class BalancoServiceImpl implements BalancoService{
 		balancoDailyUpdate.setLucroLiquidoAnual(ultimoBalanco.getLucroLiquidoAnual());
 		balancoDailyUpdate.setLucroLiquidoTrimestral(ultimoBalanco.getLucroLiquidoTrimestral());
 		balancoDailyUpdate.setPatrimonioLiquido(ultimoBalanco.getPatrimonioLiquido());
-		balancoDailyUpdate.setQtdPapeis(ultimoBalanco.getQtdPapeis());
 		balancoDailyUpdate.setTrimestre(balancoDailyUpdate.getData().toString());
 		
 		DesempenhoFinanceiro desempenho = balancoDailyUpdate.getDesempenhoFinanceiro() != null ? balancoDailyUpdate.getDesempenhoFinanceiro() : new DesempenhoFinanceiro();
@@ -119,8 +118,8 @@ public class BalancoServiceImpl implements BalancoService{
 		multiplos.setMediaPrecoSobreValorPatrimonial(ultimoBalanco.getMultiplosFundamentalistas().getMediaPrecoSobreValorPatrimonial());
 		multiplos.setRoe(ultimoBalanco.getMultiplosFundamentalistas().getRoe());
 		
-		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getQtdPapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
-		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getQtdPapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
+		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getAcao().getQuantidade(), balancoDailyUpdate.getLucroLiquidoAnual()));
+		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getAcao().getQuantidade(), balancoDailyUpdate.getPatrimonioLiquido()));
 		
 		balancoDailyUpdate.setMultiplosFundamentalistas(multiplos);
 		balancoDailyUpdate.setNota(calculadoraFundamentalista.getNota(balancoDailyUpdate));

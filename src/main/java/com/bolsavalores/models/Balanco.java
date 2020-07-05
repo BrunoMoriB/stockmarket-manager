@@ -56,9 +56,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="caixadisponivel")
 	private Long caixaDisponivel;
 	
-	@Column(name="qtdpapeis")
-	private Long qtdPapeis;
-	
 	@Column(name="justificativa_nota")
 	private String justificativaNota;
 	
@@ -165,14 +162,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setCaixaDisponivel(Long caixaDisponivel) {
 		this.caixaDisponivel = caixaDisponivel;
-	}
-
-	public Long getQtdPapeis() {
-		return qtdPapeis;
-	}
-
-	public void setQtdPapeis(Long qtdPapeis) {
-		this.qtdPapeis = qtdPapeis;
 	}
 
 	public Double getCotacao() {
