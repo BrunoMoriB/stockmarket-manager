@@ -4,8 +4,11 @@ import java.text.ParseException;
 import java.util.List;
 
 import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.exceptions.B3ClientInfoException;
+import com.bolsavalores.models.exceptions.BalancoNotFoundException;
 
 public interface BalancoService {
-	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException;
+	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, BalancoNotFoundException, B3ClientInfoException;
 	public Balanco salvaBalanco(Balanco balanco) throws ParseException;
+	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate) throws ParseException, BalancoNotFoundException, B3ClientInfoException; 
 }

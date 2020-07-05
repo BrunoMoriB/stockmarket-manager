@@ -13,10 +13,14 @@ import org.springframework.stereotype.Service;
 import com.bolsavalores.clients.B3Client;
 import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.MultiplosFundamentalistas;
 import com.bolsavalores.models.b3.LstQtn;
+import com.bolsavalores.models.exceptions.B3ClientInfoException;
+import com.bolsavalores.models.exceptions.BalancoNotFoundException;
+import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 
@@ -25,6 +29,9 @@ public class BalancoServiceImpl implements BalancoService{
 
 	@Autowired
 	BalancoRepository balancoRepository;
+	
+	@Autowired
+	AcaoRepository acaoRepository;
 	
 	@Autowired
 	CalculadoraFundamentalista calculadoraFundamentalista;
@@ -36,7 +43,7 @@ public class BalancoServiceImpl implements BalancoService{
 	B3Client b3Client;
 	
 	@Override
-	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException {
+	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, BalancoNotFoundException, B3ClientInfoException {
 		List<Balanco> balancos = balancoRepository.findByAcaoId(acaoId);
 		
 		Collections.sort(balancos);
@@ -53,11 +60,18 @@ public class BalancoServiceImpl implements BalancoService{
 		
 		if(!hasDailyUpdated) {
 			Balanco balancoDailyUpdated = new Balanco();
-			balancoDailyUpdated.setAcao(balancos.get(0).getAcao());
+			balancoDailyUpdated.setAcao(getAcao(balancos, acaoId));
 			salvaBalancoDailyUpdated(balancoDailyUpdated);
 		}
 		
 		return balancos;
+	}
+	
+	private Acao getAcao(List<Balanco> balancos, long acaoId) {
+		if(balancos != null && !balancos.isEmpty())
+			return balancos.get(0).getAcao();
+		else
+			return acaoRepository.findById(acaoId);
 	}
 
 	@Override
@@ -89,11 +103,15 @@ public class BalancoServiceImpl implements BalancoService{
 		return balancoRepository.save(balanco);
 	}
 	
-	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate) throws ParseException  {
+	@Override
+	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate) throws ParseException, BalancoNotFoundException, B3ClientInfoException  {
 		LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(balancoDailyUpdate.getAcao().getCodigo());
 		double precoAtual   = cotacaoAtual.getClosPric();
 		
 		Balanco ultimoBalanco = balancoRepository.findLastBalancoByAcaoId(balancoDailyUpdate.getAcao().getId());
+		
+		if(ultimoBalanco == null)
+			throw new BalancoNotFoundException("Não existe Balanço cadastrado para Ação(id " + balancoDailyUpdate.getAcao().getId() + "). ");
 		
 		balancoDailyUpdate.setCotacao(precoAtual);
 		balancoDailyUpdate.setCaixaDisponivel(ultimoBalanco.getCaixaDisponivel());
