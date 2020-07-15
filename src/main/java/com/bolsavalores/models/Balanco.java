@@ -2,11 +2,11 @@ package com.bolsavalores.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,13 +19,19 @@ import javax.persistence.Table;
 @Table(name="balanco")
 public class Balanco implements Serializable, Comparable<Balanco> {
 
+	public Balanco() {}
+
+	public Balanco(Empresa empresa) {
+		this.empresa = empresa;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	
 	@ManyToOne
 	@JoinColumn(name="id_acao")
-	private Acao acao;
+	private Empresa empresa;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_multiplos")
@@ -89,14 +95,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setNota(int nota) {
 		this.nota = nota;
-	}
-
-	public Acao getAcao() {
-		return acao;
-	}
-
-	public void setAcao(Acao acao) {
-		this.acao = acao;
 	}
 
 	public Long getLucroLiquidoTrimestral() {
@@ -194,15 +192,33 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public void setDailyUpdated(boolean isDailyUpdated) {
 		this.dailyUpdated = isDailyUpdated;
 	}
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
 	
 	@Override
 	public int compareTo(Balanco outroBalanco) {
-		// TODO Auto-generated method stub
 		if(this.dailyUpdated)
 			return 1;
 		else if(outroBalanco.isDailyUpdated())
 			return -1;
 		else		
 			return this.data.compareTo(outroBalanco.getData());
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Balanco))
+			return false;
+		Balanco other = (Balanco) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(id);
 	}
 }

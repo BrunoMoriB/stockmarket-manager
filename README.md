@@ -40,6 +40,8 @@ Ter o Python e o PIP instalados. Executar os comandos abaixo
 
 ```
 pip3 install selenium
+pip3 install pyautogui
+sudo apt-get install python3-tk python3-dev
 ```
 
 Baixar o geckodriver em uma pasta de preferência e adicionar o caminho da pasta onde estará o executável na variável de ambiente PATH.
@@ -76,3 +78,10 @@ cd extras/scripts
 python3 gen-bd-inserts-partir-dados-b3.py
 cd ../..
 ```
+
+### Obtenção de dados de cotações
+
+Salvar os arquivos na pasta 'extras/dados/cotacoes' utilizando o arquivo no link abaixo
+
+http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/
+
