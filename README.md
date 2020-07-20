@@ -17,26 +17,18 @@ Executar no terminal dentro da instância do docker
 run # alias do comando 'mvn spring-boot:run'
 ```
 
-## Gerador de dados das empresas da B3
+## Procedimentos para gerar das das empresas da B3
 
 ### Ferramentas necessárias
 
 * Python versão 3
   * Dependência selenium
+  * Pacotes TK e DEV do python 3
 * Pip (gerenciador de pacotes do python) versão 3
 * Navegador Firefox
+* Geckodriver (driver selenium para o Firefox)
 
-### Gerar o arquivo de dados das empresas da b3
-
-### Detalhes do script
-
-O script gen-dados-empresas-b3.py lê a página das empresas da b3 e gera um arquivo chamado 'gen-dados-empresas-b3-output.json' que possui os dados das empresas da B3,
-caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
-* --local True : parâmetro adicional é usado para processar o arquivo de dados existentes sem consultar o site da b3, usado para corrigir ou formatar o json de saída
-
-### Configuração necessário para executar o script
-
-Ter o Python e o PIP instalados. Executar os comandos abaixo
+### Configurando a máquuina para executar os scripts
 
 ```
 pip3 install selenium
@@ -60,16 +52,31 @@ cd .. && rm geckodriver-v0.26.0-linux64.tar.gz
 
 ### Gerar o arquivo de dados das empresas da b3
 
+#### Detalhes do script
+
+O script gen-dados-empresas-b3.py lê a página das empresas da b3 e gera um arquivo chamado dados-empresas-b3.json que possui os dados das empresas da B3,
+caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
+* --local True : parâmetro adicional é usado para processar o arquivo de dados existentes sem consultar o site da b3, usado para corrigir ou formatar o json de saída
+
+
+
+#### Execução do script
+
 Executar os comandos abaixo na raiz do projeto
 
 ```
 cd extras/scripts
 python3 gen-dados-empresas-b3.py
-rm geckodriver.log
 cd ../..
 ```
 
-### Gerando/Atualizando o script para popular os dados das tabelas Setor, Empresa e Acao
+### Gerar/atualizar o script SQL para popular os dados das tabelas Setor, Empresa e Acao do banco de dados
+
+#### Detalhes do script
+
+Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3
+
+#### Execução do script
 
 Executar os comandos abaixo na raiz do projeto
 
@@ -79,9 +86,18 @@ python3 gen-bd-inserts-partir-dados-b3.py
 cd ../..
 ```
 
-### Obtenção de dados de cotações
+### Gerar/atualizar o arquivo de dados dos balanços financeiros e cotações das empresas
 
-Salvar os arquivos na pasta 'extras/dados/cotacoes' utilizando o arquivo no link abaixo
+#### Detalhes do script
 
-http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/
+Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3
 
+#### Execução do script
+
+Executar os comandos abaixo na raiz do projeto
+
+```
+cd extras/scripts
+python3 gen-dados-balancos-financeiros-empresas-b3.py
+cd ../..
+```

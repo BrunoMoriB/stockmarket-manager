@@ -44,6 +44,7 @@ public class BalancoServiceImpl implements BalancoService{
 
 	@Override
 	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, BalancoNotFoundException, B3ClientInfoException {
+		//TODO: Receber como parâmetro o id da Empresa, validar com o Bruno
 		List<Balanco> balancos = balancoRepository.findByAcaoId(acaoId);
 		
 		Collections.sort(balancos);
@@ -104,6 +105,7 @@ public class BalancoServiceImpl implements BalancoService{
 	
 	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate, long acaoId) throws ParseException, B3ClientInfoException,
 			BalancoNotFoundException {
+		//TODO: Receber como parâmetro o id da Empresa, validar com o Bruno
 		Acao acao = acaoRepository.findById(acaoId);
 		LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(acao.getCodigo());
 		//TODO: Implementação anterior abaixo, validar com o Bruno

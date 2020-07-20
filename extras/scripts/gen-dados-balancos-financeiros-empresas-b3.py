@@ -20,7 +20,7 @@ import logging
 LOG_FILENAME = '/tmp/gen-dados-balancos.log'
 
 ARQUIVO_DADOS_B3 = '../dados/dados-empresas-b3.json'
-ARQUIVO_DADOS_BALANCOS = '../dados/dados-balancos-financeiros.json'
+ARQUIVO_DADOS_BALANCOS = '../dados/dados-balancos-financeiros-empresas-b3.json'
 INICIO_LINHA_ANOS_BALANCOS = 1
 
 DE_PARA_MES_BALANCO = {
