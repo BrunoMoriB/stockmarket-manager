@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
@@ -45,6 +46,9 @@ public class BalancoResource {
 	
 	@Autowired
 	JsonConverter jsonConverter;
+	
+	@Autowired
+	CalculadoraFundamentalista calculadoraFundamentalista;
 	
 	@GetMapping("/busca")
 	public Balanco getBalanco(@RequestParam long id) {
@@ -103,6 +107,27 @@ public class BalancoResource {
 			return new ResponseEntity<String>("Não foi possível recalcular os Balancos. ", HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+	@GetMapping("/buscaBalancosDailyUpdatedRequisitosMinimos")
+	public ResponseEntity<String> getBalancosDailyUpdatedRequisitosMinimos(){
+		try {
+			List<Balanco> balancosDailyUpdated = balancoRepository.findBalancosDailyUpdated();
+			
+			if(balancosDailyUpdated == null || balancosDailyUpdated.isEmpty())
+				throw new StockmarketException("Nenhum balanço daily updated encontrado. ");
+			
+			balancosDailyUpdated.removeIf( b -> !calculadoraFundamentalista.isDadosBalancoValidos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()) ||
+					!calculadoraFundamentalista.validaRequisitosMinimos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()));
+
+			Collections.sort(balancosDailyUpdated, Balanco.Comparators.NOTA);
+			
+			return ResponseEntity.ok(jsonConverter.toJson(balancosDailyUpdated));
+		} catch (Exception e) {
+			LOG.error("Não foi possível encontrar os Balanços daily updated. ", e);
+			return new ResponseEntity<String>("Não foi possível encontrar os Balanços daily updated. ", HttpStatus.BAD_REQUEST);
+		}
+	}
+	
 	
 	@PostMapping()
 	public Balanco salvaBalanco(@RequestBody Balanco balanco) {

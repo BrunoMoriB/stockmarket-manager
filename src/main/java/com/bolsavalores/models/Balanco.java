@@ -2,6 +2,7 @@ package com.bolsavalores.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Comparator;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -190,12 +191,20 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	
 	@Override
 	public int compareTo(Balanco outroBalanco) {
-		// TODO Auto-generated method stub
 		if(this.dailyUpdated)
 			return 1;
 		else if(outroBalanco.isDailyUpdated())
 			return -1;
 		else		
 			return this.data.compareTo(outroBalanco.getData());
+	}
+	
+	public static class Comparators {
+		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
+	            @Override
+	            public int compare(Balanco b1, Balanco b2) {
+	                return b2.nota - b1.nota;
+	            }
+	        };
 	}
 }
