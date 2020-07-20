@@ -3,13 +3,13 @@ package com.bolsavalores.clients;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.bolsavalores.models.b3.DailyFluctuationHistory;
 import com.bolsavalores.models.b3.LstQtn;
+import com.bolsavalores.models.exceptions.B3ClientInfoException;
 
 @Component
 public class B3Client {
@@ -31,10 +31,14 @@ public class B3Client {
 		return listLstQtn;
 	}
 	
-	public LstQtn getCotacaoMaisAtualByCodigoAcao(String codigoAcao) {
+	public LstQtn getCotacaoMaisAtualByCodigoAcao(String codigoAcao) throws B3ClientInfoException {
 		restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 		DailyFluctuationHistory dailyFluctuation = restTemplate.getForObject(B3_URI + "/" + codigoAcao, DailyFluctuationHistory.class);
 		List<LstQtn> listLstQtn = dailyFluctuation.getTradgFlr().getScty().getLstQtn();
+		
+		if(listLstQtn == null || listLstQtn.isEmpty())
+			throw new B3ClientInfoException();
+		
 		Collections.sort(listLstQtn);
 		return listLstQtn.get(listLstQtn.size() - 1);
 	}

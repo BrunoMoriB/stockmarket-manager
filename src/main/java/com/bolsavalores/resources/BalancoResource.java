@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.exceptions.StockmarketException;
+import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -27,8 +32,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 @RequestMapping(value="/balanco")
 public class BalancoResource {
 
+    private static final Logger LOG = LoggerFactory.getLogger(BalancoResource.class);
+	
 	@Autowired
 	BalancoRepository balancoRepository;
+	
+	@Autowired
+	AcaoRepository acaoRepository;
 	
 	@Autowired
 	BalancoService balancoService;
@@ -53,8 +63,7 @@ public class BalancoResource {
 			Collections.sort(balancos);
 			return ResponseEntity.ok(jsonConverter.toJson(balancos));
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error("Não foi possível buscar os Balancos. ", e);
 			return new ResponseEntity<String>("Não foi possível buscar os Balancos. ", HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -65,8 +74,32 @@ public class BalancoResource {
 			List<Balanco> balancosRecalculados = balancoService.getBalancosRecalculadosByAcaoId(acaoId);
 			return ResponseEntity.ok(jsonConverter.toJson(balancosRecalculados));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error("Não foi possível recalcular os Balancos. ", e);
+			return new ResponseEntity<String>("Não foi possível recalcular os Balancos. ", HttpStatus.BAD_REQUEST);
+		}
+	}
+	
+	@GetMapping("/buscaTodosBalancosDailyUpdatedRecalculados")
+	public ResponseEntity<String> getTodosBalancosDailyUpdatedRecalculados(){
+		LOG.info("Iniciando processo de atualização dos Balanços das empresas.");
+		
+		try {
+			List<Acao> acoes  = acaoRepository.findAll();
+			acoes.forEach(a -> {
+					try {
+						balancoService.getBalancosRecalculadosByAcaoId(a.getId());
+					} catch (ParseException | StockmarketException e) {
+						LOG.error("Não foi possível recalcular os Balancos para Ação(id " + a.getId() + "). " + e.getMessage());
+					}
+				});
+			
+			List<Balanco> balancosRecalculados = balancoRepository.findBalancosDailyUpdated();
+			
+			LOG.info("Processo de atualização dos Balanços das empresas foi finalizado!");
+			
+			return ResponseEntity.ok(jsonConverter.toJson(balancosRecalculados));
+		} catch (Exception e) {
+			LOG.error("Não foi possível recalcular os Balancos. ", e);
 			return new ResponseEntity<String>("Não foi possível recalcular os Balancos. ", HttpStatus.BAD_REQUEST);
 		}
 	}

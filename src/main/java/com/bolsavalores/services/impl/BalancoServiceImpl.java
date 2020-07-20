@@ -18,6 +18,8 @@ import com.bolsavalores.models.Balanco;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.MultiplosFundamentalistas;
 import com.bolsavalores.models.b3.LstQtn;
+import com.bolsavalores.models.exceptions.B3ClientInfoException;
+import com.bolsavalores.models.exceptions.BalancoNotFoundException;
 import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
@@ -29,6 +31,9 @@ public class BalancoServiceImpl implements BalancoService{
 	BalancoRepository balancoRepository;
 	
 	@Autowired
+	AcaoRepository acaoRepository;
+	
+	@Autowired
 	CalculadoraFundamentalista calculadoraFundamentalista;
 	
 	@Autowired
@@ -37,11 +42,8 @@ public class BalancoServiceImpl implements BalancoService{
 	@Autowired
 	B3Client b3Client;
 
-	@Autowired
-	AcaoRepository acaoRepository;
-	
 	@Override
-	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException {
+	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, BalancoNotFoundException, B3ClientInfoException {
 		List<Balanco> balancos = balancoRepository.findByAcaoId(acaoId);
 		
 		Collections.sort(balancos);
@@ -59,11 +61,15 @@ public class BalancoServiceImpl implements BalancoService{
 		if(!hasDailyUpdated) {
 			Balanco balancoDailyUpdated = new Balanco(balancos.get(0).getEmpresa());
 			salvaBalancoDailyUpdated(balancoDailyUpdated, acaoId);
+			//TODO: Implementação anterior abaixo, validar com o Bruno
+			// Balanco balancoDailyUpdated = new Balanco();
+			// balancoDailyUpdated.setAcao(getAcao(balancos, acaoId));
+			// salvaBalancoDailyUpdated(balancoDailyUpdated);
 		}
 		
 		return balancos;
 	}
-
+	
 	@Override
 	public Balanco salvaBalanco(Balanco balanco) throws ParseException {
 		List<Balanco> balancosAnteriores = balancoRepository.findByEmpresaId(balanco.getEmpresa().getId());
@@ -71,8 +77,11 @@ public class BalancoServiceImpl implements BalancoService{
 		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores));
 		
 		MultiplosFundamentalistas multiplos = balanco.getMultiplosFundamentalistas() != null ? balanco.getMultiplosFundamentalistas() : new MultiplosFundamentalistas();
-		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getLucroLiquidoAnual()));
-		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getPatrimonioLiquido()));
+		//TODO: Implementação anterior abaixo, validar com o Bruno
+		//multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getAcao().getQuantidade(), balanco.getLucroLiquidoAnual()));
+		//multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getAcao().getQuantidade(), balanco.getPatrimonioLiquido()));
+		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getLucroLiquidoAnual()));		
+		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getPatrimonioLiquido()));
 		multiplos.setRoe(calculadoraFundamentalista.getRoe(balanco.getLucroLiquidoAnual(), balanco.getPatrimonioLiquido()));
 		multiplos.setDividaBrutaSobrePatrimonioLiquido(calculadoraFundamentalista.getDividaBrutaSobrePatrimonioLiquido(balanco.getDividaBruta(), balanco.getPatrimonioLiquido()));
 		multiplos.setCaixaDisponivelSobreDividaBruta(calculadoraFundamentalista.getCaixaDisponivelSobreDividaBruta(balanco.getCaixaDisponivel(), balanco.getDividaBruta()));
@@ -93,12 +102,19 @@ public class BalancoServiceImpl implements BalancoService{
 		return balancoRepository.save(balanco);
 	}
 	
-	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate, long acaoId) throws ParseException  {
+	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate, long acaoId) throws ParseException, B3ClientInfoException,
+			BalancoNotFoundException {
 		Acao acao = acaoRepository.findById(acaoId);
 		LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(acao.getCodigo());
+		//TODO: Implementação anterior abaixo, validar com o Bruno
+		//LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(balancoDailyUpdate.getAcao().getCodigo());
+
 		double precoAtual   = cotacaoAtual.getClosPric();
 		
 		Balanco ultimoBalanco = balancoRepository.findLastBalancoByAcaoId(acao.getId());
+		
+		if(ultimoBalanco == null)
+			throw new BalancoNotFoundException("Não existe Balanço cadastrado para Ação(id " + acaoId+ "). ");
 		
 		balancoDailyUpdate.setCotacao(precoAtual);
 		balancoDailyUpdate.setCaixaDisponivel(ultimoBalanco.getCaixaDisponivel());
@@ -108,7 +124,6 @@ public class BalancoServiceImpl implements BalancoService{
 		balancoDailyUpdate.setLucroLiquidoAnual(ultimoBalanco.getLucroLiquidoAnual());
 		balancoDailyUpdate.setLucroLiquidoTrimestral(ultimoBalanco.getLucroLiquidoTrimestral());
 		balancoDailyUpdate.setPatrimonioLiquido(ultimoBalanco.getPatrimonioLiquido());
-		balancoDailyUpdate.setQtdPapeis(ultimoBalanco.getQtdPapeis());
 		balancoDailyUpdate.setTrimestre(balancoDailyUpdate.getData().toString());
 		
 		DesempenhoFinanceiro desempenho = balancoDailyUpdate.getDesempenhoFinanceiro() != null ? balancoDailyUpdate.getDesempenhoFinanceiro() : new DesempenhoFinanceiro();
@@ -124,8 +139,11 @@ public class BalancoServiceImpl implements BalancoService{
 		multiplos.setMediaPrecoSobreValorPatrimonial(ultimoBalanco.getMultiplosFundamentalistas().getMediaPrecoSobreValorPatrimonial());
 		multiplos.setRoe(ultimoBalanco.getMultiplosFundamentalistas().getRoe());
 		
-		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getQtdPapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
-		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getQtdPapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
+		//TODO: Implementação anterior abaixo, validar com o Bruno
+		// multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getAcao().getQuantidade(), balancoDailyUpdate.getLucroLiquidoAnual()));
+		// multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getAcao().getQuantidade(), balancoDailyUpdate.getPatrimonioLiquido()));
+		multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
+		multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
 		
 		balancoDailyUpdate.setMultiplosFundamentalistas(multiplos);
 		balancoDailyUpdate.setNota(calculadoraFundamentalista.getNota(balancoDailyUpdate));

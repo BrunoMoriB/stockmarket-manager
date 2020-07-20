@@ -25,6 +25,8 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.empresa = empresa;
 	}
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
@@ -57,9 +59,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	
 	@Column(name="caixadisponivel")
 	private Long caixaDisponivel;
-	
-	@Column(name="qtdpapeis")
-	private Long qtdPapeis;
 	
 	@Column(name="justificativa_nota")
 	private String justificativaNota;
@@ -159,14 +158,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setCaixaDisponivel(Long caixaDisponivel) {
 		this.caixaDisponivel = caixaDisponivel;
-	}
-
-	public Long getQtdPapeis() {
-		return qtdPapeis;
-	}
-
-	public void setQtdPapeis(Long qtdPapeis) {
-		this.qtdPapeis = qtdPapeis;
 	}
 
 	public Double getCotacao() {

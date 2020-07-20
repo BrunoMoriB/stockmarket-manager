@@ -20,4 +20,7 @@ public interface BalancoRepository extends JpaRepository<Balanco, Long>{
 
 	@Query("select b from Balanco b inner join Empresa e where e.id = ?1")
 	public List<Balanco> findByEmpresaId(long empresaId);
+	
+	@Query("SELECT b FROM Balanco b WHERE b.dailyUpdated = true ") 
+	public List<Balanco> findBalancosDailyUpdated();
 }

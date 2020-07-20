@@ -8,7 +8,6 @@
 210,Petroleo e Gás,
 213,Energia Elétrica,
 215,Educacional,
-216,Agricultura,Consumo
 1,Alimentos,Consumo
 101,Banco,Financeiro
 209,Previdência e Seguros,Seguros
@@ -18,4 +17,8 @@
 214,Serviços Financeiros,Financeiro
 302,Tecnologia,Serviços
 303,Serviços Médicos,Saúde
-212,Vestuário no geral,
+501,Móveis,Comércio
+401,Saúde,Comércio
+212,Vestuário no geral,Comércio
+601,Exploração de Imóveis,
+216,Agricultura,Consumo

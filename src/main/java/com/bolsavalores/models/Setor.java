@@ -17,6 +17,11 @@ import javax.persistence.Table;
 @Table(name="setor")
 public class Setor implements Serializable, Comparable<Setor> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;

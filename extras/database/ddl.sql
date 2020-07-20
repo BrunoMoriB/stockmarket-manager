@@ -9,9 +9,10 @@ ALTER TABLE Setor ALTER COLUMN id SET DEFAULT nextval('setor_id_seq');
 CREATE SEQUENCE empresa_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Empresa(
 	id INTEGER PRIMARY KEY,
-	razao_social VARCHAR(70) NOT NULL,
+	razao_social VARCHAR(70) NOT NULL CONSTRAINT empresa_razao_social_unq UNIQUE,
     nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
-    cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE
+    cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE,
+	quantidade_papeis BIGINT
 );
 ALTER TABLE Empresa ALTER COLUMN id SET DEFAULT nextval('empresa_id_seq');
 
@@ -61,7 +62,6 @@ CREATE TABLE Balanco (
 	trimestre VARCHAR(55),
 	id_multiplos INTEGER REFERENCES Multiplosfundamentalistas(id),
 	id_desempenho INTEGER REFERENCES Desempenhofinanceiro(id),
-	qtdpapeis BIGINT,
 	lucroliq_anual BIGINT,
 	cotacao NUMERIC,
 	patrimonioliquido BIGINT,
@@ -71,3 +71,13 @@ CREATE TABLE Balanco (
 	isdailyupdated BOOLEAN
 );
 ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
+
+CREATE SEQUENCE usuario_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Usuario (
+	id INTEGER PRIMARY KEY,
+	apelido VARCHAR(30) NOT NULL,
+	email VARCHAR(70) NOT NULL,
+	senha VARCHAR(100) NOT NULL,
+	papel VARCHAR (13) NOT NULL
+);
+ALTER TABLE Usuario ALTER COLUMN id SET DEFAULT nextval('usuario_id_seq');

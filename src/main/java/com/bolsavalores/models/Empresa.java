@@ -31,6 +31,9 @@ public class Empresa {
 	@Column(name = "cnpj")
 	private String cnpj;
 
+	@Column(name = "quantidade_papeis")
+	private Long quantidadePapeis;
+
 	@ManyToMany
 	@JoinTable(
 		name = "empresa_setor",
@@ -56,6 +59,10 @@ public class Empresa {
 
 	public String getCnpj() {
 		return cnpj;
+	}
+
+	public Long getQuantidadePapeis() {
+		return quantidadePapeis;
 	}
     
     @Override

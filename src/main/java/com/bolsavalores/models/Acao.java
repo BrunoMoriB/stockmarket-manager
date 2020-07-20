@@ -14,11 +14,12 @@ import javax.persistence.Table;
 @Table(name = "acao")
 public class Acao implements Serializable, Comparable<Acao> {
 
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String codigo;
-	private long quantidade;
 
 	@ManyToOne
 	private Empresa empresa;
@@ -34,12 +35,6 @@ public class Acao implements Serializable, Comparable<Acao> {
 	}
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
-	}
-	public long getQuantidade() {
-		return quantidade;
-	}
-	public void setQuantidade(long quantidade) {
-		this.quantidade = quantidade;
 	}
 	
 	@Override

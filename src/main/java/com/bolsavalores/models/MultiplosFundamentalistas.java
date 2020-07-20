@@ -13,6 +13,11 @@ import javax.persistence.Table;
 @Table(name="multiplosfundamentalistas")
 public class MultiplosFundamentalistas implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
