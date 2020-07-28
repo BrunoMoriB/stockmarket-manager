@@ -58,8 +58,6 @@ O script gen-dados-empresas-b3.py lê a página das empresas da b3 e gera um arq
 caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
 * --local True : parâmetro adicional é usado para processar o arquivo de dados existentes sem consultar o site da b3, usado para corrigir ou formatar o json de saída
 
-
-
 #### Execução do script
 
 Executar os comandos abaixo na raiz do projeto
@@ -74,7 +72,7 @@ cd ../..
 
 #### Detalhes do script
 
-Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3
+Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3 para gerar as queries
 
 #### Execução do script
 
@@ -90,7 +88,10 @@ cd ../..
 
 #### Detalhes do script
 
-Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3
+Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3 para gerar os dados dos balanços,
+caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
+
+* --processar-empresa "razao social" : parâmetro adicional é usado para processar somente uma ou mais empresas onde a razão social contenha o texto informado
 
 #### Execução do script
 
@@ -99,5 +100,39 @@ Executar os comandos abaixo na raiz do projeto
 ```
 cd extras/scripts
 python3 gen-dados-balancos-financeiros-empresas-b3.py
+cd ../..
+```
+
+
+### Gerar/atualizar o arquivo de dados de proventos das ações
+
+#### Detalhes do script
+
+Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3 para gerar os dados dos proventos,
+caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
+
+#### Execução do script
+
+Executar os comandos abaixo na raiz do projeto
+
+```
+cd extras/scripts
+python3 gen-dados-proventos-empresas-b3.py
+cd ../..
+```
+
+### Gerar/atualizar o script SQL para popular os dados da tabela Provento
+
+#### Detalhes do script
+
+Utiliza o arquivo dados-balancos-financeiros-empresas-b3.json gerado no script de obtenção de dados dos balanços das empresas b3 para gerar as queries
+
+#### Execução do script
+
+Executar os comandos abaixo na raiz do projeto
+
+```
+cd extras/scripts
+python3 gen-bd-inserts-partir-dados-proventos.py
 cd ../..
 ```
