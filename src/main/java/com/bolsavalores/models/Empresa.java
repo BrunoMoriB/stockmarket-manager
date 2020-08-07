@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,16 +31,18 @@ public class Empresa {
 
 	@Column(name = "cnpj")
 	private String cnpj;
+	
+	private long quantidade;
 
 	@ManyToMany
 	@JoinTable(
-		name = "empresa_setor",
+		name = "empresasetor",
 		joinColumns = @JoinColumn(name = "id_empresa"),
 		inverseJoinColumns = @JoinColumn(name = "id_setor")
 	)
 	private Set<Setor> setores;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empresa")
 	private Set<Acao> acoes;
 
     public long getId() {
@@ -58,7 +61,47 @@ public class Empresa {
 		return cnpj;
 	}
     
-    @Override
+	public long getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(long quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public Set<Setor> getSetores() {
+		return setores;
+	}
+
+	public void setSetores(Set<Setor> setores) {
+		this.setores = setores;
+	}
+
+	public Set<Acao> getAcoes() {
+		return acoes;
+	}
+
+	public void setAcoes(Set<Acao> acoes) {
+		this.acoes = acoes;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setRazaoSocial(String razaoSocial) {
+		this.razaoSocial = razaoSocial;
+	}
+
+	public void setNomePregao(String nomePregao) {
+		this.nomePregao = nomePregao;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

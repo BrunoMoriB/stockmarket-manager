@@ -11,7 +11,8 @@ CREATE TABLE Empresa(
 	id INTEGER PRIMARY KEY,
 	razao_social VARCHAR(70) NOT NULL,
     nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
-    cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE
+    cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE,
+    quantidade BIGINT
 );
 ALTER TABLE Empresa ALTER COLUMN id SET DEFAULT nextval('empresa_id_seq');
 

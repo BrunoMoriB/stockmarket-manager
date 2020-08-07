@@ -17,13 +17,18 @@ import javax.persistence.Table;
 @Table(name="setor")
 public class Setor implements Serializable, Comparable<Setor> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 
 	@ManyToMany
 	@JoinTable(
-		name = "empresa_setor",
+		name = "empresasetor",
 		joinColumns = @JoinColumn(name = "id_setor"),
 		inverseJoinColumns = @JoinColumn(name = "id_empresa")
 	)
@@ -37,6 +42,18 @@ public class Setor implements Serializable, Comparable<Setor> {
 
 	public String getNome() {
 		return nome;
+	}
+
+	public Set<Empresa> getEmpresas() {
+		return empresas;
+	}
+
+	public void setEmpresas(Set<Empresa> empresas) {
+		this.empresas = empresas;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	@Override

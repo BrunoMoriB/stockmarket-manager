@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,6 +17,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name="balanco")
 public class Balanco implements Serializable, Comparable<Balanco> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -197,7 +201,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	
 	@Override
 	public int compareTo(Balanco outroBalanco) {
-		// TODO Auto-generated method stub
 		if(this.dailyUpdated)
 			return 1;
 		else if(outroBalanco.isDailyUpdated())
