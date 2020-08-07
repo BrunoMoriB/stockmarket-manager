@@ -17,9 +17,9 @@ def gen_setores(empresas):
 def gen_acoes_empresa(empresa):
     acoes = []
     inserts = ['\n/* Popular a tabela de acao */\n']
-    for c in empresa['codigos_negociacao']:
+    for a in empresa['acoes']:
         inserts.append("""insert into Acao (codigo, id_empresa)
-            values ('%s', (select id from Empresa where cnpj = '%s'));\n""" % (c, empresa["cnpj"]))
+            values ('%s', (select id from Empresa where cnpj = '%s'));\n""" % (a['codigo_negociacao'], empresa["cnpj"]))
     return inserts
 
 def gen_setores_empresa(empresa):
@@ -42,13 +42,8 @@ def gen_empresas(empresas):
         inserts.extend(gen_acoes_empresa(e))
     return inserts
 
-def corrigir_valores(empresas):
-    for e in empresas:
-        e['cnpj'] = re.sub('[^0-9]', '', e['cnpj'])
-
 jsonfile = open(ARQUIVO_DADOS_B3, "r")
 empresas = json.loads(jsonfile.read())
-corrigir_valores(empresas)
 inserts = ['\connect bolsa_valores;\n']
 inserts.extend(gen_setores(empresas))
 inserts.extend(gen_empresas(empresas))

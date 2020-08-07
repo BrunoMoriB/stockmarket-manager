@@ -58,7 +58,7 @@ CREATE TABLE Balanco (
 	data DATE,
 	lucroliq_trimestral BIGINT,
 	nota INTEGER,
-	id_acao INTEGER REFERENCES Acao(id),
+	id_empresa INTEGER REFERENCES Empresa(id),
 	trimestre VARCHAR(55),
 	id_multiplos INTEGER REFERENCES Multiplosfundamentalistas(id),
 	id_desempenho INTEGER REFERENCES Desempenhofinanceiro(id),

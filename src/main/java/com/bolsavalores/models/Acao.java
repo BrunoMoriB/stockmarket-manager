@@ -62,7 +62,7 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof Setor))
+		if (!(obj instanceof Acao))
 			return false;
 		Acao other = (Acao) obj;
 		return Objects.equals(id, other.id);

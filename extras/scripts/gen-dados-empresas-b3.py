@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
+from selenium.common.exceptions import NoSuchElementException 
 import time
 import json
-from selenium.common.exceptions import NoSuchElementException 
 import tempfile
 import os
 import sys
@@ -31,11 +31,20 @@ def normalizar(word):
     os.remove("temp-word.json")
     return word
 
-def remover_duplicados(lista):
+def remover_duplicados(lista):   
     return list(dict.fromkeys(lista))
 
-def filtrar_codigos_negociacao_invalidos(codigos_negociacao):
-    return [c for c in codigos_negociacao if re.match("^\w{5,6}$", c)]
+def remover_acoes_duplicadas(acoes):
+    nova_lista = []
+    acoes_adicionadas = {}
+    for a in acoes:
+        if a['codigo_negociacao'] not in acoes_adicionadas:
+            acoes_adicionadas[a['codigo_negociacao']] = 1
+            nova_lista.append(a)
+    return nova_lista
+
+def filtrar_codigos_negociacao_invalidos(acoes):
+    return [a for a in acoes if re.match("^\w{5,6}$", a['codigo_negociacao'])]
 
 def filtrar_strings_vazias(lista):
     return [e for e in lista if len(e) > 0]
@@ -87,11 +96,11 @@ def obter_dados_da_empresa(driver, razao_social):
     classificacao_setorial = linhas_tabela_acao[4].find_elements_by_tag_name("td")[1].text
     classificacao_setorial = list(normalizar(c) for c in classificacao_setorial.split("/"))
     
-    codigosNegociacao = []
+    acoes = []
     driver.find_element_by_xpath("/html/body/div[2]/div[1]/ul/li[1]/div/table/tbody/tr[2]/td[2]/a[1]").click()
     links_codigos_acoes = tabela_acao.find_elements_by_class_name("LinkCodNeg")
     for acao in links_codigos_acoes:
-        codigosNegociacao.append(normalizar(acao.text))
+        acoes.append({'codigo_negociacao': normalizar(acao.text)})
     
     e = {
         "razao_social": razao_social, 
@@ -99,7 +108,7 @@ def obter_dados_da_empresa(driver, razao_social):
         "cnpj": cnpj, 
         "atividades": atividades,
         "classificacao_setorial": classificacao_setorial, 
-        "codigos_negociacao": codigosNegociacao
+        "acoes": acoes
     }
     print(json.dumps(e))
     empresas.append(e)
@@ -151,41 +160,42 @@ def normalizar_empresas_json_e_salvar():
         if e["razao_social"] not in razoes_social:
             e["atividades"] = filtrar_strings_vazias(remover_duplicados(e["atividades"]))
             e["classificacao_setorial"] = remover_duplicados(e["classificacao_setorial"])
-            e["codigos_negociacao"] = filtrar_codigos_negociacao_invalidos(remover_duplicados(e["codigos_negociacao"]))
+            e["acoes"] = filtrar_codigos_negociacao_invalidos(remover_acoes_duplicadas(e["acoes"]))
+            e['cnpj'] = re.sub('[^0-9]', '', e['cnpj'])
             razoes_social[e["razao_social"]] = 1
-            if not deve_remover_empresas_sem_acoes or len(e["codigos_negociacao"]) > 0:
+            if not deve_remover_empresas_sem_acoes or len(e["acoes"]) > 0:
                 empresas_normalized.append(e)
-
     jsonfile = open(ARQUIVO_DADOS_B3_SAIDA, "w")
     jsonfile.write(json.dumps(empresas_normalized, indent=4))
     jsonfile.close()
 
 
-with webdriver.Firefox() as driver:
-    is_local_exec = True if "--local" in sys.argv else False
-    
+
+is_local_exec = True if "--local" in sys.argv else False
+
+try:
+    jsonfile = open(ARQUIVO_DADOS_B3_SAIDA, "r")
+    empresas = json.loads(jsonfile.read())
+    jsonfile.close()
+except Exception as err:
+    print("Arquivo pré-existente não encontrado")
+    print(err)
+
+if is_local_exec == False:
+    driver = webdriver.Firefox()
+    print("Processando arquivo acessando a página da b3")
+    driver.implicitly_wait(5)
+    wait = WebDriverWait(driver, 10)    
+    driver.get("http://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm")    
+    driver.maximize_window()
+    time.sleep(5)
     try:
-        jsonfile = open(ARQUIVO_DADOS_B3_SAIDA, "r")
-        empresas = json.loads(jsonfile.read())
-        jsonfile.close()
+        acessar_dados_das_empresas(driver)
     except Exception as err:
-        print("Arquivo pré-existente não encontrado")
+        print('Erro enquanto capturava os dados')
         print(err)
+else:
+    print("Processando arquivo local")
 
-    if is_local_exec == False:
-        print("Processando arquivo acessando a página da b3")
-        driver.implicitly_wait(5)
-        wait = WebDriverWait(driver, 10)    
-        driver.get("http://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm")    
-        driver.maximize_window()
-        time.sleep(5)
-        try:
-            acessar_dados_das_empresas(driver)
-        except Exception as err:
-            print('Erro enquanto capturava os dados')
-            print(err)
-    else:
-        print("Processando arquivo local")
-
-    normalizar_empresas_json_e_salvar()    
-    print("Arquivo final gerado!")
+normalizar_empresas_json_e_salvar()    
+print("Arquivo final gerado!")

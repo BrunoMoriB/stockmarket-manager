@@ -105,7 +105,7 @@ public class Empresa {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!(obj instanceof Setor))
+		if (!(obj instanceof Empresa))
 			return false;
 		Empresa other = (Empresa) obj;
 		return Objects.equals(id, other.id);

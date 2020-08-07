@@ -13,10 +13,12 @@ import org.springframework.stereotype.Service;
 import com.bolsavalores.clients.B3Client;
 import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.MultiplosFundamentalistas;
 import com.bolsavalores.models.b3.LstQtn;
+import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
 
@@ -34,6 +36,9 @@ public class BalancoServiceImpl implements BalancoService{
 	
 	@Autowired
 	B3Client b3Client;
+
+	@Autowired
+	AcaoRepository acaoRepository;
 	
 	@Override
 	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException {
@@ -45,16 +50,15 @@ public class BalancoServiceImpl implements BalancoService{
 		for(Balanco balanco : balancos) {
 			if(balanco.isDailyUpdated()) {
 				hasDailyUpdated = true;
-				salvaBalancoDailyUpdated(balanco);
+				salvaBalancoDailyUpdated(balanco, acaoId);
 			}else {
 				salvaBalanco(balanco);
 			}
 		}
 		
 		if(!hasDailyUpdated) {
-			Balanco balancoDailyUpdated = new Balanco();
-			balancoDailyUpdated.setAcao(balancos.get(0).getAcao());
-			salvaBalancoDailyUpdated(balancoDailyUpdated);
+			Balanco balancoDailyUpdated = new Balanco(balancos.get(0).getEmpresa());
+			salvaBalancoDailyUpdated(balancoDailyUpdated, acaoId);
 		}
 		
 		return balancos;
@@ -62,7 +66,7 @@ public class BalancoServiceImpl implements BalancoService{
 
 	@Override
 	public Balanco salvaBalanco(Balanco balanco) throws ParseException {
-		List<Balanco> balancosAnteriores = balancoRepository.findByAcaoId(balanco.getAcao().getId());
+		List<Balanco> balancosAnteriores = balancoRepository.findByEmpresaId(balanco.getEmpresa().getId());
 	
 		balanco.setLucroLiquidoAnual(calculadoraFundamentalista.getLucroLiquidoAnual(balanco, balancosAnteriores));
 		
@@ -89,11 +93,12 @@ public class BalancoServiceImpl implements BalancoService{
 		return balancoRepository.save(balanco);
 	}
 	
-	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate) throws ParseException  {
-		LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(balancoDailyUpdate.getAcao().getCodigo());
+	public Balanco salvaBalancoDailyUpdated(Balanco balancoDailyUpdate, long acaoId) throws ParseException  {
+		Acao acao = acaoRepository.findById(acaoId);
+		LstQtn cotacaoAtual = b3Client.getCotacaoMaisAtualByCodigoAcao(acao.getCodigo());
 		double precoAtual   = cotacaoAtual.getClosPric();
 		
-		Balanco ultimoBalanco = balancoRepository.findLastBalancoByAcaoId(balancoDailyUpdate.getAcao().getId());
+		Balanco ultimoBalanco = balancoRepository.findLastBalancoByAcaoId(acao.getId());
 		
 		balancoDailyUpdate.setCotacao(precoAtual);
 		balancoDailyUpdate.setCaixaDisponivel(ultimoBalanco.getCaixaDisponivel());
