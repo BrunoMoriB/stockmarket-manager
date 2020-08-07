@@ -33,9 +33,8 @@ ALTER TABLE Acao ALTER COLUMN id SET DEFAULT nextval('acao_id_seq');
 CREATE SEQUENCE provento_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Provento (
 	id INTEGER PRIMARY KEY,
-	tipo VARCHAR(10) NOT NULL,
+	tipo VARCHAR(9) NOT NULL,
 	valor NUMERIC NOT NULL,
-	data_aprovacao DATE NOT NULL,
 	data_ex DATE NOT NULL,
 	data_pagamento DATE,
 	id_acao INTEGER REFERENCES Acao(id) NOT NULL

@@ -96,54 +96,67 @@ def configurar_balanco_do_ano_e_trimestre(empresa, ano, campo, valores_trimestre
             logging.info('Balanço da empresa %s, data %s e trimestre %s encontrada' % (empresa['razao_social'], b['data'], b['trimestre']))
             empresa.get('balancos').append(b)    
 
-def obter_balancos_empresa(driver, empresa, retentativas=3):
+def filtrar_balancos_incompletos(balancos):
+    nova_lista_balancos = []
+    campos_obrigatorios = ['patrimonioliquido', 'lucroliq_trimestral', 'dividabruta', 'caixadisponivel']
+    for b in balancos:
+        contem_campo_vazio = False
+        for c in campos_obrigatorios:
+            if b.get(c, None) is None:
+                contem_campo_vazio = True
+                break
+        if not contem_campo_vazio:
+            nova_lista_balancos.append(b)
+    return nova_lista_balancos
+
+def obter_balancos_empresa(driver, empresa):
     balancos_preenchidos = False
-    try:
-        pyautogui.moveTo(0, 900)
-        if empresa.get('balancos') is None:
-            empresa['balancos'] = []
-        for acao in empresa['acoes']:
-            cod_neg = acao['codigo_negociacao']
-            driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=%s' % cod_neg)
-            #driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=TIET11')
-            driver.maximize_window()
-            time.sleep(20)
-            if eh_pagina_acao_nao_encontrada(driver):
-                logging.info('Código %s não encontrado' % cod_neg)
-                continue
-            logging.info('Obtendo os balanços do código %s' % cod_neg)
-            driver.find_element_by_xpath('//a[@href="#tabinformativos"]').click()
-            time.sleep(3)
-        
-            linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[1].find_elements_by_tag_name('th')
+    pyautogui.moveTo(0, 900)
+    if empresa.get('balancos') is None:
+        empresa['balancos'] = []
+    for acao in empresa['acoes']:
+        cod_neg = acao['codigo_negociacao']
+        driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=%s' % cod_neg)
+        driver.maximize_window()
+        time.sleep(20)
+        if eh_pagina_acao_nao_encontrada(driver):
+            logging.info('Código %s não encontrado' % cod_neg)
+            continue
+        logging.info('Obtendo os balanços do código %s' % cod_neg)
+        driver.find_element_by_xpath('//a[@href="#tabinformativos"]').click()
+        time.sleep(3)
+        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[1].find_elements_by_tag_name('th')
+    
+        try:            
             for i in range(1, len(linhas_anos_balancos)-1):
                 ano = int(linhas_anos_balancos[i].text.strip())
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'patrimonioliquido', obter_valores_da_celula_balancos_pagina_indicadores(driver, 1, i))
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'lucroliq_trimestral', obter_valores_da_celula_balancos_pagina_indicadores(driver, 5, i))
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'dividabruta', obter_valores_da_celula_balancos_pagina_indicadores(driver, 6, i))
-                        
-            driver.find_element_by_xpath('//a[@href="#tabfluxocaixa"]').click()
-            time.sleep(3)
-            linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[2].find_elements_by_tag_name('th')
+        except:
+            logging.exception('Exception lançada')
+            logging.info('Erro na obtenção do patrimonio, lucro ou divida do balanço da ação %s' % cod_neg)
+                    
+        driver.find_element_by_xpath('//a[@href="#tabfluxocaixa"]').click()
+        time.sleep(3)
+        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[2].find_elements_by_tag_name('th')
+        try:
             for i in range(1, len(linhas_anos_balancos)-1):
                 ano = int(linhas_anos_balancos[i].text.strip())
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'caixadisponivel', obter_valores_da_celula_balancos_pagina_caixas(driver, 7, i))
-
-            #driver.get('https://www.fundamentus.com.br/detalhes.php?papel=TIET11')
-            driver.get('https://www.fundamentus.com.br/detalhes.php?papel=%s' % cod_neg)
-            driver.maximize_window()
-            qtdepapeis = driver.find_element_by_xpath('/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span').text.replace('.', '')
-            empresa['qtdepapeis'] = int(qtdepapeis)
-            balancos_preenchidos = True
-            break
-    except:
-        logging.exception('Exception lançada')
-        retentativas -= 1
-        if retentativas > 0 :            
-            logging.info('Erro na obtenção dos balanços da empresa %s, irá retentar mais %d vez(es)' % (empresa['razao_social'], retentativas))
-            obter_balancos_empresa(driver, empresa, retentativas)
-        else:
-            logging.info('Erro na obtenção dos balanços da empresa %s, não haverá mais retentativas' % (empresa['razao_social']))            
+        except:
+            logging.exception('Exception lançada')
+            logging.info('Erro na obtenção do caixa disponível da ação %s' % cod_neg)
+        empresa['balancos'] = filtrar_balancos_incompletos(empresa['balancos'])
+        if len(empresa['balancos']) == 0:
+            logging.warning('Não foi possível capturar os balanços da ação %s' % cod_neg)
+            continue
+        driver.get('https://www.fundamentus.com.br/detalhes.php?papel=%s' % cod_neg)
+        driver.maximize_window()
+        qtdepapeis = driver.find_element_by_xpath('/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span').text.replace('.', '')
+        empresa['qtdepapeis'] = int(qtdepapeis)
+        balancos_preenchidos = True
+        break         
     if balancos_preenchidos:
         empresa['balancos'] = [balanco for balanco in empresa['balancos'] if balanco['data'] <= datetime.now()]
         obter_cotacao(driver, empresa)

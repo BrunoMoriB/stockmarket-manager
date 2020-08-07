@@ -1,4 +1,4 @@
-# stockmarket-manager (backend)
+# Stockmarket-Manager (Back-end)
 Gerenciador de operações de ações (trades) e de informações das empresas com capital aberto - Dados financeiros, indicadores, etc.
 
 ## Preparar o ambiente de desenvolvimento
@@ -15,6 +15,23 @@ extras/docker/run-docker.sh
 Executar no terminal dentro da instância do docker
 ```
 run # alias do comando 'mvn spring-boot:run'
+```
+
+## Gerar um pacote debian do projeto
+
+### Detalhes do script
+
+Compila o projeto e gera um pacote para instalação para instalação em sistemas Debian 
+
+* close-version : Parâmetro adicional para finalizar a versão atual que consta no arquivo pom.xml, criar uma tag no git com a versão que está fechando e
+incrementando a nova versão no pom.xml
+
+### Execução do script
+
+Executar no terminal dentro da instância do docker
+
+```
+/stockmarket-manager/extras/debian/build-package.sh
 ```
 
 ## Procedimentos para gerar das das empresas da B3
