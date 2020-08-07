@@ -28,7 +28,7 @@ public class Setor implements Serializable, Comparable<Setor> {
 
 	@ManyToMany
 	@JoinTable(
-		name = "empresa_setor",
+		name = "empresasetor",
 		joinColumns = @JoinColumn(name = "id_setor"),
 		inverseJoinColumns = @JoinColumn(name = "id_empresa")
 	)
@@ -42,6 +42,18 @@ public class Setor implements Serializable, Comparable<Setor> {
 
 	public String getNome() {
 		return nome;
+	}
+
+	public Set<Empresa> getEmpresas() {
+		return empresas;
+	}
+
+	public void setEmpresas(Set<Empresa> empresas) {
+		this.empresas = empresas;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	@Override

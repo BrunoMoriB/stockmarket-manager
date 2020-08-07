@@ -15,17 +15,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
+//TODO: remover?
 @Entity
 @Table(name="balanco")
 public class Balanco implements Serializable, Comparable<Balanco> {
 
+<<<<<<< HEAD
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
-
+=======
 	public Balanco() {}
 
 	public Balanco(Empresa empresa) {
 		this.empresa = empresa;
 	}
+>>>>>>> 886cab183efb60dadce8c7267e4420b7f79d1a48
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -33,7 +40,7 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	
 	@ManyToOne
 	@JoinColumn(name="id_acao")
-	private Acao acao;
+	private Empresa empresa;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_multiplos")
@@ -60,6 +67,9 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="caixadisponivel")
 	private Long caixaDisponivel;
 	
+	@Column(name="qtdpapeis")
+	private Long qtdPapeis;
+	
 	@Column(name="justificativa_nota")
 	private String justificativaNota;
 	
@@ -71,10 +81,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	private String trimestre;
 	
 	private int nota;
-	
-	@ManyToOne()
-	@JoinColumn(name="id_empresa")
-	private Empresa empresa;
 	
 	public long getId() {
 		return id;
@@ -162,6 +168,14 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setCaixaDisponivel(Long caixaDisponivel) {
 		this.caixaDisponivel = caixaDisponivel;
+	}
+
+	public Long getQtdPapeis() {
+		return qtdPapeis;
+	}
+
+	public void setQtdPapeis(Long qtdPapeis) {
+		this.qtdPapeis = qtdPapeis;
 	}
 
 	public Double getCotacao() {
