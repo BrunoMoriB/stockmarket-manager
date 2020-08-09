@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl enable stockmarket-manager.service
+systemctl start stockmarket-manager.service

@@ -27,7 +27,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@CrossOrigin
+@CrossOrigin //TODO: É necessário? Pensar pois pode ser uma falha de segurança
 @RestController
 @RequestMapping(value="/acao")
 public class AcaoResource {
@@ -38,14 +38,14 @@ public class AcaoResource {
 	@Autowired
 	JsonConverter jsonConverter;
 	
-	@GetMapping("/busca")
+	@GetMapping("/busca") //TODO: utilizar como parâmetro de path. Ex.: /acao/1   : @PathVariable. Remover a necessidade do parse do json, 
 	public ResponseEntity<String> getAcao(@RequestParam long id) {
 		try {
 			Acao acao = acaoRepository.findById(id);
 			AcaoResponse acaoResponse = new AcaoResponse(acao.getId(), acao.getCodigo(), getEmpresaResponse(acao.getEmpresa()));
 			return ResponseEntity.ok(jsonConverter.toJson(acaoResponse));
 		} catch (JsonProcessingException e) {
-			e.printStackTrace();
+			e.printStackTrace(); //TODO: logar
 			return new ResponseEntity<String>("Não foi possível buscar a Ação. ", HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -53,11 +53,13 @@ public class AcaoResource {
 	@GetMapping()
 	public ResponseEntity<String> getAcoes(){
 		try{
-			new SetorResponse(3L, "adeasw");
+			new SetorResponse(3L, "adeasw"); //TODO: =)
 			List<Acao> acoes = acaoRepository.findAll();
-			Collections.sort(acoes);
+			Collections.sort(acoes); //TODO: ordene no front=end, poupe processamento
 			List<AcaoResponse> acoesResponse = new ArrayList<AcaoResponse>();
 			acoes.forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo(), getEmpresaResponse(a.getEmpresa()))));
+			// acoesResponse = acoes.stream().map(a -> new AcaoResponse(a.getId(), a.getCodigo(), getEmpresaResponse(a.getEmpresa())))
+			// 	.collect(Collectors.toList()); //TODO: Uma outra forma de transformar listas
 			return ResponseEntity.ok(jsonConverter.toJson(acoesResponse));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -97,7 +99,7 @@ public class AcaoResource {
 	private EmpresaResponse getEmpresaResponse(Empresa empresa) {
 		Set<SetorResponse> setores = new HashSet<SetorResponse>();
 		empresa.getSetores().stream().forEach(s -> setores.add(new SetorResponse(s.getId(), s.getNome())));
-		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidade(), setores);
+		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidadePapeis(), setores);
 	}
 	
 	@Getter

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [[ "$(systemctl is-active stockmarket-manager.service)" == "active" ]]; then
+	systemctl stop stockmarket-manager.service
+fi

@@ -1,0 +1,12 @@
+ 
+[Unit]
+Description=Software to manage and consult investments
+
+[Service]
+ExecStart=/usr/bin/java -Xms128m -Xmx256m -jar /opt/comprando-valor/stockmarket-manager/stockmarket.jar
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

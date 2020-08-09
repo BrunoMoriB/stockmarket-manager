@@ -2,7 +2,6 @@ import re
 import sys
 import json
 import time
-import zipfile
 import os
 from datetime import datetime
 from datetime import timedelta 
@@ -17,11 +16,10 @@ from selenium.webdriver.common.action_chains import ActionChains
 import pyautogui
 import logging
 
-LOG_FILENAME = '/tmp/gen-dados-balancos.log'
+LOG_FILENAME = '/tmp/gen-dados-balancos-financeiros-empresas-b3.log'
 
 ARQUIVO_DADOS_B3 = '../dados/dados-empresas-b3.json'
 ARQUIVO_DADOS_BALANCOS = '../dados/dados-balancos-financeiros-empresas-b3.json'
-INICIO_LINHA_ANOS_BALANCOS = 1
 
 DE_PARA_MES_BALANCO = {
     '1T': 2,
@@ -98,53 +96,67 @@ def configurar_balanco_do_ano_e_trimestre(empresa, ano, campo, valores_trimestre
             logging.info('Balanço da empresa %s, data %s e trimestre %s encontrada' % (empresa['razao_social'], b['data'], b['trimestre']))
             empresa.get('balancos').append(b)    
 
-def obter_balancos_empresa(driver, empresa, retentativas=3):
+def filtrar_balancos_incompletos(balancos):
+    nova_lista_balancos = []
+    campos_obrigatorios = ['patrimonioliquido', 'lucroliq_trimestral', 'dividabruta', 'caixadisponivel']
+    for b in balancos:
+        contem_campo_vazio = False
+        for c in campos_obrigatorios:
+            if b.get(c, None) is None:
+                contem_campo_vazio = True
+                break
+        if not contem_campo_vazio:
+            nova_lista_balancos.append(b)
+    return nova_lista_balancos
+
+def obter_balancos_empresa(driver, empresa):
     balancos_preenchidos = False
-    try:
-        if empresa.get('balancos') is None:
-            empresa['balancos'] = []
-        for acao in empresa['acoes']:
-            cod_neg = acao['codigo_negociacao']
-            driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=%s' % cod_neg)
-            #driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=TIET11')
-            driver.maximize_window()
-            time.sleep(20)
-            if eh_pagina_acao_nao_encontrada(driver):
-                logging.info('Código %s não encontrado' % cod_neg)
-                continue
-            logging.info('Obtendo os balanços do código %s' % cod_neg)
-            driver.find_element_by_xpath('//a[@href="#tabinformativos"]').click()
-            time.sleep(3)
-        
-            linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[1].find_elements_by_tag_name('th')
+    pyautogui.moveTo(0, 900)
+    if empresa.get('balancos') is None:
+        empresa['balancos'] = []
+    for acao in empresa['acoes']:
+        cod_neg = acao['codigo_negociacao']
+        driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=%s' % cod_neg)
+        driver.maximize_window()
+        time.sleep(20)
+        if eh_pagina_acao_nao_encontrada(driver):
+            logging.info('Código %s não encontrado' % cod_neg)
+            continue
+        logging.info('Obtendo os balanços do código %s' % cod_neg)
+        driver.find_element_by_xpath('//a[@href="#tabinformativos"]').click()
+        time.sleep(3)
+        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[1].find_elements_by_tag_name('th')
+    
+        try:            
             for i in range(1, len(linhas_anos_balancos)-1):
                 ano = int(linhas_anos_balancos[i].text.strip())
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'patrimonioliquido', obter_valores_da_celula_balancos_pagina_indicadores(driver, 1, i))
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'lucroliq_trimestral', obter_valores_da_celula_balancos_pagina_indicadores(driver, 5, i))
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'dividabruta', obter_valores_da_celula_balancos_pagina_indicadores(driver, 6, i))
-                        
-            driver.find_element_by_xpath('//a[@href="#tabfluxocaixa"]').click()
-            time.sleep(3)
-            linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[2].find_elements_by_tag_name('th')
+        except:
+            logging.exception('Exception lançada')
+            logging.info('Erro na obtenção do patrimonio, lucro ou divida do balanço da ação %s' % cod_neg)
+                    
+        driver.find_element_by_xpath('//a[@href="#tabfluxocaixa"]').click()
+        time.sleep(3)
+        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[2].find_elements_by_tag_name('th')
+        try:
             for i in range(1, len(linhas_anos_balancos)-1):
                 ano = int(linhas_anos_balancos[i].text.strip())
                 configurar_balanco_do_ano_e_trimestre(empresa, ano, 'caixadisponivel', obter_valores_da_celula_balancos_pagina_caixas(driver, 7, i))
-
-            #driver.get('https://www.fundamentus.com.br/detalhes.php?papel=TIET11')
-            driver.get('https://www.fundamentus.com.br/detalhes.php?papel=%s' % cod_neg)
-            driver.maximize_window()
-            qtdepapeis = driver.find_element_by_xpath('/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span').text.replace('.', '')
-            empresa['qtdepapeis'] = int(qtdepapeis)
-            balancos_preenchidos = True
-            break
-    except:
-        logging.exception('Exception lançada')
-        retentativas -= 1
-        if retentativas > 0 :            
-            logging.info('Erro na obtenção dos balanços da empresa %s, irá retentar mais %d vez(es)' % (empresa['razao_social'], retentativas))
-            obter_balancos_empresa(driver, empresa, retentativas)
-        else:
-            logging.info('Erro na obtenção dos balanços da empresa %s, não haverá mais retentativas' % (empresa['razao_social']))            
+        except:
+            logging.exception('Exception lançada')
+            logging.info('Erro na obtenção do caixa disponível da ação %s' % cod_neg)
+        empresa['balancos'] = filtrar_balancos_incompletos(empresa['balancos'])
+        if len(empresa['balancos']) == 0:
+            logging.warning('Não foi possível capturar os balanços da ação %s' % cod_neg)
+            continue
+        driver.get('https://www.fundamentus.com.br/detalhes.php?papel=%s' % cod_neg)
+        driver.maximize_window()
+        qtdepapeis = driver.find_element_by_xpath('/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span').text.replace('.', '')
+        empresa['qtdepapeis'] = int(qtdepapeis)
+        balancos_preenchidos = True
+        break         
     if balancos_preenchidos:
         empresa['balancos'] = [balanco for balanco in empresa['balancos'] if balanco['data'] <= datetime.now()]
         obter_cotacao(driver, empresa)
@@ -197,7 +209,11 @@ def obter_cotacao(driver, empresa, retentativas=3, cod_neg_concluidas=[]):
             time.sleep(1)
             input = driver.find_element_by_class_name('fildBusca')
             set_input_text(input, cod_neg_corrente, False, 4)
-            driver.find_element_by_class_name('suggest-list').find_element_by_tag_name('a').click()
+            link_acao = driver.find_element_by_class_name('suggest-list').find_element_by_tag_name('a')
+            if 'NADA ENCONTRADO' in link_acao.text.upper():
+                logging.info('Cotações da %s não foram encontradas' % (cod_neg_corrente))
+                continue    
+            link_acao.click()
             time.sleep(5)
             driver.execute_script("window.scrollTo(0, %d)" % 450)
             time.sleep(2)            
@@ -225,7 +241,7 @@ def obter_cotacao(driver, empresa, retentativas=3, cod_neg_concluidas=[]):
                 time.sleep(1)
                 input = driver.find_element_by_class_name('highcharts-range-selector')
                 dataini_alterada = datetime.strptime(input.get_attribute('value').strip(), '%d/%m/%Y')
-                if dataini_alterada.year != dataini.year or dataini_alterada.month != dataini.month:
+                if dataini_alterada.year != dataini.year:
                     logging.info('Não é possível obter cotações mais antigas que %s para a ação %s' % (dataini, cod_neg_corrente))
                     break
                 driver.execute_script('document.getElementsByClassName("highcharts-range-input")[1].getElementsByTagName("text")[0].dispatchEvent(new MouseEvent("click", {"view": window,"bubbles": true, "cancelable": true}))')
@@ -238,7 +254,7 @@ def obter_cotacao(driver, empresa, retentativas=3, cod_neg_concluidas=[]):
                 eixo_y = 900
                 valor_cotacao = None
                 pyautogui.moveTo(0, eixo_y)
-                mes = 1
+                mes = dataini_alterada.month
                 retentativas_valor_ponto_grafico=3
                 pyautogui.moveTo(eixo_x_ini-10, eixo_y, 1, pyautogui.easeOutQuad)
                 for ponto_x in range(eixo_x_ini, eixo_x_fim+15, 10):
@@ -306,38 +322,74 @@ def salvar_arquivo_dados_balancos(empresas):
         jsonfile.write(json.dumps(empresas, indent=4, cls=ObjParaJSON))
     logging.info('Arquivo atualizado')
 
+def obter_empresas_partir_arquivo_dados_b3():
+    jsonfile = open(ARQUIVO_DADOS_B3, "r")
+    return json.loads(jsonfile.read())
+
+def obter_empresas_balancos_partir_arquivo_dados_balancos():
+    empresa_balancos = []
+    try:
+        with open(ARQUIVO_DADOS_BALANCOS, "r") as jsonfile:
+            empresa_balancos = json.loads(jsonfile.read(), cls=JSONParaObj)
+    except:
+        logging.exception('Exception lançada')
+        logging.info('Arquivo pré-existente não encontrado')
+    return empresa_balancos
+
+def processar_empresas_faltantes(driver):
+    logging.info('Processar empresas faltantes')
+    empresas = obter_empresas_partir_arquivo_dados_b3()
+    empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
+    empresa_balancos_novo = empresa_balancos[:]
+    for e in empresas:
+        empresa_balanco = None
+        for eb in empresa_balancos:
+            if eb['cnpj'] == e['cnpj']:
+                logging.info('Empresa %s já processada' % eb['razao_social'])
+                empresa_balanco = eb
+                break
+        if empresa_balanco is None:
+            logging.info('Balanco da empresa %s ainda não capturado' % e['razao_social'])
+            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}    
+            if obter_balancos_empresa(driver, empresa_balanco):
+                empresa_balancos_novo.append(empresa_balanco) 
+                salvar_arquivo_dados_balancos(empresa_balancos_novo)
+      
+def processar_empresa(driver, razao_social):
+    logging.info('Força processamento empresa "%s"' % (razao_social))
+    empresas = obter_empresas_partir_arquivo_dados_b3()
+    empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
+    empresa_balancos_novo = empresa_balancos[:]
+    for e in empresas:
+        if razao_social.upper() in e['razao_social']:
+            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}
+            if obter_balancos_empresa(driver, empresa_balanco):
+                indice_substituir = None
+                for i, eb in enumerate(empresa_balancos):
+                    if eb['cnpj'] == empresa_balanco['cnpj']:
+                        indice_substituir = i
+                        break
+                if indice_substituir is None:
+                    logging.info('Empresa ainda não processada, adicionando a mesma')
+                    empresa_balancos_novo.append(empresa_balanco)
+                else:
+                    logging.info('Empresa já processada, será atualizada')
+                    empresa_balancos_novo[indice_substituir] = empresa_balanco
+                salvar_arquivo_dados_balancos(empresa_balancos_novo)
+
+# MAIN
 if os.path.exists(LOG_FILENAME):
     os.remove(LOG_FILENAME)
 logging.basicConfig(filename=LOG_FILENAME, level=logging.INFO)
 
-jsonfile = open(ARQUIVO_DADOS_B3, "r")
-empresas = json.loads(jsonfile.read())
-
-empresa_balancos = []
-try:
-    with open(ARQUIVO_DADOS_BALANCOS, "r") as jsonfile:
-        empresa_balancos = json.loads(jsonfile.read(), cls=JSONParaObj)
-except:
-    logging.exception('Exception lançada')
-    logging.info('Arquivo pré-existente não encontrado')
-
-empresa_balancos_novo = empresa_balancos[:]
 with webdriver.Firefox() as driver:
-    try:    
-        pyautogui.moveTo(0, 900) 
-        for e in empresas:
-            empresa_balanco = None
-            for eb in empresa_balancos:
-                if eb['cnpj'] == e['cnpj']:            
-                    logging.info('Empresa %s já processada' % eb['razao_social'])
-                    empresa_balanco = eb
-                    break
-            if empresa_balanco is None:
-                logging.info('Balanco da empresa %s ainda não capturado' % e['razao_social'])
-                empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}    
-                if obter_balancos_empresa(driver, empresa_balanco):            
-                    empresa_balancos_novo.append(empresa_balanco) 
-                    salvar_arquivo_dados_balancos(empresa_balancos_novo)
+    try:
+        razao_social_processar = sys.argv[2]  if '--processar-empresa' in sys.argv else None
+        if razao_social_processar is not None:
+            processar_empresa(driver, razao_social_processar)
+        else:
+            processar_empresas_faltantes(driver)
+
     except:
         logging.exception('Exception lançada')
         logging.info('Não foi possivel finalizar o processamento')

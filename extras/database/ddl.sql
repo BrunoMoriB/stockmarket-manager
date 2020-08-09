@@ -26,9 +26,20 @@ CREATE SEQUENCE acao_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Acao (
 	codigo VARCHAR(6),
 	id INTEGER PRIMARY KEY,
-	id_empresa INTEGER REFERENCES Empresa(id)
+	id_empresa INTEGER REFERENCES Empresa(id) NOT NULL
 );
 ALTER TABLE Acao ALTER COLUMN id SET DEFAULT nextval('acao_id_seq');
+
+CREATE SEQUENCE provento_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Provento (
+	id INTEGER PRIMARY KEY,
+	tipo VARCHAR(9) NOT NULL,
+	valor NUMERIC NOT NULL,
+	data_ex DATE NOT NULL,
+	data_pagamento DATE,
+	id_acao INTEGER REFERENCES Acao(id) NOT NULL
+);
+ALTER TABLE Provento ALTER COLUMN id SET DEFAULT nextval('provento_id_seq');
 
 CREATE SEQUENCE desempenho_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Desempenhofinanceiro (
