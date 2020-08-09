@@ -22,14 +22,13 @@ import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Empresa;
 import com.bolsavalores.repositories.AcaoRepository;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value="/acao")
+@RequestMapping(value="/acoes")
 public class AcaoResource {
 
 	@Autowired
@@ -38,13 +37,17 @@ public class AcaoResource {
 	@Autowired
 	JsonConverter jsonConverter;
 	
-	@GetMapping("/busca")
+	@GetMapping("/{id}")
 	public ResponseEntity<String> getAcao(@RequestParam long id) {
 		try {
 			Acao acao = acaoRepository.findById(id);
+			
+//		if(acao == null)
+//			TODO tratar
+			
 			AcaoResponse acaoResponse = new AcaoResponse(acao.getId(), acao.getCodigo(), getEmpresaResponse(acao.getEmpresa()));
 			return ResponseEntity.ok(jsonConverter.toJson(acaoResponse));
-		} catch (JsonProcessingException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity<String>("Não foi possível buscar a Ação. ", HttpStatus.BAD_REQUEST);
 		}
@@ -53,8 +56,11 @@ public class AcaoResource {
 	@GetMapping()
 	public ResponseEntity<String> getAcoes(){
 		try{
-			new SetorResponse(3L, "adeasw");
 			List<Acao> acoes = acaoRepository.findAll();
+			
+//			if(acoes == null || acoes.isEmpty())
+//			TODO tratar
+			
 			Collections.sort(acoes);
 			List<AcaoResponse> acoesResponse = new ArrayList<AcaoResponse>();
 			acoes.forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo(), getEmpresaResponse(a.getEmpresa()))));
@@ -71,24 +77,34 @@ public class AcaoResource {
 		 acao = acaoRepository.save(acao);
 		 AcaoResponse acaoResponse = new AcaoResponse(acao.getId(), acao.getCodigo(), getEmpresaResponse(acao.getEmpresa()));
 			return ResponseEntity.ok(jsonConverter.toJson(acaoResponse));
-		} catch (JsonProcessingException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity<String>("Não foi possível salvar a Ação. ", HttpStatus.BAD_REQUEST);
 		}
 	}
 	
 	@DeleteMapping()
-	public void deletaAcao(@RequestParam long id) {
-		acaoRepository.deleteById(id);
+	public ResponseEntity<?> deletaAcao(@RequestParam long id) {
+		try {
+			acaoRepository.deleteById(id);
+			return ResponseEntity.noContent().build();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity<String>("Não foi possível deletar a Ação. ", HttpStatus.BAD_REQUEST);
+		}
 	}
 	
 	@GetMapping("/buscaPorNomeOuCodigo")
 	public ResponseEntity<String> buscaAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
 		try {
-			Acao acao = acaoRepository.findByNomeOrCodigo(nome.toUpperCase(), codigo.toUpperCase());
+			Acao acao = acaoRepository.findByNomeOrCodigo(nome, codigo);
+			
+//			if(acao == null)
+//			TODO tratar
+			
 			AcaoResponse acaoResponse = new AcaoResponse(acao.getId(), acao.getCodigo(), getEmpresaResponse(acao.getEmpresa()));
 			return ResponseEntity.ok(jsonConverter.toJson(acaoResponse));
-		} catch (JsonProcessingException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity<String>("Não foi possível buscar a Ação. ", HttpStatus.BAD_REQUEST);
 		}

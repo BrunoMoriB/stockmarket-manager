@@ -7,11 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="multiplosfundamentalistas")
 public class MultiplosFundamentalistas implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -36,6 +43,19 @@ public class MultiplosFundamentalistas implements Serializable{
 	
 	@Column(name="caixadisponivel_dividabruta")
 	private Double caixaDisponivelSobreDividaBruta;
+	
+	@Column(name="justificativa_nota")
+	private String justificativaNota;
+	
+	private int nota;
+	
+	@ManyToOne()
+	@JoinColumn(name="id_balanco")
+	private Balanco balanco;
+	
+	@ManyToOne()
+	@JoinColumn(name="id_acao")
+	private Acao acao;
 
 	public Double getPrecoSobreLucro() {
 		return precoSobreLucro;
@@ -99,5 +119,37 @@ public class MultiplosFundamentalistas implements Serializable{
 
 	public void setCaixaDisponivelSobreDividaBruta(Double caixaDisponivelSobreDividaBruta) {
 		this.caixaDisponivelSobreDividaBruta = caixaDisponivelSobreDividaBruta;
+	}
+
+	public Balanco getBalanco() {
+		return balanco;
+	}
+
+	public void setBalanco(Balanco balanco) {
+		this.balanco = balanco;
+	}
+
+	public Acao getAcao() {
+		return acao;
+	}
+
+	public void setAcao(Acao acao) {
+		this.acao = acao;
+	}
+
+	public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
+	public String getJustificativaNota() {
+		return justificativaNota;
+	}
+
+	public void setJustificativaNota(String justificativaNota) {
+		this.justificativaNota = justificativaNota;
 	}
 }

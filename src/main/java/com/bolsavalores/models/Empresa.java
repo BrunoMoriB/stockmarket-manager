@@ -44,7 +44,7 @@ public class Empresa {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empresa")
 	private Set<Acao> acoes;
-
+	
     public long getId() {
         return id;
 	}

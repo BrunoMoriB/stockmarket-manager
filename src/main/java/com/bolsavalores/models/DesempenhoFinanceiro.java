@@ -7,11 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="desempenhofinanceiro")
 public class DesempenhoFinanceiro implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -25,6 +32,10 @@ public class DesempenhoFinanceiro implements Serializable{
 	
 	@Column(name="hascrescimentolucroliquido_tresanos")
 	private Boolean hasCrescimentoLucroLiquidoTresAnos;
+	
+	@ManyToOne
+	@JoinColumn(name="id_balanco")
+	private Balanco balanco;
 
 	public Double getEvolucaoLucroLiquidoTrimestral() {
 		return evolucaoLucroLiquidoTrimestral;
@@ -56,5 +67,13 @@ public class DesempenhoFinanceiro implements Serializable{
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Balanco getBalanco() {
+		return balanco;
+	}
+
+	public void setBalanco(Balanco balanco) {
+		this.balanco = balanco;
 	}
 }
