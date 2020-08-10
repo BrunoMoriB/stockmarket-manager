@@ -13,6 +13,10 @@ if [[ $? != 0 ]]; then
 fi
 
 if [[ "$1" == "close-version" ]]; then    
+    if [[ ! -z "$(git status --porcelain)" ]]; then 
+        echo 'You need to clean your changes before continue';
+        exit 1
+    fi
     FINAL_VERSION=$(echo "${CURRENT_POM_VERSION}" | sed 's/-SNAPSHOT//')
     echo "Current develop version: ${CURRENT_POM_VERSION} - Release version is going to be: ${FINAL_VERSION}"
     echo "Set the new develop version (it is not necessary to write '-SNAPSHOT', only the version number):"

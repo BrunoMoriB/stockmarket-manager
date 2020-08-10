@@ -1,4 +1,6 @@
 #!/bin/bash
 
 systemctl enable stockmarket-manager.service
-systemctl start stockmarket-manager.service
+if [[ -f "/etc/comprando-valor/stockmarket-manager/application.properties" ]]; then
+    systemctl start stockmarket-manager.service
+fi

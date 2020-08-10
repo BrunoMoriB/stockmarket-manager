@@ -3,7 +3,7 @@
 Description=Software to manage and consult investments
 
 [Service]
-ExecStart=/usr/bin/java -Xms128m -Xmx256m -jar /opt/comprando-valor/stockmarket-manager/stockmarket.jar
+ExecStart=/usr/bin/java -Xms256m -Xmx512m -jar /opt/comprando-valor/stockmarket-manager/stockmarket.jar --spring.config.location=classpath:/etc/comprando-valor/stockmarket-manager/application.properties
 Type=simple
 Restart=on-failure
 RestartSec=10

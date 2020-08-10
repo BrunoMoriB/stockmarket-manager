@@ -43,13 +43,15 @@ o repositório, ficando a cargo de quem executa o script efetuar manualmente
 git push --tags # quando estiver tudo ok
 ```
 
+O pacote debian será gerado na pasta target/ do projeto
+
 Caso deseje efetuar o rollback das mudanças use o comando do git abaixo informando o hash do commit que deseja efetuar
 ```
 git reset --hard hash-commit-que-deseja-voltar
 git push -f #use somente se você fez o push das mudanças, caso não tenha feito pode parar o comando de cima
 ```
 
-## Procedimentos para gerar das das empresas da B3
+## Procedimentos para gerar dados das empresas da B3
 
 ### Ferramentas necessárias
 
