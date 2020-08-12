@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +47,7 @@ public class BalancoResource {
 	JsonConverter jsonConverter;
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<String> getBalanco(@RequestParam long id) {
+	public ResponseEntity<String> getBalanco(@PathVariable long id) {
 		try{
 			Balanco balanco = balancoRepository.findById(id);
 			
@@ -106,10 +107,10 @@ public class BalancoResource {
 		}
 	}
 
-	@GetMapping("/buscaPorEmpresaId")
-	public ResponseEntity<String> buscaBalancosByEmpresaId(@RequestParam long empresaId){
+	@GetMapping("/buscaPorAcaoId")
+	public ResponseEntity<String> buscaBalancosByAcaoId(@RequestParam long acaoId){
 		try {
-			List<Balanco> balancos = balancoRepository.findByEmpresaId(empresaId);
+			List<Balanco> balancos = balancoRepository.findByAcaoId(acaoId);
 			
 //			if(balancos == null || balancos.isEmpty())
 //				TODO tratar
@@ -131,7 +132,7 @@ public class BalancoResource {
 																					b.getTrimestre())));
 			Collections.sort(balancos);
 			return ResponseEntity.ok(jsonConverter.toJson(balancosResponse));
-		} catch (JsonProcessingException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return new ResponseEntity<String>("Não foi possível buscar os Balancos. ", HttpStatus.BAD_REQUEST);
 		}

@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,12 +39,12 @@ public class AcaoResource {
 	JsonConverter jsonConverter;
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<String> getAcao(@RequestParam long id) {
+	public ResponseEntity<String> getAcao(@PathVariable long id) {
 		try {
 			Acao acao = acaoRepository.findById(id);
 			
-//		if(acao == null)
-//			TODO tratar
+//			if(acao == null)
+//				TODO tratar
 			
 			AcaoResponse acaoResponse = new AcaoResponse(acao.getId(), acao.getCodigo(), getEmpresaResponse(acao.getEmpresa()));
 			return ResponseEntity.ok(jsonConverter.toJson(acaoResponse));
@@ -59,7 +60,7 @@ public class AcaoResource {
 			List<Acao> acoes = acaoRepository.findAll();
 			
 //			if(acoes == null || acoes.isEmpty())
-//			TODO tratar
+//				TODO tratar
 			
 			Collections.sort(acoes);
 			List<AcaoResponse> acoesResponse = new ArrayList<AcaoResponse>();
