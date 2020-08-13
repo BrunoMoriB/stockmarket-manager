@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ "$(pwd)" != "/stockmarket-manager" ]]; then
+    echo "Execute 'cd /stockmarket-manager' and try to build again";
+    exit 1
+fi
+
 TEMP_DIR="$(mktemp -d)"
 BASE_DIR=${TEMP_DIR}"/stockmarket-manager"
 TARGET_DEBIAN_DIR="/stockmarket-manager/target"
@@ -14,7 +19,7 @@ fi
 
 if [[ "$1" == "close-version" ]]; then    
     if [[ ! -z "$(git status --porcelain)" ]]; then 
-        echo 'You need to clean your changes before continue';
+        echo 'You need to clean your changes before continue'
         exit 1
     fi
     FINAL_VERSION=$(echo "${CURRENT_POM_VERSION}" | sed 's/-SNAPSHOT//')
@@ -40,7 +45,7 @@ if [[ "$1" == "close-version" ]]; then
     git commit -m "New develop version ${NEW_VERSION} started"
     echo "Check the git changes using 'git log' command and push all using 'git push --tags'"
 else
-    /usr/bin/mvn clean install -DskipTests
+    mvn clean install -DskipTests
 fi
 
 echo "Pasta temporária onde será gerado o pacote: ${TEMP_DIR}"
