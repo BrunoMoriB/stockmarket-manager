@@ -29,7 +29,6 @@ public class LstQtn implements Comparable<LstQtn>{
 	
 	@Override
 	public int compareTo(LstQtn outraLstQtn) {
-		// TODO Auto-generated method stub
 		return this.dtTm.compareTo(outraLstQtn.getDtTm());
 	}
 }

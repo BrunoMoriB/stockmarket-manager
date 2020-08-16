@@ -12,9 +12,8 @@ services:
     ports:
      - "5432:5432"
     volumes:
-     - ./extras/database/massdata:/bd-massdata
      - ./extras/database/ddl.sql:/docker-entrypoint-initdb.d/1-ddl.sql
-     - ./extras/database/populate-tables.sql:/docker-entrypoint-initdb.d/2-populate-tables.sql
+     - ./extras/database/populate-setores-acoes-empresas.sql:/docker-entrypoint-initdb.d/2-populate-setores-acoes-empresas.sql
     environment:
      - POSTGRES_USER=bruno.mori  
      - POSTGRES_PASSWORD=123456

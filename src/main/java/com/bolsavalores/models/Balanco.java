@@ -2,16 +2,19 @@ package com.bolsavalores.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -24,20 +27,24 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	public Balanco() {}
+
+	public Balanco(Empresa empresa) {
+		this.empresa = empresa;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
+
+	@ManyToOne()
+	@JoinColumn(name="id_empresa")
+	private Empresa empresa;
 	
-	@ManyToOne
-	@JoinColumn(name="id_acao")
-	private Acao acao;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
+	private List<MultiplosFundamentalistas> multiplosFundamentalistas;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="id_multiplos")
-	private MultiplosFundamentalistas multiplosFundamentalistas;
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="id_desempenho")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
 	private DesempenhoFinanceiro desempenhoFinanceiro;
 	
 	private LocalDate data;
@@ -57,17 +64,12 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="caixadisponivel")
 	private Long caixaDisponivel;
 	
-	@Column(name="justificativa_nota")
-	private String justificativaNota;
-	
 	@Column(name="isdailyupdated")
 	private boolean dailyUpdated;
 	
 	private Double cotacao;
 	
 	private String trimestre;
-	
-	private int nota;
 	
 	public long getId() {
 		return id;
@@ -83,22 +85,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setData(LocalDate data) {
 		this.data = data;
-	}
-
-	public int getNota() {
-		return nota;
-	}
-
-	public void setNota(int nota) {
-		this.nota = nota;
-	}
-
-	public Acao getAcao() {
-		return acao;
-	}
-
-	public void setAcao(Acao acao) {
-		this.acao = acao;
 	}
 
 	public Long getLucroLiquidoTrimestral() {
@@ -123,14 +109,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setTrimestre(String trimestre) {
 		this.trimestre = trimestre;
-	}
-
-	public MultiplosFundamentalistas getMultiplosFundamentalistas() {
-		return multiplosFundamentalistas;
-	}
-
-	public void setMultiplosFundamentalistas(MultiplosFundamentalistas multiplosFundamentalistas) {
-		this.multiplosFundamentalistas = multiplosFundamentalistas;
 	}
 
 	public DesempenhoFinanceiro getDesempenhoFinanceiro() {
@@ -169,14 +147,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return cotacao;
 	}
 	
-	public String getJustificativaNota() {
-		return justificativaNota;
-	}
-
-	public void setJustificativaNota(String justificativaNota) {
-		this.justificativaNota = justificativaNota;
-	}
-	
 	public void setCotacao(Double cotacao) {
 		this.cotacao = cotacao;
 	}
@@ -188,6 +158,22 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public void setDailyUpdated(boolean isDailyUpdated) {
 		this.dailyUpdated = isDailyUpdated;
 	}
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+	
+	public List<MultiplosFundamentalistas> getMultiplosFundamentalistas() {
+		return multiplosFundamentalistas;
+	}
+	
+	public MultiplosFundamentalistas getMultiplosFundamentalistasByAcaoId(long acaoId) {
+		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao().getId() == acaoId).findFirst().orElse(null);
+	}
+
+	public void setMultiplosFundamentalistas(List<MultiplosFundamentalistas> multiplosFundamentalistas) {
+		this.multiplosFundamentalistas = multiplosFundamentalistas;
+	}
 	
 	@Override
 	public int compareTo(Balanco outroBalanco) {
@@ -198,13 +184,28 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		else		
 			return this.data.compareTo(outroBalanco.getData());
 	}
-	
-	public static class Comparators {
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Balanco))
+			return false;
+		Balanco other = (Balanco) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(id);
+	}
+
+	/*public static class Comparators {
 		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
 	            @Override
 	            public int compare(Balanco b1, Balanco b2) {
 	                return b2.nota - b1.nota;
 	            }
 	        };
-	}
+	}*/
 }

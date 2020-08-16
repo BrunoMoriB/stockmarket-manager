@@ -1,16 +1,19 @@
 package com.bolsavalores.models;
 
 import java.io.Serializable;
+import java.util.Objects;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="acao")
+@Table(name = "acao")
 public class Acao implements Serializable, Comparable<Acao> {
 
 	/**
@@ -19,16 +22,13 @@ public class Acao implements Serializable, Comparable<Acao> {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
-	private String nome;
 	private String codigo;
-	private long quantidade;
-	
-	@OneToOne
-	@JoinColumn(name="id_setor")
-	private Setor setor;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="id_empresa")
+	private Empresa empresa;
 	
 	public long getId() {
 		return id;
@@ -36,39 +36,41 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	public String getCodigo() {
 		return codigo;
 	}
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	public long getQuantidade() {
-		return quantidade;
+	public Empresa getEmpresa() {
+		return empresa;
 	}
-	public void setQuantidade(long quantidade) {
-		this.quantidade = quantidade;
-	}
-	public Setor getSetor() {
-		return setor;
-	}
-	public void setSetor(Setor setor) {
-		this.setor = setor;
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 	
 	@Override
 	public String toString() {
-		return this.nome + " - " + this.codigo;
+		return this.codigo;
 	}
 	
 	@Override
 	public int compareTo(Acao outraAcao) {
-		// TODO Auto-generated method stub
-		return this.nome.compareTo(outraAcao.nome);
+		return this.codigo.compareTo(outraAcao.codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Acao))
+			return false;
+		Acao other = (Acao) obj;
+		return Objects.equals(id, other.id);
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(id);
 	}
 }

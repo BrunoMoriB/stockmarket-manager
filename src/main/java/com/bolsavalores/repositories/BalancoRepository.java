@@ -12,11 +12,14 @@ public interface BalancoRepository extends JpaRepository<Balanco, Long>{
 
 	public Balanco findById(long id);
 	
-	@Query("SELECT b FROM Balanco b WHERE b.acao.id = ?1 ORDER BY b.data  ")
-	public List<Balanco> findByAcaoId(long acaoId);
+	@Query("SELECT b FROM Balanco b WHERE b.data = (SELECT MAX(b2.data) FROM Balanco b2 WHERE b2.empresa.id = b.empresa.id AND b2.dailyUpdated = false) AND b.dailyUpdated = false AND b.empresa.id = ?1")
+	public Balanco findLastBalancoByEmpresaId(long empresaId);
+
+	@Query("SELECT b FROM Balanco b INNER JOIN b.empresa e WHERE e.id = ?1 ORDER BY b.data")
+	public List<Balanco> findByEmpresaId(long empresaId);
 	
-	@Query("SELECT b from Balanco b WHERE b.data = (SELECT MAX(b2.data) FROM Balanco b2 WHERE b2.acao.id = b.acao.id AND b2.dailyUpdated = false) AND b.dailyUpdated = false and b.acao.id = ?1")
-	public Balanco findLastBalancoByAcaoId(long acaoId);
+	@Query("SELECT b FROM Balanco b INNER JOIN b.empresa e INNER JOIN e.acoes a WHERE a.id = ?1 ORDER BY b.data")
+	public List<Balanco> findByAcaoId(long acaoId);
 	
 	@Query("SELECT b FROM Balanco b WHERE b.dailyUpdated = true ") 
 	public List<Balanco> findBalancosDailyUpdated();
