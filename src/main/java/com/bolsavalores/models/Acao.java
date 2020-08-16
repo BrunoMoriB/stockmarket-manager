@@ -26,7 +26,7 @@ public class Acao implements Serializable, Comparable<Acao> {
 	private long id;
 	private String codigo;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	

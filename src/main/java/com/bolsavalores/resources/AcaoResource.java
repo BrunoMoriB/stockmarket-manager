@@ -112,6 +112,9 @@ public class AcaoResource {
 	}
 	
 	private EmpresaResponse getEmpresaResponse(Empresa empresa) {
+		if(empresa == null)
+			return null;
+		
 		Set<SetorResponse> setores = new HashSet<SetorResponse>();
 		empresa.getSetores().stream().forEach(s -> setores.add(new SetorResponse(s.getId(), s.getNome())));
 		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidade(), setores);
