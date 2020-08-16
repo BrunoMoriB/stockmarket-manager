@@ -96,7 +96,7 @@ public class AcaoResource {
 	}
 	
 	@GetMapping("/buscaPorNomeOuCodigo")
-	public ResponseEntity<String> buscaAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
+	public ResponseEntity<String> getAcaoByNomeOuCodigo(@RequestParam String nome, String codigo){
 		try {
 			Acao acao = acaoRepository.findByNomeOrCodigo(nome, codigo);
 			

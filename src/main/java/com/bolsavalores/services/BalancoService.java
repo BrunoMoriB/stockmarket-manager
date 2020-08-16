@@ -88,6 +88,7 @@ public class BalancoService{
 		desempenho.setEvolucaoLucroLiquidoTrimestral(calculadoraFundamentalista.getEvolucaoLucroLiquidoTrimestral(balanco, balancosAnteriores));
 		desempenho.setEvolucaoLucroLiquidoAnual(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
 		desempenho.setHasCrescimentoLucroLiquidoTresAnos(calculadoraFundamentalista.hasLucroCrescenteTresAnos(balanco, balancosAnteriores));
+		desempenho.setBalanco(balanco);
 		balanco.setDesempenhoFinanceiro(desempenho);
 		
 		balanco.getEmpresa().getAcoes().stream().forEach(a -> {
@@ -106,9 +107,9 @@ public class BalancoService{
 		try {
 			
 //			TODO futuro ajuste quando existe tabela COTAÇÃO;
-			
-			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getLucroLiquidoAnual()));
-			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getQtdPapeis(), balanco.getPatrimonioLiquido()));
+			 
+			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getEmpresa().getQuantidade(), balanco.getLucroLiquidoAnual()));
+			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getEmpresa().getQuantidade(), balanco.getPatrimonioLiquido()));
 			multiplos.setRoe(calculadoraFundamentalista.getRoe(balanco.getLucroLiquidoAnual(), balanco.getPatrimonioLiquido()));
 			multiplos.setDividaBrutaSobrePatrimonioLiquido(calculadoraFundamentalista.getDividaBrutaSobrePatrimonioLiquido(balanco.getDividaBruta(), balanco.getPatrimonioLiquido()));
 			multiplos.setCaixaDisponivelSobreDividaBruta(calculadoraFundamentalista.getCaixaDisponivelSobreDividaBruta(balanco.getCaixaDisponivel(), balanco.getDividaBruta()));

@@ -27,7 +27,6 @@ import com.bolsavalores.models.Empresa;
 import com.bolsavalores.models.MultiplosFundamentalistas;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.services.BalancoService;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -227,7 +226,7 @@ public class BalancoResource {
 																															mf.getCaixaDisponivelSobreDividaBruta(), 
 																															mf.getNota(),
 																															mf.getJustificativaNota(),
-																															mf.getAcao().getId())));
+																															new AcaoResponse(mf.getAcao().getId(), mf.getAcao().getCodigo()))));
 		
 		return listMultFundResponse;
 	}
@@ -283,7 +282,7 @@ public class BalancoResource {
 		Double caixaDisponivelSobreDividaBruta;
 		int nota;
 		String justificativaNota;
-		long idAcao;
+		AcaoResponse acao;
 	}
 	
 	@Getter

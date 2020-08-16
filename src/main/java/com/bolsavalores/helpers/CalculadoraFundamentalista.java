@@ -130,15 +130,15 @@ public class CalculadoraFundamentalista {
 	
 	public Avaliacao getNota(Balanco balanco, MultiplosFundamentalistas multiplos) {
 		int nota = 0;
-		String justificativa = "A empresa aprensenta: \r\n";
+		String justificativa = "A empresa apresenta: \r\n";
 		
 		if(!isDadosBalancoValidos(multiplos, balanco.getDesempenhoFinanceiro())) {
-			justificativa+="Este balanço não possui informações suficientes para darmos uma Nota.";
+			justificativa="Este balanço não possui informações suficientes para darmos uma Nota.";
 			return new Avaliacao(nota, justificativa);
 		}
 		
 		if(!validaRequisitosMinimos(multiplos, balanco.getDesempenhoFinanceiro())) {
-			justificativa+="Este balanço não possui os requisítos mínimos necessários. \r\n - ROE acima de 10%; \r\n - Dívida equilibrada não ultrapassando 80% do valor do Patrimônio; \r\n - Lucro Líquido crescente nos últimos três anos; ";
+			justificativa="Este balanço não possui os requisítos mínimos necessários. \r\n - ROE acima de 10%; \r\n - Dívida equilibrada não ultrapassando 80% do valor do Patrimônio; \r\n - Lucro Líquido crescente nos últimos três anos; ";
 			return new Avaliacao(nota, justificativa);
 		}
 		

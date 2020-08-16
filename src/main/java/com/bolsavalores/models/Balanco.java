@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,10 +41,10 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy="balanco")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
 	private List<MultiplosFundamentalistas> multiplosFundamentalistas;
 	
-	@OneToOne(fetch = FetchType.LAZY, mappedBy="balanco")
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
 	private DesempenhoFinanceiro desempenhoFinanceiro;
 	
 	private LocalDate data;
