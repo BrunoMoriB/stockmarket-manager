@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="empresa")
-public class Empresa {
+public class Empresa implements Comparable<Empresa> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -45,7 +45,7 @@ public class Empresa {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empresa")
 	private Set<Acao> acoes;
-
+	
     public long getId() {
         return id;
 	}
@@ -111,5 +111,10 @@ public class Empresa {
 	@Override
 	public int hashCode() {
 		return Objects.hashCode(id);
+	}
+	
+	@Override
+	public int compareTo(Empresa outraEmpresa) {
+		return this.nomePregao.compareTo(outraEmpresa.nomePregao);
 	}
 }

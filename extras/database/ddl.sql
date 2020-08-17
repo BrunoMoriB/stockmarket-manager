@@ -1,4 +1,3 @@
-
 CREATE SEQUENCE setor_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Setor(
 	id INTEGER PRIMARY KEY,
@@ -9,10 +8,10 @@ ALTER TABLE Setor ALTER COLUMN id SET DEFAULT nextval('setor_id_seq');
 CREATE SEQUENCE empresa_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Empresa(
 	id INTEGER PRIMARY KEY,
-	razao_social VARCHAR(70) NOT NULL CONSTRAINT empresa_razao_social_unq UNIQUE,
+	razao_social VARCHAR(70) NOT NULL,
     nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
     cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE,
-	quantidade_papeis BIGINT
+    quantidade BIGINT
 );
 ALTER TABLE Empresa ALTER COLUMN id SET DEFAULT nextval('empresa_id_seq');
 
@@ -35,7 +34,8 @@ CREATE TABLE Desempenhofinanceiro (
 	id INTEGER PRIMARY KEY,
 	evolucaolucroliquido_trimestral NUMERIC,
 	evolucaolucroliquido_anual NUMERIC,
-	hascrescimentolucroliquido_tresanos BOOLEAN	
+	hascrescimentolucroliquido_tresanos BOOLEAN,
+	id_balanco INTEGER REFERENCES Balanco(id)
 );
 ALTER TABLE Desempenhofinanceiro ALTER COLUMN id SET DEFAULT nextval('desempenho_id_seq');
 
@@ -48,7 +48,11 @@ CREATE TABLE Multiplosfundamentalistas (
 	dividabruta_patrimonioliquido NUMERIC,
 	media_precolucro NUMERIC,
 	media_precovalorpatrimonial NUMERIC,
-	caixadisponivel_dividabruta NUMERIC	
+	caixadisponivel_dividabruta NUMERIC,
+	nota INTEGER,
+	justificativa_nota VARCHAR(1000),
+	id_balanco INTEGER REFERENCES Balanco(id),
+	id_acao INTEGER REFERENCES Acao(id)
 );
 ALTER TABLE Multiplosfundamentalistas ALTER COLUMN id SET DEFAULT nextval('multiplos_id_seq');
 
@@ -57,17 +61,13 @@ CREATE TABLE Balanco (
 	id INTEGER PRIMARY KEY,
 	data DATE,
 	lucroliq_trimestral BIGINT,
-	nota INTEGER,
 	id_empresa INTEGER REFERENCES Empresa(id),
 	trimestre VARCHAR(55),
-	id_multiplos INTEGER REFERENCES Multiplosfundamentalistas(id),
-	id_desempenho INTEGER REFERENCES Desempenhofinanceiro(id),
 	lucroliq_anual BIGINT,
 	cotacao NUMERIC,
 	patrimonioliquido BIGINT,
 	dividabruta BIGINT,
 	caixadisponivel BIGINT,
-	justificativa_nota VARCHAR(1000),
 	isdailyupdated BOOLEAN
 );
 ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');

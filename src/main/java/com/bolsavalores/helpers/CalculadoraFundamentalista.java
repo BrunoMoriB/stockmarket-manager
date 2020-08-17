@@ -93,98 +93,96 @@ public class CalculadoraFundamentalista {
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.####").format(evolucaoDividaLiquida)).doubleValue();
 	}*/
 	
-	public Double getMediaPrecoSobreLucro(Balanco balanco, Double precoSobreLucroCorrente,List<Balanco> balancos) throws ParseException {
+	public Double getMediaPrecoSobreLucro(Balanco balanco, Double precoSobreLucroCorrente, List<Balanco> balancos, long acaoId) throws ParseException {
 		if(precoSobreLucroCorrente == null)
 			return null;
 		
 		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
 		List<Balanco> balancosAnteriores = balancos.stream()
-				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistas().getPrecoSobreLucro() != null)
+				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreLucro() != null)
 				.collect(Collectors.toList());
 		
 		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
 			return null;
 		
-		Double precoSobreLucro = balancosAnteriores.stream().mapToDouble(b -> b.getMultiplosFundamentalistas().getPrecoSobreLucro()).sum();
+		Double precoSobreLucro = balancosAnteriores.stream().mapToDouble(b -> b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreLucro()).sum();
 		precoSobreLucro+=precoSobreLucroCorrente;
 		precoSobreLucro/=8;
 		
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreLucro)).doubleValue();
 	}
 	
-	public Double getMediaPrecoSobreValorPatrimonial(Balanco balanco, Double precoSobreValorPatrimonialCorrente, List<Balanco> balancos) throws ParseException {
+	public Double getMediaPrecoSobreValorPatrimonial(Balanco balanco, Double precoSobreValorPatrimonialCorrente, List<Balanco> balancos, long acaoId) throws ParseException {
 		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
 		List<Balanco> balancosAnteriores = balancos.stream()
-				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
+				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreValorPatrimonial() != null)
 				.collect(Collectors.toList());
 		
 		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
 			return null;
 		
-		Double precoSobreValorPatrimonial = balancosAnteriores.stream().mapToDouble(b -> b.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial()).sum();
+		Double precoSobreValorPatrimonial = balancosAnteriores.stream().mapToDouble(b -> b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreValorPatrimonial()).sum();
 		precoSobreValorPatrimonial+=precoSobreValorPatrimonialCorrente;
 		precoSobreValorPatrimonial/=8;
 		
 		return NumberFormat.getInstance().parse(new DecimalFormat("#.##").format(precoSobreValorPatrimonial)).doubleValue();
 	}
 	
-	public int getNota(Balanco balanco) {
+	public Avaliacao getNota(Balanco balanco, MultiplosFundamentalistas multiplos) {
 		int nota = 0;
-		String justificativa = "A empresa aprensenta: \r\n";
+		String justificativa = "A empresa apresenta: \r\n";
 		
-		if(!isDadosBalancoValidos(balanco.getMultiplosFundamentalistas(), balanco.getDesempenhoFinanceiro())) {
-			balanco.setJustificativaNota("Este balanço não possui informações suficientes para darmos uma Nota.");
-			return nota;
+		if(!isDadosBalancoValidos(multiplos, balanco.getDesempenhoFinanceiro())) {
+			justificativa="Este balanço não possui informações suficientes para darmos uma Nota.";
+			return new Avaliacao(nota, justificativa);
 		}
 		
-		if(!validaRequisitosMinimos(balanco.getMultiplosFundamentalistas(), balanco.getDesempenhoFinanceiro())) {
-			balanco.setJustificativaNota("Este balanço não possui os requisítos mínimos necessários. \r\n - ROE acima de 10%; \r\n - Dívida equilibrada não ultrapassando 80% do valor do Patrimônio; \r\n - Lucro Líquido crescente nos últimos três anos; ");
-			return nota;
+		if(!validaRequisitosMinimos(multiplos, balanco.getDesempenhoFinanceiro())) {
+			justificativa="Este balanço não possui os requisítos mínimos necessários. \r\n - ROE acima de 10%; \r\n - Dívida equilibrada não ultrapassando 80% do valor do Patrimônio; \r\n - Lucro Líquido crescente nos últimos três anos; ";
+			return new Avaliacao(nota, justificativa);
 		}
 		
-		if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 10) {
+		if(multiplos.getPrecoSobreLucro() <= 10) {
 			justificativa+="- Relação entre Preço(cotação) e Lucro Líquido anual excelente, não ultrapassando a faixa de 10 (+2 pts); \r\n";
 			nota+=2;
-		}else if(balanco.getMultiplosFundamentalistas().getPrecoSobreLucro() <= 13) {
+		}else if(multiplos.getPrecoSobreLucro() <= 13) {
 			justificativa+="- Boa relação entre Preço(cotação) e Lucro Líquido anual, não ultrapassando a faixa de 13 (+1 pts); \r\n";
 			nota+=1;
 		}
 		
-		if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 1.6) {
+		if(multiplos.getPrecoSobreValorPatrimonial() <= 1.6) {
 			justificativa+="- Uma excelente relação entre Preço(cotação) e Patrimônio Líquido, não ultrapassando a faixa de 1.5 (+2 pts); \r\n";
 			nota+=2;
-		}else if(balanco.getMultiplosFundamentalistas().getPrecoSobreValorPatrimonial() <= 2.3) {
+		}else if(multiplos.getPrecoSobreValorPatrimonial() <= 2.3) {
 			justificativa+="- Uma boa relação entre Preço(cotação) e Patrimônio Líquido, não ultrapassando a faixa de 2.3 (+1 pts); \r\n";
 			nota+=1;
 		}
 		
-		if(balanco.getMultiplosFundamentalistas().getRoe() >= 0.2) {
+		if(multiplos.getRoe() >= 0.2) {
 			justificativa+="- Retorno sobre Patrimônio Líquido(ROE) muito bom, acima de 20% (+2 pts); \r\n";
 			nota+=2;
-		}else if(balanco.getMultiplosFundamentalistas().getRoe() >= 0.15) {
+		}else if(multiplos.getRoe() >= 0.15) {
 			justificativa+="- Um belo Retorno sobre Patrimônio Líquido(ROE), acima de 15% (+1 pts); \r\n";
 			nota+=1;
 		}
 		
-		if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.3) {
+		if(multiplos.getDividaBrutaSobrePatrimonioLiquido() <= 0.3) {
 			justificativa+="- Relação entre a Dívida bruta perante o Patrimônio Líquido excelente, ficando abaixo de 30% (+2 pts); \r\n";
 			nota+=2;
-		} else if(balanco.getMultiplosFundamentalistas().getDividaBrutaSobrePatrimonioLiquido() <= 0.6) {
+		} else if(multiplos.getDividaBrutaSobrePatrimonioLiquido() <= 0.6) {
 			justificativa+="- Boa relação entre a Dívida bruta perante o Patrimônio Líquido, abaixo de 60% (+1 pts); \r\n";
 			nota+=1;
 		}
 		
-		if(balanco.getMultiplosFundamentalistas().getCaixaDisponivelSobreDividaBruta() >= 2) {
+		if(multiplos.getCaixaDisponivelSobreDividaBruta() >= 2) {
 			justificativa+="- Excelente proporção do Caixa disponível perante a Dívida bruta, acima de 2 (+2 pts); \r\n";
 			nota+=2;
-		}else if(balanco.getMultiplosFundamentalistas().getCaixaDisponivelSobreDividaBruta() >= 1) {
+		}else if(multiplos.getCaixaDisponivelSobreDividaBruta() >= 1) {
 			justificativa+="- Proporção do Caixa disponível perante a Dívida bruta boa, acima de 1 (+1 pts); \r\n";
 			nota+=1;
 		}
 		
-		balanco.setJustificativaNota(justificativa);
-		
-		return nota;
+		return new Avaliacao(nota, justificativa);
 	}
 	
 	private boolean validaRequisitosMinimos(MultiplosFundamentalistas multiplos, DesempenhoFinanceiro desempenho) {
