@@ -2,4 +2,4 @@ Package: stockmarket-manager
 Version: #VERSION#
 Maintainer: Comprando Valor
 Architecture: amd64
-Description: Software to manage and consult investments
+Description: Back-end software to manage and consult investments
