@@ -3,7 +3,6 @@ package com.bolsavalores.models;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,7 +22,7 @@ public class Acao implements Serializable, Comparable<Acao> {
 	private long id;
 	private String codigo;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	
@@ -39,9 +38,11 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	
 	public Empresa getEmpresa() {
 		return empresa;
+	}
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 	
 	@Override
