@@ -36,8 +36,8 @@ Procedimento abaixo somente gera um pacote debian com a versão SNAPSHOT do pom.
 ```
 
 Procedimento abaixo deve ser usado para gerar uma versão final para produção, irá remover a palavra SNAPSHOT da versão, gerar o pacote
-para entrega e solicitar a nova versão do SNAPSHOT. No final efetuará os commits e criação da tag do git, porém não irá efetuar ao push
-o repositório, ficando a cargo de quem executa o script efetuar manualmente
+para entrega e solicitar a nova versão do SNAPSHOT. No final efetuará os commits e criação da tag do git, porém não irá efetuar o push
+ao repositório, ficando a cargo de quem executa o script efetuar manualmente
 ```
 /stockmarket-manager/extras/debian/build-package.sh close-version
 git push --tags # quando estiver tudo ok
@@ -47,8 +47,8 @@ O pacote debian será gerado na pasta target/ do projeto
 
 Caso deseje efetuar o rollback das mudanças use o comando do git abaixo informando o hash do commit que deseja efetuar
 ```
-git reset --hard hash-commit-que-deseja-voltar
-git push -f #use somente se você fez o push das mudanças, caso não tenha feito pode parar o comando de cima
+git reset --hard {hash-commit-que-deseja-voltar} && git tag --delete {tag-para-deletar}
+git push -f && git push origin :refs/tags/{tag-para-deletar} #use somente se você fez o push das mudanças, caso não tenha feito pode parar o comando de cima
 ```
 
 ## Procedimentos para gerar dados das empresas da B3
@@ -62,7 +62,7 @@ git push -f #use somente se você fez o push das mudanças, caso não tenha feit
 * Navegador Firefox
 * Geckodriver (driver selenium para o Firefox)
 
-### Configurando a máquuina para executar os scripts
+### Configurando a máquina para executar os scripts
 
 ```
 pip3 install selenium
@@ -84,7 +84,7 @@ export PATH="${PATH}:$(pwd)"
 cd .. && rm geckodriver-v0.26.0-linux64.tar.gz
 ```
 
-### Gerar o arquivo de dados das empresas da b3
+### Gerar o arquivo JSON de dados das empresas da b3
 
 #### Detalhes do script
 
@@ -118,7 +118,7 @@ python3 gen-bd-inserts-partir-dados-b3.py
 cd ../..
 ```
 
-### Gerar/atualizar o arquivo de dados dos balanços financeiros e cotações das empresas
+### Gerar o arquivo JSON de dados dos balanços financeiros e cotações das empresas
 
 #### Detalhes do script
 
@@ -137,8 +137,23 @@ python3 gen-dados-balancos-financeiros-empresas-b3.py
 cd ../..
 ```
 
+### Gerar/atualizar o script SQL para popular os dados da tabela Balanco, cotações e atualizar a tabela empresa
 
-### Gerar/atualizar o arquivo de dados de proventos das ações
+#### Detalhes do script
+
+Utiliza o arquivo dados-balancos-financeiros-empresas-b3.json gerado no script de obtenção de dados dos balanços das empresas b3 para gerar as queries
+
+#### Execução do script
+
+Executar os comandos abaixo na raiz do projeto
+
+```
+cd extras/scripts
+python3 gen-bd-inserts-partir-dados-balancos.py
+cd ../..
+```
+
+### Gerar o arquivo JSON de dados de proventos das ações
 
 #### Detalhes do script
 
@@ -159,7 +174,8 @@ cd ../..
 
 #### Detalhes do script
 
-Utiliza o arquivo dados-balancos-financeiros-empresas-b3.json gerado no script de obtenção de dados dos balanços das empresas b3 para gerar as queries
+Utiliza o arquivo dados-proventos-empresas-b3.json gerado no script de obtenção de dados de proventos das empresas b3 para
+gerar as queries
 
 #### Execução do script
 

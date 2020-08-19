@@ -1,3 +1,5 @@
+/*TODO: Transformar todos os campos 'id' em bigint */
+
 CREATE SEQUENCE setor_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Setor(
 	id INTEGER PRIMARY KEY,
@@ -11,7 +13,7 @@ CREATE TABLE Empresa(
 	razao_social VARCHAR(70) NOT NULL,
     nome_pregao VARCHAR(70) NOT NULL CONSTRAINT empresa_nome_pregao_unq UNIQUE,
     cnpj VARCHAR(14) NOT NULL CONSTRAINT empresa_cnpj_unq UNIQUE,
-    quantidade BIGINT
+    quantidade_papeis BIGINT
 );
 ALTER TABLE Empresa ALTER COLUMN id SET DEFAULT nextval('empresa_id_seq');
 
@@ -40,6 +42,30 @@ CREATE TABLE Provento (
 );
 ALTER TABLE Provento ALTER COLUMN id SET DEFAULT nextval('provento_id_seq');
 
+CREATE SEQUENCE cotacao_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Cotacao (
+	id BIGINT PRIMARY KEY,
+	data DATE NOT NULL,
+	valor NUMERIC NOT NULL,
+	id_acao BIGINT REFERENCES Acao(id) NOT NULL
+);
+ALTER TABLE Cotacao ALTER COLUMN id SET DEFAULT nextval('cotacao_id_seq');
+
+CREATE SEQUENCE balanco_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Balanco (
+	id INTEGER PRIMARY KEY,
+	data DATE,
+	lucroliq_trimestral BIGINT,
+	id_empresa INTEGER REFERENCES Empresa(id),
+	trimestre VARCHAR(55),
+	lucroliq_anual BIGINT,
+	patrimonioliquido BIGINT,
+	dividabruta BIGINT,
+	caixadisponivel BIGINT,
+	isdailyupdated BOOLEAN
+);
+ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
+
 CREATE SEQUENCE desempenho_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Desempenhofinanceiro (
 	id INTEGER PRIMARY KEY,
@@ -66,22 +92,6 @@ CREATE TABLE Multiplosfundamentalistas (
 	id_acao INTEGER REFERENCES Acao(id)
 );
 ALTER TABLE Multiplosfundamentalistas ALTER COLUMN id SET DEFAULT nextval('multiplos_id_seq');
-
-CREATE SEQUENCE balanco_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
-CREATE TABLE Balanco (
-	id INTEGER PRIMARY KEY,
-	data DATE,
-	lucroliq_trimestral BIGINT,
-	id_empresa INTEGER REFERENCES Empresa(id),
-	trimestre VARCHAR(55),
-	lucroliq_anual BIGINT,
-	cotacao NUMERIC,
-	patrimonioliquido BIGINT,
-	dividabruta BIGINT,
-	caixadisponivel BIGINT,
-	isdailyupdated BOOLEAN
-);
-ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
 
 CREATE SEQUENCE usuario_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Usuario (
