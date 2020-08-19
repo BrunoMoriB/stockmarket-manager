@@ -213,6 +213,10 @@ public class BalancoResource {
 			/*
 			balancosDailyUpdated.removeIf( b -> !calculadoraFundamentalista.isDadosBalancoValidos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()) ||
 					!calculadoraFundamentalista.validaRequisitosMinimos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()));
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 			Collections.sort(balancosDailyUpdated, Balanco.Comparators.NOTA);
 			*/
 			return ResponseEntity.ok(jsonConverter.toJson(balancosDailyUpdated));

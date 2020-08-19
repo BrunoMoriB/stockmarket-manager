@@ -23,7 +23,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 @CrossOrigin 
 @RestController
-@RequestMapping(value="/usuario")
+@RequestMapping(value="/usuarios")
 public class UsuarioResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(UsuarioResource.class);

@@ -31,10 +31,11 @@ import com.google.common.collect.ImmutableList;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	private static final RequestMatcher PUBLIC_ACCESS = new OrRequestMatcher(new RequestMatcher[] {
-		new AntPathRequestMatcher("/acao/**", String.valueOf(HttpMethod.GET)),
-		new AntPathRequestMatcher("/balanco/**", String.valueOf(HttpMethod.GET)),
-		new AntPathRequestMatcher("/setor/**", String.valueOf(HttpMethod.GET)),
-		new AntPathRequestMatcher("/usuario/**", String.valueOf(HttpMethod.POST))
+		new AntPathRequestMatcher("/acoes/**", String.valueOf(HttpMethod.GET)),
+		new AntPathRequestMatcher("/balancos/**", String.valueOf(HttpMethod.GET)),
+		new AntPathRequestMatcher("/setores/**", String.valueOf(HttpMethod.GET)),
+		new AntPathRequestMatcher("/empresas/**", String.valueOf(HttpMethod.GET)),
+		new AntPathRequestMatcher("/usuarios/**", String.valueOf(HttpMethod.POST))
 	});
 
 	@Autowired

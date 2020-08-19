@@ -185,7 +185,7 @@ public class CalculadoraFundamentalista {
 		return new Avaliacao(nota, justificativa);
 	}
 	
-	private boolean validaRequisitosMinimos(MultiplosFundamentalistas multiplos, DesempenhoFinanceiro desempenho) {
+	public boolean validaRequisitosMinimos(MultiplosFundamentalistas multiplos, DesempenhoFinanceiro desempenho) {
 		if(multiplos.getRoe() < 0.1)
 			return false;
 		
@@ -309,7 +309,7 @@ public class CalculadoraFundamentalista {
 		return lucrosLiquidoTri != null && lucrosLiquidoTri.size() == 3 ? lucrosLiquidoTri.stream().reduce(0L, Long::sum) + balanco.getLucroLiquidoTrimestral() : null;
 	}
 	
-	private boolean isDadosBalancoValidos(MultiplosFundamentalistas multiplos, DesempenhoFinanceiro desempenho) {
+	public boolean isDadosBalancoValidos(MultiplosFundamentalistas multiplos, DesempenhoFinanceiro desempenho) {
 		return multiplos != null && desempenho != null &&
 			   multiplos.getRoe() != null && multiplos.getDividaBrutaSobrePatrimonioLiquido() != null &&
 			   multiplos.getPrecoSobreLucro() != null && multiplos.getPrecoSobreValorPatrimonial() != null &&
