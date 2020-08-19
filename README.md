@@ -28,18 +28,18 @@ que está fechando e incrementando a nova versão no pom.xml
 
 ### Execução do script
 
-Executar no terminal dentro da instância do docker
+Executar na raiz do projeto (fora do docker)
 
 Procedimento abaixo somente gera um pacote debian com a versão SNAPSHOT do pom.xml
 ```
-/stockmarket-manager/extras/debian/build-package.sh
+./extras/debian/build-package.sh
 ```
 
 Procedimento abaixo deve ser usado para gerar uma versão final para produção, irá remover a palavra SNAPSHOT da versão, gerar o pacote
 para entrega e solicitar a nova versão do SNAPSHOT. No final efetuará os commits e criação da tag do git, porém não irá efetuar o push
 ao repositório, ficando a cargo de quem executa o script efetuar manualmente
 ```
-/stockmarket-manager/extras/debian/build-package.sh close-version
+./extras/debian/build-package.sh close-version
 git push --tags # quando estiver tudo ok
 ```
 
