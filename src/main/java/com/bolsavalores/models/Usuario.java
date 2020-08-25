@@ -1,5 +1,6 @@
 package com.bolsavalores.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +20,7 @@ public class Usuario {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	private String apelido;
+	@Column(unique = true)
 	private String email;
 	private String senha;
 	private String papel;

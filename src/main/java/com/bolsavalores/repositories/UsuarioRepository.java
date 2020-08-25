@@ -6,5 +6,6 @@ import com.bolsavalores.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	
+	//TODO: Add a @cacheable 
 	public Usuario findByEmail(String email);
 }

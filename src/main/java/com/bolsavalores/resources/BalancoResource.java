@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,9 +37,8 @@ import com.bolsavalores.services.BalancoService;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@CrossOrigin
 @RestController
-@RequestMapping(value="/balancos")
+@RequestMapping(value=Resources.BALANCOS)
 public class BalancoResource {
 
     private static final Logger LOG = LoggerFactory.getLogger(BalancoResource.class);

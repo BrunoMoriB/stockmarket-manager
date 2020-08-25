@@ -1,44 +1,28 @@
 package com.bolsavalores.security;
 
-import com.bolsavalores.models.Usuario;
+import com.bolsavalores.models.enums.PapelUsuarioEnum;
 
 public class Token {
 	private String hash;
-//	private String apelido;
-//	private String email;
-//    private Long idUsuario;
+	private Long idUsuario;
+	private PapelUsuarioEnum papelUsuario;
     
-    private Usuario usuario;
-    
-    public Token(String hash) {
-    	this.hash = hash;
-    }
-    
-	/*public Token(String hash, String apelido, String email, Long idUsuario) {
-		super();
+    public Token(String hash, Long idUsuario, PapelUsuarioEnum papelUsuario) {
 		this.hash = hash;
-		this.apelido = apelido;
-		this.email = email;
 		this.idUsuario = idUsuario;
-	}*/
-    
-    public Token(String hash, Usuario usuario) {
-    	this.hash 	 = hash;
-    	this.usuario = usuario;
+		this.papelUsuario = papelUsuario;
     }
-	
+    	
 	public String getHash() {
 		return hash;
 	}
-	public void setHash(String hash) {
-		this.hash = hash;
+
+	public Long getIdUsuario() {
+		return idUsuario;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
+	public PapelUsuarioEnum getPapelUsuario() {
+		return papelUsuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 }

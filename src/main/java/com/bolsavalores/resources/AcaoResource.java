@@ -9,7 +9,6 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,9 +26,8 @@ import com.bolsavalores.repositories.AcaoRepository;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@CrossOrigin
 @RestController
-@RequestMapping(value="/acoes")
+@RequestMapping(value=Resources.ACOES)
 public class AcaoResource {
 
 	@Autowired
@@ -62,7 +60,7 @@ public class AcaoResource {
 //			if(acoes == null || acoes.isEmpty())
 //				TODO tratar
 			
-			Collections.sort(acoes);
+			Collections.sort(acoes); //TODO: Ordernar no front-end
 			List<AcaoResponse> acoesResponse = new ArrayList<AcaoResponse>();
 			acoes.forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo(), getEmpresaResponse(a.getEmpresa()))));
 			return ResponseEntity.ok(jsonConverter.toJson(acoesResponse));

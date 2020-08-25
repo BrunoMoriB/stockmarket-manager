@@ -17,9 +17,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.bolsavalores.models.Usuario;
 import com.bolsavalores.models.exceptions.TokenException;
 import com.bolsavalores.models.exceptions.UsuarioNotFoundException;
+import com.bolsavalores.resources.Resources;
 import com.bolsavalores.services.TokenService;
 
 @Component
@@ -37,25 +37,23 @@ public class TokenAuthFilter extends OncePerRequestFilter {
 	
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        if (Resources.ehRecursoPublico(request)) {
+            filterChain.doFilter(request, response);
+            return;
+        }            
 		try {
-            String tokenHeader = request.getHeader(AUTHORIZATION_HEADER);
-           
+            String tokenHeader = request.getHeader(AUTHORIZATION_HEADER);           
             if (tokenHeader == null || !tokenHeader.startsWith(BEARER_PREFIX))
                 throw new TokenException();
-             
-            Token token = tokenService.decodificaToken(tokenHeader.replace(BEARER_PREFIX, ""));
-            Usuario usuario = token.getUsuario();
+            Token token = tokenService.decodificaToken(tokenHeader.replace(BEARER_PREFIX, ""));            
             request.setAttribute(REQUEST_ATTRIBUTE_NAME, token);              
-            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(usuario.getEmail(), usuario.getSenha(), Arrays.asList(new Permissao(usuario.getPapel().name()))));
-            setUsuarioInMDC(usuario.getId());
+            SecurityContextHolder.getContext().setAuthentication(new UsernamePasswordAuthenticationToken(token.getIdUsuario(), null,
+                Arrays.asList(token.getPapelUsuario())));
+            setUsuarioInMDC(token.getIdUsuario());
+            filterChain.doFilter(request, response);
         } catch (TokenException e) {
         	LOG.error("Token inválido. ", e.getMessage());
-			return;
-        } catch (UsuarioNotFoundException e) {
-        	LOG.error("Usuário não localizado. ", e.getMessage());
-			return;
-		} finally {
-            filterChain.doFilter(request, response);
+		} finally {            
             MDC.remove(MDC_ID_USUARIO);
         }
 	}

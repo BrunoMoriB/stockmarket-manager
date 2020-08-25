@@ -18,8 +18,9 @@ import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.bolsavalores.models.Usuario;
+import com.bolsavalores.models.enums.PapelUsuarioEnum;
+import com.bolsavalores.models.exceptions.StockmarketException;
 import com.bolsavalores.models.exceptions.TokenException;
-import com.bolsavalores.models.exceptions.UsuarioNotFoundException;
 import com.bolsavalores.repositories.UsuarioRepository;
 import com.bolsavalores.security.Token;
 import com.bolsavalores.security.TokenConfig;
@@ -28,8 +29,7 @@ import com.bolsavalores.security.TokenConfig;
 public class TokenService {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(TokenService.class);
-    private static final String APELIDO_CLAIM = "apelido";
-    private static final String EMAIL_CLAIM = "email";
+    private static final String PAPEL_USUARIO_CLAIM = "papelUsuario";
     
     @Autowired
     private TokenConfig tokenConfig;
@@ -46,33 +46,28 @@ public class TokenService {
             .build();
     }
 
-	public Token geraToken(Usuario usuario) throws TokenException {
+	public Token geraToken(Usuario usuario) throws StockmarketException {
 		try {
 	        String hash = JWT.create()
 	            .withIssuer(tokenConfig.getJwtIssuer())
 	            .withSubject(String.valueOf(usuario.getId()))
 	            .withExpiresAt(dataDeExpiracao())
-	            .withClaim(APELIDO_CLAIM, usuario.getApelido())
-	            .withClaim(EMAIL_CLAIM, usuario.getEmail())
+	            .withClaim(PAPEL_USUARIO_CLAIM, usuario.getPapel().name())
 	            .sign(getAlgoritmo());
 	        
-	        return new Token(hash, usuario);
+	        return new Token(hash, usuario.getId(), usuario.getPapel());
 	    } catch (JWTCreationException e) {
 	        LOG.error("Erro ao gerar um token JWT", e);
-	        throw new TokenException("Erro ao gerar um token JWT. " + e.getMessage());
+	        throw new StockmarketException();
 	    }
 	}
 	
-	public Token decodificaToken(String token) throws TokenException, UsuarioNotFoundException{
+	public Token decodificaToken(String tokenHash) throws TokenException {
 	    try {
-            DecodedJWT tokenDecodificado = verificadorDeTokens.verify(token);
-            Usuario usuario = usuarioRepository.findByEmail(tokenDecodificado.getClaim(EMAIL_CLAIM).asString());
-            
-            if(usuario == null)
-            	throw new UsuarioNotFoundException();
-            
-            return new Token(token, usuario);
-        } catch (JWTVerificationException exception){
+            DecodedJWT tokenDecodificado = verificadorDeTokens.verify(tokenHash);
+            return new Token(tokenHash, Long.valueOf(tokenDecodificado.getSubject()), PapelUsuarioEnum.valueOf(tokenDecodificado.getClaim(PAPEL_USUARIO_CLAIM).asString()));
+        } catch (JWTVerificationException exception) {
+            LOG.error("Erro ao decodificar o token", exception);
             throw new TokenException();
         }
 	}

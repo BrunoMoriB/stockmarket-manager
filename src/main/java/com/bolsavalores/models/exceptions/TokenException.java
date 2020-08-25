@@ -1,10 +1,11 @@
 package com.bolsavalores.models.exceptions;
 
-public class TokenException extends StockmarketException{
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-	/**
-	 * 
-	 */
+@ResponseStatus(code = HttpStatus.UNAUTHORIZED)
+public class TokenException extends StockmarketException {
+
 	private static final long serialVersionUID = 1L;
 
 	public TokenException() {

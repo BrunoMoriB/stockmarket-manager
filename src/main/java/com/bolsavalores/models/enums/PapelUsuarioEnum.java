@@ -1,6 +1,8 @@
 package com.bolsavalores.models.enums;
 
-public enum PapelUsuarioEnum {
+import org.springframework.security.core.GrantedAuthority;
+
+public enum PapelUsuarioEnum implements GrantedAuthority {
 	COMUM("Comum"),
 	PREMIUM("Premium"),
 	ADMINISTRADOR("Administrador");
@@ -17,6 +19,11 @@ public enum PapelUsuarioEnum {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	@Override
+	public String getAuthority() {
+		return name();
 	}
 	
 }
