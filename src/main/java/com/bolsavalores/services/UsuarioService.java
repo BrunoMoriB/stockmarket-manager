@@ -2,7 +2,9 @@ package com.bolsavalores.services;
 
 import java.util.Arrays;
 
+import com.bolsavalores.global.Erros;
 import com.bolsavalores.models.Usuario;
+import com.bolsavalores.models.exceptions.JaExisteException;
 import com.bolsavalores.models.exceptions.StockmarketException;
 import com.bolsavalores.repositories.UsuarioRepository;
 import com.bolsavalores.security.Token;
@@ -10,6 +12,7 @@ import com.bolsavalores.security.Token;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.User;
@@ -31,6 +34,20 @@ public class UsuarioService implements UserDetailsService {
 	
 	@Autowired	
 	TokenService tokenService;
+
+	public void cadastrarUsuario(Usuario usuario) throws StockmarketException {
+		try {
+			usuario = usuarioRepository.save(usuario);
+			LOG.info("Usuário criado com sucesso: " + usuario.getEmail());
+		} catch (DataIntegrityViolationException ex) {
+			if (Erros.ehViolacaoDeRegistroUnico(ex)) {
+				LOG.info("Tentativa de cadastro com e-mail já existente " + usuario.getEmail());
+				throw new JaExisteException("E-mail já cadastrado");
+			}
+			LOG.error("Error desconhecido no momento de cadastrar o email " + usuario.getEmail(), ex);		
+			throw new StockmarketException();
+		}		
+	}
 	
 	public Token autentica(String email, String senha) throws StockmarketException {
 		authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, senha));

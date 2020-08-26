@@ -1,11 +1,17 @@
 package com.bolsavalores.resources;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.bolsavalores.helpers.JsonConverter;
+import com.bolsavalores.models.Empresa;
+import com.bolsavalores.models.Setor;
+import com.bolsavalores.repositories.SetorRepository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,17 +24,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bolsavalores.helpers.JsonConverter;
-import com.bolsavalores.models.Empresa;
-import com.bolsavalores.models.Setor;
-import com.bolsavalores.repositories.SetorRepository;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @RestController
 @RequestMapping(value=Resources.SETORES)
 public class SetorResource {
+
+	private static final Logger LOG = LoggerFactory.getLogger(SetorResource.class);
 
 	@Autowired
 	SetorRepository setorRepository;
@@ -53,21 +56,12 @@ public class SetorResource {
 	}
 	
 	@GetMapping
-	public ResponseEntity<String> getSetores(){
-		try {
-			List<Setor> setores = setorRepository.findAll();
-			Collections.sort(setores);
-			
-	//		if(setores == null || setores.isEmpty())
-	//			TODO tratar
-			
-			List<SetorResponse> setorResponse = new ArrayList<SetorResponse>();
-			setores.stream().forEach(s -> setorResponse.add(new SetorResponse(s.getId(), s.getNome(), getEmpresasResponse(s.getEmpresas()))));
-			return ResponseEntity.ok(jsonConverter.toJson(setorResponse));
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new ResponseEntity<String>("Não foi possível buscar os Setores. ", HttpStatus.BAD_REQUEST);
-		}
+	public ResponseEntity<List<SetorResponse>> getSetores() {
+		List<Setor> setores = setorRepository.findAll();
+		LOG.info("Lista de setores obtida");
+		List<SetorResponse> setorResponse = new ArrayList<SetorResponse>();
+		setores.stream().forEach(s -> setorResponse.add(new SetorResponse(s.getId(), s.getNome(), getEmpresasResponse(s.getEmpresas()))));
+		return ResponseEntity.ok(setorResponse);
 	}
 	
 	@PostMapping

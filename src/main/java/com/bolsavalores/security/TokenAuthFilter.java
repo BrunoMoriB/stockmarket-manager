@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.bolsavalores.models.exceptions.TokenException;
-import com.bolsavalores.models.exceptions.UsuarioNotFoundException;
 import com.bolsavalores.resources.Resources;
 import com.bolsavalores.services.TokenService;
 
