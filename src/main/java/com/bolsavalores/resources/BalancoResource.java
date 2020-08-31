@@ -27,9 +27,11 @@ import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.Cotacao;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.Empresa;
 import com.bolsavalores.models.MultiplosFundamentalistas;
+import com.bolsavalores.models.Provento;
 import com.bolsavalores.models.exceptions.StockmarketException;
 import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
@@ -69,8 +71,8 @@ public class BalancoResource {
 	//			TODO tratar
 			
 			BalancoResponse balancoResponse = new BalancoResponse(balanco.getId(), 
-																  getEmpresaResponse(balanco.getEmpresa()), 
-																  getMultiplosFundamentalistaResponse(balanco.getMultiplosFundamentalistas()), 
+																  getEmpresaResponse(balanco.getEmpresa(), balanco.getData()), 
+																  getMultiplosFundamentalistaResponse(balanco.getMultiplosFundamentalistas(), balanco.getData()), 
 																  getDesempenhoFinanceiroResponse(balanco.getDesempenhoFinanceiro()), 
 																  balanco.getData(), 
 																  balanco.getLucroLiquidoTrimestral(), 
@@ -79,7 +81,6 @@ public class BalancoResource {
 																  balanco.getDividaBruta(), 
 																  balanco.getCaixaDisponivel(), 
 																  balanco.isDailyUpdated(), 
-																  balanco.getCotacao(), 
 																  balanco.getTrimestre());
 			
 			return ResponseEntity.ok(jsonConverter.toJson(balancoResponse));
@@ -99,8 +100,8 @@ public class BalancoResource {
 
 			List<BalancoResponse> balancosResponse = new ArrayList<BalancoResponse>();
 			balancos.stream().forEach(b -> balancosResponse.add(new BalancoResponse(b.getId(), 
-																	  getEmpresaResponse(b.getEmpresa()), 
-																	  getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas()), 
+																	  getEmpresaResponse(b.getEmpresa(), b.getData()), 
+																	  getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas(), b.getData()), 
 																	  getDesempenhoFinanceiroResponse(b.getDesempenhoFinanceiro()), 
 																	  b.getData(), 
 																	  b.getLucroLiquidoTrimestral(), 
@@ -109,7 +110,6 @@ public class BalancoResource {
 																	  b.getDividaBruta(), 
 																	  b.getCaixaDisponivel(), 
 																	  b.isDailyUpdated(), 
-																	  b.getCotacao(), 
 																	  b.getTrimestre())));
 			
 			return ResponseEntity.ok(jsonConverter.toJson(balancosResponse));
@@ -130,8 +130,8 @@ public class BalancoResource {
 			Collections.sort(balancos);
 			List<BalancoResponse> balancosResponse = new ArrayList<BalancoResponse>();
 			balancos.stream().forEach(b -> balancosResponse.add(new BalancoResponse(b.getId(), 
-																					getEmpresaResponse(b.getEmpresa()), 
-																					getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas()), 
+																					getEmpresaResponse(b.getEmpresa(), b.getData()), 
+																					getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas(), b.getData()), 
 																					getDesempenhoFinanceiroResponse(b.getDesempenhoFinanceiro()), 
 																					b.getData(), 
 																					b.getLucroLiquidoTrimestral(), 
@@ -140,7 +140,6 @@ public class BalancoResource {
 																					b.getDividaBruta(), 
 																					b.getCaixaDisponivel(), 
 																					b.isDailyUpdated(), 
-																					b.getCotacao(), 
 																					b.getTrimestre())));			
 			return ResponseEntity.ok(jsonConverter.toJson(balancosResponse));		
 		} catch (Exception e) {
@@ -159,8 +158,8 @@ public class BalancoResource {
 			
 			List<BalancoResponse> balancosResponse = new ArrayList<BalancoResponse>();
 			balancosRecalculados.stream().forEach(b -> balancosResponse.add(new BalancoResponse(b.getId(), 
-																								getEmpresaResponse(b.getEmpresa()), 
-																								getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas()), 
+																								getEmpresaResponse(b.getEmpresa(), b.getData()), 
+																								getMultiplosFundamentalistaResponse(b.getMultiplosFundamentalistas(), b.getData()), 
 																								getDesempenhoFinanceiroResponse(b.getDesempenhoFinanceiro()), 
 																								b.getData(), 
 																								b.getLucroLiquidoTrimestral(), 
@@ -169,7 +168,6 @@ public class BalancoResource {
 																								b.getDividaBruta(), 
 																								b.getCaixaDisponivel(), 
 																								b.isDailyUpdated(), 
-																								b.getCotacao(),
 																								b.getTrimestre())));
 			return ResponseEntity.ok(jsonConverter.toJson(balancosResponse));	
 		} catch (Exception e) {
@@ -213,10 +211,7 @@ public class BalancoResource {
 			/*
 			balancosDailyUpdated.removeIf( b -> !calculadoraFundamentalista.isDadosBalancoValidos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()) ||
 					!calculadoraFundamentalista.validaRequisitosMinimos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()));
-<<<<<<< HEAD
-=======
-
->>>>>>> master
+					
 			Collections.sort(balancosDailyUpdated, Balanco.Comparators.NOTA);
 			*/
 			return ResponseEntity.ok(jsonConverter.toJson(balancosDailyUpdated));
@@ -232,8 +227,8 @@ public class BalancoResource {
 		try {
 			balanco = balancoService.salvaBalanco(balanco);
 			BalancoResponse balancoResponse = new BalancoResponse(balanco.getId(), 
-																  getEmpresaResponse(balanco.getEmpresa()), 
-																  getMultiplosFundamentalistaResponse(balanco.getMultiplosFundamentalistas()), 
+																  getEmpresaResponse(balanco.getEmpresa(), balanco.getData()), 
+																  getMultiplosFundamentalistaResponse(balanco.getMultiplosFundamentalistas(), balanco.getData()), 
 																  getDesempenhoFinanceiroResponse(balanco.getDesempenhoFinanceiro()), 
 																  balanco.getData(), 
 																  balanco.getLucroLiquidoTrimestral(), 
@@ -242,7 +237,6 @@ public class BalancoResource {
 																  balanco.getDividaBruta(), 
 																  balanco.getCaixaDisponivel(), 
 																  balanco.isDailyUpdated(), 
-																  balanco.getCotacao(), 
 																  balanco.getTrimestre());
 			
 			return ResponseEntity.ok(jsonConverter.toJson(balancoResponse));
@@ -263,16 +257,16 @@ public class BalancoResource {
 		}
 	}
 	
-	private EmpresaResponse getEmpresaResponse(Empresa empresa) {
+	private EmpresaResponse getEmpresaResponse(Empresa empresa, LocalDate data) {
 		Set<SetorResponse> setoresResponse = new HashSet<SetorResponse>();
 		Set<AcaoResponse> acoesResponse = new HashSet<AcaoResponse>();
-		empresa.getSetores().stream().forEach(s -> setoresResponse.add(new SetorResponse(s.getId(), s.getNome())));
-		empresa.getAcoes().stream().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo())));
+		empresa.getSetores().forEach(s -> setoresResponse.add(new SetorResponse(s.getId(), s.getNome())));
+		empresa.getAcoes().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo(), getCotacaoResponse(a.getCotacoes(), data), getProventosResponse(a.getProventos()))));
 		
 		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidadePapeis(), acoesResponse, setoresResponse);
 	}
 	
-	private Set<MultiplosFundamentalistasResponse> getMultiplosFundamentalistaResponse(List<MultiplosFundamentalistas> listMultiplosFundamentalistas) {
+	private Set<MultiplosFundamentalistasResponse> getMultiplosFundamentalistaResponse(List<MultiplosFundamentalistas> listMultiplosFundamentalistas, LocalDate data) {
 		Set<MultiplosFundamentalistasResponse> listMultFundResponse = new HashSet<MultiplosFundamentalistasResponse>();
 		listMultiplosFundamentalistas.stream().forEach(mf -> listMultFundResponse.add(new MultiplosFundamentalistasResponse(mf.getId(), 
 																															mf.getPrecoSobreLucro(), 
@@ -284,7 +278,10 @@ public class BalancoResource {
 																															mf.getCaixaDisponivelSobreDividaBruta(), 
 																															mf.getNota(),
 																															mf.getJustificativaNota(),
-																															new AcaoResponse(mf.getAcao().getId(), mf.getAcao().getCodigo()))));
+																															new AcaoResponse(mf.getAcao().getId(), 
+																																			 mf.getAcao().getCodigo(), 
+																																			 getCotacaoResponse(mf.getAcao().getCotacoes(), data),
+																																			 getProventosResponse(mf.getAcao().getProventos())))));
 		
 		return listMultFundResponse;
 	}
@@ -294,6 +291,17 @@ public class BalancoResource {
 												desempenhoFinanceiroResponse.getEvolucaoLucroLiquidoTrimestral(), 
 												desempenhoFinanceiroResponse.getEvolucaoLucroLiquidoAnual(), 
 												desempenhoFinanceiroResponse.getHasCrescimentoLucroLiquidoTresAnos());
+	}
+	
+	private CotacaoResponse getCotacaoResponse(List<Cotacao> cotacoes, LocalDate data) {
+		Cotacao cotacao = cotacoes.stream().filter(c -> c.getData() == data).findFirst().orElse(null);
+		return cotacao != null ? new CotacaoResponse(cotacao.getId(), cotacao.getData(), cotacao.getValor()) : null;
+	}
+	
+	private List<ProventoResponse> getProventosResponse(List<Provento> proventos){
+		List<ProventoResponse> proventosResponse = new ArrayList<ProventoResponse>();
+		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento())));
+		return proventosResponse;
 	}
 	
 	@Getter
@@ -310,7 +318,6 @@ public class BalancoResource {
 		Long dividaBruta;
 		Long caixaDisponivel;
 		boolean dailyUpdated;
-		Double cotacao;
 		String trimestre;
 	}
 	
@@ -363,5 +370,25 @@ public class BalancoResource {
     static class AcaoResponse {
 		long id;
 		String codigo;
+		CotacaoResponse cotacao;
+		List<ProventoResponse> proventos;
     }
+	
+	@Getter
+	@AllArgsConstructor
+	static class CotacaoResponse{
+		long id;
+		LocalDate data;
+		double valor;
+	}
+	
+	@Getter
+	@AllArgsConstructor
+	static class ProventoResponse{
+		long id;
+		String tipo;
+		double valor;
+		LocalDate dataEx;
+		LocalDate dataPagamento;
+	}
 }

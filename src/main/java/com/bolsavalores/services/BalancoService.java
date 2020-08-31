@@ -16,11 +16,13 @@ import com.bolsavalores.helpers.CalculadoraFundamentalista;
 import com.bolsavalores.helpers.JsonConverter;
 import com.bolsavalores.models.Acao;
 import com.bolsavalores.models.Balanco;
+import com.bolsavalores.models.Cotacao;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.MultiplosFundamentalistas;
 import com.bolsavalores.models.b3.LstQtn;
 import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
+import com.bolsavalores.repositories.CotacaoRepository;
 import com.bolsavalores.models.exceptions.B3ClientInfoException;
 import com.bolsavalores.models.exceptions.BalancoNotFoundException;
 
@@ -42,9 +44,15 @@ public class BalancoService{
 	@Autowired
 	AcaoRepository acaoRepository;
 	
+	@Autowired
+	CotacaoRepository cotacaoRepository;
+	
 	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, B3ClientInfoException, BalancoNotFoundException {
 		Acao acao = acaoRepository.findById(acaoId);
 		List<Balanco> balancos = balancoRepository.findByEmpresaId(acao.getEmpresa().getId());
+		
+		if(balancos == null || balancos.isEmpty())
+			return balancos;
 		
 		Collections.sort(balancos);
 		boolean hasDailyUpdated = false;
@@ -93,7 +101,7 @@ public class BalancoService{
 		desempenho.setBalanco(balanco);
 		balanco.setDesempenhoFinanceiro(desempenho);
 		
-		balanco.getEmpresa().getAcoes().stream().forEach(a -> {
+		balanco.getEmpresa().getAcoes().stream().filter(a -> balanco.getMultiplosFundamentalistasByAcaoId(a.getId()) != null).forEach(a -> {
 			Avaliacao avaliacao = calculadoraFundamentalista.getNota(balanco, balanco.getMultiplosFundamentalistasByAcaoId(a.getId()));
 			balanco.getMultiplosFundamentalistasByAcaoId(a.getId()).setNota(avaliacao.getNota());
 			balanco.getMultiplosFundamentalistasByAcaoId(a.getId()).setJustificativaNota(avaliacao.getJustificativa());
@@ -102,16 +110,22 @@ public class BalancoService{
 		balanco.setTrimestre(getTrimestre(balanco.getData()));
 		balanco.setDailyUpdated(false);
 		
-		return balancoRepository.save(balanco);
+		try {
+			balancoRepository.save(balanco);
+		}catch(Exception e) {
+			System.out.println("error>>" + e);
+		}
+		
+		return balanco;
 	}
 	
 	private MultiplosFundamentalistas buildMultiplosFundamentalistas(MultiplosFundamentalistas multiplos, Balanco balanco, List<Balanco> balancosAnteriores, Acao acao) {
 		try {
 			
-//			TODO futuro ajuste quando existe tabela COTAÇÃO;
+			Cotacao cotacao = cotacaoRepository.findCotacaoByAcaoIdAndData(acao.getId(), balanco.getData());
 			 
-			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balanco.getCotacao(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getLucroLiquidoAnual()));
-			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balanco.getCotacao(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getPatrimonioLiquido()));
+			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getLucroLiquidoAnual()));
+			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getPatrimonioLiquido()));
 			multiplos.setRoe(calculadoraFundamentalista.getRoe(balanco.getLucroLiquidoAnual(), balanco.getPatrimonioLiquido()));
 			multiplos.setDividaBrutaSobrePatrimonioLiquido(calculadoraFundamentalista.getDividaBrutaSobrePatrimonioLiquido(balanco.getDividaBruta(), balanco.getPatrimonioLiquido()));
 			multiplos.setCaixaDisponivelSobreDividaBruta(calculadoraFundamentalista.getCaixaDisponivelSobreDividaBruta(balanco.getCaixaDisponivel(), balanco.getDividaBruta()));
@@ -126,13 +140,11 @@ public class BalancoService{
 		return multiplos;
 	}
 	
-	private MultiplosFundamentalistas buildMultiplosFundamentalistasDailyUpdated(MultiplosFundamentalistas multiplos, Balanco balancoDailyUpdate, MultiplosFundamentalistas ultimoMultiplos) {
+	private MultiplosFundamentalistas buildMultiplosFundamentalistasDailyUpdated(MultiplosFundamentalistas multiplos, Balanco balancoDailyUpdate, MultiplosFundamentalistas ultimoMultiplos, double precoAtual) {
 //		if(ultimosMultiplos == null)
 //			TODO tratar;
 		
 		try {
-			
-//			TODO futuro ajuste quando existe tabela COTAÇÃO;
 			
 			multiplos.setCaixaDisponivelSobreDividaBruta(ultimoMultiplos.getCaixaDisponivelSobreDividaBruta());
 			multiplos.setDividaBrutaSobrePatrimonioLiquido(ultimoMultiplos.getDividaBrutaSobrePatrimonioLiquido());
@@ -140,8 +152,8 @@ public class BalancoService{
 			multiplos.setMediaPrecoSobreValorPatrimonial(ultimoMultiplos.getMediaPrecoSobreValorPatrimonial());
 			multiplos.setRoe(ultimoMultiplos.getRoe());
 			
-			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
-			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(balancoDailyUpdate.getCotacao(), balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
+			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
+			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
 		}catch(Exception e) {
 //			TODO tratar: pensar como lidar com essa situação.
 		}
@@ -159,7 +171,6 @@ public class BalancoService{
 		if(ultimoBalanco == null)
 			throw new BalancoNotFoundException("Não existe Balanço cadastrado. ");
 		
-		balancoDailyUpdate.setCotacao(precoAtual);
 		balancoDailyUpdate.setCaixaDisponivel(ultimoBalanco.getCaixaDisponivel());
 		balancoDailyUpdate.setDailyUpdated(true);
 		balancoDailyUpdate.setData(LocalDate.now());
@@ -179,14 +190,16 @@ public class BalancoService{
 		if(balancoDailyUpdate.getMultiplosFundamentalistas() == null || balancoDailyUpdate.getMultiplosFundamentalistas().isEmpty()) {
 			balancoDailyUpdate.getEmpresa().getAcoes().stream().forEach(a -> multiplosFundamentalistas.add(buildMultiplosFundamentalistasDailyUpdated(new MultiplosFundamentalistas(), 
 																																					  balancoDailyUpdate, 
-																																					  getUltimoMultiplosFundamentalistaByAcao(ultimoBalanco, a))));
+																																					  getUltimoMultiplosFundamentalistaByAcao(ultimoBalanco, a),
+																																					  precoAtual)));
 			
 		}else {
 			balancoDailyUpdate.getEmpresa().getAcoes().stream().forEach(a -> {
 				MultiplosFundamentalistas multiplos = balancoDailyUpdate.getMultiplosFundamentalistas().stream().filter(m -> m.getAcao().getId() == a.getId()).findFirst().orElse(null);
 				multiplosFundamentalistas.add(buildMultiplosFundamentalistasDailyUpdated(multiplos == null ? new MultiplosFundamentalistas() : multiplos, 
 																						 balancoDailyUpdate, 
-																						 getUltimoMultiplosFundamentalistaByAcao(ultimoBalanco, a)));
+																						 getUltimoMultiplosFundamentalistaByAcao(ultimoBalanco, a),
+																						 precoAtual));
 			});
 		}
 		

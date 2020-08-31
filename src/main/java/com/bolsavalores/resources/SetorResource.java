@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +34,8 @@ import lombok.Getter;
 @RequestMapping(value="/setores")
 public class SetorResource {
 
+    private static final Logger LOG = LoggerFactory.getLogger(SetorResource.class);
+	
 	@Autowired
 	SetorRepository setorRepository;
 	
@@ -49,7 +53,7 @@ public class SetorResource {
 			SetorResponse setorResponse = new SetorResponse(setor.getId(), setor.getNome(), getEmpresasResponse(setor.getEmpresas()));
 			return ResponseEntity.ok(jsonConverter.toJson(setorResponse));
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Não foi possível buscar o Setor. ", e);
 			return new ResponseEntity<String>("Não foi possível buscar o Setor. ", HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -64,10 +68,10 @@ public class SetorResource {
 	//			TODO tratar
 			
 			List<SetorResponse> setorResponse = new ArrayList<SetorResponse>();
-			setores.stream().forEach(s -> setorResponse.add(new SetorResponse(s.getId(), s.getNome(), getEmpresasResponse(s.getEmpresas()))));
+			setores.stream().filter(s -> validaSetor(s)).forEach(s -> setorResponse.add(new SetorResponse(s.getId(), s.getNome(), getEmpresasResponse(s.getEmpresas()))));
 			return ResponseEntity.ok(jsonConverter.toJson(setorResponse));
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Não foi possível buscar os Setores. ", e);
 			return new ResponseEntity<String>("Não foi possível buscar os Setores. ", HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -79,7 +83,7 @@ public class SetorResource {
 			SetorResponse setorResponse = new SetorResponse(setor.getId(), setor.getNome(), getEmpresasResponse(setor.getEmpresas()));
 			return ResponseEntity.ok(jsonConverter.toJson(setorResponse));
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Não foi possível salvar o Setor. ", e);
 			return new ResponseEntity<String>("Não foi possível salvar o Setor. ", HttpStatus.BAD_REQUEST);
 		}
 	}
@@ -90,20 +94,35 @@ public class SetorResource {
 			setorRepository.deleteById(id);
 			return ResponseEntity.noContent().build();
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error("Não foi possível deletar o Setor. ", e);
 			return new ResponseEntity<String>("Não foi possível deletar o Setor. ", HttpStatus.BAD_REQUEST);
 		}
 	}
 	
 	private Set<EmpresaResponse> getEmpresasResponse(Set<Empresa> empresas){
 		Set<EmpresaResponse> empresasResponse = new HashSet<EmpresaResponse>();
-		empresas.stream().forEach(e -> {
+		empresas.stream().filter(e -> validaEmpresa(e)).forEach(e -> {
 			Set<AcaoResponse> acoesResponse = new HashSet<AcaoResponse>();
-			e.getAcoes().stream().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo())));
+			e.getAcoes().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), a.getCodigo())));
 			empresasResponse.add(new EmpresaResponse(e.getId(), e.getRazaoSocial(), e.getNomePregao(), e.getCnpj(), e.getQuantidadePapeis(), acoesResponse));
 		});
 		
 		return empresasResponse;
+	}
+	
+	private boolean validaSetor(Setor setor) {
+		return setor != null &&
+			   setor.getNome() != null && !setor.getNome().isEmpty() &&
+			   setor.getEmpresas() != null && !setor.getEmpresas().isEmpty();
+	}
+	
+	private boolean validaEmpresa(Empresa empresa) {
+		return empresa != null && 
+			   empresa.getCnpj() != null && !empresa.getCnpj().isEmpty() &&
+			   empresa.getNomePregao() != null && !empresa.getNomePregao().isEmpty() &&
+			   empresa.getQuantidadePapeis() != null && 
+			   empresa.getRazaoSocial() != null && !empresa.getRazaoSocial().isEmpty() &&
+			   empresa.getAcoes() != null && !empresa.getAcoes().isEmpty();
 	}
 	
 	@Getter

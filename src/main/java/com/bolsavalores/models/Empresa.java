@@ -15,6 +15,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 @Entity
 @Table(name="empresa")
 public class Empresa implements Comparable<Empresa> {
@@ -35,7 +38,8 @@ public class Empresa implements Comparable<Empresa> {
 	@Column(name = "quantidade_papeis")
 	private Long quantidadePapeis;
 
-	@ManyToMany
+	@Fetch(FetchMode.SUBSELECT)
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
 		name = "empresasetor",
 		joinColumns = @JoinColumn(name = "id_empresa"),

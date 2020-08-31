@@ -1,14 +1,17 @@
 package com.bolsavalores.models;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,6 +28,12 @@ public class Acao implements Serializable, Comparable<Acao> {
 	@ManyToOne
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "acao")
+	private List<Cotacao> cotacoes;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "acao")
+	private List<Provento> proventos;
 	
 	public long getId() {
 		return id;
@@ -68,5 +77,17 @@ public class Acao implements Serializable, Comparable<Acao> {
 	@Override
 	public int hashCode() {
 		return Objects.hashCode(id);
+	}
+	public List<Cotacao> getCotacoes() {
+		return cotacoes;
+	}
+	public void setCotacoes(List<Cotacao> cotacoes) {
+		this.cotacoes = cotacoes;
+	}
+	public List<Provento> getProventos() {
+		return proventos;
+	}
+	public void setProventos(List<Provento> proventos) {
+		this.proventos = proventos;
 	}
 }

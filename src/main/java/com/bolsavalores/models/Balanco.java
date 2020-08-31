@@ -67,8 +67,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="isdailyupdated")
 	private boolean dailyUpdated;
 	
-	private Double cotacao;
-	
 	private String trimestre;
 	
 	public long getId() {
@@ -143,14 +141,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.caixaDisponivel = caixaDisponivel;
 	}
 
-	public Double getCotacao() {
-		return cotacao;
-	}
-	
-	public void setCotacao(Double cotacao) {
-		this.cotacao = cotacao;
-	}
-
 	public boolean isDailyUpdated() {
 		return dailyUpdated;
 	}
@@ -168,7 +158,7 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	}
 	
 	public MultiplosFundamentalistas getMultiplosFundamentalistasByAcaoId(long acaoId) {
-		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao().getId() == acaoId).findFirst().orElse(null);
+		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao() != null && mf.getAcao().getId() == acaoId).findFirst().orElse(null);
 	}
 
 	public void setMultiplosFundamentalistas(List<MultiplosFundamentalistas> multiplosFundamentalistas) {
