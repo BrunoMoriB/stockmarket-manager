@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Table(name="multiplosfundamentalistas")
 public class MultiplosFundamentalistas implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -29,7 +26,7 @@ public class MultiplosFundamentalistas implements Serializable{
 	
 	@Column(name="media_precolucro")
 	private Double mediaPrecoSobreLucro;
-	
+	 
 	@Column(name="preco_valorpatrimonial")
 	private Double precoSobreValorPatrimonial;
 	

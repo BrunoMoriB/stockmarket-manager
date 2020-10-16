@@ -100,6 +100,9 @@ public class SetorResource {
 	}
 	
 	private Set<EmpresaResponse> getEmpresasResponse(Set<Empresa> empresas){
+		if(empresas == null || empresas.isEmpty())
+			return null;
+		
 		Set<EmpresaResponse> empresasResponse = new HashSet<EmpresaResponse>();
 		empresas.stream().filter(e -> validaEmpresa(e)).forEach(e -> {
 			Set<AcaoResponse> acoesResponse = new HashSet<AcaoResponse>();
@@ -112,8 +115,7 @@ public class SetorResource {
 	
 	private boolean validaSetor(Setor setor) {
 		return setor != null &&
-			   setor.getNome() != null && !setor.getNome().isEmpty() &&
-			   setor.getEmpresas() != null && !setor.getEmpresas().isEmpty();
+			   setor.getNome() != null && !setor.getNome().isEmpty() ;
 	}
 	
 	private boolean validaEmpresa(Empresa empresa) {
@@ -140,7 +142,7 @@ public class SetorResource {
 		String razaoSocial;
 		String nomePregao;
 		String cnpj;
-		long quantidade;
+		long quantidadePapeis;
 		Set<AcaoResponse> acoes;
 	}
 	

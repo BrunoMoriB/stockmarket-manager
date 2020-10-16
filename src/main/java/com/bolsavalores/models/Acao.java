@@ -1,9 +1,12 @@
 package com.bolsavalores.models;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -29,11 +32,11 @@ public class Acao implements Serializable, Comparable<Acao> {
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "acao")
-	private List<Cotacao> cotacoes;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "acao")
+	private Set<Cotacao> cotacoes;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "acao")
-	private List<Provento> proventos;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "acao")
+	private Set<Provento> proventos;
 	
 	public long getId() {
 		return id;
@@ -78,16 +81,29 @@ public class Acao implements Serializable, Comparable<Acao> {
 	public int hashCode() {
 		return Objects.hashCode(id);
 	}
-	public List<Cotacao> getCotacoes() {
+	public Cotacao getCotacaoDailyUpdated() {
+		return this.cotacoes.stream().filter(c -> c.isDailyUpdated() == true).findFirst().orElse(null);
+		
+	}
+	public Set<Cotacao> getCotacoes() {
 		return cotacoes;
 	}
-	public void setCotacoes(List<Cotacao> cotacoes) {
+	public void setCotacoes(Set<Cotacao> cotacoes) {
 		this.cotacoes = cotacoes;
 	}
-	public List<Provento> getProventos() {
+	public void setCotacao(Cotacao cotacao) {
+		if(this.cotacoes == null)
+			this.cotacoes = new HashSet<Cotacao>();
+
+		if(cotacao.isDailyUpdated()) 
+			this.cotacoes = this.cotacoes.stream().filter(c -> !c.isDailyUpdated()).collect(Collectors.toSet());
+		
+		this.cotacoes.add(cotacao);
+	}
+	public Set<Provento> getProventos() {
 		return proventos;
 	}
-	public void setProventos(List<Provento> proventos) {
+	public void setProventos(Set<Provento> proventos) {
 		this.proventos = proventos;
 	}
 }

@@ -29,7 +29,6 @@ import com.bolsavalores.models.Empresa;
 import com.bolsavalores.models.Provento;
 import com.bolsavalores.models.Setor;
 import com.bolsavalores.repositories.EmpresaRepository;
-import com.bolsavalores.resources.AcaoResource.CotacaoResponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -198,13 +197,13 @@ public class EmpresaResource {
 			   acao.getCodigo() != null && !acao.getCodigo().isEmpty();
 	}
 	
-	private List<CotacaoResponse> getCotacoesResponse(List<Cotacao> cotacoes) {
+	private List<CotacaoResponse> getCotacoesResponse(Set<Cotacao> cotacoes) {
 		List<CotacaoResponse> cotacoesResponse = new ArrayList<CotacaoResponse>();
 		cotacoes.forEach(c -> cotacoesResponse.add(new CotacaoResponse(c.getId(), c.getData(), c.getValor())));
 		return cotacoesResponse;
 	}
 	
-	private List<ProventoResponse> getProventosResponse(List<Provento> proventos){
+	private List<ProventoResponse> getProventosResponse(Set<Provento> proventos){
 		List<ProventoResponse> proventosResponse = new ArrayList<ProventoResponse>();
 		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento())));
 		return proventosResponse;
@@ -217,7 +216,7 @@ public class EmpresaResource {
 		String razaoSocial;
 		String nomePregao;
 		String cnpj;
-		long quantidade;
+		long quantidadePapeis;
 		Set<SetorResponse> setores;
 		Set<AcaoResponse> acoes;
 	}

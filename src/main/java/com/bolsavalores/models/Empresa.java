@@ -3,6 +3,7 @@ package com.bolsavalores.models;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,9 +15,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 @Entity
 @Table(name="empresa")
@@ -38,7 +36,7 @@ public class Empresa implements Comparable<Empresa> {
 	@Column(name = "quantidade_papeis")
 	private Long quantidadePapeis;
 
-	@Fetch(FetchMode.SUBSELECT)
+//	@Fetch(FetchMode.SUBSELECT)
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
 		name = "empresasetor",
@@ -47,7 +45,7 @@ public class Empresa implements Comparable<Empresa> {
 	)
 	private Set<Setor> setores;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "empresa")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "empresa")
 	private Set<Acao> acoes;
 	
     public long getId() {

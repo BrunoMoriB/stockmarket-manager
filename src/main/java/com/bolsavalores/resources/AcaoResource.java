@@ -150,13 +150,13 @@ public class AcaoResource {
 			   empresa.getSetores() != null && !empresa.getSetores().isEmpty();
 	}
 	
-	private List<CotacaoResponse> getCotacoesResponse(List<Cotacao> cotacoes) {
+	private List<CotacaoResponse> getCotacoesResponse(Set<Cotacao> cotacoes) {
 		List<CotacaoResponse> cotacoesResponse = new ArrayList<CotacaoResponse>();
 		cotacoes.forEach(c -> cotacoesResponse.add(new CotacaoResponse(c.getId(), c.getData(), c.getValor())));
 		return cotacoesResponse;
 	}
 	
-	private List<ProventoResponse> getProventosResponse(List<Provento> proventos){
+	private List<ProventoResponse> getProventosResponse(Set<Provento> proventos){
 		List<ProventoResponse> proventosResponse = new ArrayList<ProventoResponse>();
 		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento())));
 		return proventosResponse;
@@ -197,7 +197,7 @@ public class AcaoResource {
 		String razaoSocial;
 		String nomePregao;
 		String cnpj;
-		long quantidade;
+		long quantidadePapeis;
 		Set<SetorResponse> setores;
 	}
 	

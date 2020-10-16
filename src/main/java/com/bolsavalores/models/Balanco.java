@@ -1,9 +1,8 @@
 package com.bolsavalores.models;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -22,9 +21,6 @@ import javax.persistence.Table;
 @Table(name="balanco")
 public class Balanco implements Serializable, Comparable<Balanco> {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public Balanco() {}
@@ -37,17 +33,15 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 
-	@ManyToOne()
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
-	private List<MultiplosFundamentalistas> multiplosFundamentalistas;
+	private Set<MultiplosFundamentalistas> multiplosFundamentalistas;
 	
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
 	private DesempenhoFinanceiro desempenhoFinanceiro;
-	
-	private LocalDate data;
 	
 	@Column(name="lucroliq_trimestral")
 	private Long lucroLiquidoTrimestral;
@@ -67,7 +61,9 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="isdailyupdated")
 	private boolean dailyUpdated;
 	
-	private String trimestre;
+	private int trimestre;
+	
+	private int ano;
 	
 	public long getId() {
 		return id;
@@ -75,14 +71,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public LocalDate getData() {
-		return data;
-	}
-
-	public void setData(LocalDate data) {
-		this.data = data;
 	}
 
 	public Long getLucroLiquidoTrimestral() {
@@ -99,14 +87,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setLucroLiquidoAnual(Long lucroLiquidoAnual) {
 		this.lucroLiquidoAnual = lucroLiquidoAnual;
-	}
-
-	public String getTrimestre() {
-		return trimestre;
-	}
-
-	public void setTrimestre(String trimestre) {
-		this.trimestre = trimestre;
 	}
 
 	public DesempenhoFinanceiro getDesempenhoFinanceiro() {
@@ -153,7 +133,7 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return empresa;
 	}
 	
-	public List<MultiplosFundamentalistas> getMultiplosFundamentalistas() {
+	public Set<MultiplosFundamentalistas> getMultiplosFundamentalistas() {
 		return multiplosFundamentalistas;
 	}
 	
@@ -161,7 +141,7 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao() != null && mf.getAcao().getId() == acaoId).findFirst().orElse(null);
 	}
 
-	public void setMultiplosFundamentalistas(List<MultiplosFundamentalistas> multiplosFundamentalistas) {
+	public void setMultiplosFundamentalistas(Set<MultiplosFundamentalistas> multiplosFundamentalistas) {
 		this.multiplosFundamentalistas = multiplosFundamentalistas;
 	}
 	
@@ -171,8 +151,12 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 			return 1;
 		else if(outroBalanco.isDailyUpdated())
 			return -1;
-		else		
-			return this.data.compareTo(outroBalanco.getData());
+		else if(this.ano > outroBalanco.getAno())
+			return 1;
+		else if(this.trimestre > outroBalanco.getTrimestre())
+			return 1;
+		else
+			return -1;
 	}
 
 	@Override
@@ -188,6 +172,22 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Override
 	public int hashCode() {
 		return Objects.hashCode(id);
+	}
+
+	public int getTrimestre() {
+		return trimestre;
+	}
+
+	public void setTrimestre(int trimestre) {
+		this.trimestre = trimestre;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 
 	/*public static class Comparators {

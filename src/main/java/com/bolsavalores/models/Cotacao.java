@@ -3,6 +3,7 @@ package com.bolsavalores.models;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +24,9 @@ public class Cotacao implements Serializable {
 	
 	private LocalDate data;
 	private double valor;
+	
+	@Column(name="isdailyupdated")
+	private boolean dailyUpdated;
 
 	@ManyToOne
 	@JoinColumn(name="id_acao")
@@ -58,5 +62,13 @@ public class Cotacao implements Serializable {
 
 	public void setAcao(Acao acao) {
 		this.acao = acao;
+	}
+
+	public boolean isDailyUpdated() {
+		return dailyUpdated;
+	}
+
+	public void setDailyUpdated(boolean dailyUpdated) {
+		this.dailyUpdated = dailyUpdated;
 	}
 }
