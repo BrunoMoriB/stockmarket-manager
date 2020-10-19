@@ -149,4 +149,13 @@ public class MultiplosFundamentalistas implements Serializable{
 	public void setJustificativaNota(String justificativaNota) {
 		this.justificativaNota = justificativaNota;
 	}
+	
+//	public static class Comparators {
+//		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
+//	            @Override
+//	            public int compare(Balanco b1, Balanco b2) {
+//	                return b2.nota - b1.nota;
+//	            }
+//	        };
+//	}
 }

@@ -40,6 +40,7 @@ import com.bolsavalores.models.exceptions.BalancoNotFoundException;
 import com.bolsavalores.models.exceptions.StockmarketException;
 import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
+import com.bolsavalores.repositories.MultiplosFundamentalistasRepository;
 import com.bolsavalores.services.BalancoService;
 
 import lombok.AllArgsConstructor;
@@ -54,6 +55,9 @@ public class BalancoResource {
 	
 	@Autowired
 	BalancoRepository balancoRepository;
+	
+	@Autowired
+	MultiplosFundamentalistasRepository multiplosFundamentalistasRepository;
 	
 	@Autowired
 	AcaoRepository acaoRepository;
@@ -262,17 +266,37 @@ public class BalancoResource {
 	@GetMapping("/buscaBalancosDailyUpdatedRequisitosMinimos")
 	public ResponseEntity<String> getBalancosDailyUpdatedRequisitosMinimos(){
 		try {
-			List<Balanco> balancosDailyUpdated = balancoRepository.findBalancosDailyUpdated();
+			List<MultiplosFundamentalistas> multiplosDailyUpdated = multiplosFundamentalistasRepository.findMultiplosFundamentalistasDailyUpdated();
 			
-			if(balancosDailyUpdated == null || balancosDailyUpdated.isEmpty())
+			if(multiplosDailyUpdated == null || multiplosDailyUpdated.isEmpty())
 				throw new StockmarketException("Nenhum balanço daily updated encontrado. ");
-			/*
-			balancosDailyUpdated.removeIf( b -> !calculadoraFundamentalista.isDadosBalancoValidos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()) ||
-					!calculadoraFundamentalista.validaRequisitosMinimos(b.getMultiplosFundamentalistas(), b.getDesempenhoFinanceiro()));
+			
+			multiplosDailyUpdated.removeIf(mf -> !calculadoraFundamentalista.isDadosBalancoValidos(mf, mf.getBalanco().getDesempenhoFinanceiro()) ||
+					!calculadoraFundamentalista.validaRequisitosMinimos(mf, mf.getBalanco().getDesempenhoFinanceiro()));
 					
-			Collections.sort(balancosDailyUpdated, Balanco.Comparators.NOTA);
-			*/
-			return ResponseEntity.ok(jsonConverter.toJson(balancosDailyUpdated));
+//			Collections.sort(multiplosDailyUpdated, Balanco.Comparators.NOTA);
+			
+			List<BalancoResponse> balancosRecalculadosResponse = new ArrayList<BalancoResponse>();
+			multiplosDailyUpdated.forEach(mf -> balancosRecalculadosResponse.add(new BalancoResponse(mf.getBalanco().getId(), 
+																									 getEmpresaResponse(mf.getBalanco().getEmpresa(), 
+																											 			mf.getBalanco().getTrimestre(), 
+																											 			mf.getBalanco().getAno(), 
+																											 			mf.getBalanco().isDailyUpdated()),
+																									 getMultiplosFundamentalistaResponse(new HashSet<MultiplosFundamentalistas>(Arrays.asList(mf)), 
+																											 						     mf.getBalanco().getTrimestre(), 
+																											 						     mf.getBalanco().getAno(),  
+																											 						     mf.getBalanco().getEmpresa().getId(), 
+																											 						     mf.getBalanco().isDailyUpdated()),
+																									 getDesempenhoFinanceiroResponse(mf.getBalanco().getDesempenhoFinanceiro()), 
+																									 mf.getBalanco().getLucroLiquidoTrimestral(), 
+																									 mf.getBalanco().getLucroLiquidoAnual(), 
+																									 mf.getBalanco().getPatrimonioLiquido(), 
+																									 mf.getBalanco().getDividaBruta(), 
+																									 mf.getBalanco().getCaixaDisponivel(), 
+																									 mf.getBalanco().isDailyUpdated(), 
+																									 mf.getBalanco().getTrimestre(), 
+																									 mf.getBalanco().getAno())));
+			return ResponseEntity.ok(jsonConverter.toJson(balancosRecalculadosResponse));
 		} catch (Exception e) {
 			LOG.error("Não foi pssível encontrar os Balanços daily updated. ", e);
 			return new ResponseEntity<String>("Não foi possível encontrar os Balanços daily updated. ", HttpStatus.BAD_REQUEST);

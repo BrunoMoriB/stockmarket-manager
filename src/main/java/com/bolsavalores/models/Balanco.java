@@ -189,13 +189,4 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	public void setAno(int ano) {
 		this.ano = ano;
 	}
-
-	/*public static class Comparators {
-		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
-	            @Override
-	            public int compare(Balanco b1, Balanco b2) {
-	                return b2.nota - b1.nota;
-	            }
-	        };
-	}*/
 }
