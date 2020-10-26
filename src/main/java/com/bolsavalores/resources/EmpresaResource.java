@@ -199,13 +199,21 @@ public class EmpresaResource {
 	
 	private List<CotacaoResponse> getCotacoesResponse(Set<Cotacao> cotacoes) {
 		List<CotacaoResponse> cotacoesResponse = new ArrayList<CotacaoResponse>();
-		cotacoes.forEach(c -> cotacoesResponse.add(new CotacaoResponse(c.getId(), c.getData(), c.getValor())));
+		cotacoes.forEach(c -> cotacoesResponse.add(new CotacaoResponse(c.getId(), 
+												   c.getData(), 
+												   c.getValor(),
+												   new AcaoResponse(c.getAcao().getId(), c.getAcao().getCodigo(), null, null))));
 		return cotacoesResponse;
 	}
 	
 	private List<ProventoResponse> getProventosResponse(Set<Provento> proventos){
 		List<ProventoResponse> proventosResponse = new ArrayList<ProventoResponse>();
-		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento())));
+		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), 
+																	      p.getTipo(), 
+																	      p.getValor(), 
+																	      p.getDataEx(), 
+																	      p.getDataPagamento(),
+																	      new AcaoResponse(p.getAcao().getId(), p.getAcao().getCodigo(), null, null))));
 		return proventosResponse;
 	}
 	
@@ -236,6 +244,7 @@ public class EmpresaResource {
 		long id;
 		LocalDate data;
 		double valor;
+		AcaoResponse acao;
 	}
 	
 	@Getter
@@ -246,6 +255,7 @@ public class EmpresaResource {
 		double valor;
 		LocalDate dataEx;
 		LocalDate dataPagamento;
+		AcaoResponse acao;
 	}
 	
 	@Getter

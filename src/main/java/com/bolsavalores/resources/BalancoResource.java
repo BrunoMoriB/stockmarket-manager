@@ -307,6 +307,7 @@ public class BalancoResource {
 	@PostMapping()
 	public ResponseEntity<String> salvaBalanco(@RequestBody Balanco balanco) {
 		try {
+			LOG.info("Iniciando o fluxo para salvar o Balanço. ");
 			balanco = balancoService.salvaBalanco(balanco);
 			BalancoResponse balancoResponse = new BalancoResponse(balanco.getId(), 
 																  getEmpresaResponse(balanco.getEmpresa(), 
@@ -328,6 +329,7 @@ public class BalancoResource {
 																  balanco.getTrimestre(),
 																  balanco.getAno());
 			
+			LOG.info("O fluxo para salvar o Balanço foi finalizado. ");
 			return ResponseEntity.ok(jsonConverter.toJson(balancoResponse));
 		} catch (Exception e) {
 			LOG.error("Não foi possível salvar o Balanço. ", e);

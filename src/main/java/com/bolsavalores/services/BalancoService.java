@@ -121,6 +121,7 @@ public class BalancoService{
 //		balanco.setData(getData(balanco.getTrimestre()));
 		balanco.setDailyUpdated(false);
 		
+		balanco.getEmpresa().getAcoes().forEach(a -> acaoRepository.save(a));
 		return balancoRepository.save(balanco);
 	}
 	

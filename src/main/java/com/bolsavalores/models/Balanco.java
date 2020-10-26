@@ -33,7 +33,7 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name="id_empresa")
 	private Empresa empresa;
 	

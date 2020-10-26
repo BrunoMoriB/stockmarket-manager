@@ -36,7 +36,6 @@ public class Empresa implements Comparable<Empresa> {
 	@Column(name = "quantidade_papeis")
 	private Long quantidadePapeis;
 
-//	@Fetch(FetchMode.SUBSELECT)
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(
 		name = "empresasetor",
