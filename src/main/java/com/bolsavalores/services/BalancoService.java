@@ -23,10 +23,12 @@ import com.bolsavalores.models.Balanco;
 import com.bolsavalores.models.Cotacao;
 import com.bolsavalores.models.DesempenhoFinanceiro;
 import com.bolsavalores.models.MultiplosFundamentalistas;
+import com.bolsavalores.models.Units;
 import com.bolsavalores.models.b3.LstQtn;
 import com.bolsavalores.repositories.AcaoRepository;
 import com.bolsavalores.repositories.BalancoRepository;
 import com.bolsavalores.repositories.CotacaoRepository;
+import com.bolsavalores.repositories.UnitsRepository;
 import com.bolsavalores.models.exceptions.B3ClientInfoException;
 import com.bolsavalores.models.exceptions.BalancoNotFoundException;
 
@@ -35,7 +37,6 @@ public class BalancoService{
 
     private static final Logger LOG = LoggerFactory.getLogger(BalancoService.class);
 
-	
 	@Autowired
 	BalancoRepository balancoRepository;
 	
@@ -50,12 +51,15 @@ public class BalancoService{
 	
 	@Autowired
 	B3Client b3Client;
-
+	
 	@Autowired
 	AcaoRepository acaoRepository;
 	
 	@Autowired
 	CotacaoRepository cotacaoRepository;
+	
+	@Autowired
+	UnitsRepository unitsRepository;
 	
 	public List<Balanco> getBalancosRecalculadosByAcaoId(long acaoId) throws ParseException, B3ClientInfoException, BalancoNotFoundException {
 		Acao acao = acaoRepository.findById(acaoId);
@@ -135,8 +139,9 @@ public class BalancoService{
 			Cotacao cotacao = cotacaoRepository.findCotacaoByAcaoIdAndData(acao.getId(), dateWithDayFirst);
 			
 			if(cotacao != null ) {
-				multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getLucroLiquidoAnual()));
-				multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getPatrimonioLiquido()));
+				long multiplicador = getMultiplicador(acao);
+				multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getLucroLiquidoAnual(), multiplicador));
+				multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(cotacao.getValor(), balanco.getEmpresa().getQuantidadePapeis(), balanco.getPatrimonioLiquido(), multiplicador));
 			}else {
 				multiplos.setPrecoSobreLucro(null);
 				multiplos.setPrecoSobreValorPatrimonial(null);
@@ -169,8 +174,9 @@ public class BalancoService{
 			multiplos.setMediaPrecoSobreValorPatrimonial(ultimoMultiplos.getMediaPrecoSobreValorPatrimonial());
 			multiplos.setRoe(ultimoMultiplos.getRoe());
 			
-			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getLucroLiquidoAnual()));
-			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getPatrimonioLiquido()));
+			long multiplicador = getMultiplicador(acao);
+			multiplos.setPrecoSobreLucro(calculadoraFundamentalista.getPrecoSobreLucro(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getLucroLiquidoAnual(), multiplicador));
+			multiplos.setPrecoSobreValorPatrimonial(calculadoraFundamentalista.getPrecoSobreValorPatrimonial(precoAtual, balancoDailyUpdate.getEmpresa().getQuantidadePapeis(), balancoDailyUpdate.getPatrimonioLiquido(), multiplicador));
 			
 			LOG.info("CALCULO PL " + acao.getCodigo() + ": " + precoAtual + " / " +  balancoDailyUpdate.getLucroLiquidoAnual() + " / " + balancoDailyUpdate.getEmpresa().getQuantidadePapeis() + " = " + multiplos.getPrecoSobreLucro());
 			
@@ -179,6 +185,14 @@ public class BalancoService{
 		}
 		
 		return multiplos;
+	}
+	
+	private long getMultiplicador(Acao acao) {
+		if(!acao.isUnit())
+			return 1;
+		
+		Units unit = unitsRepository.findByCodigoAcao(acao.getCodigo());
+		return unit.getMultiplicador();
 	}
 	
 	public Balanco getLastBalancoByEmpresaId(long empresaId) {

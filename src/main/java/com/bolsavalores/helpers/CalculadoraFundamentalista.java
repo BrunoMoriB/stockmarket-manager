@@ -21,7 +21,7 @@ public class CalculadoraFundamentalista {
 	private static final int NUMERO_ANOS_LUCROANUAL = 2;
 	private static final String TRIMESTRE_SEPARATOR = "T";
 	
-	public Double getPrecoSobreLucro(double cotacao, long qtdPapeis, Long lucroLiquidoAnual) throws ParseException{
+	public Double getPrecoSobreLucro(double cotacao, long qtdPapeis, Long lucroLiquidoAnual, long multiplicador) throws ParseException{
 		if(lucroLiquidoAnual == null || lucroLiquidoAnual == 0L)
 			return null;
 		
@@ -29,11 +29,12 @@ public class CalculadoraFundamentalista {
 		double lucroLiquidoAnualDouble = lucroLiquidoAnual;
 		
 		double lucroPorAcao    = lucroLiquidoAnualDouble / qtdPapeisDouble;
+		lucroPorAcao*=multiplicador;
 		double precoSobreLucro = cotacao / lucroPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreLucro)).doubleValue(); 
 	}
 	
-	public Double getPrecoSobreValorPatrimonial(double cotacao, long qtdPapeis, Long patrimonioLiquido) throws ParseException {
+	public Double getPrecoSobreValorPatrimonial(double cotacao, long qtdPapeis, Long patrimonioLiquido, long multiplicador) throws ParseException {
 		if(patrimonioLiquido == null || patrimonioLiquido == 0L)
 			return null;
 			
@@ -41,6 +42,7 @@ public class CalculadoraFundamentalista {
 		double patrimonioLiquidoDouble = patrimonioLiquido;
 		
 		double valorPatrimonialPorAcao    = patrimonioLiquidoDouble / qtdPapeisDouble;
+		valorPatrimonialPorAcao*=multiplicador;
 		double precoSobreValorPatrimonial = cotacao / valorPatrimonialPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreValorPatrimonial)).doubleValue(); 
 	}

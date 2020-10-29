@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -37,6 +38,9 @@ public class Acao implements Serializable, Comparable<Acao> {
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "acao")
 	private Set<Provento> proventos;
+	
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "acao")
+	private Units units;
 	
 	public long getId() {
 		return id;
@@ -105,5 +109,15 @@ public class Acao implements Serializable, Comparable<Acao> {
 	}
 	public void setProventos(Set<Provento> proventos) {
 		this.proventos = proventos;
+	}
+	
+	public boolean isUnit() {
+		return this.codigo.contains("11");
+	}
+	public Units getUnits() {
+		return units;
+	}
+	public void setUnits(Units units) {
+		this.units = units;
 	}
 }

@@ -58,4 +58,8 @@ public class Units {
 	public void setQtdPn(long qtdPn) {
 		this.qtdPn = qtdPn;
 	}
+	
+	public long getMultiplicador() {
+		return this.qtdOn + this.qtdPn;
+	}
 }

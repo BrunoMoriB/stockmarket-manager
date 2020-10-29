@@ -10,6 +10,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -360,7 +364,9 @@ public class BalancoResource {
 																				   			  ano,
 																				   			  isDailyUpdated), 
 																		   getProventosResponse(a.getId(), a.getProventos()), 
-																		   new EmpresaResponse(empresa.getId(), "", "", "", 0L, null, null))));
+																		   new EmpresaResponse(empresa.getId(), "", "", "", 0L, null, null),
+																		   a.isUnit() ? new UnitsResponse(a.getUnits().getId(), a.getUnits().getQtdOn(), a.getUnits().getQtdPn(), a.getUnits().getMultiplicador()) : null,
+																		   a.isUnit())));
 		
 		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidadePapeis(), acoesResponse, setoresResponse);
 	}
@@ -385,7 +391,12 @@ public class BalancoResource {
 																																					 	        ano,
 																																					 	        isDailyUpdated),
 																																			 getProventosResponse(mf.getAcao().getId(), mf.getAcao().getProventos()),
-																																			 new EmpresaResponse(empresaId, "", "", "", 0L, null, null)))));
+																																			 new EmpresaResponse(empresaId, "", "", "", 0L, null, null),
+																																			 mf.getAcao().isUnit() ? new UnitsResponse(mf.getAcao().getUnits().getId(), 
+																																											 		   mf.getAcao().getUnits().getQtdOn(), 
+																																											 		   mf.getAcao().getUnits().getQtdPn(), 
+																																											 		   mf.getAcao().getUnits().getMultiplicador()): null,
+																																			 mf.getAcao().isUnit()))));
 		
 		return listMultFundResponse;
 	}
@@ -399,7 +410,7 @@ public class BalancoResource {
 	
 	private List<CotacaoResponse> getCotacaoResponse(long acaoId, Set<Cotacao> cotacoes, int trimestre, int ano, boolean isDailyUpdated) {
 		Cotacao cotacao = cotacoes.stream().filter(c -> (isDailyUpdated && isDailyUpdated == c.isDailyUpdated()) || (!isDailyUpdated && comparaDatas(c.getData(), trimestre, ano))).findFirst().orElse(null);
-		return cotacao != null ? Arrays.asList(new CotacaoResponse(cotacao.getId(), cotacao.getData(), cotacao.getValor(), new AcaoResponse(acaoId, "", null, null, null))) : null;
+		return cotacao != null ? Arrays.asList(new CotacaoResponse(cotacao.getId(), cotacao.getData(), cotacao.getValor(), new AcaoResponse(acaoId, "", null, null, null, null, null))) : null;
 	}
 	
 	private boolean comparaDatas(LocalDate dataCotacao, int trimestre, int ano) {
@@ -409,7 +420,7 @@ public class BalancoResource {
 	
 	private List<ProventoResponse> getProventosResponse(long acaoId, Set<Provento> proventos){
 		List<ProventoResponse> proventosResponse = new ArrayList<ProventoResponse>();
-		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento(), new AcaoResponse(acaoId, "", null, null, null))));
+		proventos.forEach(p -> proventosResponse.add(new ProventoResponse(p.getId(), p.getTipo(), p.getValor(), p.getDataEx(), p.getDataPagamento(), new AcaoResponse(acaoId, "", null, null, null, null, null))));
 		return proventosResponse;
 	}
 	
@@ -482,6 +493,8 @@ public class BalancoResource {
 		List<CotacaoResponse> cotacoes;
 		List<ProventoResponse> proventos;
 		EmpresaResponse empresa;
+		UnitsResponse units;
+		Boolean isUnit;
     }
 	
 	@Getter
@@ -502,5 +515,14 @@ public class BalancoResource {
 		LocalDate dataEx;
 		LocalDate dataPagamento;
 		AcaoResponse acao;
+	}
+	
+	@Getter
+	@AllArgsConstructor
+	static class UnitsResponse{
+		long id;
+		long qtdOn;
+		long qtdPn;
+		long multiplicador;
 	}
 }
