@@ -10,10 +10,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -415,6 +411,7 @@ public class BalancoResource {
 	
 	private boolean comparaDatas(LocalDate dataCotacao, int trimestre, int ano) {
 		Month mes = dataBalancoUtils.getMonthByTrimestre(trimestre);
+		ano = mes == Month.FEBRUARY ? ano + 1 : ano;
 		return dataCotacao.getMonth() == mes && dataCotacao.getYear() == ano;
 	}
 	
