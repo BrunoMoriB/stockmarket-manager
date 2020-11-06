@@ -47,21 +47,22 @@ CREATE TABLE Cotacao (
 	id BIGINT PRIMARY KEY,
 	data DATE NOT NULL,
 	valor NUMERIC NOT NULL,
-	id_acao BIGINT REFERENCES Acao(id) NOT NULL
+	id_acao BIGINT REFERENCES Acao(id) NOT NULL,
+	isdailyupdated BOOLEAN
 );
 ALTER TABLE Cotacao ALTER COLUMN id SET DEFAULT nextval('cotacao_id_seq');
 
 CREATE SEQUENCE balanco_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Balanco (
 	id INTEGER PRIMARY KEY,
-	data DATE,
 	lucroliq_trimestral BIGINT,
 	id_empresa INTEGER REFERENCES Empresa(id),
-	trimestre VARCHAR(55),
+	trimestre INTEGER,
 	lucroliq_anual BIGINT,
 	patrimonioliquido BIGINT,
 	dividabruta BIGINT,
 	caixadisponivel BIGINT,
+	ano INTEGER,
 	isdailyupdated BOOLEAN
 );
 ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
@@ -102,3 +103,12 @@ CREATE TABLE Usuario (
 	papel VARCHAR (13) NOT NULL
 );
 ALTER TABLE Usuario ALTER COLUMN id SET DEFAULT nextval('usuario_id_seq');
+
+CREATE SEQUENCE units_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
+CREATE TABLE Units (
+	id INTEGER PRIMARY KEY,
+	id_acao INTEGER REFERENCES Acao(id) NOT NULL,
+	qtd_on INTEGER NOT NULL,
+	qtd_pn INTEGER NOT NULL	
+);
+ALTER TABLE Units ALTER COLUMN id SET DEFAULT nextval('units_id_seq');

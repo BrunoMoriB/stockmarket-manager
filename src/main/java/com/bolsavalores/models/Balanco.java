@@ -1,9 +1,8 @@
 package com.bolsavalores.models;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -22,9 +21,6 @@ import javax.persistence.Table;
 @Table(name="balanco")
 public class Balanco implements Serializable, Comparable<Balanco> {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public Balanco() {}
@@ -42,12 +38,10 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	private Empresa empresa;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
-	private List<MultiplosFundamentalistas> multiplosFundamentalistas;
+	private Set<MultiplosFundamentalistas> multiplosFundamentalistas;
 	
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="balanco")
 	private DesempenhoFinanceiro desempenhoFinanceiro;
-	
-	private LocalDate data;
 	
 	@Column(name="lucroliq_trimestral")
 	private Long lucroLiquidoTrimestral;
@@ -67,9 +61,9 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 	@Column(name="isdailyupdated")
 	private boolean dailyUpdated;
 	
-	private Double cotacao;
+	private int trimestre;
 	
-	private String trimestre;
+	private int ano;
 	
 	public long getId() {
 		return id;
@@ -77,14 +71,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public LocalDate getData() {
-		return data;
-	}
-
-	public void setData(LocalDate data) {
-		this.data = data;
 	}
 
 	public Long getLucroLiquidoTrimestral() {
@@ -101,14 +87,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 
 	public void setLucroLiquidoAnual(Long lucroLiquidoAnual) {
 		this.lucroLiquidoAnual = lucroLiquidoAnual;
-	}
-
-	public String getTrimestre() {
-		return trimestre;
-	}
-
-	public void setTrimestre(String trimestre) {
-		this.trimestre = trimestre;
 	}
 
 	public DesempenhoFinanceiro getDesempenhoFinanceiro() {
@@ -143,14 +121,6 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		this.caixaDisponivel = caixaDisponivel;
 	}
 
-	public Double getCotacao() {
-		return cotacao;
-	}
-	
-	public void setCotacao(Double cotacao) {
-		this.cotacao = cotacao;
-	}
-
 	public boolean isDailyUpdated() {
 		return dailyUpdated;
 	}
@@ -163,15 +133,15 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return empresa;
 	}
 	
-	public List<MultiplosFundamentalistas> getMultiplosFundamentalistas() {
+	public Set<MultiplosFundamentalistas> getMultiplosFundamentalistas() {
 		return multiplosFundamentalistas;
 	}
 	
 	public MultiplosFundamentalistas getMultiplosFundamentalistasByAcaoId(long acaoId) {
-		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao().getId() == acaoId).findFirst().orElse(null);
+		return this.multiplosFundamentalistas.stream().filter(mf -> mf.getAcao() != null && mf.getAcao().getId() == acaoId).findFirst().orElse(null);
 	}
 
-	public void setMultiplosFundamentalistas(List<MultiplosFundamentalistas> multiplosFundamentalistas) {
+	public void setMultiplosFundamentalistas(Set<MultiplosFundamentalistas> multiplosFundamentalistas) {
 		this.multiplosFundamentalistas = multiplosFundamentalistas;
 	}
 	
@@ -181,8 +151,12 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 			return 1;
 		else if(outroBalanco.isDailyUpdated())
 			return -1;
-		else		
-			return this.data.compareTo(outroBalanco.getData());
+		else if(this.ano > outroBalanco.getAno())
+			return 1;
+		else if(this.trimestre > outroBalanco.getTrimestre())
+			return 1;
+		else
+			return -1;
 	}
 
 	@Override
@@ -200,12 +174,19 @@ public class Balanco implements Serializable, Comparable<Balanco> {
 		return Objects.hashCode(id);
 	}
 
-	/*public static class Comparators {
-		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
-	            @Override
-	            public int compare(Balanco b1, Balanco b2) {
-	                return b2.nota - b1.nota;
-	            }
-	        };
-	}*/
+	public int getTrimestre() {
+		return trimestre;
+	}
+
+	public void setTrimestre(int trimestre) {
+		this.trimestre = trimestre;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
 }

@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Table(name="multiplosfundamentalistas")
 public class MultiplosFundamentalistas implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -29,7 +26,7 @@ public class MultiplosFundamentalistas implements Serializable{
 	
 	@Column(name="media_precolucro")
 	private Double mediaPrecoSobreLucro;
-	
+	 
 	@Column(name="preco_valorpatrimonial")
 	private Double precoSobreValorPatrimonial;
 	
@@ -152,4 +149,13 @@ public class MultiplosFundamentalistas implements Serializable{
 	public void setJustificativaNota(String justificativaNota) {
 		this.justificativaNota = justificativaNota;
 	}
+	
+//	public static class Comparators {
+//		 public static Comparator<Balanco> NOTA = new Comparator<Balanco>() {
+//	            @Override
+//	            public int compare(Balanco b1, Balanco b2) {
+//	                return b2.nota - b1.nota;
+//	            }
+//	        };
+//	}
 }

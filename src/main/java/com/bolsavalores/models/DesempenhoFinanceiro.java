@@ -15,9 +15,6 @@ import javax.persistence.Table;
 @Table(name="desempenhofinanceiro")
 public class DesempenhoFinanceiro implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id

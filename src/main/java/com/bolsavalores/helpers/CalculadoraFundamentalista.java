@@ -3,8 +3,6 @@ package com.bolsavalores.helpers;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -21,8 +19,9 @@ import com.bolsavalores.models.MultiplosFundamentalistas;
 public class CalculadoraFundamentalista {
 	
 	private static final int NUMERO_ANOS_LUCROANUAL = 2;
+	private static final String TRIMESTRE_SEPARATOR = "T";
 	
-	public Double getPrecoSobreLucro(double cotacao, long qtdPapeis, Long lucroLiquidoAnual) throws ParseException{
+	public Double getPrecoSobreLucro(double cotacao, long qtdPapeis, Long lucroLiquidoAnual, long multiplicador) throws ParseException{
 		if(lucroLiquidoAnual == null || lucroLiquidoAnual == 0L)
 			return null;
 		
@@ -30,21 +29,26 @@ public class CalculadoraFundamentalista {
 		double lucroLiquidoAnualDouble = lucroLiquidoAnual;
 		
 		double lucroPorAcao    = lucroLiquidoAnualDouble / qtdPapeisDouble;
+		lucroPorAcao*=multiplicador;
 		double precoSobreLucro = cotacao / lucroPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreLucro)).doubleValue(); 
 	}
 	
-	public Double getPrecoSobreValorPatrimonial(double cotacao, long qtdPapeis, long patrimonioLiquido) throws ParseException {
+	public Double getPrecoSobreValorPatrimonial(double cotacao, long qtdPapeis, Long patrimonioLiquido, long multiplicador) throws ParseException {
+		if(patrimonioLiquido == null || patrimonioLiquido == 0L)
+			return null;
+			
 		double qtdPapeisDouble 	       = qtdPapeis;
 		double patrimonioLiquidoDouble = patrimonioLiquido;
 		
 		double valorPatrimonialPorAcao    = patrimonioLiquidoDouble / qtdPapeisDouble;
+		valorPatrimonialPorAcao*=multiplicador;
 		double precoSobreValorPatrimonial = cotacao / valorPatrimonialPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreValorPatrimonial)).doubleValue(); 
 	}
 	
-	public Double getRoe(Long lucroLiquidoAnual, long patrimonioLiquido) throws ParseException {
-		if(lucroLiquidoAnual == null || lucroLiquidoAnual == 0L)
+	public Double getRoe(Long lucroLiquidoAnual, Long patrimonioLiquido) throws ParseException {
+		if(lucroLiquidoAnual == null || lucroLiquidoAnual == 0L || patrimonioLiquido == null || patrimonioLiquido == 0L)
 			return null;
 	
 		double lucroLiquidoAnualDouble = lucroLiquidoAnual;
@@ -54,7 +58,10 @@ public class CalculadoraFundamentalista {
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(roe)).doubleValue(); 
 	}
 	
-	public double getDividaBrutaSobrePatrimonioLiquido(long dividaBruta, long patrimonioLiquido) throws ParseException{
+	public Double getDividaBrutaSobrePatrimonioLiquido(long dividaBruta, long patrimonioLiquido) throws ParseException{
+		if(patrimonioLiquido == 0L)
+			return null;
+		
 		double dividaBrutaDouble	   = dividaBruta;
 		double patrimonioLiquidoDouble = patrimonioLiquido;
 		
@@ -97,7 +104,7 @@ public class CalculadoraFundamentalista {
 		if(precoSobreLucroCorrente == null)
 			return null;
 		
-		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
+		Set<String> setTrimestres = getTrimestresAnteriores(balanco.getTrimestre(), balanco.getAno(), 7, new HashSet<String>());
 		List<Balanco> balancosAnteriores = balancos.stream()
 				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreLucro() != null)
 				.collect(Collectors.toList());
@@ -113,7 +120,10 @@ public class CalculadoraFundamentalista {
 	}
 	
 	public Double getMediaPrecoSobreValorPatrimonial(Balanco balanco, Double precoSobreValorPatrimonialCorrente, List<Balanco> balancos, long acaoId) throws ParseException {
-		Set<String> setTrimestres	     = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 7);
+		if(precoSobreValorPatrimonialCorrente == null)
+			return null;
+		
+		Set<String> setTrimestres = getTrimestresAnteriores(balanco.getTrimestre(), balanco.getAno(), 7, new HashSet<String>());
 		List<Balanco> balancosAnteriores = balancos.stream()
 				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreValorPatrimonial() != null)
 				.collect(Collectors.toList());
@@ -199,7 +209,7 @@ public class CalculadoraFundamentalista {
 	}
 	
 	public Boolean hasLucroCrescenteTresAnos(Balanco balanco, List<Balanco> balancos) {
-		Set<String> setAnosAnteriores        = getSetAnosAnteriores(balanco.getData(), new HashSet<String>());
+		Set<String> setAnosAnteriores = getAnosAnteriores(balanco.getTrimestre(), balanco.getAno(), new HashSet<String>());
 		List<Balanco> balancosAnosAnteriores = balancos.stream()
 					.filter(b -> verificaDatasBalancosAnteriores(b, setAnosAnteriores))
 					.collect(Collectors.toList());
@@ -300,7 +310,7 @@ public class CalculadoraFundamentalista {
 	}
 	
 	public Long getLucroLiquidoAnual(Balanco balanco, List<Balanco> balancosAnteriores) {
-		Set<String> setTrimestres = getSetTrimestresAnteriores(balanco.getData(), new HashSet<String>(), 3);
+		Set<String> setTrimestres = getTrimestresAnteriores(balanco.getTrimestre(), balanco.getAno(), 3, new HashSet<String>());
 		List<Long> lucrosLiquidoTri = balancosAnteriores.stream()
 					.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres))
 					.map(b -> b.getLucroLiquidoTrimestral())
@@ -320,63 +330,51 @@ public class CalculadoraFundamentalista {
 	
 	private boolean verificaDatasBalancosAnteriores(Balanco balanco, Set<String> listTrimestres) {
 		String resultado = listTrimestres.stream()
-					.filter(t -> t.split("/")[0].equals(String.valueOf(balanco.getData().getYear())) && t.split("/")[1].equals(String.valueOf(balanco.getData().getMonthValue())))
+					.filter(t -> t.split(TRIMESTRE_SEPARATOR)[0].equals(String.valueOf(balanco.getTrimestre())) && t.split(TRIMESTRE_SEPARATOR)[1].equals(String.valueOf(balanco.getAno())))
 					.findAny()
 					.orElse(null);
 		
 		return resultado != null ? true : false;
 	}
 	
-	private Set<String> getSetAnosAnteriores(LocalDate data, Set<String> setAno){
-		int mes = data.getMonthValue();
-		int ano = data.getYear() - 1;
+	private Set<String> getAnosAnteriores(int trimestre, int ano, Set<String> setAno){
+		ano-=1;
 		
-		setAno.add(ano + "/" + mes);
+		setAno.add(trimestre + TRIMESTRE_SEPARATOR + ano);
 		
-		if(setAno.size() < NUMERO_ANOS_LUCROANUAL) {
-			LocalDate anoAnterior = LocalDate.of(ano, mes, 01);
-			setAno.addAll(getSetAnosAnteriores(anoAnterior, setAno));
-		}
+		if(setAno.size() < NUMERO_ANOS_LUCROANUAL)
+			setAno.addAll(getAnosAnteriores(trimestre, ano, setAno));
 		
 		return setAno;
 	}
 	
-	private Set<String> getSetTrimestresAnteriores(LocalDate data, Set<String> setTrimestres, int numeroTrimestres){
-		int mes = data.getMonthValue() - 3;
-		int ano = data.getYear();
-		 
-		if(mes <= 0) {
-			mes = 11;
-			ano = ano - 1;
+	private Set<String> getTrimestresAnteriores(int trimestre, int ano, int numeroTrimestres, Set<String> setTrimestres){
+		trimestre-=1;
+		
+		if(trimestre <= 0) {
+			trimestre = 4;
+			ano-=1;
 		}
 		
-		setTrimestres.add(ano + "/" + mes);
+		setTrimestres.add(trimestre + "T" + ano);
 		
-		if(setTrimestres.size() < numeroTrimestres) {
-			LocalDate trimestreAnterior = LocalDate.of(ano, mes, 01);
-			setTrimestres.addAll(getSetTrimestresAnteriores(trimestreAnterior, setTrimestres, numeroTrimestres));
-		}
+		if(setTrimestres.size() < numeroTrimestres) 
+			setTrimestres.addAll(getTrimestresAnteriores(trimestre, ano, numeroTrimestres, setTrimestres));
 		
 		return setTrimestres;
 	}
 	
 	private Balanco getBalancoTrimestralAnoAnterior(Balanco balanco, List<Balanco> balancosAnteriores) {
-		LocalDate dataBalanco  = balanco.getData();
-
-		Month mes = dataBalanco.getMonth();
-		int ano   = dataBalanco.getYear();
-		
 		Balanco balancoTrimestralAnoAnterior = balancosAnteriores.stream()
-					.filter(b -> verificaDataBalancoAnterior(b, mes, ano))
+					.filter(b -> verificaDataBalancoAnterior(b, balanco.getTrimestre(), balanco.getAno()))
 					.findAny()
 					.orElse(null);
 		
 		return balancoTrimestralAnoAnterior;
 	}
 	
-	private boolean verificaDataBalancoAnterior(Balanco balanco, Month mes, int ano) {
-		LocalDate dataBalanco = balanco.getData();
-		int anoAnterior		  = ano - 1;
-		return mes.compareTo(dataBalanco.getMonth()) == 0 && dataBalanco.getYear() == anoAnterior ? true : false;
+	private boolean verificaDataBalancoAnterior(Balanco balanco, int trimestre, int ano) {
+		int anoAnterior	= ano - 1;
+		return trimestre == balanco.getTrimestre() && balanco.getAno() == anoAnterior ? true : false;
 	}
 }
