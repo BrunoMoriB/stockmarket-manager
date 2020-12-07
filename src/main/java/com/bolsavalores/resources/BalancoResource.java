@@ -352,7 +352,29 @@ public class BalancoResource {
 		Set<SetorResponse> setoresResponse = new HashSet<SetorResponse>();
 		Set<AcaoResponse> acoesResponse = new HashSet<AcaoResponse>();
 		empresa.getSetores().forEach(s -> setoresResponse.add(new SetorResponse(s.getId(), s.getNome())));
-		empresa.getAcoes().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), 
+		
+		for(Acao a : empresa.getAcoes()) {
+			try { 
+				acoesResponse.add(new AcaoResponse(a.getId(), 
+						   a.getCodigo(), 
+						   getCotacaoResponse(a.getId(), 
+								   			  a.getCotacoes(), 
+								   			  trimestre, 
+								   			  ano,
+								   			  isDailyUpdated), 
+						   getProventosResponse(a.getId(), a.getProventos()), 
+						   new EmpresaResponse(empresa.getId(), "", "", "", 0L, null, null),
+						   a.isUnit() ? new UnitsResponse(a.getUnits().getId(), 
+								   						  a.getUnits().getQtdOn(), 
+								   						  a.getUnits().getQtdPn(), 
+								   						  a.getUnits().getMultiplicador()) : null,
+						   a.isUnit()));
+			}catch(Exception e) {
+				LOG.error("ERRO > acao " + a.getId(), e);
+			}
+		}
+		
+		/*empresa.getAcoes().forEach(a -> acoesResponse.add(new AcaoResponse(a.getId(), 
 																		   a.getCodigo(), 
 																		   getCotacaoResponse(a.getId(), 
 																				   			  a.getCotacoes(), 
@@ -361,8 +383,11 @@ public class BalancoResource {
 																				   			  isDailyUpdated), 
 																		   getProventosResponse(a.getId(), a.getProventos()), 
 																		   new EmpresaResponse(empresa.getId(), "", "", "", 0L, null, null),
-																		   a.isUnit() ? new UnitsResponse(a.getUnits().getId(), a.getUnits().getQtdOn(), a.getUnits().getQtdPn(), a.getUnits().getMultiplicador()) : null,
-																		   a.isUnit())));
+																		   a.isUnit() ? new UnitsResponse(a.getUnits().getId(), 
+																				   						  a.getUnits().getQtdOn(), 
+																				   						  a.getUnits().getQtdPn(), 
+																				   						  a.getUnits().getMultiplicador()) : null,
+																		   a.isUnit())));*/
 		
 		return new EmpresaResponse(empresa.getId(), empresa.getRazaoSocial(), empresa.getNomePregao(), empresa.getCnpj(), empresa.getQuantidadePapeis(), acoesResponse, setoresResponse);
 	}

@@ -18,7 +18,7 @@ import com.bolsavalores.models.MultiplosFundamentalistas;
 @Component
 public class CalculadoraFundamentalista {
 	
-	private static final int NUMERO_ANOS_LUCROANUAL = 2;
+	private static final int NUMERO_ANOS_LUCROANUAL = 3;
 	private static final String TRIMESTRE_SEPARATOR = "T";
 	
 	public Double getPrecoSobreLucro(double cotacao, long qtdPapeis, Long lucroLiquidoAnual, long multiplicador) throws ParseException{
@@ -249,6 +249,37 @@ public class CalculadoraFundamentalista {
 		
 		return isLucroCrescenteUm && isLucroCrescenteDois;
 	}
+	
+	public Boolean hasLucroCrescenteAnos(Balanco balanco, List<Balanco> balancos) {
+		Set<String> setAnosAnteriores = getAnosAnteriores(balanco.getTrimestre(), balanco.getAno(), new HashSet<String>());
+		List<Balanco> balancosAnosAnteriores = balancos.stream()
+					.filter(b -> verificaDatasBalancosAnteriores(b, setAnosAnteriores))
+					.collect(Collectors.toList());
+		
+		Collections.sort(balancosAnosAnteriores);
+		
+		boolean isLucroCrescenteUm   = false;
+		boolean isLucroCrescenteDois = false;
+		
+		if(balanco.getLucroLiquidoAnual()  == null || balancosAnosAnteriores.size() != NUMERO_ANOS_LUCROANUAL)
+			return null;
+		
+		if(balancosAnosAnteriores.get(2).getLucroLiquidoAnual()  == null)
+			return null;
+		else
+			isLucroCrescenteUm = balanco.getLucroLiquidoAnual() > balancosAnosAnteriores.get(2).getLucroLiquidoAnual();
+		
+		if(balancosAnosAnteriores.get(0).getLucroLiquidoAnual()  == null)
+			return null;
+		else
+			isLucroCrescenteDois = balanco.getLucroLiquidoAnual() > balancosAnosAnteriores.get(0).getLucroLiquidoAnual();
+		
+		return isLucroCrescenteUm && isLucroCrescenteDois;
+	}
+	
+	
+	
+	
 	
 	/*public Boolean hasDividaLiquidaCrescenteTresAnos(Balanco balanco, List<Balanco> balancos, Long dividaLiquidaCorrente) {
 		Set<String> setAnosAnteriores        = getSetAnosAnteriores(balanco.getData(), new HashSet<String>());

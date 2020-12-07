@@ -112,7 +112,7 @@ public class BalancoService{
 		DesempenhoFinanceiro desempenho = balanco.getDesempenhoFinanceiro() != null ? balanco.getDesempenhoFinanceiro() : new DesempenhoFinanceiro();
 		desempenho.setEvolucaoLucroLiquidoTrimestral(calculadoraFundamentalista.getEvolucaoLucroLiquidoTrimestral(balanco, balancosAnteriores));
 		desempenho.setEvolucaoLucroLiquidoAnual(calculadoraFundamentalista.getEvolucaoLucroLiquidoAnual(balanco, balancosAnteriores));
-		desempenho.setHasCrescimentoLucroLiquidoTresAnos(calculadoraFundamentalista.hasLucroCrescenteTresAnos(balanco, balancosAnteriores));
+		desempenho.setHasCrescimentoLucroLiquidoTresAnos(calculadoraFundamentalista.hasLucroCrescenteAnos(balanco, balancosAnteriores));
 		desempenho.setBalanco(balanco);
 		balanco.setDesempenhoFinanceiro(desempenho);
 		
@@ -125,7 +125,12 @@ public class BalancoService{
 //		balanco.setData(getData(balanco.getTrimestre()));
 		balanco.setDailyUpdated(false);
 		
-		balanco.getEmpresa().getAcoes().forEach(a -> acaoRepository.save(a));
+		balanco.getEmpresa().getAcoes().forEach(a -> {
+			if(a.getUnits() != null)
+				a.getUnits().setAcao(a);
+			
+			acaoRepository.save(a);
+		});
 		return balancoRepository.save(balanco);
 	}
 	
