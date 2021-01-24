@@ -21,3 +21,4 @@ mvnw.cmd
 .vscode/
 extras/scripts/geckodriver.log
 .factorypath
+extras/dados/COTAHIST_A*.ZIP

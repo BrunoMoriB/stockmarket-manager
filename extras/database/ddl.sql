@@ -62,6 +62,9 @@ CREATE TABLE Balanco (
 	patrimonioliquido BIGINT,
 	dividabruta BIGINT,
 	caixadisponivel BIGINT,
+	ebit BIGINT,
+	liquidez_corrente BIGINT,
+	receita_liquida BIGINT,
 	ano INTEGER,
 	isdailyupdated BOOLEAN
 );

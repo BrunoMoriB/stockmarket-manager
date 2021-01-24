@@ -118,7 +118,7 @@ python3 gen-bd-inserts-partir-dados-b3.py
 cd ../..
 ```
 
-### Gerar o arquivo JSON de dados dos balanços financeiros e cotações das empresas
+### Gerar o arquivo JSON de dados dos balanços financeiros
 
 #### Detalhes do script
 
@@ -126,6 +126,8 @@ Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados
 caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
 
 * --processar-empresa "razao social" : parâmetro adicional é usado para processar somente uma ou mais empresas onde a razão social contenha o texto informado
+* --processar-empresas-com-balancos-invalidos : parâmetro adicional é usado para processar empresas no qual algum balanço esteja faltando valores
+* --continuar-falha-obtencao-balanco : parâmetro adicional é usado para a obter os balanços caso falhe em algum dos anos
 
 #### Execução do script
 
@@ -152,6 +154,15 @@ cd extras/scripts
 python3 gen-bd-inserts-partir-dados-balancos.py
 cd ../..
 ```
+
+### Gerar o arquivo JSON de dados das cotações
+
+Baixar os arquivos do ano inteiro que se deseja obter as cotações no link abaixo dentro da pasta extras/dados (estes arquivos não deverão ser comitados)
+
+* http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/
+
+
+
 
 ### Gerar o arquivo JSON de dados de proventos das ações
 

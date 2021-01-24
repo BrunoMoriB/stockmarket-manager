@@ -1,26 +1,5 @@
 [
     {
-        "razao_social": "ADVANCED DIGITAL HEALTH MEDICINA PREVENTIVA S.A.",
-        "nome_empresa": "ADVANCED-DH",
-        "cnpj": "10345009000198",
-        "atividades": [
-            "Presta\u00e7\u00e3o de Serv. de Medicina Preventiva",
-            "Com\u00e9rcio. Distribui\u00e7\u00e3o. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Kits de Teste Laboratorial",
-            "Intermedia\u00e7\u00e3o de Neg.",
-            "Licenciamento de Marcas E Franquias",
-            "Etc."
-        ],
-        "classificacao_setorial": [
-            "Sa\u00fade",
-            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "ADHM3"
-            }
-        ]
-    },
-    {
         "razao_social": "AES TIETE ENERGIA SA",
         "nome_empresa": "AES TIETE E",
         "cnpj": "04128563000110",
@@ -57,22 +36,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "AFLT3"
-            }
-        ]
-    },
-    {
-        "razao_social": "ALEF S.A.",
-        "nome_empresa": "ALEF S/A",
-        "cnpj": "02217319000107",
-        "atividades": [
-            "Holding - Participa\u00e7\u00e3o em Outras Sociedades"
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "ALEF3B"
             }
         ]
     },
@@ -909,22 +872,6 @@
         ]
     },
     {
-        "razao_social": "BETAPART PARTICIPACOES S.A.",
-        "nome_empresa": "BETAPART",
-        "cnpj": "02762124000130",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "BETP3B"
-            }
-        ]
-    },
-    {
         "razao_social": "BICICLETAS MONARK S.A.",
         "nome_empresa": "BIC MONARK",
         "cnpj": "56992423000190",
@@ -1211,38 +1158,6 @@
         ]
     },
     {
-        "razao_social": "CABINDA PARTICIPACOES S.A.",
-        "nome_empresa": "CABINDA PART",
-        "cnpj": "04030182000102",
-        "atividades": [
-            "A Companhia Tem Por Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades. Comerciais E Civis. Como S\u00f3cia. Acionista Ou Quotista. No Pa\u00eds Ou No Exterior."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "CABI3B"
-            }
-        ]
-    },
-    {
-        "razao_social": "CACONDE PARTICIPACOES S.A.",
-        "nome_empresa": "CACONDE PART",
-        "cnpj": "04031213000131",
-        "atividades": [
-            "A Companhia Tem Por Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades Comerciais E Civis. Como S\u00f3cia. Acionista Ou Quotista. No Pa\u00eds Ou No Exterior."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "CACO3B"
-            }
-        ]
-    },
-    {
         "razao_social": "CAMBUCI S.A.",
         "nome_empresa": "CAMBUCI",
         "cnpj": "61088894000108",
@@ -1273,22 +1188,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "CAML3"
-            }
-        ]
-    },
-    {
-        "razao_social": "CAPITALPART PARTICIPACOES S.A.",
-        "nome_empresa": "CAPITALPART",
-        "cnpj": "02591787000139",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "CPTP3B"
             }
         ]
     },
@@ -2094,27 +1993,6 @@
         ]
     },
     {
-        "razao_social": "CONC RIO-TERESOPOLIS S.A.",
-        "nome_empresa": "CONC RIO TER",
-        "cnpj": "00938574000105",
-        "atividades": [
-            "Administra\u00e7\u00e3o. Opera\u00e7\u00e3o E Conserva\u00e7\u00e3o de Rodovia"
-        ],
-        "classificacao_setorial": [
-            "Bens Industriais",
-            "Transporte",
-            "Explora\u00e7\u00e3o de Rodovias"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "CRTE3B"
-            },
-            {
-                "codigo_negociacao": "CRTE5B"
-            }
-        ]
-    },
-    {
         "razao_social": "CONSERVAS ODERICH S.A.",
         "nome_empresa": "ODERICH",
         "cnpj": "97191902000194",
@@ -2848,29 +2726,6 @@
         ]
     },
     {
-        "razao_social": "EQUATORIAL MARANH\u00c3O DISTRIBUIDORA DE ENERGIA S.A.",
-        "nome_empresa": "EQTLMARANHAO",
-        "cnpj": "06272793000184",
-        "atividades": [
-            "Empresa Distribuidora de Energia El\u00e9trica Para Todo O Estado Do Maranh\u00e3o."
-        ],
-        "classificacao_setorial": [
-            "Utilidade P\u00fablica",
-            "Energia El\u00e9trica"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "EQMA3B"
-            },
-            {
-                "codigo_negociacao": "EQMA5B"
-            },
-            {
-                "codigo_negociacao": "EQMA6B"
-            }
-        ]
-    },
-    {
         "razao_social": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
         "nome_empresa": "EQTL PARA",
         "cnpj": "04895728000180",
@@ -3146,22 +3001,6 @@
             },
             {
                 "codigo_negociacao": "GFSA12"
-            }
-        ]
-    },
-    {
-        "razao_social": "GAMA PARTICIPACOES S.A.",
-        "nome_empresa": "GAMA PART",
-        "cnpj": "02796775000140",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "OPGM3B"
             }
         ]
     },
@@ -3584,22 +3423,6 @@
         ]
     },
     {
-        "razao_social": "INNCORP S.A.",
-        "nome_empresa": "SELECTPART",
-        "cnpj": "02604860000160",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "SLCT3B"
-            }
-        ]
-    },
-    {
         "razao_social": "INSTITUTO HERMES PARDINI S.A.",
         "nome_empresa": "IHPARDINI",
         "cnpj": "19378769000176",
@@ -3668,27 +3491,6 @@
             },
             {
                 "codigo_negociacao": "FIGE4"
-            }
-        ]
-    },
-    {
-        "razao_social": "INVESTIMENTOS E PARTICIP. EM INFRA S.A. - INVEPAR",
-        "nome_empresa": "INVEPAR",
-        "cnpj": "03758318000124",
-        "atividades": [
-            "Foi Constitu\u00edda Sob A Forma de Sociedade An\u00f3nima E Tem Como Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Bens Industriais",
-            "Transporte",
-            "Servi\u00e7os de Apoio e Armazenagem"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "IVPR3B"
-            },
-            {
-                "codigo_negociacao": "IVPR4B"
             }
         ]
     },
@@ -4007,40 +3809,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "LINX3"
-            }
-        ]
-    },
-    {
-        "razao_social": "LITEL PARTICIPACOES S.A.",
-        "nome_empresa": "LITEL",
-        "cnpj": "00743065000127",
-        "atividades": [],
-        "classificacao_setorial": [
-            "Materiais B\u00e1sicos",
-            "Minera\u00e7\u00e3o",
-            "Minerais Met\u00e1licos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "LTEL3B"
-            }
-        ]
-    },
-    {
-        "razao_social": "LITELA PARTICIPA\u00c7\u00d5ES S.A.",
-        "nome_empresa": "LITELA",
-        "cnpj": "05495546000184",
-        "atividades": [
-            "A Cia Tem Como Atividade A Participa\u00e7\u00e3o. Sob Qualquer Forma. No Capital de Outras Sociedades Civis Ou Comerciais. Atualmente. A Cia Tem Participa\u00e7\u00e3o Somente Na Vale S.A."
-        ],
-        "classificacao_setorial": [
-            "Materiais B\u00e1sicos",
-            "Minera\u00e7\u00e3o",
-            "Minerais Met\u00e1licos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "LTLA3B"
             }
         ]
     },
@@ -4652,30 +4420,6 @@
         ]
     },
     {
-        "razao_social": "MRS LOGISTICA S.A.",
-        "nome_empresa": "MRS LOGIST",
-        "cnpj": "01417222000177",
-        "atividades": [
-            "Servi\u00e7os de Transporte Ferrovi\u00e1rio de Cargas"
-        ],
-        "classificacao_setorial": [
-            "Bens Industriais",
-            "Transporte",
-            "Transporte Ferrovi\u00e1rio"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "MRSA3B"
-            },
-            {
-                "codigo_negociacao": "MRSA5B"
-            },
-            {
-                "codigo_negociacao": "MRSA6B"
-            }
-        ]
-    },
-    {
         "razao_social": "MRV ENGENHARIA E PARTICIPACOES S.A.",
         "nome_empresa": "MRV",
         "cnpj": "08343492000120",
@@ -4885,22 +4629,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "OMGE3"
-            }
-        ]
-    },
-    {
-        "razao_social": "OPPORTUNITY ENERGIA E PARTICIPACOES S.A.",
-        "nome_empresa": "OPPORT ENERG",
-        "cnpj": "02318346000168",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "OPHE3B"
             }
         ]
     },
@@ -5246,23 +4974,6 @@
         ]
     },
     {
-        "razao_social": "PRODUTORES ENERGET.DE MANSO S.A.- PROMAN",
-        "nome_empresa": "PROMAN",
-        "cnpj": "02291077000193",
-        "atividades": [
-            "Gera\u00e7\u00e3o de Energia El\u00e9trica"
-        ],
-        "classificacao_setorial": [
-            "Utilidade P\u00fablica",
-            "Energia El\u00e9trica"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "PRMN3B"
-            }
-        ]
-    },
-    {
         "razao_social": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
         "nome_empresa": "PROFARMA",
         "cnpj": "45453214000151",
@@ -5277,22 +4988,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "PFRM3"
-            }
-        ]
-    },
-    {
-        "razao_social": "PROMPT PARTICIPACOES S.A.",
-        "nome_empresa": "PROMPT PART",
-        "cnpj": "02992449000109",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "PRPT3B"
             }
         ]
     },
@@ -5526,32 +5221,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "RSID3"
-            }
-        ]
-    },
-    {
-        "razao_social": "RUMO MALHA NORTE S.A.",
-        "nome_empresa": "ALL NORTE",
-        "cnpj": "24962466000136",
-        "atividades": [
-            "(i) Constru\u00e7\u00e3o E Explora\u00e7\u00e3o de Sistemas de Transporte Ferrovi\u00e1rio de Carga. Rodovias E Hidrovias",
-            "(ii) Presta\u00e7\u00e3o de Servi\u00e7os de Transporte de Carga em Ferrovias. Rodovias E Hidrovias",
-            "Etc."
-        ],
-        "classificacao_setorial": [
-            "Bens Industriais",
-            "Transporte",
-            "Transporte Ferrovi\u00e1rio"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "FRRN3B"
-            },
-            {
-                "codigo_negociacao": "FRRN5B"
-            },
-            {
-                "codigo_negociacao": "FRRN6B"
             }
         ]
     },
@@ -5936,39 +5605,6 @@
         ]
     },
     {
-        "razao_social": "SUDESTE S.A.",
-        "nome_empresa": "SUDESTE S/A",
-        "cnpj": "02062747000108",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades."
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "OPSE3B"
-            }
-        ]
-    },
-    {
-        "razao_social": "SUL 116 PARTICIPACOES S.A.",
-        "nome_empresa": "SUL 116 PART",
-        "cnpj": "01957772000189",
-        "atividades": [
-            "Participa\u00e7\u00e3o em Outras Sociedades. Comerciais Ou Civis. Nacionais Ou Estrangeiras. Como S\u00f3cia. Acionista Ou Quotista",
-            "E A Participa\u00e7\u00e3o. Como Quotista. em Fundos de Investimento Constuidos Regularmente"
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "OPTS3B"
-            }
-        ]
-    },
-    {
         "razao_social": "SUL AMERICA S.A.",
         "nome_empresa": "SUL AMERICA",
         "cnpj": "29978814000187",
@@ -6238,23 +5874,6 @@
         ]
     },
     {
-        "razao_social": "TERMINAL GARAGEM MENEZES CORTES S.A.",
-        "nome_empresa": "MENEZES CORT",
-        "cnpj": "02664042000152",
-        "atividades": [
-            "Estacionamento E Loca\u00e7\u00e3o de Lojas E Espa\u00e7os"
-        ],
-        "classificacao_setorial": [
-            "Financeiro",
-            "Explora\u00e7\u00e3o de Im\u00f3veis"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "MNZC3B"
-            }
-        ]
-    },
-    {
         "razao_social": "TERRA SANTA AGRO S.A.",
         "nome_empresa": "TERRA SANTA",
         "cnpj": "05799312000120",
@@ -6501,21 +6120,6 @@
             },
             {
                 "codigo_negociacao": "UNIP6"
-            }
-        ]
-    },
-    {
-        "razao_social": "UPTICK PARTICIPACOES S.A.",
-        "nome_empresa": "UPTICK",
-        "cnpj": "02162616000194",
-        "atividades": [],
-        "classificacao_setorial": [
-            "Utilidade P\u00fablica",
-            "Energia El\u00e9trica"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "UPKP3B"
             }
         ]
     },
@@ -6786,22 +6390,6 @@
         "acoes": [
             {
                 "codigo_negociacao": "YDUQ3"
-            }
-        ]
-    },
-    {
-        "razao_social": "524 PARTICIPACOES S.A.",
-        "nome_empresa": "524 PARTICIP",
-        "cnpj": "01851771000155",
-        "atividades": [
-            "Holding - Participa\u00e7\u00e3o em Outras Sociedades"
-        ],
-        "classificacao_setorial": [
-            "Outros"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "QVQP3B"
             }
         ]
     }

@@ -44,7 +44,7 @@ def remover_acoes_duplicadas(acoes):
     return nova_lista
 
 def filtrar_codigos_negociacao_invalidos(acoes):
-    return [a for a in acoes if re.match("^\w{5,6}$", a['codigo_negociacao'])]
+    return [a for a in acoes if re.match("^\w{5,6}$", a['codigo_negociacao']) and re.match(".+[0-9]$", a['codigo_negociacao'])]
 
 def filtrar_strings_vazias(lista):
     return [e for e in lista if len(e) > 0]

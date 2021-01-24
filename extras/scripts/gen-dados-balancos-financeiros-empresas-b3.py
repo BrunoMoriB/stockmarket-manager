@@ -1,19 +1,11 @@
-import re
 import sys
 import json
 import time
 import os
 from datetime import datetime
-from datetime import timedelta 
-from dateutil.relativedelta import relativedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.expected_conditions import presence_of_element_located
-from selenium.common.exceptions import NoSuchElementException 
-from selenium.webdriver.common.action_chains import ActionChains
-import pyautogui
 import logging
 
 LOG_FILENAME = '/tmp/gen-dados-balancos-financeiros-empresas-b3.log'
@@ -21,305 +13,319 @@ LOG_FILENAME = '/tmp/gen-dados-balancos-financeiros-empresas-b3.log'
 ARQUIVO_DADOS_B3 = '../dados/dados-empresas-b3.json'
 ARQUIVO_DADOS_BALANCOS = '../dados/dados-balancos-financeiros-empresas-b3.json'
 
-DE_PARA_MES_BALANCO = {
-    '1T': 2,
-    '2T': 5,
-    '3T': 8,
-    '4T': 11
+COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS = "Demonstrações Financeiras Padronizadas"
+COMBO_BALANCO_PATRIMONIAL_ATIVO = 'Balanço Patrimonial Ativo'
+COMBO_BALANCO_PATRIMONIAL_PASSIVO = 'Balanço Patrimonial Passivo'
+
+ANOS_BALANCOS_OBTENCAO = range(2011, 2021)
+RELACAO_MES_TRIMESTRE = {
+    3: 1,
+    6: 2,
+    9: 3,
+    12: 4
 }
 
-DE_MES_PORTUGUES_PARA_INGLES = {
-    'Jan': 'Jan',
-    'Fev': 'Feb',
-    'Mar': 'Mar',
-    'Abr': 'Apr',
-    'Mai': 'May',
-    'Jun': 'Jun',
-    'Jul': 'Jul',
-    'Ago': 'Aug',
-    'Set': 'Sep',
-    'Out': 'Oct',
-    'Nov': 'Nov',
-    'Dez': 'Dec',
-}
+continuar_falha_obtencao_balanco = False
+ano_sendo_processado = None
 
-class ObjParaJSON(json.JSONEncoder):
-    def default(self, o):
-        if isinstance(o, datetime):
-            return '%.4d-%.2d-%.2d' % (o.year, o.month, o.day)
-        return json.JSONEncoder.default(self, o)
-        
-class JSONParaObj(json.JSONDecoder):
-	def object_hook(self, dct):
-		logging.info(dct)
-		for k, v in dct.items():
-			if k == 'data':
-				dct[k] = datetime.strptime(v, '%Y-%m-%d')
-		return dct
-
-def obter_semana_do_mes(data):
-    semana = 1
-    data_incremental = datetime(data.year, data.month, 1)
-    while True:        
-        data_incremental += timedelta(days=(6-data_incremental.weekday()))
-        if data_incremental >= data:
-            return semana
-        data_incremental += timedelta(days=1)
-        semana += 1        
-
-def obter_data_pelo_ano_trimestre(ano, trimestre):
-    d = datetime(ano, DE_PARA_MES_BALANCO[trimestre], 1)
-    d = d.replace(day=d.day+7-d.weekday())
-    return d
-
-def eh_pagina_acao_nao_encontrada(driver):
-    try:
-        h = driver.find_element_by_tag_name('h2')
-        return h.text == 'Erro interno no servidor.'
-    except NoSuchElementException:
-        return False
-
-def configurar_balanco_do_ano_e_trimestre(empresa, ano, campo, valores_trimestres):
-    for k, v in valores_trimestres.items():
-        balanco_encontrado = False
-        for b in empresa.get('balancos'):            
-            if b['data'].year == ano and b['trimestre'] == k:
-                b[campo] = v
-                balanco_encontrado = True
-                break
-        if balanco_encontrado == False:    
-            b = {
-                'data': obter_data_pelo_ano_trimestre(ano, k),
-                'trimestre': k,
-                campo: v
-            }
-            logging.info('Balanço da empresa %s, data %s e trimestre %s encontrada' % (empresa['razao_social'], b['data'], b['trimestre']))
-            empresa.get('balancos').append(b)    
-
-def filtrar_balancos_incompletos(balancos):
-    nova_lista_balancos = []
-    campos_obrigatorios = ['patrimonioliquido', 'lucroliq_trimestral', 'dividabruta', 'caixadisponivel']
-    for b in balancos:
-        contem_campo_vazio = False
-        for c in campos_obrigatorios:
-            if b.get(c, None) is None:
-                contem_campo_vazio = True
-                break
-        if not contem_campo_vazio:
-            nova_lista_balancos.append(b)
-    return nova_lista_balancos
-
-def obter_balancos_empresa(driver, empresa):
-    balancos_preenchidos = False
-    pyautogui.moveTo(0, 900)
-    if empresa.get('balancos') is None:
-        empresa['balancos'] = []
-    for acao in empresa['acoes']:
-        cod_neg = acao['codigo_negociacao']
-        driver.get('https://plataforma.penserico.com/dashboard/cp.pr?e=%s' % cod_neg)
-        driver.maximize_window()
-        time.sleep(20)
-        if eh_pagina_acao_nao_encontrada(driver):
-            logging.info('Código %s não encontrado' % cod_neg)
-            continue
-        logging.info('Obtendo os balanços do código %s' % cod_neg)
-        driver.find_element_by_xpath('//a[@href="#tabinformativos"]').click()
-        time.sleep(3)
-        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[1].find_elements_by_tag_name('th')
-    
-        try:            
-            for i in range(1, len(linhas_anos_balancos)-1):
-                ano = int(linhas_anos_balancos[i].text.strip())
-                configurar_balanco_do_ano_e_trimestre(empresa, ano, 'patrimonioliquido', obter_valores_da_celula_balancos_pagina_indicadores(driver, 1, i))
-                configurar_balanco_do_ano_e_trimestre(empresa, ano, 'lucroliq_trimestral', obter_valores_da_celula_balancos_pagina_indicadores(driver, 5, i))
-                configurar_balanco_do_ano_e_trimestre(empresa, ano, 'dividabruta', obter_valores_da_celula_balancos_pagina_indicadores(driver, 6, i))
-        except:
-            logging.exception('Exception lançada')
-            logging.info('Erro na obtenção do patrimonio, lucro ou divida do balanço da ação %s' % cod_neg)
-                    
-        driver.find_element_by_xpath('//a[@href="#tabfluxocaixa"]').click()
-        time.sleep(3)
-        linhas_anos_balancos = driver.find_elements_by_tag_name('thead')[2].find_elements_by_tag_name('th')
-        try:
-            for i in range(1, len(linhas_anos_balancos)-1):
-                ano = int(linhas_anos_balancos[i].text.strip())
-                configurar_balanco_do_ano_e_trimestre(empresa, ano, 'caixadisponivel', obter_valores_da_celula_balancos_pagina_caixas(driver, 7, i))
-        except:
-            logging.exception('Exception lançada')
-            logging.info('Erro na obtenção do caixa disponível da ação %s' % cod_neg)
-        empresa['balancos'] = filtrar_balancos_incompletos(empresa['balancos'])
-        if len(empresa['balancos']) == 0:
-            logging.warning('Não foi possível capturar os balanços da ação %s' % cod_neg)
-            continue
-        driver.get('https://www.fundamentus.com.br/detalhes.php?papel=%s' % cod_neg)
-        driver.maximize_window()
-        qtdepapeis = driver.find_element_by_xpath('/html/body/div[1]/div[2]/table[2]/tbody/tr[2]/td[4]/span').text.replace('.', '')
-        empresa['qtdepapeis'] = int(qtdepapeis)
-        balancos_preenchidos = True
-        break         
-    if balancos_preenchidos:
-        empresa['balancos'] = [balanco for balanco in empresa['balancos'] if balanco['data'] <= datetime.now()]
-        obter_cotacao(driver, empresa)
-    return balancos_preenchidos
-
-def obter_valores_da_celula_balancos(driver, indice_linha, indice_coluna, template_celula, template_celula_valores):
-    action = ActionChains(driver)
-    celula_template = driver.find_element_by_xpath(template_celula % (indice_linha, indice_coluna))
-    action.move_to_element(celula_template).perform()
-    time.sleep(2)    
-    trimestres = {}
-    for j in range(1, 3):
-        for k in range(1, 3):
-            tri = driver.find_element_by_xpath(template_celula_valores % (indice_linha, indice_coluna, j, k)).text.strip()
-            triArr = tri.split(":")
-            trimestres[triArr[0]] = float(re.sub('[^0-9\-]', '', triArr[1])) * 10.0**6
-    return trimestres        
-
-def obter_valores_da_celula_balancos_pagina_caixas(driver, indice_linha, indice_coluna):
-    template_celula = '/html/body/div[1]/div[3]/div/div/div/div/div/div[4]/div/table/tbody/tr[%d]/td[%d]'
-    template_celula_valores = '/html/body/div[1]/div[3]/div/div/div/div/div/div[4]/div/table/tbody/tr[%d]/td[%d]/span/div/span[2]/div/div[%d]/div[%d]'
-    return obter_valores_da_celula_balancos(driver, indice_linha, indice_coluna, template_celula, template_celula_valores)
-
-
-def obter_valores_da_celula_balancos_pagina_indicadores(driver, indice_linha, indice_coluna):
-    template_celula = '/html/body/div[1]/div[3]/div/div/div/div/div/div[3]/div/table/tbody/tr[%d]/td[%d]'
-    template_celula_valores = '/html/body/div[1]/div[3]/div/div/div/div/div/div[3]/div/table/tbody/tr[%d]/td[%d]/span/div/span[2]/div/div[%d]/div[%d]'
-    return obter_valores_da_celula_balancos(driver, indice_linha, indice_coluna, template_celula, template_celula_valores)
-
-def set_input_text(input, text, enter=True, seconds=3):
+def set_input_text(input, text, enter=True, wait_after=3):
     input.clear()
     input.send_keys(text)
     if enter:
         input.send_keys(Keys.ENTER)
-    time.sleep(seconds)
+    time.sleep(wait_after)
 
-def obter_cotacao(driver, empresa, retentativas=3, cod_neg_concluidas=[]):
-    cod_neg_corrente = None
-    try:
-        driver.get('https://economia.uol.com.br/cotacoes/bolsas/bvsp-bovespa')
-        time.sleep(5)        
-        for acao in empresa['acoes']:
-            cod_neg_corrente = acao['codigo_negociacao']
-            if acao.get('cotacoes') is None:
-                acao['cotacoes'] = []
-            elif len(acao['cotacoes']) == len(empresa['balancos']) or cod_neg_corrente in cod_neg_concluidas:
-                continue            
-            pyautogui.moveTo(0, 900)   
-            driver.execute_script("window.scrollTo(0, %d)" % 0)
-            time.sleep(1)
-            input = driver.find_element_by_class_name('fildBusca')
-            set_input_text(input, cod_neg_corrente, False, 4)
-            link_acao = driver.find_element_by_class_name('suggest-list').find_element_by_tag_name('a')
-            if 'NADA ENCONTRADO' in link_acao.text.upper():
-                logging.info('Cotações da %s não foram encontradas' % (cod_neg_corrente))
-                continue    
-            link_acao.click()
-            time.sleep(5)
-            driver.execute_script("window.scrollTo(0, %d)" % 450)
-            time.sleep(2)            
-            driver.find_element_by_class_name('chart-nav-content').find_elements_by_tag_name('span')[1].click()
-            time.sleep(4)
-            
-            anoini = min([balanco['data'].year for balanco in empresa['balancos']])
-            anofim = max([balanco['data'].year for balanco in empresa['balancos']])
+def find_element(driver, by, value, retries=3, time_between_retries=3, texto_log=None):
+    attempt=1
+    while True:
+        try:
+            ele = driver.find_element(by, value)
+            if not texto_log:
+                if ele:
+                    texto_log = ele.tag_name
+                else:
+                    texto_log = "Nenhum obtido"
+            logging.info("Elemento obtido: {}".format(texto_log))
+            return ele
+        except Exception as ex:            
+            if attempt > retries:
+                raise ex            
+            logging.error("Não foi possível localizar o elemento {} pelo {} na {} tentativa".format(value, by, attempt))
+            time.sleep(time_between_retries)
+            attempt += 1
 
-            for ano in reversed(range(anoini, anofim+1)):
-                dataini = datetime(ano, 1, 1)
-                datafim = datetime(ano, 12, 28)
-                if datafim > datetime.now():
-                    datafim += relativedelta(months=-(12-datetime.now().month))
-                if len([cotacao for cotacao in acao['cotacoes'] if cotacao['data'].year == ano]) == datafim.month:
-                    logging.info('Cotações já processadas do ano %d para a ação %s' % (ano, cod_neg_corrente))
-                    continue
-                logging.info('Obtendo as cotações da ação %s, início %s e fim %s ' % (cod_neg_corrente, dataini, datafim))
-                driver.execute_script('document.getElementsByClassName("highcharts-range-input")[0].getElementsByTagName("text")[0].dispatchEvent(new MouseEvent("click", {"view": window,"bubbles": true, "cancelable": true}))')
-                time.sleep(1)
-                input = driver.find_element_by_class_name('highcharts-range-selector')
-                set_input_text(input, datetime.strftime(dataini, '%d/%m/%Y'))
-                
-                driver.execute_script('document.getElementsByClassName("highcharts-range-input")[0].getElementsByTagName("text")[0].dispatchEvent(new MouseEvent("click", {"view": window,"bubbles": true, "cancelable": true}))')
-                time.sleep(1)
-                input = driver.find_element_by_class_name('highcharts-range-selector')
-                dataini_alterada = datetime.strptime(input.get_attribute('value').strip(), '%d/%m/%Y')
-                if dataini_alterada.year != dataini.year:
-                    logging.info('Não é possível obter cotações mais antigas que %s para a ação %s' % (dataini, cod_neg_corrente))
-                    break
-                driver.execute_script('document.getElementsByClassName("highcharts-range-input")[1].getElementsByTagName("text")[0].dispatchEvent(new MouseEvent("click", {"view": window,"bubbles": true, "cancelable": true}))')
-                time.sleep(1)                    
-                input = driver.find_elements_by_class_name('highcharts-range-selector')[1]
-                set_input_text(input, datetime.strftime(datafim, '%d/%m/%Y'))
+def find_elements(driver, by, value, retries=3, time_between_retries=3, texto_log=None):
+    attempt=1
+    while True:
+        try:
+            elets = driver.find_elements(by, value)
+            if len(elets) == 0 and attempt <= retries:
+                raise Exception("Quantidade zerada de elementos, retentando")
+            if texto_log:
+                texto_log = texto_log + " - Qtde {}".format(len(elets))
+            else:
+                texto_log = "Lista com {}".format(len(elets))
+            logging.info("Elementos obtidos: {}".format(texto_log))
+            return elets
+        except Exception as ex:            
+            if attempt > retries:
+                raise ex            
+            logging.error("Não foi possível localizar o elemento {} pelo {} na {} tentativa".format(value, by, attempt))
+            time.sleep(time_between_retries)
+            attempt += 1
 
-                eixo_x_ini = 455
-                eixo_x_fim = 1155
-                eixo_y = 900
-                valor_cotacao = None
-                pyautogui.moveTo(0, eixo_y)
-                mes = dataini_alterada.month
-                retentativas_valor_ponto_grafico=3
-                pyautogui.moveTo(eixo_x_ini-10, eixo_y, 1, pyautogui.easeOutQuad)
-                for ponto_x in range(eixo_x_ini, eixo_x_fim+15, 10):
-                    if mes > datafim.month:
-                        retentativas=3
-                        logging.info('Finalizando a obtenção de cotações do código %s para o ano %d' % (cod_neg_corrente, ano))
-                        break
-                    pyautogui.moveTo(ponto_x, eixo_y, 0.2, pyautogui.easeOutQuad)
-                    time.sleep(0.2)                    
-                    try:
-                        valor_cotacao = driver.find_elements_by_tag_name('tspan')[-1].text.replace(',', '.').strip()
-                        valor_cotacao = float(valor_cotacao)
-                    except:
-                        logging.exception('Exception lançada')
-                        retentativas_valor_ponto_grafico -= 1
-                        if retentativas_valor_ponto_grafico > 0:
-                            logging.info('Erro na obtenção do ponto da ação %s, irá retentar mais %d vez(es)' % (cod_neg_corrente, retentativas_valor_ponto_grafico))
-                            continue
-                        else:
-                            raise Exception('Retentativas de obter o ponto acabaram')
-                    retentativas_valor_ponto_grafico=3
-                    data_cotacao_grafico = driver.find_elements_by_tag_name('tspan')[-4].text.split(',')[1].strip()
-                    data_cotacao_grafico = re.split(r'\s+', data_cotacao_grafico)
-                    data_cotacao_grafico = (' '.join([DE_MES_PORTUGUES_PARA_INGLES[data_cotacao_grafico[0]], data_cotacao_grafico[1].zfill(2)]))
-                    data_cotacao_grafico = datetime.strptime(data_cotacao_grafico, '%b %d')
-                    data_cotacao_grafico = datetime(ano, data_cotacao_grafico.month, data_cotacao_grafico.day)                    
-                    if data_cotacao_grafico.month == mes and obter_semana_do_mes(data_cotacao_grafico) > 1:
-                        logging.info('Data %s encontrada no eixo x %d' % (data_cotacao_grafico, ponto_x))
-                        cotacao_ja_processada = False
-                        for cotacao_existente in acao['cotacoes']:
-                            if cotacao_existente['data'].year == ano and cotacao_existente['data'].month == mes:
-                                cotacao_ja_processada = True
-                                break
-                        if cotacao_ja_processada:
-                            logging.info('Cotação %s do ano %d e mês %d já processada' % (cod_neg_corrente, ano, mes))
-                        else:
-                            cotacao = {
-                                'data': data_cotacao_grafico,
-                                'valor' : valor_cotacao
-                            }
-                            acao['cotacoes'].append(cotacao)
-                            logging.info('Cotação da ação %s e data %s obtida: R$ %.2f' % (cod_neg_corrente, cotacao['data'], cotacao['valor']))
-                        mes += 1
-                    if data_cotacao_grafico.month > mes:
-                        logging.info('Não é possível obter mais cotação da %s do ano %d e mês %d já processada' % (cod_neg_corrente, ano, mes))
-                        break
-            cod_neg_concluidas.append(cod_neg_corrente)
-            retentativas=3
-            logging.info('Código %s foi concluído, reiniciando as retentativas' % (cod_neg_corrente))
-    except:
-        logging.exception('Exception lançada')
-        retentativas -= 1
-        if retentativas > 0 :            
-            logging.info('Erro na obtenção de cotação %s, irá retentar mais %d vez(es)' % (cod_neg_corrente, retentativas))
-            obter_cotacao(driver, empresa, retentativas, cod_neg_concluidas)
+def click_element(driver, by, value, retries=3, time_between_retries=3, wait_after_click=3, text_log=None):
+    ele = find_element(driver, by, value, retries, time_between_retries)
+    if text_log:
+        text_log = ele.tag_name
+    logging.info("Clicando no elemento: {}".format(text_log))
+    ele.click()
+    time.sleep(wait_after_click)
+
+def switch_to_iframe(driver, index=0, skip_if_not_exists=False):    
+    iframes = find_elements(driver, By.TAG_NAME, 'iframe')
+    if skip_if_not_exists and index >= len(iframes):
+        logging.info("iframe do índice {} não foi encontrado, alteração de contexto de iframe ignorado".format(index))
+    else:        
+        logging.info("Quantidade de iframes: %d" % len(iframes))
+        driver.switch_to.frame(iframes[index])
+
+def exit_from_iframe(driver):
+    driver.switch_to.default_content()
+
+def scroll(driver, direcao):
+    driver.execute_script("window.scrollTo(0, %d)" % direcao)
+
+def switch_to_window(driver, position, close_before_chance=False, retries=3, time_between_retries=3):    
+    attempt=1
+    window_closed = False
+    while True:
+        try:
+            logging.info("Quantidade de janelas: {}".format(len(driver.window_handles)))
+            w = driver.window_handles[position]
+            logging.info("Página corrente: {}".format(driver.title))
+            if not window_closed and close_before_chance:
+                driver.close()
+                window_closed = True
+            driver.switch_to.window(w)
+            logging.info("Nova página: {}".format(driver.title))
+            break
+        except Exception as ex:            
+            if attempt > retries:
+                raise ex            
+            logging.error("Não foi possível alterar para a página {} na {} tentativa".format(position, attempt))
+            time.sleep(time_between_retries)
+            attempt += 1
+
+def balanco_contem_todos_campos(balanco, campos):
+    for campo in campos:
+        if balanco.get(campo) is None:
+            logging.info("Campo '{}' inválido no balanco".format(campo))
+            return False
+    return True
+
+def balanco_contem_algum_campo(balanco, campos):
+    for campo in campos:
+        if balanco.get(campo) is not None:
+            return True
+    logging.info("Nenhum dos campos '{}' foi encontrado no balanço".format(campos))
+    return False
+
+def preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, tipos_relatorios_trimestrais_ja_lidos):    
+    logging.info("Abrindo relatório de demonstração de resultados do balanco do ano {} e trimestre {}".format(balanco['ano'], balanco['trimestre']))
+    switch_to_iframe(driver)
+    linhas_tabela_inf_balanco = find_elements(driver, By.XPATH, '/html/body/form/div[4]/table/tbody/tr', texto_log="Tabela de informações do balanço")
+    for i in range(1, len(linhas_tabela_inf_balanco)):
+        codigo = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[0].text.strip()
+        texto = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[1].text.strip()
+        valor = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[2].text.strip().replace('.', '').replace(',', '.')
+        if valor == "":
+            valor = 0
         else:
-            logging.info('Erro na obtenção de cotação %s, não haverá mais retentativas' % (cod_neg_corrente))
-            cod_neg_concluidas.append(cod_neg_corrente)
-            obter_cotacao(driver, empresa, cod_neg_concluidas=cod_neg_concluidas)
+            valor = float(valor)            
+        if codigo == "3.09" and "Lucro/Prejuízo Consolidado do Período" == texto:
+            balanco['lucro_prejuizo_consolidado_do_periodo'] = valor
+        elif "3.11" == codigo and "Lucro ou Prejuízo Líquido do Período" == texto:
+            balanco['lucro_ou_prejuizo_liquido_do_periodo'] = valor    
+        elif "3.13" == codigo and "Lucro/Prejuízo do Período" == texto:
+            balanco['lucro_prejuizo_do_periodo'] = valor                                    
+        elif "3.01" == codigo and "Receita de Venda de Bens e/ou Serviços" == texto:
+            balanco['receita_de_venda_de_bens_e_ou_servicos'] = valor
+        elif "3.01" == codigo and ("Receitas de Intermediação Financeira" == texto or "Receitas da Intermediação Financeira"):
+            balanco['receitas_de_intermediacao_financeira'] = valor
+        elif "3.05" == codigo and "Resultado Antes do Resultado Financeiro e dos Tributos" == texto:
+            balanco['resultado_antes_do_resultado_financeiro_e_dos_tributos'] = valor
+        elif "3.05" == codigo and "Resultado Antes dos Tributos sobre o Lucro" == texto:
+            balanco['resultado_antes_dos_tributos_sobre_o_lucro'] = valor
+    tipos_relatorios_trimestrais_ja_lidos.append(COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS)
+    exit_from_iframe(driver)
+    logging.info("Dados do balanço obtidos até o momento {}".format(balanco))
 
+def preencher_balanco_patrimonial_ativo(driver, balanco, tipos_relatorios_trimestrais_ja_lidos):
+    logging.info("Abrindo relatório de ativos do balanco do ano {} e trimestre {}".format(balanco['ano'], balanco['trimestre']))
+    switch_to_iframe(driver)
+    linhas_tabela_inf_balanco = find_elements(driver, By.XPATH,'/html/body/form/div[4]/table/tbody/tr', texto_log="Tabela de informações do balanço")
+    for i in range(1, len(linhas_tabela_inf_balanco)):
+        codigo = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[0].text.strip()
+        texto = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[1].text.strip()
+        valor = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[2].text.strip().replace('.', '').replace(',', '.')
+        if valor == "":
+            valor = 0.0
+        else:
+            valor = float(valor)
+        if "1" == codigo and "Ativo Total" == texto:
+            balanco['ativo_total'] = valor
+        elif "1.01" == codigo and "Ativo Circulante" == texto:
+            balanco['ativo_circulante'] = valor
+        elif "1.01.01" == codigo and "Caixa e Equivalentes de Caixa" == texto:
+            balanco['caixa_e_equivalente_caixa'] = valor
+        elif "1.01.02" == codigo and "Aplicações Financeiras" == texto:
+            balanco['aplicacoes_financeiras'] = valor
+        elif "1.02" == codigo and "Ativo Não Circulante" == texto:
+            balanco['ativo_nao_circulante'] = valor
+    tipos_relatorios_trimestrais_ja_lidos.append(COMBO_BALANCO_PATRIMONIAL_ATIVO)
+    logging.info("Dados do balanço obtidos até o momento {}".format(balanco))
+    exit_from_iframe(driver)
+
+def preencher_balanco_patrimonial_passivo(driver, balanco, tipos_relatorios_trimestrais_ja_lidos):
+    logging.info("Abrindo relatório de passivos do balanco do ano {} e trimestre {}".format(balanco['ano'], balanco['trimestre']))
+    switch_to_iframe(driver)
+    linhas_tabela_inf_balanco = find_elements(driver, By.XPATH,'/html/body/form/div[4]/table/tbody/tr', texto_log="Tabela de informações do balanço")                                
+    for i in range(1, len(linhas_tabela_inf_balanco)):
+        codigo = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[0].text.strip()
+        texto = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[1].text.strip()
+        valor = linhas_tabela_inf_balanco[i].find_elements_by_tag_name("td")[2].text.strip().replace('.', '').replace(',', '.')
+        if valor == "":
+            valor = 0.0
+        else:
+            valor = float(valor)
+        if "2" == codigo and "Passivo Total" == texto:
+            balanco['passivo_total'] = valor
+        elif "2.01" == codigo and "Passivo Circulante" == texto:
+            balanco['passivo_circulante'] = valor
+        elif "2.02" == codigo and "Passivo Não Circulante" == texto:
+            balanco['passivo_nao_circulante'] = valor 
+        elif ("2.03.09" == codigo or "2.08.09" == codigo) and "Participação dos Acionistas Não Controladores" == texto:
+            balanco['participacao_dos_acionistas_nao_controladores'] = valor
+        elif "2.08" == codigo and "Patrimônio Líquido Consolidado" == texto:
+            balanco['patrimonio_liquido_consolidado'] = valor
+        elif ("2.01.04" == codigo or "2.02.01" == codigo) and "Empréstimos e Financiamentos" == texto:
+            if balanco.get('emprestimos_e_financiamentos'):
+                balanco['emprestimos_e_financiamentos'] = balanco['emprestimos_e_financiamentos'] + valor
+            else:
+                balanco['emprestimos_e_financiamentos'] = valor
+    tipos_relatorios_trimestrais_ja_lidos.append(COMBO_BALANCO_PATRIMONIAL_PASSIVO)
+    logging.info("Dados do balanço obtidos até o momento {}".format(balanco))
+    exit_from_iframe(driver)
+
+def obter_balancos_empresa(driver, empresa, anos_pular=[]):
+    balancos_preenchidos = False
+    if empresa.get('balancos') is None:
+        empresa['balancos'] = []
+    driver.get('http://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm')
+    driver.maximize_window()
+    time.sleep(2)
+    switch_to_iframe(driver)
+
+    # Pesquisar empresa e selecionar resultado
+    #scroll(driver, 2000)
+    input = find_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[3]/div[1]/div[1]/div[2]/div[1]/div/div[1]/label/span[1]/input[1]', time_between_retries=2)
+    logging.info("Buscar empresa " + empresa['razao_social'])
+    set_input_text(input, empresa['razao_social'])
+    try:
+        click_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr/td[1]/a', text_log="Selecionar empresa")
+    except Exception as ex:
+        if find_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[2]/div[1]/span/div').text.strip() == 'Empresa não encontrada':
+            logging.info("Empresa não se encontra mais na bolsa")
+            return False
+        else:
+            raise ex            
+    click_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div[1]/div[1]/ul/li[2]/a', text_log="Selecionar aba de dados de balanços")    
+    anos_ja_lidos = list(set([b['ano'] for b in empresa['balancos']]))
+    logging.info("Anos já lidos da empresa {}: {}".format(empresa['razao_social'], anos_ja_lidos))
+    for ano_obter in ANOS_BALANCOS_OBTENCAO:
+        if ano_obter in anos_pular:
+            continue
+        global ano_sendo_processado
+        ano_sendo_processado = ano_obter
+        logging.info("Buscando os indicadores do ano {}".format(ano_obter))
+        elementos_opcoes_anos_balancos = find_elements(driver, By.XPATH, '/html/body/form/div[3]/div/div[1]/div/div[3]/div[2]/div[1]/div/select/option', texto_log="Lista dos anos dos balanços")
+        trimestres_ja_lidos = []
+        for el_op in elementos_opcoes_anos_balancos:            
+            if str(ano_obter) in el_op.text and ano_obter not in anos_ja_lidos:                
+                logging.info("Ano {} selecionado".format(ano_obter))
+                balancos = []     
+                el_op.click()
+                time.sleep(5)
+                while True:
+                    continuar_dados_ano = False
+                    elementos_trimestrais = find_elements(driver, By.XPATH, '/html/body/form/div[3]/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div[2]/p/a', texto_log="Escolhendo os trimestres dos balanços nos links")
+                    for el_tr in elementos_trimestrais:
+                        tipos_relatorios_trimestrais_ja_lidos = []                        
+                        if hasattr(el_tr, 'text') and el_tr.text not in trimestres_ja_lidos and ("Informações Trimestrais" in el_tr.text or "Demonstrações Financeiras Padronizadas" in el_tr.text) and COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS not in tipos_relatorios_trimestrais_ja_lidos:
+                            texto_trimestre_exec = el_tr.text
+                            logging.info("Abrindo o trimestre '{}'".format(texto_trimestre_exec))
+                            id_ele = el_tr.get_attribute("id")
+                            if id_ele:
+                                driver.execute_script('document.getElementById("{}").click()'.format(id_ele))
+                            else:
+                                el_tr.click()
+                            time.sleep(3)
+                            switch_to_window(driver, 1)                                                                                               
+                            data_relatorio = datetime.strptime(find_element(driver, By.XPATH, '/html/body/form/div[3]/div/div[3]/div[1]/div[2]/span[2]').text, '%d/%m/%Y')                        
+                            if ano_obter != data_relatorio.year:
+                                raise Exception("Página não carregou o trimestre selecionado no combobox")
+                            balanco = { 'ano': data_relatorio.year, 'trimestre': RELACAO_MES_TRIMESTRE[data_relatorio.month] }
+                            logging.info("Data relatório {}".format(data_relatorio))
+                            preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, tipos_relatorios_trimestrais_ja_lidos)
+                            logging.info("Selecionar outros relatórios")
+                            
+                            while True:
+                                continuar_dados_trimestre = False
+                                elementos_tipos_relatorios = find_elements(driver, By.XPATH, '/html/body/form/div[5]/div/select[2]/option', texto_log="Combobox tipos de relatórios de balanços")
+                                for el_tipo_relatorio in elementos_tipos_relatorios:                                    
+                                    if COMBO_BALANCO_PATRIMONIAL_ATIVO == el_tipo_relatorio.text.strip() and COMBO_BALANCO_PATRIMONIAL_ATIVO not in tipos_relatorios_trimestrais_ja_lidos:
+                                        logging.info(el_tipo_relatorio.text.strip())
+                                        el_tipo_relatorio.click()
+                                        time.sleep(5)
+                                        preencher_balanco_patrimonial_ativo(driver, balanco, tipos_relatorios_trimestrais_ja_lidos)
+                                        continuar_dados_trimestre = True
+                                    elif COMBO_BALANCO_PATRIMONIAL_PASSIVO == el_tipo_relatorio.text.strip() and COMBO_BALANCO_PATRIMONIAL_PASSIVO not in tipos_relatorios_trimestrais_ja_lidos:
+                                        logging.info(el_tipo_relatorio.text.strip())
+                                        el_tipo_relatorio.click()
+                                        time.sleep(5)
+                                        preencher_balanco_patrimonial_passivo(driver, balanco, tipos_relatorios_trimestrais_ja_lidos)
+                                        continuar_dados_trimestre = True
+                                    if continuar_dados_trimestre:
+                                        break # leu um relatório, obtem a lista novamente
+                                if not continuar_dados_trimestre:
+                                    break # Para loop leitura dos tipos de relatórios do trimestre em questão
+                                else:
+                                    logging.info("Continuado a ler os tipos de relatórios do trimestre")
+                            balancos.append(balanco)
+                            logging.info("Todos os dados do relatório do balanço {} foram capturados".format(data_relatorio))
+                            switch_to_window(driver, 0, close_before_chance=True)
+                            switch_to_iframe(driver)
+                            trimestres_ja_lidos.append(texto_trimestre_exec)
+                            continuar_dados_ano = True
+                            break # leu todos os trimestres do ano em questão
+                    if not continuar_dados_ano:
+                        anos_ja_lidos.append(ano_obter)
+                        logging.info("Ano {} finalizado".format(ano_obter))
+                        break # Para loop leitura dos trimestres do ano em questão
+                    else:
+                        logging.info("Continuando a buscar os próximos trimestres do ano {}".format(ano_obter))
+                empresa['balancos'].extend(balancos)
+                break # leu o ano, para o loop para continuar
+    logging.info("Foi obtido {} anos da empresa {}".format(len(anos_ja_lidos), empresa['razao_social']))
+    if len(empresa['balancos']) > 0:
+        balancos_preenchidos = True        
+    return balancos_preenchidos
 
 def salvar_arquivo_dados_balancos(empresas):
     logging.info('Atualizando o arquivo %s com %d empresas' % (ARQUIVO_DADOS_BALANCOS, len(empresas)))
     with open(ARQUIVO_DADOS_BALANCOS, 'w') as jsonfile:
-        jsonfile.write(json.dumps(empresas, indent=4, cls=ObjParaJSON))
+        jsonfile.write(json.dumps(empresas, indent=4))
     logging.info('Arquivo atualizado')
 
 def obter_empresas_partir_arquivo_dados_b3():
@@ -330,14 +336,33 @@ def obter_empresas_balancos_partir_arquivo_dados_balancos():
     empresa_balancos = []
     try:
         with open(ARQUIVO_DADOS_BALANCOS, "r") as jsonfile:
-            empresa_balancos = json.loads(jsonfile.read(), cls=JSONParaObj)
+            empresa_balancos = json.loads(jsonfile.read())
     except:
         logging.exception('Exception lançada')
         logging.info('Arquivo pré-existente não encontrado')
     return empresa_balancos
 
-def processar_empresas_faltantes(driver):
-    logging.info('Processar empresas faltantes')
+
+def balanco_normal_eh_valido(balanco):
+    campos = ['ativo_circulante', 'ativo_nao_circulante', 'passivo_circulante', 'passivo_nao_circulante', 'receita_de_venda_de_bens_e_ou_servicos', 'caixa_e_equivalente_caixa',
+        'aplicacoes_financeiras', 'emprestimos_e_financiamentos', 'resultado_antes_do_resultado_financeiro_e_dos_tributos']
+    return balanco_contem_todos_campos(balanco, campos)
+
+def balanco_de_banco_eh_valido(balanco):
+    campos = ['ativo_total', 'passivo_total', 'patrimonio_liquido_consolidado', 'participacao_dos_acionistas_nao_controladores']
+    if not balanco_contem_todos_campos(balanco, campos):
+        return False
+    campos = ['lucro_prejuizo_consolidado_do_periodo', 'lucro_ou_prejuizo_liquido_do_periodo', 'lucro_prejuizo_do_periodo']
+    if not balanco_contem_algum_campo(balanco, campos):
+        return False   
+    campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro']
+    if not balanco_contem_algum_campo(balanco, campos):
+        return False    
+    return True
+
+def processar_empresas_faltantes():
+    logging.info('Processar empresas faltantes')    
+    global ano_sendo_processado
     empresas = obter_empresas_partir_arquivo_dados_b3()
     empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
     empresa_balancos_novo = empresa_balancos[:]
@@ -350,46 +375,107 @@ def processar_empresas_faltantes(driver):
                 break
         if empresa_balanco is None:
             logging.info('Balanco da empresa %s ainda não capturado' % e['razao_social'])
+            attempt=1            
             empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}    
-            if obter_balancos_empresa(driver, empresa_balanco):
-                empresa_balancos_novo.append(empresa_balanco) 
-                salvar_arquivo_dados_balancos(empresa_balancos_novo)
+            anos_pular = []
+            while True:
+                try:             
+                    with webdriver.Firefox() as driver:                        
+                        if obter_balancos_empresa(driver, empresa_balanco, anos_pular=anos_pular):
+                            empresa_balancos_novo.append(empresa_balanco) 
+                            salvar_arquivo_dados_balancos(empresa_balancos_novo)
+                        break
+                except Exception as ex:
+                    logging.error(ex)
+                    if attempt > 5:
+                        if continuar_falha_obtencao_balanco and ano_sendo_processado:
+                            logging.error("Não foi possível obter os balanços do ano {} para a empresa {}. Job seguirá para o próximo ano".format(ano_sendo_processado, e['razao_social']))
+                            anos_pular.append(ano_sendo_processado)
+                            ano_sendo_processado = None
+                        else:
+                            break            
+                    logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
+                    attempt += 1
+
       
-def processar_empresa(driver, razao_social):
-    logging.info('Força processamento empresa "%s"' % (razao_social))
+def processar_empresa(razao_social):
+    logging.info('Forçar processamento da empresa "%s"' % (razao_social))
     empresas = obter_empresas_partir_arquivo_dados_b3()
     empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
     empresa_balancos_novo = empresa_balancos[:]
     for e in empresas:
         if razao_social.upper() in e['razao_social']:
+            attempt=1
             empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}
-            if obter_balancos_empresa(driver, empresa_balanco):
-                indice_substituir = None
-                for i, eb in enumerate(empresa_balancos):
-                    if eb['cnpj'] == empresa_balanco['cnpj']:
-                        indice_substituir = i
+            while True:
+                try:              
+                    with webdriver.Firefox() as driver:      
+                        if obter_balancos_empresa(driver, empresa_balanco):
+                            indice_substituir = None
+                            for i, eb in enumerate(empresa_balancos):
+                                if eb['cnpj'] == empresa_balanco['cnpj']:
+                                    indice_substituir = i
+                                    break
+                            if indice_substituir is None:
+                                logging.info('Empresa ainda não processada, adicionando a mesma')
+                                empresa_balancos_novo.append(empresa_balanco)
+                            else:
+                                logging.info('Empresa já processada, será atualizada')
+                                empresa_balancos_novo[indice_substituir] = empresa_balanco
+                            salvar_arquivo_dados_balancos(empresa_balancos_novo)
                         break
-                if indice_substituir is None:
-                    logging.info('Empresa ainda não processada, adicionando a mesma')
-                    empresa_balancos_novo.append(empresa_balanco)
-                else:
-                    logging.info('Empresa já processada, será atualizada')
-                    empresa_balancos_novo[indice_substituir] = empresa_balanco
-                salvar_arquivo_dados_balancos(empresa_balancos_novo)
+                except Exception as ex:
+                    logging.error(ex)
+                    if attempt > 5:
+                        break            
+                    logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
+                    attempt += 1
+
+def processar_empresas_com_balancos_invalidos():
+    logging.info('Processar empresas com dados de balanços inválidos')
+    empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
+    empresa_balancos_novo = empresa_balancos[:]
+    for i, e in enumerate(empresa_balancos):
+        tem_balanco_invalido = False
+        for b in e['balancos']:
+            if not balanco_normal_eh_valido(b) and not balanco_de_banco_eh_valido(b):
+                tem_balanco_invalido = True
+                break
+        if tem_balanco_invalido:
+            attempt=1
+            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}
+            while True:
+                try:              
+                    with webdriver.Firefox() as driver:      
+                        if obter_balancos_empresa(driver, empresa_balanco):                            
+                            logging.info('Empresa com balanços corrigidos, será atualizada')
+                            empresa_balancos_novo[i] = empresa_balanco
+                            salvar_arquivo_dados_balancos(empresa_balancos_novo)
+                            break
+                        break
+                except Exception as ex:
+                    logging.error(ex)
+                    if attempt > 5:
+                        break            
+                    logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
+                    attempt += 1
 
 # MAIN
 if os.path.exists(LOG_FILENAME):
     os.remove(LOG_FILENAME)
 logging.basicConfig(filename=LOG_FILENAME, level=logging.INFO)
 
-with webdriver.Firefox() as driver:
-    try:
-        razao_social_processar = sys.argv[2]  if '--processar-empresa' in sys.argv else None
-        if razao_social_processar is not None:
-            processar_empresa(driver, razao_social_processar)
-        else:
-            processar_empresas_faltantes(driver)
 
-    except:
-        logging.exception('Exception lançada')
-        logging.info('Não foi possivel finalizar o processamento')
+try:
+    razao_social_processar = sys.argv[2] if '--processar-empresa' in sys.argv else None
+    escolha_processar_empresas_balancos_invalidos = True if '--processar-empresas-com-balancos-invalidos' in sys.argv else False
+    continuar_falha_obtencao_balanco = True if '--continuar-falha-obtencao-balanco' in sys.argv else False
+    if razao_social_processar is not None:
+        processar_empresa(razao_social_processar)
+    elif escolha_processar_empresas_balancos_invalidos:
+        processar_empresas_com_balancos_invalidos()
+    else:
+        processar_empresas_faltantes()
+except:
+    logging.exception('Exception lançada')
+    logging.info('Não foi possivel finalizar o processamento')
