@@ -465,7 +465,6 @@ if os.path.exists(LOG_FILENAME):
     os.remove(LOG_FILENAME)
 logging.basicConfig(filename=LOG_FILENAME, level=logging.INFO)
 
-
 try:
     razao_social_processar = sys.argv[2] if '--processar-empresa' in sys.argv else None
     escolha_processar_empresas_balancos_invalidos = True if '--processar-empresas-com-balancos-invalidos' in sys.argv else False

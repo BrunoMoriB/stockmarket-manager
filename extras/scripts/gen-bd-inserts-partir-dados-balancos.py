@@ -1,10 +1,7 @@
 import json
 
-
 ARQUIVO_DADOS_BALANCOS = "../dados/dados-balancos-financeiros-empresas-b3.json"
 ARQUIVO_INSERTS_SAIDA = "../database/populate-balancos-cotacoes-update-empresas.sql"
-
-
 
 def contem_campos(balanco, campos):
     for c in campos:
@@ -32,7 +29,7 @@ def obter_patrimonio_liquido(balanco):
         return soma_ativos + soma_passivos
     else:
         soma_passivos = obter_numero(balanco, 'passivo_total') - obter_numero(balanco, 'patrimonio_liquido_consolidado') + obter_numero(balanco, 'participacao_dos_acionistas_nao_controladores')
-        return obter_numero(balanco, 'ativo_total') + soma_passivos
+        return obter_numero(balanco, 'ativo_total') - soma_passivos
 
 def obter_lucro_liquido(balanco):
     return obter_primeiro_numero_positivo(balanco, ['lucro_prejuizo_consolidado_do_periodo', 'lucro_ou_prejuizo_liquido_do_periodo', 'lucro_prejuizo_do_periodo'])
@@ -70,22 +67,10 @@ def gen_balancos(empresas):
     return inserts
             
 
-def gen_cotacoes(empresas):
-    inserts = ['\n/* Popular a tabela cotações */\n']
-    for e in empresas:
-        for a in e['acoes']:
-            for c in a['cotacoes']:
-                query = '''insert into cotacao (data, valor, id_acao)
-                    values ('{}', {}, (select id from acao where codigo = '{}'));\n'''.format(c['data'], c['valor'], a['codigo_negociacao'])
-                inserts.append(query)
-    return inserts
-
 jsonfile = open(ARQUIVO_DADOS_BALANCOS, "r")
 empresas = json.loads(jsonfile.read())
 inserts = ['\connect bolsa_valores;\n']
 inserts.extend(gen_balancos(empresas))
-inserts.extend(update_empresas(empresas))
-inserts.extend(gen_cotacoes(empresas))
 inserts.append('\disconnect;')
 
 sql_file = open(ARQUIVO_INSERTS_SAIDA, 'w')

@@ -91,6 +91,7 @@ cd .. && rm geckodriver-v0.26.0-linux64.tar.gz
 O script gen-dados-empresas-b3.py lê a página das empresas da b3 e gera um arquivo chamado dados-empresas-b3.json que possui os dados das empresas da B3,
 caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
 * --local True : parâmetro adicional é usado para processar o arquivo de dados existentes sem consultar o site da b3, usado para corrigir ou formatar o json de saída
+* --processar-empresa : parâmetro adicional é usado para processar um empresa em específico
 
 #### Execução do script
 
@@ -143,7 +144,7 @@ cd ../..
 
 #### Detalhes do script
 
-Utiliza o arquivo dados-balancos-financeiros-empresas-b3.json gerado no script de obtenção de dados dos balanços das empresas b3 para gerar as queries
+Utiliza o arquivo 'dados-balancos-financeiros-empresas-b3.json' gerado no script de obtenção de dados dos balanços das empresas b3 para gerar as queries
 
 #### Execução do script
 
@@ -157,18 +158,44 @@ cd ../..
 
 ### Gerar o arquivo JSON de dados das cotações
 
-Baixar os arquivos do ano inteiro que se deseja obter as cotações no link abaixo dentro da pasta extras/dados (estes arquivos não deverão ser comitados)
+#### Detalhes do script
+
+Baixar os arquivos do ano inteiro que se deseja obter as cotações no link abaixo dentro da pasta extras/dados (estes arquivos não deverão ser comitados). O script irá ler todos os arquivos no formato 'COTAHIST_A*.ZIP' e gerar o arquivo de dados de cotações. Utiliza também o arquivo 'dados-empresas-b3.json'
 
 * http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/
 
+#### Execução do script
 
+Executar os comandos abaixo na raiz do projeto
 
+```
+cd extras/scripts
+python3 gen-dados-cotacoes.py
+cd ../..
+```
+
+### Gerar/atualizar o script SQL para popular os dados da tabela Cotacao
+
+#### Detalhes do script
+
+Utiliza o arquivo 'dados-cotacoes-empresas-b3.json' gerado no script de obtenção de dados de cotações das empresas b3 para
+gerar as queries
+
+#### Execução do script
+
+Executar os comandos abaixo na raiz do projeto
+
+```
+cd extras/scripts
+python3 gen-bd-inserts-partir-dados-cotacoes.py
+cd ../..
+```
 
 ### Gerar o arquivo JSON de dados de proventos das ações
 
 #### Detalhes do script
 
-Utiliza o arquivo dados-empresas-b3.json gerado no script de obtenção de dados das empresas b3 para gerar os dados dos proventos,
+Utiliza o arquivo 'dados-empresas-b3.json' gerado no script de obtenção de dados das empresas b3 para gerar os dados dos proventos,
 caso o script não complete a execução poderá ser executado novamente e continuar de onde parou
 
 #### Execução do script

@@ -1,5 +1,24 @@
 [
     {
+        "razao_social": "AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A",
+        "nome_empresa": "AERIS",
+        "cnpj": "12528708000107",
+        "atividades": [
+            "Explora\u00e7\u00e3o de Neg\u00f3cio de Constru\u00e7\u00e3o E Comercializa\u00e7\u00e3o de P\u00e1s de Rotores Para Turbinas Utilizadas Na Gera\u00e7\u00e3o E\u00f3lica de Energia."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "M\u00e1quinas e Equipamentos",
+            "M\u00e1q. e Equip. Industriais"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "AERI3"
+            }
+        ],
+        "quantidade_papeis": 766213456
+    },
+    {
         "razao_social": "AES TIETE ENERGIA SA",
         "nome_empresa": "AES TIETE E",
         "cnpj": "04128563000110",
@@ -20,7 +39,8 @@
             {
                 "codigo_negociacao": "TIET4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1995532616
     },
     {
         "razao_social": "AFLUENTE TRANSMISS\u00c3O DE ENERGIA EL\u00c9TRICA S/A",
@@ -37,7 +57,8 @@
             {
                 "codigo_negociacao": "AFLT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 63084700
     },
     {
         "razao_social": "ALFA HOLDINGS S.A.",
@@ -61,7 +82,8 @@
             {
                 "codigo_negociacao": "RPAD6"
             }
-        ]
+        ],
+        "quantidade_papeis": 84682269
     },
     {
         "razao_social": "ALIANSCE SONAE SHOPPING CENTERS S.A.",
@@ -78,7 +100,8 @@
             {
                 "codigo_negociacao": "ALSO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 265772778
     },
     {
         "razao_social": "ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A",
@@ -98,7 +121,8 @@
             {
                 "codigo_negociacao": "ALPK3"
             }
-        ]
+        ],
+        "quantidade_papeis": 193771106
     },
     {
         "razao_social": "ALPARGATAS S.A.",
@@ -119,7 +143,8 @@
             {
                 "codigo_negociacao": "ALPA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 588062222
     },
     {
         "razao_social": "ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.",
@@ -137,7 +162,30 @@
             {
                 "codigo_negociacao": "APER3"
             }
-        ]
+        ],
+        "quantidade_papeis": 11480134
+    },
+    {
+        "razao_social": "ALPHAVILLE S.A.",
+        "nome_empresa": "ALPHAVILLE",
+        "cnpj": "16811931000100",
+        "atividades": [
+            "Holding Controladora Da Alphaville Urbanismo S.A.. Controlada Esta Que Atua No Setor de Urbanismo E Desenvolvimento de Empreendimentos Imobili\u00e1rios. As Atividades Da Controlada Englobam Concep\u00e7\u00e3o. Pla"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "AVLL3"
+            },
+            {
+                "codigo_negociacao": "AVLL11"
+            }
+        ],
+        "quantidade_papeis": 22415794
     },
     {
         "razao_social": "ALUPAR INVESTIMENTO S/A",
@@ -161,7 +209,8 @@
             {
                 "codigo_negociacao": "ALUP4"
             }
-        ]
+        ],
+        "quantidade_papeis": 879111269
     },
     {
         "razao_social": "AMBEV S.A.",
@@ -179,7 +228,26 @@
             {
                 "codigo_negociacao": "ABEV3"
             }
-        ]
+        ],
+        "quantidade_papeis": 15735117965
+    },
+    {
+        "razao_social": "AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A",
+        "nome_empresa": "AMBIPAR",
+        "cnpj": "12648266000124",
+        "atividades": [
+            "Gerenciamento E Valoriza\u00e7\u00e3o de Res\u00edduos. Bem Como. Presta\u00e7\u00e3o de Servi\u00e7os de Atendimento A Emerg\u00eancia."
+        ],
+        "classificacao_setorial": [
+            "Utilidade P\u00fablica",
+            "\u00e1gua e Saneamento"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "AMBP3"
+            }
+        ],
+        "quantidade_papeis": 112935588
     },
     {
         "razao_social": "AMPLA ENERGIA E SERVICOS S.A.",
@@ -196,14 +264,15 @@
             {
                 "codigo_negociacao": "CBEE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 166634326
     },
     {
         "razao_social": "ANIMA HOLDING S.A.",
         "nome_empresa": "ANIMA",
         "cnpj": "09288252000132",
         "atividades": [
-            "Administra\u00e7\u00e3o. Direta Ou Indireta. de Atividade de Institui\u00e7\u00f5es de 3\u00ba E 4\u00ba Graus. Educa\u00e7\u00e3o Profissional."
+            "Administra\u00e7\u00e3o. Direta Ou Indireta. de Atividade de Institui\u00e7\u00f5es de 3\u00ba E 4\u00ba Graus. Educa\u00e7\u00e3o profissional."
         ],
         "classificacao_setorial": [
             "Consumo C\u00edclico",
@@ -214,7 +283,8 @@
             {
                 "codigo_negociacao": "ANIM3"
             }
-        ]
+        ],
+        "quantidade_papeis": 134622935
     },
     {
         "razao_social": "AREZZO IND\u00daSTRIA E COM\u00c9RCIO S.A.",
@@ -232,7 +302,8 @@
             {
                 "codigo_negociacao": "ARZZ3"
             }
-        ]
+        ],
+        "quantidade_papeis": 99631414
     },
     {
         "razao_social": "ATACAD\u00c3O S.A.",
@@ -254,14 +325,15 @@
             {
                 "codigo_negociacao": "CRFB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1985199050
     },
     {
         "razao_social": "ATMA PARTICIPA\u00c7\u00d5ES S.A.",
         "nome_empresa": "ATMASA",
         "cnpj": "04032433000180",
         "atividades": [
-            "A Atma Participa\u00e7\u00f5es S.A.. Nova Denomina\u00e7\u00e3o Da Liq Participa\u00e7\u00f5es S.A. Tem Como Objeto Social A Participa\u00e7\u00e3o em Outras Sociedades Comerciais E Civis. Como S\u00f3cia. Acionista Ou Co"
+            "A Atma Participa\u00e7\u00f5es S.A. Tem Como Objeto Social A Participa\u00e7\u00e3o. Direta E Indireta. em Outras Sociedades Comerciais E Civis. Como S\u00f3cia. Acionista Ou Quotista. No Pa\u00eds Ou No Exterior."
         ],
         "classificacao_setorial": [
             "Bens Industriais",
@@ -272,7 +344,8 @@
             {
                 "codigo_negociacao": "ATMP3"
             }
-        ]
+        ],
+        "quantidade_papeis": 24669930
     },
     {
         "razao_social": "ATOM EMPREENDIMENTOS E PARTICIPA\u00c7\u00d5ES S.A.",
@@ -288,14 +361,34 @@
             {
                 "codigo_negociacao": "ATOM3"
             }
-        ]
+        ],
+        "quantidade_papeis": 20898994
+    },
+    {
+        "razao_social": "AURA MINERALS INC.",
+        "nome_empresa": "AURA 360",
+        "cnpj": "07857093000114",
+        "atividades": [
+            "Aproveitamento de Jazidas Minerais. Principalmente Por Meio de Explora\u00e7\u00e3o E Extra\u00e7\u00e3o de Min\u00e9rios. Com Foco em Ouro E Cobre."
+        ],
+        "classificacao_setorial": [
+            "Materiais B\u00e1sicos",
+            "Minera\u00e7\u00e3o",
+            "Minerais Met\u00e1licos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "AURA33"
+            }
+        ],
+        "quantidade_papeis": 19287525
     },
     {
         "razao_social": "AZEVEDO E TRAVASSOS S.A.",
         "nome_empresa": "AZEVEDO",
         "cnpj": "61351532000168",
         "atividades": [
-            "Execu\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Pesada Junto A Org\u00e3os P\u00fablicos"
+            "Execu\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Pesada Junto \u00e0 Org\u00e3os P\u00fabicos"
         ],
         "classificacao_setorial": [
             "Bens Industriais",
@@ -309,7 +402,8 @@
             {
                 "codigo_negociacao": "AZEV4"
             }
-        ]
+        ],
+        "quantidade_papeis": 19800000
     },
     {
         "razao_social": "AZUL S.A.",
@@ -327,7 +421,8 @@
             {
                 "codigo_negociacao": "AZUL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1258869825
     },
     {
         "razao_social": "B2W - COMPANHIA DIGITAL",
@@ -345,7 +440,8 @@
             {
                 "codigo_negociacao": "BTOW3"
             }
-        ]
+        ],
+        "quantidade_papeis": 559858093
     },
     {
         "razao_social": "B3 S.A. - BRASIL. BOLSA. BALC\u00c3O",
@@ -363,7 +459,8 @@
             {
                 "codigo_negociacao": "B3SA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2059138490
     },
     {
         "razao_social": "BAHEMA EDUCA\u00c7\u00c3O S.A.",
@@ -381,7 +478,8 @@
             {
                 "codigo_negociacao": "BAHI3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2242459
     },
     {
         "razao_social": "BANCO BMG S.A.",
@@ -399,7 +497,8 @@
             {
                 "codigo_negociacao": "BMGB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 591474531
     },
     {
         "razao_social": "BANCO INTER S.A.",
@@ -423,7 +522,8 @@
             {
                 "codigo_negociacao": "BIDI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 764444645
     },
     {
         "razao_social": "BANESTES S.A. - BCO EST ESPIRITO SANTO",
@@ -444,7 +544,8 @@
             {
                 "codigo_negociacao": "BEES4"
             }
-        ]
+        ],
+        "quantidade_papeis": 315912860
     },
     {
         "razao_social": "BARDELLA S.A. INDUSTRIAS MECANICAS",
@@ -465,7 +566,8 @@
             {
                 "codigo_negociacao": "BDLL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1600000
     },
     {
         "razao_social": "BATTISTELLA ADM PARTICIPACOES S.A.",
@@ -486,7 +588,8 @@
             {
                 "codigo_negociacao": "BTTL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 14860568
     },
     {
         "razao_social": "BAUMER S.A.",
@@ -506,7 +609,8 @@
             {
                 "codigo_negociacao": "BALM4"
             }
-        ]
+        ],
+        "quantidade_papeis": 9800000
     },
     {
         "razao_social": "BB SEGURIDADE PARTICIPA\u00c7\u00d5ES S.A.",
@@ -524,7 +628,8 @@
             {
                 "codigo_negociacao": "BBSE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2000000000
     },
     {
         "razao_social": "BBM LOGISTICA S.A.",
@@ -542,7 +647,8 @@
             {
                 "codigo_negociacao": "BBML3"
             }
-        ]
+        ],
+        "quantidade_papeis": 40760818
     },
     {
         "razao_social": "BCO ABC BRASIL S.A.",
@@ -560,7 +666,8 @@
             {
                 "codigo_negociacao": "ABCB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 220890867
     },
     {
         "razao_social": "BCO ALFA DE INVESTIMENTO S.A.",
@@ -581,7 +688,8 @@
             {
                 "codigo_negociacao": "BRIV4"
             }
-        ]
+        ],
+        "quantidade_papeis": 88600584
     },
     {
         "razao_social": "BCO AMAZONIA S.A.",
@@ -597,7 +705,8 @@
             {
                 "codigo_negociacao": "BAZA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 29645967
     },
     {
         "razao_social": "BCO BRADESCO S.A.",
@@ -618,7 +727,8 @@
             {
                 "codigo_negociacao": "BBDC4"
             }
-        ]
+        ],
+        "quantidade_papeis": 8870212686
     },
     {
         "razao_social": "BCO BRASIL S.A.",
@@ -642,7 +752,8 @@
             {
                 "codigo_negociacao": "BBAS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2865417020
     },
     {
         "razao_social": "BCO BTG PACTUAL S.A.",
@@ -661,12 +772,16 @@
                 "codigo_negociacao": "BPAC11"
             },
             {
+                "codigo_negociacao": "BPAC13"
+            },
+            {
                 "codigo_negociacao": "BPAC3"
             },
             {
                 "codigo_negociacao": "BPAC5"
             }
-        ]
+        ],
+        "quantidade_papeis": 2712706972
     },
     {
         "razao_social": "BCO ESTADO DE SERGIPE S.A. - BANESE",
@@ -685,7 +800,8 @@
             {
                 "codigo_negociacao": "BGIP4"
             }
-        ]
+        ],
+        "quantidade_papeis": 15285090
     },
     {
         "razao_social": "BCO ESTADO DO PARA S.A.",
@@ -701,7 +817,8 @@
             {
                 "codigo_negociacao": "BPAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 9521649
     },
     {
         "razao_social": "BCO ESTADO DO RIO GRANDE DO SUL S.A.",
@@ -725,28 +842,8 @@
             {
                 "codigo_negociacao": "BRSR6"
             }
-        ]
-    },
-    {
-        "razao_social": "BCO INDUSVAL S.A.",
-        "nome_empresa": "INDUSVAL",
-        "cnpj": "61024352000171",
-        "atividades": [
-            "Banco M\u00faltiplo Que Concentra Seus Neg\u00f3cios em Produtos de Cr\u00e9dito Corporativo. em Moeda Nacional E Estrangeira. Bem Como Produtos de Repasse. Tesouraria E Servi\u00e7o de Assessoria Financeira A Empresas."
         ],
-        "classificacao_setorial": [
-            "Financeiro",
-            "Intermedi\u00e1rios Financeiros",
-            "Bancos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "IDVL3"
-            },
-            {
-                "codigo_negociacao": "IDVL4"
-            }
-        ]
+        "quantidade_papeis": 408974477
     },
     {
         "razao_social": "BCO MERCANTIL DE INVESTIMENTOS S.A.",
@@ -767,7 +864,8 @@
             {
                 "codigo_negociacao": "BMIN4"
             }
-        ]
+        ],
+        "quantidade_papeis": 4825200
     },
     {
         "razao_social": "BCO MERCANTIL DO BRASIL S.A.",
@@ -788,7 +886,8 @@
             {
                 "codigo_negociacao": "BMEB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 52415790
     },
     {
         "razao_social": "BCO NORDESTE DO BRASIL S.A.",
@@ -806,7 +905,8 @@
             {
                 "codigo_negociacao": "BNBR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 86371464
     },
     {
         "razao_social": "BCO PAN S.A.",
@@ -824,7 +924,8 @@
             {
                 "codigo_negociacao": "BPAN4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1205056121
     },
     {
         "razao_social": "BCO PINE S.A.",
@@ -845,7 +946,8 @@
             {
                 "codigo_negociacao": "PINE4"
             }
-        ]
+        ],
+        "quantidade_papeis": 148157764
     },
     {
         "razao_social": "BCO SANTANDER (BRASIL) S.A.",
@@ -869,7 +971,8 @@
             {
                 "codigo_negociacao": "SANB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 7498531051
     },
     {
         "razao_social": "BICICLETAS MONARK S.A.",
@@ -887,7 +990,8 @@
             {
                 "codigo_negociacao": "BMKS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 454750
     },
     {
         "razao_social": "BIOMM S.A.",
@@ -903,11 +1007,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "BIOM3"
-            },
-            {
-                "codigo_negociacao": "BIOM11"
             }
-        ]
+        ],
+        "quantidade_papeis": 67716252
     },
     {
         "razao_social": "BIOSEV S.A.",
@@ -926,22 +1028,8 @@
             {
                 "codigo_negociacao": "BSEV3"
             }
-        ]
-    },
-    {
-        "razao_social": "BIOTOSCANA INVESTMENTS S.A.",
-        "nome_empresa": "BIOTOSCANA",
-        "cnpj": "19688956000156",
-        "atividades": [],
-        "classificacao_setorial": [
-            "Sa\u00fade",
-            "Medicamentos e Outros Produtos"
         ],
-        "acoes": [
-            {
-                "codigo_negociacao": "GBIO33"
-            }
-        ]
+        "quantidade_papeis": 1020429426
     },
     {
         "razao_social": "BK BRASIL OPERA\u00c7\u00c3O E ASSESSORIA A RESTAURANTES SA",
@@ -959,7 +1047,30 @@
             {
                 "codigo_negociacao": "BKBR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 275355447
+    },
+    {
+        "razao_social": "BOA VISTA SERVI\u00c7OS S.A.",
+        "nome_empresa": "BOA VISTA",
+        "cnpj": "11725176000127",
+        "atividades": [
+            "Atividades de Cobran\u00e7a E Informa\u00e7\u00f5es Cadastrais",
+            "Concess\u00e3o de Cr\u00e9dito Pelas Oscip",
+            "Holdings de Institui\u00e7\u00f5es N\u00e3o-financeiras",
+            "Consultoria em Tecnologia Da Informa\u00e7\u00e3o",
+            "E Suporte T\u00e9cnico E Manuten\u00e7\u00e3o."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "BOAS3"
+            }
+        ],
+        "quantidade_papeis": 480135860
     },
     {
         "razao_social": "BOMBRIL S.A.",
@@ -980,7 +1091,8 @@
             {
                 "codigo_negociacao": "BOBR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 260509779
     },
     {
         "razao_social": "BR MALLS PARTICIPACOES S.A.",
@@ -997,7 +1109,8 @@
             {
                 "codigo_negociacao": "BRML3"
             }
-        ]
+        ],
+        "quantidade_papeis": 873141333
     },
     {
         "razao_social": "BR PROPERTIES S.A.",
@@ -1016,7 +1129,8 @@
             {
                 "codigo_negociacao": "BRPR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 491510283
     },
     {
         "razao_social": "BRADESPAR S.A.",
@@ -1037,7 +1151,8 @@
             {
                 "codigo_negociacao": "BRAP4"
             }
-        ]
+        ],
+        "quantidade_papeis": 348034045
     },
     {
         "razao_social": "BRASIL BROKERS PARTICIPACOES S.A.",
@@ -1053,7 +1168,8 @@
             {
                 "codigo_negociacao": "BBRK3"
             }
-        ]
+        ],
+        "quantidade_papeis": 78531824
     },
     {
         "razao_social": "BRASILAGRO - CIA BRAS DE PROP AGRICOLAS",
@@ -1071,7 +1187,8 @@
             {
                 "codigo_negociacao": "AGRO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 62104301
     },
     {
         "razao_social": "BRASKEM S.A.",
@@ -1099,7 +1216,8 @@
             {
                 "codigo_negociacao": "BRKM6"
             }
-        ]
+        ],
+        "quantidade_papeis": 797218554
     },
     {
         "razao_social": "BRB BCO DE BRASILIA S.A.",
@@ -1120,7 +1238,8 @@
             {
                 "codigo_negociacao": "BSLI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 363046500
     },
     {
         "razao_social": "BRF S.A.",
@@ -1138,7 +1257,8 @@
             {
                 "codigo_negociacao": "BRFS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 812473246
     },
     {
         "razao_social": "BRQ SOLUCOES EM INFORMATICA S.A.",
@@ -1155,7 +1275,8 @@
             {
                 "codigo_negociacao": "BRQB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 132658616
     },
     {
         "razao_social": "CAMBUCI S.A.",
@@ -1171,7 +1292,8 @@
             {
                 "codigo_negociacao": "CAMB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 42100080
     },
     {
         "razao_social": "CAMIL ALIMENTOS S.A.",
@@ -1189,7 +1311,8 @@
             {
                 "codigo_negociacao": "CAML3"
             }
-        ]
+        ],
+        "quantidade_papeis": 370000000
     },
     {
         "razao_social": "CCR S.A.",
@@ -1207,7 +1330,8 @@
             {
                 "codigo_negociacao": "CCRO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2020000000
     },
     {
         "razao_social": "CEA MODAS S.A.",
@@ -1225,7 +1349,8 @@
             {
                 "codigo_negociacao": "CEAB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 308245068
     },
     {
         "razao_social": "CEMEPE INVESTIMENTOS S.A.",
@@ -1244,7 +1369,8 @@
             {
                 "codigo_negociacao": "MAPT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 918895
     },
     {
         "razao_social": "CENTRAIS ELET BRAS S.A. - ELETROBRAS",
@@ -1267,7 +1393,8 @@
             {
                 "codigo_negociacao": "ELET6"
             }
-        ]
+        ],
+        "quantidade_papeis": 1568930910
     },
     {
         "razao_social": "CENTRAIS ELET DE SANTA CATARINA S.A.",
@@ -1287,7 +1414,8 @@
             {
                 "codigo_negociacao": "CLSC4"
             }
-        ]
+        ],
+        "quantidade_papeis": 38571591
     },
     {
         "razao_social": "CENTRO DE IMAGEM DIAGNOSTICOS S.A.",
@@ -1304,7 +1432,8 @@
             {
                 "codigo_negociacao": "AALR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 118292816
     },
     {
         "razao_social": "CESP - CIA ENERGETICA DE SAO PAULO",
@@ -1327,7 +1456,8 @@
             {
                 "codigo_negociacao": "CESP6"
             }
-        ]
+        ],
+        "quantidade_papeis": 327502673
     },
     {
         "razao_social": "CIA BRASILEIRA DE DISTRIBUICAO",
@@ -1345,7 +1475,8 @@
             {
                 "codigo_negociacao": "PCAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 268351567
     },
     {
         "razao_social": "CIA CATARINENSE DE AGUAS E SANEAM.-CASAN",
@@ -1365,7 +1496,8 @@
             {
                 "codigo_negociacao": "CASN4"
             }
-        ]
+        ],
+        "quantidade_papeis": 751330842
     },
     {
         "razao_social": "CIA CELG DE PARTICIPACOES - CELGPAR",
@@ -1382,7 +1514,8 @@
             {
                 "codigo_negociacao": "GPAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 77928432
     },
     {
         "razao_social": "CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG",
@@ -1399,7 +1532,8 @@
             {
                 "codigo_negociacao": "CEGR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 259637732
     },
     {
         "razao_social": "CIA ELETRICIDADE EST. DA BAHIA - COELBA",
@@ -1422,7 +1556,8 @@
             {
                 "codigo_negociacao": "CEEB6"
             }
-        ]
+        ],
+        "quantidade_papeis": 262096087
     },
     {
         "razao_social": "CIA ENERGETICA DE BRASILIA",
@@ -1445,7 +1580,8 @@
             {
                 "codigo_negociacao": "CEBR6"
             }
-        ]
+        ],
+        "quantidade_papeis": 14416383
     },
     {
         "razao_social": "CIA ENERGETICA DE MINAS GERAIS - CEMIG",
@@ -1465,7 +1601,8 @@
             {
                 "codigo_negociacao": "CMIG4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1518752601
     },
     {
         "razao_social": "CIA ENERGETICA DE PERNAMBUCO - CELPE",
@@ -1488,7 +1625,8 @@
             {
                 "codigo_negociacao": "CEPE6"
             }
-        ]
+        ],
+        "quantidade_papeis": 74612388
     },
     {
         "razao_social": "CIA ENERGETICA DO CEARA - COELCE",
@@ -1511,7 +1649,8 @@
             {
                 "codigo_negociacao": "COCE6"
             }
-        ]
+        ],
+        "quantidade_papeis": 77855299
     },
     {
         "razao_social": "CIA ENERGETICA DO RIO GDE NORTE - COSERN",
@@ -1534,7 +1673,8 @@
             {
                 "codigo_negociacao": "CSRN6"
             }
-        ]
+        ],
+        "quantidade_papeis": 168074028
     },
     {
         "razao_social": "CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D",
@@ -1554,7 +1694,8 @@
             {
                 "codigo_negociacao": "CEED4"
             }
-        ]
+        ],
+        "quantidade_papeis": 9680746
     },
     {
         "razao_social": "CIA ESTADUAL GER.TRANS.ENER.ELET-CEEE-GT",
@@ -1574,7 +1715,8 @@
             {
                 "codigo_negociacao": "EEEL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 9661257
     },
     {
         "razao_social": "CIA FERRO LIGAS DA BAHIA - FERBASA",
@@ -1595,7 +1737,8 @@
             {
                 "codigo_negociacao": "FESA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 88320000
     },
     {
         "razao_social": "CIA FIACAO TECIDOS CEDRO CACHOEIRA",
@@ -1616,7 +1759,8 @@
             {
                 "codigo_negociacao": "CEDO4"
             }
-        ]
+        ],
+        "quantidade_papeis": 10000000
     },
     {
         "razao_social": "CIA GAS DE SAO PAULO - COMGAS",
@@ -1636,15 +1780,16 @@
             {
                 "codigo_negociacao": "CGAS5"
             }
-        ]
+        ],
+        "quantidade_papeis": 132520587
     },
     {
         "razao_social": "CIA HABITASUL DE PARTICIPACOES",
         "nome_empresa": "HABITASUL",
         "cnpj": "87762563000103",
         "atividades": [
-            "Participar em Outras Sociedade. Civis Ou Comerciais",
-            "Prestar Servi\u00e7os T\u00e9cnicos de Planejamento. Organiza\u00e7\u00e3o E Estrutura\u00e7\u00e3o de Empresas Ou Grupos Empresariais"
+            "Participa\u00e7\u00e3o em Sociedades. Civis Ou Comerciais",
+            "Presta\u00e7\u00e3o de Servi\u00e7os T\u00e9cnicos de Planejamento. Organiza\u00e7\u00e3o E Estrutura\u00e7\u00e3o de Empresas Ou Grupos Empresariais."
         ],
         "classificacao_setorial": [
             "Financeiro",
@@ -1660,7 +1805,8 @@
             {
                 "codigo_negociacao": "HBTS6"
             }
-        ]
+        ],
+        "quantidade_papeis": 9133687
     },
     {
         "razao_social": "CIA HERING",
@@ -1678,7 +1824,8 @@
             {
                 "codigo_negociacao": "HGTX3"
             }
-        ]
+        ],
+        "quantidade_papeis": 162533937
     },
     {
         "razao_social": "CIA INDUSTRIAL CATAGUASES",
@@ -1697,7 +1844,8 @@
             {
                 "codigo_negociacao": "CATA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 145307
     },
     {
         "razao_social": "CIA LOCA\u00c7\u00c3O DAS AM\u00c9RICAS",
@@ -1715,7 +1863,8 @@
             {
                 "codigo_negociacao": "LCAM3"
             }
-        ]
+        ],
+        "quantidade_papeis": 508729411
     },
     {
         "razao_social": "CIA MELHORAMENTOS DE SAO PAULO",
@@ -1734,7 +1883,8 @@
             {
                 "codigo_negociacao": "MSPA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 6404949
     },
     {
         "razao_social": "CIA PARANAENSE DE ENERGIA - COPEL",
@@ -1757,7 +1907,8 @@
             {
                 "codigo_negociacao": "CPLE6"
             }
-        ]
+        ],
+        "quantidade_papeis": 273655375
     },
     {
         "razao_social": "CIA PARTICIPACOES ALIANCA DA BAHIA",
@@ -1777,7 +1928,8 @@
             {
                 "codigo_negociacao": "PEAB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 12850278
     },
     {
         "razao_social": "CIA SANEAMENTO BASICO EST SAO PAULO",
@@ -1794,7 +1946,8 @@
             {
                 "codigo_negociacao": "SBSP3"
             }
-        ]
+        ],
+        "quantidade_papeis": 683509869
     },
     {
         "razao_social": "CIA SANEAMENTO DE MINAS GERAIS-COPASA MG",
@@ -1811,7 +1964,8 @@
             {
                 "codigo_negociacao": "CSMG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 380253069
     },
     {
         "razao_social": "CIA SANEAMENTO DO PARANA - SANEPAR",
@@ -1834,7 +1988,8 @@
             {
                 "codigo_negociacao": "SAPR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1511205519
     },
     {
         "razao_social": "CIA SEGUROS ALIANCA DA BAHIA",
@@ -1855,7 +2010,8 @@
             {
                 "codigo_negociacao": "CSAB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 7680000
     },
     {
         "razao_social": "CIA SIDERURGICA NACIONAL",
@@ -1873,7 +2029,8 @@
             {
                 "codigo_negociacao": "CSNA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1387524047
     },
     {
         "razao_social": "CIA TECIDOS NORTE DE MINAS COTEMINAS",
@@ -1894,7 +2051,8 @@
             {
                 "codigo_negociacao": "CTNM4"
             }
-        ]
+        ],
+        "quantidade_papeis": 30636457
     },
     {
         "razao_social": "CIA TECIDOS SANTANENSE",
@@ -1918,7 +2076,8 @@
             {
                 "codigo_negociacao": "CTSA8"
             }
-        ]
+        ],
+        "quantidade_papeis": 111299130
     },
     {
         "razao_social": "CIELO S.A.",
@@ -1935,7 +2094,8 @@
             {
                 "codigo_negociacao": "CIEL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2716815061
     },
     {
         "razao_social": "CIMS S.A.",
@@ -1954,7 +2114,8 @@
             {
                 "codigo_negociacao": "CMSA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 38399300
     },
     {
         "razao_social": "CINESYSTEM S.A.",
@@ -1972,7 +2133,8 @@
             {
                 "codigo_negociacao": "CNSY3"
             }
-        ]
+        ],
+        "quantidade_papeis": 30969063
     },
     {
         "razao_social": "COGNA EDUCA\u00c7\u00c3O S.A.",
@@ -1990,7 +2152,8 @@
             {
                 "codigo_negociacao": "COGN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1876606210
     },
     {
         "razao_social": "CONSERVAS ODERICH S.A.",
@@ -2011,7 +2174,8 @@
             {
                 "codigo_negociacao": "ODER4"
             }
-        ]
+        ],
+        "quantidade_papeis": 11287106
     },
     {
         "razao_social": "CONSORCIO ALFA DE ADMINISTRACAO S.A.",
@@ -2048,7 +2212,8 @@
             {
                 "codigo_negociacao": "BRGE8"
             }
-        ]
+        ],
+        "quantidade_papeis": 73646388
     },
     {
         "razao_social": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
@@ -2067,7 +2232,8 @@
             {
                 "codigo_negociacao": "CALI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 372119
     },
     {
         "razao_social": "CONSTRUTORA TENDA S.A.",
@@ -2083,7 +2249,8 @@
             {
                 "codigo_negociacao": "TEND3"
             }
-        ]
+        ],
+        "quantidade_papeis": 104344246
     },
     {
         "razao_social": "CORREA RIBEIRO S.A. COMERCIO E INDUSTRIA",
@@ -2101,7 +2268,8 @@
             {
                 "codigo_negociacao": "CORR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 23153
     },
     {
         "razao_social": "COSAN LOGISTICA S.A.",
@@ -2119,7 +2287,8 @@
             {
                 "codigo_negociacao": "RLOG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 463224241
     },
     {
         "razao_social": "COSAN S.A.",
@@ -2136,7 +2305,8 @@
             {
                 "codigo_negociacao": "CSAN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 394210000
     },
     {
         "razao_social": "CPFL ENERGIA S.A.",
@@ -2153,24 +2323,8 @@
             {
                 "codigo_negociacao": "CPFE3"
             }
-        ]
-    },
-    {
-        "razao_social": "CPFL ENERGIAS RENOV\u00c1VEIS S.A.",
-        "nome_empresa": "CPFL RENOVAV",
-        "cnpj": "08439659000150",
-        "atividades": [
-            "Gera\u00e7\u00e3o de Energias Renov\u00e1veis."
         ],
-        "classificacao_setorial": [
-            "Utilidade P\u00fablica",
-            "Energia El\u00e9trica"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "CPRE3"
-            }
-        ]
+        "quantidade_papeis": 1152254440
     },
     {
         "razao_social": "CR2 EMPREENDIMENTOS IMOBILIARIOS S.A.",
@@ -2188,7 +2342,8 @@
             {
                 "codigo_negociacao": "CRDE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2422153
     },
     {
         "razao_social": "CSU CARDSYSTEM S.A.",
@@ -2206,7 +2361,8 @@
             {
                 "codigo_negociacao": "CARD3"
             }
-        ]
+        ],
+        "quantidade_papeis": 41800000
     },
     {
         "razao_social": "CTC - CENTRO DE TECNOLOGIA CANAVIEIRA S.A.",
@@ -2224,7 +2380,8 @@
             {
                 "codigo_negociacao": "CTCA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 320748000
     },
     {
         "razao_social": "CTEEP - CIA TRANSMISS\u00c3O ENERGIA EL\u00c9TRICA PAULISTA",
@@ -2244,7 +2401,27 @@
             {
                 "codigo_negociacao": "TRPL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 658883304
+    },
+    {
+        "razao_social": "CURY CONSTRUTORA E INCORPORADORA S.A.",
+        "nome_empresa": "CURY S/A",
+        "cnpj": "08797760000183",
+        "atividades": [
+            "Somos Uma Companhia Com Foco Na Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o de Empreendimentos Residenciais Enquadrados No Programa Habitacional Minha Casa Minha Vida E Sistema Brasileiro de Poupan\u00e7a E Empr\u00e9stimo\u0096sbpe"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "CURY3"
+            }
+        ],
+        "quantidade_papeis": 291875088
     },
     {
         "razao_social": "CVC BRASIL OPERADORA E AG\u00caNCIA DE VIAGENS S.A.",
@@ -2261,8 +2438,12 @@
         "acoes": [
             {
                 "codigo_negociacao": "CVCB3"
+            },
+            {
+                "codigo_negociacao": "CVCB11"
             }
-        ]
+        ],
+        "quantidade_papeis": 172828579
     },
     {
         "razao_social": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
@@ -2280,7 +2461,8 @@
             {
                 "codigo_negociacao": "CYRE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 399742799
     },
     {
         "razao_social": "CYRELA COMMERCIAL PROPERT S.A. EMPR PART",
@@ -2297,7 +2479,27 @@
             {
                 "codigo_negociacao": "CCPR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 152644445
+    },
+    {
+        "razao_social": "D1000 VAREJO FARMA PARTICIPA\u00c7\u00d5ES S.A.",
+        "nome_empresa": "D1000VFARMA",
+        "cnpj": "12108897000150",
+        "atividades": [
+            "A Companhia Tem Por Objeto A Participa\u00e7\u00e3o. Como S\u00f3cia Ou Acionista. em Outras Sociedades Do Varejo Farmac\u00eautico. Nacionais Ou Estrangeiras."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "DMVF3"
+            }
+        ],
+        "quantidade_papeis": 50602842
     },
     {
         "razao_social": "DIAGNOSTICOS DA AMERICA S.A.",
@@ -2314,7 +2516,8 @@
             {
                 "codigo_negociacao": "DASA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 480813758
     },
     {
         "razao_social": "DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS",
@@ -2335,7 +2538,8 @@
             {
                 "codigo_negociacao": "PNVL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 151480390
     },
     {
         "razao_social": "DIRECIONAL ENGENHARIA S.A.",
@@ -2353,7 +2557,8 @@
             {
                 "codigo_negociacao": "DIRR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 153398749
     },
     {
         "razao_social": "DOHLER S.A.",
@@ -2374,7 +2579,8 @@
             {
                 "codigo_negociacao": "DOHL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 75645285
     },
     {
         "razao_social": "DOMMO ENERGIA S.A.",
@@ -2394,7 +2600,8 @@
             {
                 "codigo_negociacao": "DMMO11"
             }
-        ]
+        ],
+        "quantidade_papeis": 307948654
     },
     {
         "razao_social": "DTCOM - DIRECT TO COMPANY S.A.",
@@ -2414,11 +2621,9 @@
             },
             {
                 "codigo_negociacao": "DTCY4"
-            },
-            {
-                "codigo_negociacao": "DTCY1"
             }
-        ]
+        ],
+        "quantidade_papeis": 7789411
     },
     {
         "razao_social": "DURATEX S.A.",
@@ -2436,7 +2641,8 @@
             {
                 "codigo_negociacao": "DTEX3"
             }
-        ]
+        ],
+        "quantidade_papeis": 691784501
     },
     {
         "razao_social": "ECORODOVIAS INFRAESTRUTURA E LOG\u00cdSTICA S.A.",
@@ -2454,7 +2660,8 @@
             {
                 "codigo_negociacao": "ECOR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 558699080
     },
     {
         "razao_social": "EDP - ENERGIAS DO BRASIL S.A.",
@@ -2471,7 +2678,8 @@
             {
                 "codigo_negociacao": "ENBR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 606850394
     },
     {
         "razao_social": "ELECTRO ACO ALTONA S.A.",
@@ -2492,28 +2700,8 @@
             {
                 "codigo_negociacao": "EALT4"
             }
-        ]
-    },
-    {
-        "razao_social": "ELEKEIROZ S.A.",
-        "nome_empresa": "ELEKEIROZ",
-        "cnpj": "13788120000147",
-        "atividades": [
-            "Industrializa\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Produtos Qu\u00edmicos"
         ],
-        "classificacao_setorial": [
-            "Materiais B\u00e1sicos",
-            "Qu\u00edmicos",
-            "Petroqu\u00edmicos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "ELEK3"
-            },
-            {
-                "codigo_negociacao": "ELEK4"
-            }
-        ]
+        "quantidade_papeis": 22500000
     },
     {
         "razao_social": "ELEKTRO REDES S.A.",
@@ -2533,7 +2721,8 @@
             {
                 "codigo_negociacao": "EKTR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 193759265
     },
     {
         "razao_social": "ELETROBR\u00c1S PARTICIPA\u00c7\u00d5ES S.A. - ELETROPAR",
@@ -2550,7 +2739,8 @@
             {
                 "codigo_negociacao": "LIPR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 11764889
     },
     {
         "razao_social": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
@@ -2570,7 +2760,8 @@
             {
                 "codigo_negociacao": "EMAE4"
             }
-        ]
+        ],
+        "quantidade_papeis": 36947084
     },
     {
         "razao_social": "EMBRAER S.A.",
@@ -2588,7 +2779,27 @@
             {
                 "codigo_negociacao": "EMBR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 740465044
+    },
+    {
+        "razao_social": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+        "nome_empresa": "PAGUE MENOS",
+        "cnpj": "06626253000151",
+        "atividades": [
+            "Com\u00e9rcio de Produtos Farmac\u00eauticos. Perfumarias E Afins. Sem Manipula\u00e7\u00e3o de F\u00f3rmulas."
+        ],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Medicamentos e Outros Produtos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "PGMN3"
+            }
+        ],
+        "quantidade_papeis": 443781062
     },
     {
         "razao_social": "EMPRESA NAC COM REDITO PART S.A.ENCORPAR",
@@ -2609,7 +2820,8 @@
             {
                 "codigo_negociacao": "ECPR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1900064
     },
     {
         "razao_social": "ENAUTA PARTICIPA\u00c7\u00d5ES S.A.",
@@ -2626,7 +2838,8 @@
             {
                 "codigo_negociacao": "ENAT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 265806905
     },
     {
         "razao_social": "ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A",
@@ -2646,7 +2859,8 @@
             {
                 "codigo_negociacao": "ENMT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 218941939
     },
     {
         "razao_social": "ENERGISA S.A.",
@@ -2668,11 +2882,9 @@
             },
             {
                 "codigo_negociacao": "ENGI4"
-            },
-            {
-                "codigo_negociacao": "ENGI12"
             }
-        ]
+        ],
+        "quantidade_papeis": 1814561910
     },
     {
         "razao_social": "ENEVA S.A",
@@ -2689,7 +2901,8 @@
             {
                 "codigo_negociacao": "ENEV3"
             }
-        ]
+        ],
+        "quantidade_papeis": 315835960
     },
     {
         "razao_social": "ENGIE BRASIL ENERGIA S.A.",
@@ -2706,7 +2919,26 @@
             {
                 "codigo_negociacao": "EGIE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 815927740
+    },
+    {
+        "razao_social": "ENJOEI.COM.BR ATIVIDADES DE INTERNET S.A.",
+        "nome_empresa": "ENJOEI",
+        "cnpj": "16922038000151",
+        "atividades": [
+            "Plataforma Digital de Compra E Venda de Para Produtos Usados. Por Meio Da Cria\u00e7\u00e3o de \u0093lojas Virtuais\u0094 Pelos Pr\u00f3prios Usu\u00e1rios"
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "ENJU3"
+            }
+        ],
+        "quantidade_papeis": 195468382
     },
     {
         "razao_social": "EQUATORIAL ENERGIA S.A.",
@@ -2723,7 +2955,8 @@
             {
                 "codigo_negociacao": "EQTL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1010511085
     },
     {
         "razao_social": "EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.",
@@ -2749,7 +2982,8 @@
             {
                 "codigo_negociacao": "EQPA7"
             }
-        ]
+        ],
+        "quantidade_papeis": 2209074007
     },
     {
         "razao_social": "ETERNIT S.A.",
@@ -2766,11 +3000,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "ETER3"
-            },
-            {
-                "codigo_negociacao": "ETER1"
             }
-        ]
+        ],
+        "quantidade_papeis": 51675555
     },
     {
         "razao_social": "EUCATEX S.A. INDUSTRIA E COMERCIO",
@@ -2791,7 +3023,8 @@
             {
                 "codigo_negociacao": "EUCA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 92619256
     },
     {
         "razao_social": "EVEN CONSTRUTORA E INCORPORADORA S.A.",
@@ -2809,7 +3042,8 @@
             {
                 "codigo_negociacao": "EVEN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 212000000
     },
     {
         "razao_social": "EXCELSIOR ALIMENTOS S.A.",
@@ -2828,7 +3062,8 @@
             {
                 "codigo_negociacao": "BAUH4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5222222
     },
     {
         "razao_social": "EZ TEC EMPREEND. E PARTICIPACOES S.A.",
@@ -2846,7 +3081,8 @@
             {
                 "codigo_negociacao": "EZTC3"
             }
-        ]
+        ],
+        "quantidade_papeis": 227000000
     },
     {
         "razao_social": "FERROVIA CENTRO-ATLANTICA S.A.",
@@ -2867,7 +3103,8 @@
             {
                 "codigo_negociacao": "VSPT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 136242635
     },
     {
         "razao_social": "FERTILIZANTES HERINGER S.A.",
@@ -2885,7 +3122,8 @@
             {
                 "codigo_negociacao": "FHER3"
             }
-        ]
+        ],
+        "quantidade_papeis": 53857284
     },
     {
         "razao_social": "FINANCEIRA ALFA S.A.- CRED FINANC E INVS",
@@ -2906,7 +3144,8 @@
             {
                 "codigo_negociacao": "CRIV4"
             }
-        ]
+        ],
+        "quantidade_papeis": 102942556
     },
     {
         "razao_social": "FINANSINOS S.A.- CREDITO FINANC E INVEST",
@@ -2924,7 +3163,8 @@
             {
                 "codigo_negociacao": "FNCN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 913778
     },
     {
         "razao_social": "FLEURY S.A.",
@@ -2941,7 +3181,8 @@
             {
                 "codigo_negociacao": "FLRY3"
             }
-        ]
+        ],
+        "quantidade_papeis": 317366103
     },
     {
         "razao_social": "FLEX GEST\u00c3O DE RELACIONAMENTOS S.A.",
@@ -2959,7 +3200,8 @@
             {
                 "codigo_negociacao": "FLEX3"
             }
-        ]
+        ],
+        "quantidade_papeis": 3248533
     },
     {
         "razao_social": "FRAS-LE S.A.",
@@ -2977,7 +3219,8 @@
             {
                 "codigo_negociacao": "FRAS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 217566343
     },
     {
         "razao_social": "GAFISA S.A.",
@@ -2992,17 +3235,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "GFSA3"
-            },
-            {
-                "codigo_negociacao": "GFSA1"
-            },
-            {
-                "codigo_negociacao": "GFSA11"
-            },
-            {
-                "codigo_negociacao": "GFSA12"
             }
-        ]
+        ],
+        "quantidade_papeis": 300676101
     },
     {
         "razao_social": "GENERAL SHOPPING E OUTLETS DO BRASIL S.A.",
@@ -3019,7 +3254,8 @@
             {
                 "codigo_negociacao": "GSHP3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1928769
     },
     {
         "razao_social": "GERDAU S.A.",
@@ -3040,7 +3276,8 @@
             {
                 "codigo_negociacao": "GGBR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1719658728
     },
     {
         "razao_social": "GOL LINHAS AEREAS INTELIGENTES S.A.",
@@ -3064,7 +3301,8 @@
             {
                 "codigo_negociacao": "GOLL12"
             }
-        ]
+        ],
+        "quantidade_papeis": 3137706967
     },
     {
         "razao_social": "GP INVESTMENTS. LTD.",
@@ -3082,7 +3320,8 @@
             {
                 "codigo_negociacao": "GPIV33"
             }
-        ]
+        ],
+        "quantidade_papeis": 74665608
     },
     {
         "razao_social": "GPC PARTICIPACOES S.A.",
@@ -3101,7 +3340,8 @@
             {
                 "codigo_negociacao": "GPCP4"
             }
-        ]
+        ],
+        "quantidade_papeis": 31337845
     },
     {
         "razao_social": "GRAZZIOTIN S.A.",
@@ -3122,7 +3362,8 @@
             {
                 "codigo_negociacao": "CGRA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 20147579
     },
     {
         "razao_social": "GRENDENE S.A.",
@@ -3140,7 +3381,47 @@
             {
                 "codigo_negociacao": "GRND3"
             }
-        ]
+        ],
+        "quantidade_papeis": 902160000
+    },
+    {
+        "razao_social": "GRUPO DE MODA SOMA S.A.",
+        "nome_empresa": "GRUPO SOMA",
+        "cnpj": "10285590000108",
+        "atividades": [
+            "(i) A Confec\u00e7\u00e3o de Pe\u00e7as Do Vestu\u00e1rio. Exceto Roupas \u00edntimas E As Confeccionadas Sob Medida",
+            "E (ii) O Com\u00e9rcio Varejista de Artigos de Vestu\u00e1rio E Acess\u00f3rios de Qualquer Material."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "SOMA3"
+            }
+        ],
+        "quantidade_papeis": 477141524
+    },
+    {
+        "razao_social": "GRUPO MATEUS S.A.",
+        "nome_empresa": "GRUPO MATEUS",
+        "cnpj": "24990777000109",
+        "atividades": [
+            "Holdings de Institui\u00e7\u00f5es N\u00e3o Financeiras. Participa\u00e7\u00e3o No Capital de Outras Sociedades. Na Condi\u00e7\u00e3o de Acionista. S\u00f3cia Ou Quotista. em Car\u00e1ter Permanente Ou Tempor\u00e1rio. Como Controladora Ou Coligada."
+        ],
+        "classificacao_setorial": [
+            "Consumo n\u00e3o C\u00edclico",
+            "Com\u00e9rcio e Distribui\u00e7\u00e3o",
+            "Alimentos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "GMAT3"
+            }
+        ],
+        "quantidade_papeis": 2209346079
     },
     {
         "razao_social": "GRUPO SBF SA",
@@ -3159,7 +3440,8 @@
             {
                 "codigo_negociacao": "CNTO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 241889833
     },
     {
         "razao_social": "GUARARAPES CONFECCOES S.A.",
@@ -3177,7 +3459,8 @@
             {
                 "codigo_negociacao": "GUAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 499200000
     },
     {
         "razao_social": "HAGA S.A. INDUSTRIA E COMERCIO",
@@ -3198,7 +3481,8 @@
             {
                 "codigo_negociacao": "HAGA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 11900000
     },
     {
         "razao_social": "HAPVIDA PARTICIPACOES E INVESTIMENTOS SA",
@@ -3215,7 +3499,28 @@
             {
                 "codigo_negociacao": "HAPV3"
             }
-        ]
+        ],
+        "quantidade_papeis": 3714929530
+    },
+    {
+        "razao_social": "HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A",
+        "nome_empresa": "HBR REALTY",
+        "cnpj": "14785152000151",
+        "atividades": [
+            "Deter Patrim\u00f3nio Constitu\u00eddo Por Bens Im\u00f3veis E Direitos A Eles Relativos",
+            "Administrar Bens Im\u00f3veis Pr\u00f3prios E de Terceiros",
+            "E Participar. Como S\u00f3cia Ou Acionista. em Outras Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Explora\u00e7\u00e3o de Im\u00f3veis"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "HBRE3"
+            }
+        ],
+        "quantidade_papeis": 103188981
     },
     {
         "razao_social": "HELBOR EMPREENDIMENTOS S.A.",
@@ -3233,7 +3538,8 @@
             {
                 "codigo_negociacao": "HBOR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 133851072
     },
     {
         "razao_social": "HERCULES S.A. FABRICA DE TALHERES",
@@ -3254,7 +3560,27 @@
             {
                 "codigo_negociacao": "HETA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 509999
+    },
+    {
+        "razao_social": "HIDROVIAS DO BRASIL S.A.",
+        "nome_empresa": "HIDROVIAS",
+        "cnpj": "12648327000153",
+        "atividades": [
+            "Operador de Log\u00edstica Hidrovi\u00e1ria Para Clientes de Commodities Agr\u00edcolas. Minerais. Combust\u00edveis E Derivados E Carga. Integrando O Transporte Por Barca\u00e7as Com Opera\u00e7\u00e3o de Terminais de Origem E Destino"
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Transporte",
+            "Transporte Hidrovi\u00e1rio"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "HBSA3"
+            }
+        ],
+        "quantidade_papeis": 760382643
     },
     {
         "razao_social": "HOTEIS OTHON S.A.",
@@ -3275,7 +3601,8 @@
             {
                 "codigo_negociacao": "HOOT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 18372411
     },
     {
         "razao_social": "HYPERA S.A.",
@@ -3293,25 +3620,8 @@
             {
                 "codigo_negociacao": "HYPE3"
             }
-        ]
-    },
-    {
-        "razao_social": "IDEIASNET S.A.",
-        "nome_empresa": "IDEIASNET",
-        "cnpj": "02365069000144",
-        "atividades": [
-            "Aquisi\u00e7\u00e3o de Participa\u00e7\u00f5es Diretas E Indiretas em Companhias Do Setor de Tecnologia. M\u00eddia E Telecomunica\u00e7\u00f5es",
-            "E Gest\u00e3o de Carteiras de Valores Mobili\u00e1rios E Recursos Pr\u00f3prios E de Terceiros."
         ],
-        "classificacao_setorial": [
-            "Financeiro",
-            "Servi\u00e7os Financeiros Diversos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "IDNT3"
-            }
-        ]
+        "quantidade_papeis": 633420823
     },
     {
         "razao_social": "IGB ELETR\u00d4NICA S/A",
@@ -3327,8 +3637,12 @@
         "acoes": [
             {
                 "codigo_negociacao": "IGBR3"
+            },
+            {
+                "codigo_negociacao": "IGBR1"
             }
-        ]
+        ],
+        "quantidade_papeis": 12504966
     },
     {
         "razao_social": "IGUA SANEAMENTO S.A.",
@@ -3345,7 +3659,8 @@
             {
                 "codigo_negociacao": "IGSN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 207017884
     },
     {
         "razao_social": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
@@ -3362,7 +3677,8 @@
             {
                 "codigo_negociacao": "IGTA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 176611578
     },
     {
         "razao_social": "INDUSTRIAS J B DUARTE S.A.",
@@ -3381,7 +3697,8 @@
             {
                 "codigo_negociacao": "JBDU4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5019161
     },
     {
         "razao_social": "INDUSTRIAS ROMI S.A.",
@@ -3399,7 +3716,8 @@
             {
                 "codigo_negociacao": "ROMI3"
             }
-        ]
+        ],
+        "quantidade_papeis": 73333922
     },
     {
         "razao_social": "INEPAR S.A. INDUSTRIA E CONSTRUCOES",
@@ -3420,7 +3738,8 @@
             {
                 "codigo_negociacao": "INEP4"
             }
-        ]
+        ],
+        "quantidade_papeis": 8216579
     },
     {
         "razao_social": "INSTITUTO HERMES PARDINI S.A.",
@@ -3437,7 +3756,8 @@
             {
                 "codigo_negociacao": "PARD3"
             }
-        ]
+        ],
+        "quantidade_papeis": 130978595
     },
     {
         "razao_social": "INTER CONSTRUTORA E INCORPORADORA S.A.",
@@ -3455,7 +3775,8 @@
             {
                 "codigo_negociacao": "INNT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 86885349
     },
     {
         "razao_social": "INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.",
@@ -3473,7 +3794,8 @@
             {
                 "codigo_negociacao": "MEAL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 286369530
     },
     {
         "razao_social": "INVESTIMENTOS BEMGE S.A.",
@@ -3492,7 +3814,8 @@
             {
                 "codigo_negociacao": "FIGE4"
             }
-        ]
+        ],
+        "quantidade_papeis": 2363936
     },
     {
         "razao_social": "IOCHPE MAXION S.A.",
@@ -3509,7 +3832,8 @@
             {
                 "codigo_negociacao": "MYPK3"
             }
-        ]
+        ],
+        "quantidade_papeis": 153719601
     },
     {
         "razao_social": "IRANI PAPEL E EMBALAGEM S.A.",
@@ -3526,11 +3850,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "RANI3"
-            },
-            {
-                "codigo_negociacao": "RANI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 256720235
     },
     {
         "razao_social": "IRB - BRASIL RESSEGUROS S.A.",
@@ -3548,7 +3870,8 @@
             {
                 "codigo_negociacao": "IRBR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1267890332
     },
     {
         "razao_social": "ITAU UNIBANCO HOLDING S.A.",
@@ -3569,10 +3892,11 @@
             {
                 "codigo_negociacao": "ITUB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 9804135348
     },
     {
-        "razao_social": "ITAUSA INVESTIMENTOS ITAU S.A.",
+        "razao_social": "ITAUSA S.A.",
         "nome_empresa": "ITAUSA",
         "cnpj": "61532644000115",
         "atividades": [
@@ -3590,7 +3914,8 @@
             {
                 "codigo_negociacao": "ITSA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 8410814930
     },
     {
         "razao_social": "JBS S.A.",
@@ -3606,7 +3931,8 @@
             {
                 "codigo_negociacao": "JBSS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2623373646
     },
     {
         "razao_social": "JEREISSATI PARTICIPACOES S.A.",
@@ -3621,7 +3947,8 @@
             {
                 "codigo_negociacao": "JPSA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 87889174
     },
     {
         "razao_social": "JHSF PARTICIPACOES S.A.",
@@ -3639,7 +3966,8 @@
             {
                 "codigo_negociacao": "JHSF3"
             }
-        ]
+        ],
+        "quantidade_papeis": 689024353
     },
     {
         "razao_social": "JOAO FORTES ENGENHARIA S.A.",
@@ -3647,7 +3975,7 @@
         "cnpj": "33035536000100",
         "atividades": [
             "Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o de Im\u00f3veis",
-            "Execu\u00e7\u00e3o Por Administra\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Civil"
+            "Execu\u00e7\u00e3o Por Administra\u00e7\u00e3o de Obras de Constru\u00e7\u00e3o Civil."
         ],
         "classificacao_setorial": [
             "Consumo C\u00edclico",
@@ -3658,7 +3986,8 @@
             {
                 "codigo_negociacao": "JFEN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 105203815
     },
     {
         "razao_social": "JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP",
@@ -3679,7 +4008,8 @@
             {
                 "codigo_negociacao": "JOPA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 10582361
     },
     {
         "razao_social": "JSL S.A.",
@@ -3695,7 +4025,8 @@
             {
                 "codigo_negociacao": "JSLG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 279991078
     },
     {
         "razao_social": "KARSTEN S.A.",
@@ -3716,7 +4047,8 @@
             {
                 "codigo_negociacao": "CTKA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 6205375
     },
     {
         "razao_social": "KEPLER WEBER S.A.",
@@ -3737,7 +4069,8 @@
             {
                 "codigo_negociacao": "KEPL11"
             }
-        ]
+        ],
+        "quantidade_papeis": 26311971
     },
     {
         "razao_social": "KLABIN S.A.",
@@ -3761,7 +4094,27 @@
             {
                 "codigo_negociacao": "KLBN4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5617892756
+    },
+    {
+        "razao_social": "LAVVI EMPREENDIMENTOS IMOBILI\u00c1RIOS S.A.",
+        "nome_empresa": "LAVVI",
+        "cnpj": "26462693000128",
+        "atividades": [
+            "Incorporadora Imobili\u00e1ria"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "LAVV3"
+            }
+        ],
+        "quantidade_papeis": 214628652
     },
     {
         "razao_social": "LIFEMED INDUSTRIAL EQUIP. DE ART. M\u00c9D. HOSP. S.A.",
@@ -3778,7 +4131,8 @@
             {
                 "codigo_negociacao": "LMED3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2576438
     },
     {
         "razao_social": "LIGHT S.A.",
@@ -3795,7 +4149,8 @@
             {
                 "codigo_negociacao": "LIGT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 372555324
     },
     {
         "razao_social": "LINX S.A.",
@@ -3810,7 +4165,8 @@
             {
                 "codigo_negociacao": "LINX3"
             }
-        ]
+        ],
+        "quantidade_papeis": 189408960
     },
     {
         "razao_social": "LOCALIZA RENT A CAR S.A.",
@@ -3828,7 +4184,8 @@
             {
                 "codigo_negociacao": "RENT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 758466670
     },
     {
         "razao_social": "LOCAWEB SERVI\u00c7OS DE INTERNET S.A.",
@@ -3843,7 +4200,8 @@
             {
                 "codigo_negociacao": "LWSA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 126815443
     },
     {
         "razao_social": "LOG COMMERCIAL PROPERTIES",
@@ -3860,14 +4218,15 @@
             {
                 "codigo_negociacao": "LOGG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 102159154
     },
     {
         "razao_social": "LOG-IN LOGISTICA INTERMODAL S.A.",
         "nome_empresa": "LOG-IN",
         "cnpj": "42278291000124",
         "atividades": [
-            "A Log-in Oferece Solu\u00e7\u00f5es Log\u00edsticas Integradas Atrav\u00e9s Do Transporte Aquavi\u00e1rio em Navios Porta-cont\u00eaineres. Terminal Portu\u00e1rio. Terminais Intermodais E Complemento Rodovi\u00e1rio."
+            "A Log-in Oferece Solu\u00e7\u00f5es Log\u00edsticas Integradas Atrav\u00e9s Do Transporte Mar\u00edtimo em Navios Porta-cont\u00eaineres. Terminal Portu\u00e1rio. Terminais Intermodais E Transporte Rodovi\u00e1rio de Curta Dist\u00e2ncia."
         ],
         "classificacao_setorial": [
             "Bens Industriais",
@@ -3878,7 +4237,8 @@
             {
                 "codigo_negociacao": "LOGN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 105489191
     },
     {
         "razao_social": "LOJAS AMERICANAS S.A.",
@@ -3898,8 +4258,34 @@
             },
             {
                 "codigo_negociacao": "LAME4"
+            },
+            {
+                "codigo_negociacao": "LAME1"
+            },
+            {
+                "codigo_negociacao": "LAME2"
             }
-        ]
+        ],
+        "quantidade_papeis": 1867535716
+    },
+    {
+        "razao_social": "LOJAS QUERO-QUERO S/A",
+        "nome_empresa": "QUERO-QUERO",
+        "cnpj": "96418264021802",
+        "atividades": [
+            "Com\u00e9rcio Varejista Especializado em Material de Constru\u00e7\u00e3o. Eletrodom\u00e9sticos E M\u00f3veis."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "LJQQ3"
+            }
+        ],
+        "quantidade_papeis": 187290269
     },
     {
         "razao_social": "LOJAS RENNER S.A.",
@@ -3917,7 +4303,8 @@
             {
                 "codigo_negociacao": "LREN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 796170210
     },
     {
         "razao_social": "LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.",
@@ -3935,7 +4322,8 @@
             {
                 "codigo_negociacao": "LPSB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 147554631
     },
     {
         "razao_social": "LUPATECH S.A.",
@@ -3955,7 +4343,8 @@
             {
                 "codigo_negociacao": "LUPA11"
             }
-        ]
+        ],
+        "quantidade_papeis": 26262840
     },
     {
         "razao_social": "M.DIAS BRANCO S.A. IND COM DE ALIMENTOS",
@@ -3973,7 +4362,8 @@
             {
                 "codigo_negociacao": "MDIA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 339000000
     },
     {
         "razao_social": "MAESTRO LOCADORA DE VEICULOS S.A.",
@@ -3991,7 +4381,8 @@
             {
                 "codigo_negociacao": "MSRO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 26009820
     },
     {
         "razao_social": "MAGAZINE LUIZA S.A.",
@@ -4009,7 +4400,8 @@
             {
                 "codigo_negociacao": "MGLU3"
             }
-        ]
+        ],
+        "quantidade_papeis": 6498926848
     },
     {
         "razao_social": "MAHLE-METAL LEVE S.A.",
@@ -4026,7 +4418,8 @@
             {
                 "codigo_negociacao": "LEVE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 128308500
     },
     {
         "razao_social": "MANGELS INDUSTRIAL S.A.",
@@ -4047,7 +4440,8 @@
             {
                 "codigo_negociacao": "MGEL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5783212
     },
     {
         "razao_social": "MANUFATURA DE BRINQUEDOS ESTRELA S.A.",
@@ -4068,7 +4462,8 @@
             {
                 "codigo_negociacao": "ESTR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 808350
     },
     {
         "razao_social": "MARCOPOLO S.A.",
@@ -4089,7 +4484,8 @@
             {
                 "codigo_negociacao": "POMO4"
             }
-        ]
+        ],
+        "quantidade_papeis": 946892882
     },
     {
         "razao_social": "MARFRIG GLOBAL FOODS S.A.",
@@ -4107,7 +4503,8 @@
             {
                 "codigo_negociacao": "MRFG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 711369913
     },
     {
         "razao_social": "MARISA LOJAS S.A.",
@@ -4125,14 +4522,52 @@
             {
                 "codigo_negociacao": "AMAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 261666739
+    },
+    {
+        "razao_social": "M\u00c9LIUZ S.A.",
+        "nome_empresa": "MELIUZ",
+        "cnpj": "14110585000107",
+        "atividades": [
+            "Portal Virtual Para Veicula\u00e7\u00e3o E Divulga\u00e7\u00e3o de Marcas. Produtos E Outros Materiais. Loca\u00e7\u00e3o de Espa\u00e7o Publicit\u00e1rio. Intermedia\u00e7\u00e3o de Neg\u00f3cios. Licenciamento de Softwares E Participa\u00e7\u00e3o em Sociedades."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "CASH3"
+            }
+        ],
+        "quantidade_papeis": 126433000
+    },
+    {
+        "razao_social": "MELNICK DESENVOLVIMENTO IMOBILI\u00c1RIO S.A.",
+        "nome_empresa": "MELNICK",
+        "cnpj": "12181987000177",
+        "atividades": [
+            "Constru\u00e7\u00e3o. Incorpora\u00e7\u00e3o. Loteamento E Comercializa\u00e7\u00e3o de Condom\u00ednios E Empreendimentos Imobili\u00e1rios de Qualquer Natureza."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "MELK3"
+            }
+        ],
+        "quantidade_papeis": 207969341
     },
     {
         "razao_social": "MERCANTIL BRASIL FINANC S.A. C.F.I.",
         "nome_empresa": "MERC FINANC",
         "cnpj": "33040601000187",
         "atividades": [
-            "Cr\u00e9dito. Financiamento E Investimentos."
+            "Cr\u00e9dito. Financiamento E Investimentos"
         ],
         "classificacao_setorial": [
             "Financeiro",
@@ -4146,7 +4581,8 @@
             {
                 "codigo_negociacao": "MERC4"
             }
-        ]
+        ],
+        "quantidade_papeis": 18010000
     },
     {
         "razao_social": "METALFRIO SOLUTIONS S.A.",
@@ -4164,14 +4600,15 @@
             {
                 "codigo_negociacao": "FRIO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 4106754
     },
     {
         "razao_social": "METALGRAFICA IGUACU S.A.",
         "nome_empresa": "METAL IGUACU",
         "cnpj": "80227184000166",
         "atividades": [
-            "F\u00e1brica de Embalagens Met\u00e1licas Para Alimentos"
+            "Fabrica de Embalagens Met\u00e1licas Para Alimentos"
         ],
         "classificacao_setorial": [
             "Materiais B\u00e1sicos",
@@ -4184,7 +4621,8 @@
             {
                 "codigo_negociacao": "MTIG4"
             }
-        ]
+        ],
+        "quantidade_papeis": 241344
     },
     {
         "razao_social": "METALURGICA GERDAU S.A.",
@@ -4205,7 +4643,8 @@
             {
                 "codigo_negociacao": "GOAU4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1087243204
     },
     {
         "razao_social": "METALURGICA RIOSULENSE S.A.",
@@ -4226,7 +4665,8 @@
             {
                 "codigo_negociacao": "RSUL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 583000
     },
     {
         "razao_social": "METISA METALURGICA TIMBOENSE S.A.",
@@ -4247,7 +4687,8 @@
             {
                 "codigo_negociacao": "MTSA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 9137263
     },
     {
         "razao_social": "MILLS ESTRUTURAS E SERVI\u00c7OS DE ENGENHARIA S.A.",
@@ -4265,7 +4706,8 @@
             {
                 "codigo_negociacao": "MILS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 251953730
     },
     {
         "razao_social": "MINASMAQUINAS S.A.",
@@ -4286,7 +4728,8 @@
             {
                 "codigo_negociacao": "MMAQ4"
             }
-        ]
+        ],
+        "quantidade_papeis": 44850
     },
     {
         "razao_social": "MINERVA S.A.",
@@ -4303,11 +4746,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "BEEF3"
-            },
-            {
-                "codigo_negociacao": "BEEF11"
             }
-        ]
+        ],
+        "quantidade_papeis": 549573466
     },
     {
         "razao_social": "MINUPAR PARTICIPACOES S.A.",
@@ -4325,7 +4766,8 @@
             {
                 "codigo_negociacao": "MNPR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 7100100
     },
     {
         "razao_social": "MITRE REALTY EMPREENDIMENTOS E PARTICIPA\u00c7\u00d5ES S.A.",
@@ -4343,7 +4785,8 @@
             {
                 "codigo_negociacao": "MTRE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 105774820
     },
     {
         "razao_social": "MMX MINERACAO E METALICOS S.A.",
@@ -4360,11 +4803,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "MMXM3"
-            },
-            {
-                "codigo_negociacao": "MMXM11"
             }
-        ]
+        ],
+        "quantidade_papeis": 6488183
     },
     {
         "razao_social": "MONTEIRO ARANHA S.A.",
@@ -4381,7 +4822,8 @@
             {
                 "codigo_negociacao": "MOAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 12251221
     },
     {
         "razao_social": "MOURA DUBEUX ENGENHARIA S/A",
@@ -4399,7 +4841,8 @@
             {
                 "codigo_negociacao": "MDNE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 84909375
     },
     {
         "razao_social": "MOVIDA PARTICIPACOES SA",
@@ -4417,14 +4860,15 @@
             {
                 "codigo_negociacao": "MOVI3"
             }
-        ]
+        ],
+        "quantidade_papeis": 298921014
     },
     {
         "razao_social": "MRV ENGENHARIA E PARTICIPACOES S.A.",
         "nome_empresa": "MRV",
         "cnpj": "08343492000120",
         "atividades": [
-            "Atividades de Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o atividades de Log\u00edstica"
+            "Atividades de Incorpora\u00e7\u00e3o E Constru\u00e7\u00e3o"
         ],
         "classificacao_setorial": [
             "Consumo C\u00edclico",
@@ -4435,7 +4879,8 @@
             {
                 "codigo_negociacao": "MRVE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 482875033
     },
     {
         "razao_social": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
@@ -4452,7 +4897,8 @@
             {
                 "codigo_negociacao": "MULT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 600760875
     },
     {
         "razao_social": "MUNDIAL S.A. - PRODUTOS DE CONSUMO",
@@ -4470,7 +4916,8 @@
             {
                 "codigo_negociacao": "MNDL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2480260
     },
     {
         "razao_social": "NATURA &CO HOLDING S.A.",
@@ -4487,11 +4934,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "NTCO3"
-            },
-            {
-                "codigo_negociacao": "NTCO1"
             }
-        ]
+        ],
+        "quantidade_papeis": 1375018140
     },
     {
         "razao_social": "NEOENERGIA S.A.",
@@ -4508,7 +4953,28 @@
             {
                 "codigo_negociacao": "NEOE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1213797248
+    },
+    {
+        "razao_social": "NEOGRID PARTICIPACOES S.A.",
+        "nome_empresa": "NEOGRID",
+        "cnpj": "10139870000108",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Empresas Ou Sociedades. Neg\u00f3cios E Empreendimentos",
+            "Desenvolvimento. Licenciamento E Implementa\u00e7\u00e3o de Softwares",
+            "E Presta\u00e7\u00e3o de Servi\u00e7os de Assessoria T\u00e9cnica E de Treinamento."
+        ],
+        "classificacao_setorial": [
+            "Tecnologia da Informa\u00e7\u00e3o",
+            "Programas e Servi\u00e7os"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "NGRD3"
+            }
+        ],
+        "quantidade_papeis": 238662330
     },
     {
         "razao_social": "NORDON INDUSTRIAS METALURGICAS S.A.",
@@ -4526,7 +4992,8 @@
             {
                 "codigo_negociacao": "NORD3"
             }
-        ]
+        ],
+        "quantidade_papeis": 6621486
     },
     {
         "razao_social": "NORTEC QU\u00cdMICA S.A.",
@@ -4543,7 +5010,8 @@
             {
                 "codigo_negociacao": "NRTQ3"
             }
-        ]
+        ],
+        "quantidade_papeis": 11877395
     },
     {
         "razao_social": "NOTRE DAME INTERMEDICA PARTICIPACOES SA",
@@ -4560,25 +5028,8 @@
             {
                 "codigo_negociacao": "GNDI3"
             }
-        ]
-    },
-    {
-        "razao_social": "NUTRIPLANT INDUSTRIA E COMERCIO S.A.",
-        "nome_empresa": "NUTRIPLANT",
-        "cnpj": "51128999000190",
-        "atividades": [
-            "Industria E Com\u00e9rcio de Fertilizantes Para Agricultura."
         ],
-        "classificacao_setorial": [
-            "Materiais B\u00e1sicos",
-            "Qu\u00edmicos",
-            "Fertilizantes e Defensivos"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "NUTR3"
-            }
-        ]
+        "quantidade_papeis": 609787507
     },
     {
         "razao_social": "ODONTOPREV S.A.",
@@ -4595,7 +5046,8 @@
             {
                 "codigo_negociacao": "ODPV3"
             }
-        ]
+        ],
+        "quantidade_papeis": 531294792
     },
     {
         "razao_social": "OI S.A.",
@@ -4613,7 +5065,8 @@
             {
                 "codigo_negociacao": "OIBR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5954205001
     },
     {
         "razao_social": "OMEGA GERA\u00c7\u00c3O S.A.",
@@ -4630,7 +5083,8 @@
             {
                 "codigo_negociacao": "OMGE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 195912131
     },
     {
         "razao_social": "OSX BRASIL S.A.",
@@ -4647,7 +5101,8 @@
             {
                 "codigo_negociacao": "OSXB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 3148038
     },
     {
         "razao_social": "OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.",
@@ -4664,7 +5119,26 @@
             {
                 "codigo_negociacao": "OFSA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 53949006
+    },
+    {
+        "razao_social": "PADTEC HOLDING S.A.",
+        "nome_empresa": "PADTEC",
+        "cnpj": "02365069000144",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades. Fdos de Investimento. Carteiras de Valores Mobili\u00e1rios Ou Outros Ve\u00edculos de Investimento. Que Atuem Na \u00e1rea de Tecnologia. em Especial Na Padtec S.A."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Servi\u00e7os Financeiros Diversos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "PDTC3"
+            }
+        ],
+        "quantidade_papeis": 78449779
     },
     {
         "razao_social": "PANATLANTICA S.A.",
@@ -4685,7 +5159,8 @@
             {
                 "codigo_negociacao": "PATI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 18269770
     },
     {
         "razao_social": "PARANAPANEMA S.A.",
@@ -4703,7 +5178,8 @@
             {
                 "codigo_negociacao": "PMAM3"
             }
-        ]
+        ],
+        "quantidade_papeis": 43403849
     },
     {
         "razao_social": "PBG S/A",
@@ -4719,7 +5195,8 @@
             {
                 "codigo_negociacao": "PTBL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 154529361
     },
     {
         "razao_social": "PDG REALTY S.A. EMPREEND E PARTICIPACOES",
@@ -4735,7 +5212,28 @@
             {
                 "codigo_negociacao": "PDGR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 8066955
+    },
+    {
+        "razao_social": "PET CENTER COMERCIO E PARTICIPACOES S.A.",
+        "nome_empresa": "PETZ",
+        "cnpj": "18328118000109",
+        "atividades": [
+            "Importa\u00e7\u00e3o. Exporta\u00e7\u00e3o E Com\u00e9rcio (inclusive Via Internet E-commerce) de Artigos Para Animais. Plantas. Flores. Sementes",
+            "Hospital Veterin\u00e1rio. Consult\u00f3rio. Cl\u00ednica Veterin\u00e1ria. Banho/tosa E Hotel."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Com\u00e9rcio",
+            "Produtos Diversos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "PETZ3"
+            }
+        ],
+        "quantidade_papeis": 372855796
     },
     {
         "razao_social": "PETRO RIO S.A.",
@@ -4752,7 +5250,8 @@
             {
                 "codigo_negociacao": "PRIO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 145966169
     },
     {
         "razao_social": "PETROBRAS DISTRIBUIDORA S/A",
@@ -4769,14 +5268,15 @@
             {
                 "codigo_negociacao": "BRDT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1165000000
     },
     {
         "razao_social": "PETROLEO BRASILEIRO S.A. PETROBRAS",
         "nome_empresa": "PETROBRAS",
         "cnpj": "33000167000101",
         "atividades": [
-            "Petr\u00f3leo. G\u00e1s E Energia"
+            "Pesquisa. Lavra. Refina\u00e7\u00e3o. Processamento. Com\u00e9rcio E Transporte de Petr\u00f3leo. de Seus Derivados. de G\u00e1s Natural E de Outros Hidrocarbonetos Fluidos. Al\u00e9m Das Atividades Vinculadas \u00e0 Energia."
         ],
         "classificacao_setorial": [
             "Petr\u00f3leo. G\u00e1s e Biocombust\u00edveis",
@@ -4789,7 +5289,8 @@
             {
                 "codigo_negociacao": "PETR4"
             }
-        ]
+        ],
+        "quantidade_papeis": 13044496930
     },
     {
         "razao_social": "PETTENATI S.A. INDUSTRIA TEXTIL",
@@ -4808,7 +5309,29 @@
             {
                 "codigo_negociacao": "PTNT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 48046488
+    },
+    {
+        "razao_social": "PLANO & PLANO DESENVOLVIMENTO IMOBILI\u00c1RIO S.A.",
+        "nome_empresa": "PLANOEPLANO",
+        "cnpj": "24230275000180",
+        "atividades": [
+            "(i) Incorpora\u00e7\u00e3o. Constru\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Empreendimentos Imobili\u00e1rios",
+            "(ii) Loca\u00e7\u00e3o de Im\u00f3veis Pr\u00f3prios",
+            "(iii) Administra\u00e7\u00e3o de Carteira de Receb\u00edveis de Financiamentos. Empr\u00e9stimos Imobili\u00e1r"
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Constru\u00e7\u00e3o Civil",
+            "Incorpora\u00e7\u00f5es"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "PLPL3"
+            }
+        ],
+        "quantidade_papeis": 204256000
     },
     {
         "razao_social": "PLASCAR PARTICIPACOES INDUSTRIAIS S.A.",
@@ -4828,7 +5351,8 @@
             {
                 "codigo_negociacao": "PLAS11"
             }
-        ]
+        ],
+        "quantidade_papeis": 12425418
     },
     {
         "razao_social": "POLPAR S.A.",
@@ -4844,7 +5368,8 @@
             {
                 "codigo_negociacao": "PPAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 74000
     },
     {
         "razao_social": "POMIFRUTAS S/A",
@@ -4862,7 +5387,8 @@
             {
                 "codigo_negociacao": "FRTA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2001106
     },
     {
         "razao_social": "PORTO SEGURO S.A.",
@@ -4880,7 +5406,8 @@
             {
                 "codigo_negociacao": "PSSA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 323293030
     },
     {
         "razao_social": "PORTO SUDESTE V.M. S.A.",
@@ -4896,7 +5423,8 @@
             {
                 "codigo_negociacao": "PSVM11"
             }
-        ]
+        ],
+        "quantidade_papeis": 5333330970
     },
     {
         "razao_social": "POSITIVO TECNOLOGIA S.A.",
@@ -4913,7 +5441,8 @@
             {
                 "codigo_negociacao": "POSI3"
             }
-        ]
+        ],
+        "quantidade_papeis": 141800000
     },
     {
         "razao_social": "PPLA PARTICIPATIONS LTD.",
@@ -4931,7 +5460,8 @@
             {
                 "codigo_negociacao": "PPLA11"
             }
-        ]
+        ],
+        "quantidade_papeis": 2814666
     },
     {
         "razao_social": "PRATICA KLIMAQUIP INDUSTRIA E COMERCIO SA",
@@ -4953,7 +5483,8 @@
             {
                 "codigo_negociacao": "PTCA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 3728273
     },
     {
         "razao_social": "PRINER SERVI\u00c7OS INDUSTRIAIS S.A.",
@@ -4971,7 +5502,8 @@
             {
                 "codigo_negociacao": "PRNR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 38758616
     },
     {
         "razao_social": "PROFARMA DISTRIB PROD FARMACEUTICOS S.A.",
@@ -4989,7 +5521,8 @@
             {
                 "codigo_negociacao": "PFRM3"
             }
-        ]
+        ],
+        "quantidade_papeis": 123812773
     },
     {
         "razao_social": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
@@ -5006,7 +5539,8 @@
             {
                 "codigo_negociacao": "QUAL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 284014325
     },
     {
         "razao_social": "QUALITY SOFTWARE S.A.",
@@ -5014,8 +5548,9 @@
         "cnpj": "35791391000194",
         "atividades": [
             "Servi\u00e7os Nos Setores de Inform\u00e1tica. Auditoria de Sistemas Softwares",
-            "Treinamento.desenvolvimento de Sistemas de Suporte T\u00e9cnico. Hardware E Software em Geral",
-            "Design Gr\u00e1fico E Editora\u00e7\u00e3o Eletr\u00f3nica."
+            "Treinamentos.desenvolvimento de Sistemas de Suporte T\u00e9cnico",
+            "Hardware E Software em Geral",
+            "Design Gr\u00e1fico E Editora\u00e7\u00e3o Eletronica."
         ],
         "classificacao_setorial": [
             "Tecnologia da Informa\u00e7\u00e3o",
@@ -5025,7 +5560,8 @@
             {
                 "codigo_negociacao": "QUSW3"
             }
-        ]
+        ],
+        "quantidade_papeis": 861605
     },
     {
         "razao_social": "RAIA DROGASIL S.A.",
@@ -5043,7 +5579,8 @@
             {
                 "codigo_negociacao": "RADL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1651930000
     },
     {
         "razao_social": "RANDON S.A. IMPLEMENTOS E PARTICIPACOES",
@@ -5065,7 +5602,8 @@
             {
                 "codigo_negociacao": "RAPT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 345775809
     },
     {
         "razao_social": "RECRUSUL S.A.",
@@ -5086,7 +5624,24 @@
             {
                 "codigo_negociacao": "RCSL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 75823374
+    },
+    {
+        "razao_social": "Rede DOr S\u00e3o Luiz S.A.",
+        "nome_empresa": "REDE D OR",
+        "cnpj": "06047087000139",
+        "atividades": [],
+        "classificacao_setorial": [
+            "Sa\u00fade",
+            "Serv.M\u00e9d.Hospit..An\u00e1lises e Diagn\u00f3sticos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "RDOR3"
+            }
+        ],
+        "quantidade_papeis": 1985327155
     },
     {
         "razao_social": "REDE ENERGIA PARTICIPA\u00c7\u00d5ES S.A.",
@@ -5103,7 +5658,8 @@
             {
                 "codigo_negociacao": "REDE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2110323374
     },
     {
         "razao_social": "REFINARIA DE PETROLEOS MANGUINHOS S.A.",
@@ -5120,7 +5676,8 @@
             {
                 "codigo_negociacao": "RPMG3"
             }
-        ]
+        ],
+        "quantidade_papeis": 67691629
     },
     {
         "razao_social": "RENOVA ENERGIA S.A.",
@@ -5143,7 +5700,8 @@
             {
                 "codigo_negociacao": "RNEW4"
             }
-        ]
+        ],
+        "quantidade_papeis": 41719724
     },
     {
         "razao_social": "RESTOQUE COM\u00c9RCIO E CONFEC\u00c7\u00d5ES DE ROUPAS S.A.",
@@ -5163,7 +5721,8 @@
             {
                 "codigo_negociacao": "LLIS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 68850829
     },
     {
         "razao_social": "RIO PARANAPANEMA ENERGIA S.A.",
@@ -5183,7 +5742,8 @@
             {
                 "codigo_negociacao": "GEPA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 94433283
     },
     {
         "razao_social": "RNI NEG\u00d3CIOS IMOBILI\u00c1RIOS S.A.",
@@ -5204,7 +5764,8 @@
             {
                 "codigo_negociacao": "RDNI3"
             }
-        ]
+        ],
+        "quantidade_papeis": 43769808
     },
     {
         "razao_social": "ROSSI RESIDENCIAL S.A.",
@@ -5222,7 +5783,8 @@
             {
                 "codigo_negociacao": "RSID3"
             }
-        ]
+        ],
+        "quantidade_papeis": 17153337
     },
     {
         "razao_social": "RUMO S.A.",
@@ -5240,7 +5802,8 @@
             {
                 "codigo_negociacao": "RAIL3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1854158791
     },
     {
         "razao_social": "SANSUY S.A. INDUSTRIA DE PLASTICOS",
@@ -5263,7 +5826,8 @@
             {
                 "codigo_negociacao": "SNSY6"
             }
-        ]
+        ],
+        "quantidade_papeis": 7716400
     },
     {
         "razao_social": "SANTOS BRASIL PARTICIPACOES S.A.",
@@ -5281,7 +5845,8 @@
             {
                 "codigo_negociacao": "STBP3"
             }
-        ]
+        ],
+        "quantidade_papeis": 862478378
     },
     {
         "razao_social": "SAO CARLOS EMPREEND E PARTICIPACOES S.A.",
@@ -5302,7 +5867,8 @@
             {
                 "codigo_negociacao": "SCAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 57737319
     },
     {
         "razao_social": "SAO MARTINHO S.A.",
@@ -5320,7 +5886,8 @@
             {
                 "codigo_negociacao": "SMTO3"
             }
-        ]
+        ],
+        "quantidade_papeis": 354011329
     },
     {
         "razao_social": "SAO PAULO TURISMO S.A.",
@@ -5344,7 +5911,8 @@
             {
                 "codigo_negociacao": "AHEB6"
             }
-        ]
+        ],
+        "quantidade_papeis": 8543894
     },
     {
         "razao_social": "SARAIVA LIVREIROS S.A. - EM RECUPERA\u00c7\u00c3O JUDICIAL",
@@ -5371,7 +5939,8 @@
             {
                 "codigo_negociacao": "SLED12"
             }
-        ]
+        ],
+        "quantidade_papeis": 63410194
     },
     {
         "razao_social": "SCHULZ S.A.",
@@ -5392,7 +5961,27 @@
             {
                 "codigo_negociacao": "SHUL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 89343695
+    },
+    {
+        "razao_social": "SEQUOIA LOGISTICA E TRANSPORTES S.A",
+        "nome_empresa": "SEQUOIA LOG",
+        "cnpj": "01599101000193",
+        "atividades": [
+            "Log\u00edstica.transporte Rodovi\u00e1rio de Cargas em Geral. Municipal. Intermunicipal. Estadual E Interestadual. Servi\u00e7os de Entrega R\u00e1pida E Carga E Descarga. Dentre Outros."
+        ],
+        "classificacao_setorial": [
+            "Bens Industriais",
+            "Servi\u00e7os",
+            "Servi\u00e7os Diversos"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "SEQL3"
+            }
+        ],
+        "quantidade_papeis": 127150021
     },
     {
         "razao_social": "SER EDUCACIONAL S.A.",
@@ -5412,7 +6001,8 @@
             {
                 "codigo_negociacao": "SEER3"
             }
-        ]
+        ],
+        "quantidade_papeis": 128721560
     },
     {
         "razao_social": "SIDERURGICA J. L. ALIPERTI S.A.",
@@ -5433,7 +6023,26 @@
             {
                 "codigo_negociacao": "APTI4"
             }
-        ]
+        ],
+        "quantidade_papeis": 18595
+    },
+    {
+        "razao_social": "SIMPAR S.A.",
+        "nome_empresa": "SIMPAR",
+        "cnpj": "07415333000120",
+        "atividades": [
+            "Participa\u00e7\u00e3o em Outras Sociedades Empresariais. Como S\u00f3cia Ou Acionista."
+        ],
+        "classificacao_setorial": [
+            "Financeiro",
+            "Holdings Diversificadas"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "SIMH3"
+            }
+        ],
+        "quantidade_papeis": 206165692
     },
     {
         "razao_social": "SINQIA S.A.",
@@ -5450,14 +6059,15 @@
             {
                 "codigo_negociacao": "SQIA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 70548812
     },
     {
         "razao_social": "SLC AGRICOLA S.A.",
         "nome_empresa": "SLC AGRICOLA",
         "cnpj": "89096457000155",
         "atividades": [
-            "Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Algod\u00e3o. Soja. Milho. Caf\u00e9. Entre Outros."
+            "Produ\u00e7\u00e3o E Comercializa\u00e7\u00e3o de Algod\u00e3o. Soja. Milho. Entre Outros."
         ],
         "classificacao_setorial": [
             "Consumo n\u00e3o C\u00edclico",
@@ -5468,7 +6078,8 @@
             {
                 "codigo_negociacao": "SLCE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 190595000
     },
     {
         "razao_social": "SMARTFIT ESCOLA DE GIN\u00c1STICA E DAN\u00c7A S.A.",
@@ -5486,7 +6097,8 @@
             {
                 "codigo_negociacao": "SMFT3"
             }
-        ]
+        ],
+        "quantidade_papeis": 22282733
     },
     {
         "razao_social": "SMILES FIDELIDADE S.A.",
@@ -5504,14 +6116,15 @@
             {
                 "codigo_negociacao": "SMLS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 124158953
     },
     {
         "razao_social": "SONDOTECNICA ENGENHARIA SOLOS S.A.",
         "nome_empresa": "SONDOTECNICA",
         "cnpj": "33386210000119",
         "atividades": [
-            "Consultoria T\u00e9cnica E Econ\u00f3mica Na \u00e1rea de Engenharia E Arquitetura"
+            "Servi\u00e7os de Engenharia."
         ],
         "classificacao_setorial": [
             "Bens Industriais",
@@ -5528,30 +6141,8 @@
             {
                 "codigo_negociacao": "SOND6"
             }
-        ]
-    },
-    {
-        "razao_social": "SPRINGER S.A.",
-        "nome_empresa": "SPRINGER",
-        "cnpj": "92929520000100",
-        "atividades": [
-            "Ind\u00fastria E Com\u00e9rcio. Importa\u00e7\u00e3o E Exporta\u00e7\u00e3o de Eletrodom\u00e9sticos"
         ],
-        "classificacao_setorial": [
-            "Financeiro",
-            "Holdings Diversificadas"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "SPRI3"
-            },
-            {
-                "codigo_negociacao": "SPRI5"
-            },
-            {
-                "codigo_negociacao": "SPRI6"
-            }
-        ]
+        "quantidade_papeis": 2457900
     },
     {
         "razao_social": "SPRINGS GLOBAL PARTICIPACOES S.A.",
@@ -5567,7 +6158,8 @@
             {
                 "codigo_negociacao": "SGPS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 50000000
     },
     {
         "razao_social": "STARA S.A. - IND\u00daSTRIA DE IMPLEMENTOS AGR\u00cdCOLAS",
@@ -5585,7 +6177,8 @@
             {
                 "codigo_negociacao": "STTR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 297498383
     },
     {
         "razao_social": "STATKRAFT ENERGIAS RENOVAVEIS S.A.",
@@ -5602,7 +6195,8 @@
             {
                 "codigo_negociacao": "STKF3"
             }
-        ]
+        ],
+        "quantidade_papeis": 277383387
     },
     {
         "razao_social": "SUL AMERICA S.A.",
@@ -5626,7 +6220,8 @@
             {
                 "codigo_negociacao": "SULA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1204700598
     },
     {
         "razao_social": "SUZANO HOLDING S.A.",
@@ -5650,7 +6245,8 @@
             {
                 "codigo_negociacao": "NEMO6"
             }
-        ]
+        ],
+        "quantidade_papeis": 172927303
     },
     {
         "razao_social": "SUZANO S.A.",
@@ -5668,7 +6264,8 @@
             {
                 "codigo_negociacao": "SUZB3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1361263584
     },
     {
         "razao_social": "T4F ENTRETENIMENTO S.A.",
@@ -5686,7 +6283,8 @@
             {
                 "codigo_negociacao": "SHOW3"
             }
-        ]
+        ],
+        "quantidade_papeis": 67412629
     },
     {
         "razao_social": "TAURUS ARMAS S.A.",
@@ -5706,17 +6304,9 @@
             },
             {
                 "codigo_negociacao": "TASA4"
-            },
-            {
-                "codigo_negociacao": "TASA13"
-            },
-            {
-                "codigo_negociacao": "TASA15"
-            },
-            {
-                "codigo_negociacao": "TASA17"
             }
-        ]
+        ],
+        "quantidade_papeis": 89055110
     },
     {
         "razao_social": "TECHNOS S.A.",
@@ -5734,7 +6324,8 @@
             {
                 "codigo_negociacao": "TECN3"
             }
-        ]
+        ],
+        "quantidade_papeis": 78506215
     },
     {
         "razao_social": "TECNISA S.A.",
@@ -5752,7 +6343,8 @@
             {
                 "codigo_negociacao": "TCSA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 73619230
     },
     {
         "razao_social": "TECNOSOLO ENGENHARIA S.A.",
@@ -5771,7 +6363,8 @@
             {
                 "codigo_negociacao": "TCNO4"
             }
-        ]
+        ],
+        "quantidade_papeis": 6620338
     },
     {
         "razao_social": "TEGMA GESTAO LOGISTICA S.A.",
@@ -5789,7 +6382,8 @@
             {
                 "codigo_negociacao": "TGMA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 66002915
     },
     {
         "razao_social": "TEKA-TECELAGEM KUEHNRICH S.A.",
@@ -5810,7 +6404,8 @@
             {
                 "codigo_negociacao": "TEKA4"
             }
-        ]
+        ],
+        "quantidade_papeis": 503155
     },
     {
         "razao_social": "TEKNO S.A. - INDUSTRIA E COMERCIO",
@@ -5831,14 +6426,15 @@
             {
                 "codigo_negociacao": "TKNO4"
             }
-        ]
+        ],
+        "quantidade_papeis": 2947810
     },
     {
         "razao_social": "TELEC BRASILEIRAS S.A. TELEBRAS",
         "nome_empresa": "TELEBRAS",
         "cnpj": "00336701000104",
         "atividades": [
-            "Consecu\u00e7\u00e3o Dos Objetivos Previstos No Programa Nacional de Banda Larga - (dec. 7.175 de 12/05/2010)"
+            "Consecu\u00e7\u00e3o E Execu\u00e7\u00e3o Das Pol\u00edticas P\u00fablicas de Telecomunica\u00e7\u00e3o (decreto 9.612/2018)."
         ],
         "classificacao_setorial": [
             "Comunica\u00e7\u00f5es",
@@ -5851,14 +6447,15 @@
             {
                 "codigo_negociacao": "TELB4"
             }
-        ]
+        ],
+        "quantidade_papeis": 67864762
     },
     {
         "razao_social": "TELEF\u00d4NICA BRASIL S.A",
         "nome_empresa": "TELEF BRASIL",
         "cnpj": "02558157000162",
         "atividades": [
-            "Presta\u00e7\u00e3o de Servi\u00e7os P\u00fablicos de Telecomunica\u00e7\u00f5es"
+            "Presta\u00e7\u00e3o de Servi\u00e7os de Telecomunica\u00e7\u00f5es. Explora\u00e7\u00e3o de Servi\u00e7os de Valor Adicionado E Solu\u00e7\u00f5es Integradas."
         ],
         "classificacao_setorial": [
             "Comunica\u00e7\u00f5es",
@@ -5867,11 +6464,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "VIVT3"
-            },
-            {
-                "codigo_negociacao": "VIVT4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1690984923
     },
     {
         "razao_social": "TERRA SANTA AGRO S.A.",
@@ -5888,11 +6483,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "TESA3"
-            },
-            {
-                "codigo_negociacao": "TESA12"
             }
-        ]
+        ],
+        "quantidade_papeis": 21657498
     },
     {
         "razao_social": "TEXTIL RENAUXVIEW S.A.",
@@ -5910,12 +6503,13 @@
             {
                 "codigo_negociacao": "TXRX3"
             }
-        ]
+        ],
+        "quantidade_papeis": 4259281
     },
     {
-        "razao_social": "TIM PARTICIPACOES S.A.",
-        "nome_empresa": "TIM PART S/A",
-        "cnpj": "02558115000121",
+        "razao_social": "TIM S.A.",
+        "nome_empresa": "TIM",
+        "cnpj": "02421421000111",
         "atividades": [],
         "classificacao_setorial": [
             "Comunica\u00e7\u00f5es",
@@ -5923,9 +6517,10 @@
         ],
         "acoes": [
             {
-                "codigo_negociacao": "TIMP3"
+                "codigo_negociacao": "TIMS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2420804398
     },
     {
         "razao_social": "TOTVS S.A.",
@@ -5942,7 +6537,8 @@
             {
                 "codigo_negociacao": "TOTS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 577913181
     },
     {
         "razao_social": "TPI - TRIUNFO PARTICIP. E INVEST. S.A.",
@@ -5960,7 +6556,27 @@
             {
                 "codigo_negociacao": "TPIS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 176000000
+    },
+    {
+        "razao_social": "TRACK & FIELD CO S.A.",
+        "nome_empresa": "TRACK FIELD",
+        "cnpj": "59418806000147",
+        "atividades": [
+            "Atua\u00e7\u00e3o No Varejo Dos Setores de Vestu\u00e1rio. Acess\u00f3rios E Cal\u00e7ados. Dentre Outros."
+        ],
+        "classificacao_setorial": [
+            "Consumo C\u00edclico",
+            "Tecidos. Vestu\u00e1rio e Cal\u00e7ados",
+            "Vestu\u00e1rio"
+        ],
+        "acoes": [
+            {
+                "codigo_negociacao": "TFCO4"
+            }
+        ],
+        "quantidade_papeis": 949244239
     },
     {
         "razao_social": "TRANSMISSORA ALIAN\u00c7A DE ENERGIA EL\u00c9TRICA S.A.",
@@ -5983,7 +6599,8 @@
             {
                 "codigo_negociacao": "TAEE4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1033496721
     },
     {
         "razao_social": "TREVISA INVESTIMENTOS S.A.",
@@ -6004,7 +6621,8 @@
             {
                 "codigo_negociacao": "LUXM4"
             }
-        ]
+        ],
+        "quantidade_papeis": 5196000
     },
     {
         "razao_social": "TRISUL S.A.",
@@ -6022,7 +6640,8 @@
             {
                 "codigo_negociacao": "TRIS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 186617538
     },
     {
         "razao_social": "TRONOX PIGMENTOS DO BRASIL S.A.",
@@ -6044,7 +6663,8 @@
             {
                 "codigo_negociacao": "CRPG6"
             }
-        ]
+        ],
+        "quantidade_papeis": 29018747
     },
     {
         "razao_social": "TUPY S.A.",
@@ -6062,7 +6682,8 @@
             {
                 "codigo_negociacao": "TUPY3"
             }
-        ]
+        ],
+        "quantidade_papeis": 144177500
     },
     {
         "razao_social": "ULTRAPAR PARTICIPACOES S.A.",
@@ -6079,7 +6700,8 @@
             {
                 "codigo_negociacao": "UGPA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1115005712
     },
     {
         "razao_social": "UNICASA IND\u00daSTRIA DE M\u00d3VEIS S.A.",
@@ -6097,7 +6719,8 @@
             {
                 "codigo_negociacao": "UCAS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 66086364
     },
     {
         "razao_social": "UNIPAR CARBOCLORO S.A.",
@@ -6121,7 +6744,8 @@
             {
                 "codigo_negociacao": "UNIP6"
             }
-        ]
+        ],
+        "quantidade_papeis": 94432872
     },
     {
         "razao_social": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
@@ -6145,7 +6769,8 @@
             {
                 "codigo_negociacao": "USIM6"
             }
-        ]
+        ],
+        "quantidade_papeis": 1253079108
     },
     {
         "razao_social": "VALE S.A.",
@@ -6163,7 +6788,8 @@
             {
                 "codigo_negociacao": "VALE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 5284474782
     },
     {
         "razao_social": "VALID SOLU\u00c7\u00d5ES S.A.",
@@ -6181,7 +6807,8 @@
             {
                 "codigo_negociacao": "VLID3"
             }
-        ]
+        ],
+        "quantidade_papeis": 71225000
     },
     {
         "razao_social": "VIA VAREJO S.A.",
@@ -6197,7 +6824,8 @@
             {
                 "codigo_negociacao": "VVAR3"
             }
-        ]
+        ],
+        "quantidade_papeis": 1597341594
     },
     {
         "razao_social": "VIVARA PARTICIPA\u00c7OES S.A",
@@ -6217,7 +6845,8 @@
             {
                 "codigo_negociacao": "VIVA3"
             }
-        ]
+        ],
+        "quantidade_papeis": 236197769
     },
     {
         "razao_social": "VIVER INCORPORADORA E CONSTRUTORA S.A.",
@@ -6234,11 +6863,9 @@
         "acoes": [
             {
                 "codigo_negociacao": "VIVR3"
-            },
-            {
-                "codigo_negociacao": "VIVR1"
             }
-        ]
+        ],
+        "quantidade_papeis": 97028764
     },
     {
         "razao_social": "VULCABRAS/AZALEIA S.A.",
@@ -6256,7 +6883,8 @@
             {
                 "codigo_negociacao": "VULC3"
             }
-        ]
+        ],
+        "quantidade_papeis": 245756346
     },
     {
         "razao_social": "WEG S.A.",
@@ -6274,7 +6902,8 @@
             {
                 "codigo_negociacao": "WEGE3"
             }
-        ]
+        ],
+        "quantidade_papeis": 2098658999
     },
     {
         "razao_social": "WETZEL S.A.",
@@ -6295,7 +6924,8 @@
             {
                 "codigo_negociacao": "MWET4"
             }
-        ]
+        ],
+        "quantidade_papeis": 2058003
     },
     {
         "razao_social": "WHIRLPOOL S.A.",
@@ -6316,7 +6946,8 @@
             {
                 "codigo_negociacao": "WHRL4"
             }
-        ]
+        ],
+        "quantidade_papeis": 1502786006
     },
     {
         "razao_social": "WILSON SONS LTD.",
@@ -6334,7 +6965,8 @@
             {
                 "codigo_negociacao": "WSON33"
             }
-        ]
+        ],
+        "quantidade_papeis": 71751110
     },
     {
         "razao_social": "WIZ SOLU\u00c7\u00d5ES E CORRETAGEM DE SEGUROS S.A.",
@@ -6352,7 +6984,8 @@
             {
                 "codigo_negociacao": "WIZS3"
             }
-        ]
+        ],
+        "quantidade_papeis": 159907282
     },
     {
         "razao_social": "WLM PART. E COM\u00c9RCIO DE M\u00c1QUINAS E VE\u00cdCULOS S.A.",
@@ -6373,24 +7006,7 @@
             {
                 "codigo_negociacao": "WLMM4"
             }
-        ]
-    },
-    {
-        "razao_social": "YDUQS PARTICIPACOES S.A.",
-        "nome_empresa": "YDUQS PART",
-        "cnpj": "08807432000110",
-        "atividades": [
-            "Desenvolve Principalmente Nas \u00e1reas de Educa\u00e7\u00e3o de N\u00edvel Superior. Nas Modalidades Presencial E A Dist\u00e2ncia. Educa\u00e7\u00e3o Profissional E/ou Outras \u00e1reas Associadas \u00e0 Educa\u00e7\u00e3o."
         ],
-        "classificacao_setorial": [
-            "Consumo C\u00edclico",
-            "Diversos",
-            "Servi\u00e7os Educacionais"
-        ],
-        "acoes": [
-            {
-                "codigo_negociacao": "YDUQ3"
-            }
-        ]
+        "quantidade_papeis": 36414670
     }
 ]

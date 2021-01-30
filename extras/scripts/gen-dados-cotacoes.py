@@ -5,12 +5,11 @@ import logging
 import re
 import json
 from datetime import timedelta 
-from dateutil.relativedelta import relativedelta
 from datetime import date
 
-logging.basicConfig(level=logging.INFO)
 ARQUIVO_DADOS_B3 = '../dados/dados-empresas-b3.json'
 ARQUIVO_DADOS_COTACOES = '../dados/dados-cotacoes-empresas-b3.json'
+LOG_FILENAME = '/tmp/gen-dados-cotacoes.log'
 REGEX_ANO = re.compile(r'[0-9]{4}')
 REGEX_TXT_FILENAME = re.compile(r'COTAHIST_A[0-9]{4}')
 
@@ -111,32 +110,38 @@ def salvar_arquivo_dados_cotacoes(empresas_cotacoes_processadas):
         jsonfile.write(json.dumps(empresas_cotacoes_processadas, indent=4))
     logging.info('Arquivo atualizado')
 
-empresas = obter_empresas_partir_arquivo_dados_b3()
-empresas_cotacoes_processadas = []
-for zip_filename in glob.glob(os.path.join('..','dados', 'COTAHIST_A*.ZIP')):
-    logging.info("Processando o arquivo {}".format(zip_filename))
-    with ZipFile(zip_filename, 'r') as zip_file: 
-        txt_filename = REGEX_TXT_FILENAME.findall(zip_filename)[0] + ".TXT"
-        with zip_file.open(txt_filename) as txt_file:
-            ano = int(REGEX_ANO.findall(zip_filename)[0])
-            datas_cotacoes_obter = obter_datas_para_cotacoes(ano)
-            linhas = txt_file.readlines()
-            logging.info("Linhas para processar {}".format(len(linhas)))
-            linhas_processadas = 0
-            for linha in linhas:
-                linha = linha.decode()                
-                data_cotacao_obter = obter_data_valida_pregao(datas_cotacoes_obter, obter_data_linha(linha))
-                if data_cotacao_obter:
-                    cod_neg_obter = obter_codigo_negociacao_linha(linha)                    
-                    if cod_neg_obter:
-                        preco = obter_preco_medio_papel_linha(linha)
-                        adicionar_cotacao_empresa_processada(empresas, empresas_cotacoes_processadas, data_cotacao_obter, cod_neg_obter, preco)
-                linhas_processadas += 1
-                logging.info("{} de {} linhas processadas".format(linhas_processadas, len(linhas)))
-salvar_arquivo_dados_cotacoes(empresas_cotacoes_processadas)
+def processar_cotacoes():
+    empresas = obter_empresas_partir_arquivo_dados_b3()
+    empresas_cotacoes_processadas = []
+    for zip_filename in glob.glob(os.path.join('..','dados', 'COTAHIST_A*.ZIP')):
+        logging.info("Processando o arquivo {}".format(zip_filename))
+        with ZipFile(zip_filename, 'r') as zip_file: 
+            txt_filename = REGEX_TXT_FILENAME.findall(zip_filename)[0] + ".TXT"
+            with zip_file.open(txt_filename) as txt_file:
+                ano = int(REGEX_ANO.findall(zip_filename)[0])
+                datas_cotacoes_obter = obter_datas_para_cotacoes(ano)
+                linhas = txt_file.readlines()
+                logging.info("Linhas para processar {}".format(len(linhas)))
+                linhas_processadas = 0
+                for linha in linhas:
+                    try:
+                        linha = linha.decode()                
+                        data_cotacao_obter = obter_data_valida_pregao(datas_cotacoes_obter, obter_data_linha(linha))
+                        if data_cotacao_obter:
+                            cod_neg_obter = obter_codigo_negociacao_linha(linha)                    
+                            if cod_neg_obter:
+                                preco = obter_preco_medio_papel_linha(linha)
+                                adicionar_cotacao_empresa_processada(empresas, empresas_cotacoes_processadas, data_cotacao_obter, cod_neg_obter, preco)
+                        linhas_processadas += 1
+                        logging.info("{} de {} linhas processadas".format(linhas_processadas, len(linhas)))
+                    except Exception as ex:
+                        logging.error("Erro no processamento da linha")
+                        logging.error(ex)
+                        logging.error(linha)
+    salvar_arquivo_dados_cotacoes(empresas_cotacoes_processadas)
 
-
-                
-                    
-                
-
+# MAIN
+if os.path.exists(LOG_FILENAME):
+    os.remove(LOG_FILENAME)
+logging.basicConfig(filename=LOG_FILENAME, level=logging.INFO)
+processar_cotacoes()
