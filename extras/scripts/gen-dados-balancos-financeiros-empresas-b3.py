@@ -291,7 +291,7 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                                 driver.execute_script('document.getElementById("{}").click()'.format(id_ele))
                             else:
                                 el_tr.click()
-                            time.sleep(3)
+                            time.sleep(4)
                             switch_to_window(driver, 1)                                                                                               
                             data_relatorio = datetime.strptime(find_text_element(driver, By.XPATH, '/html/body/form/div[3]/div/div[3]/div[1]/div[2]/span[2]', retry_if_empty=True), '%d/%m/%Y')
                             if ano_obter != data_relatorio.year:
