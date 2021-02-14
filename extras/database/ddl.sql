@@ -33,7 +33,7 @@ ALTER TABLE Acao ALTER COLUMN id SET DEFAULT nextval('acao_id_seq');
 
 CREATE SEQUENCE provento_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Provento (
-	id INTEGER PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	tipo VARCHAR(11) NOT NULL,
 	valor NUMERIC NOT NULL,
 	data_ex DATE NOT NULL,
@@ -46,24 +46,26 @@ CREATE SEQUENCE cotacao_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Cotacao (
 	id BIGINT PRIMARY KEY,
 	data DATE NOT NULL,
-	valor NUMERIC NOT NULL,
-	id_acao BIGINT REFERENCES Acao(id) NOT NULL,
+	valor NUMERIC(10, 2) NOT NULL,
+	ano INTEGER NOT NULL,
+	trimestre SMALLINT NOT NULL,
+	id_acao INTEGER REFERENCES Acao(id) NOT NULL,
 	isdailyupdated BOOLEAN
 );
 ALTER TABLE Cotacao ALTER COLUMN id SET DEFAULT nextval('cotacao_id_seq');
 
 CREATE SEQUENCE balanco_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Balanco (
-	id INTEGER PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	lucroliq_trimestral BIGINT,
 	id_empresa INTEGER REFERENCES Empresa(id),
-	trimestre INTEGER,
+	trimestre SMALLINT,
 	lucroliq_anual BIGINT,
 	patrimonioliquido BIGINT,
 	dividabruta BIGINT,
 	caixadisponivel BIGINT,
 	ebit BIGINT,
-	liquidez_corrente BIGINT,
+	liquidez_corrente NUMERIC,
 	receita_liquida BIGINT,
 	ano INTEGER,
 	isdailyupdated BOOLEAN
@@ -72,7 +74,7 @@ ALTER TABLE Balanco ALTER COLUMN id SET DEFAULT nextval('balanco_id_seq');
 
 CREATE SEQUENCE desempenho_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Desempenhofinanceiro (
-	id INTEGER PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	evolucaolucroliquido_trimestral NUMERIC,
 	evolucaolucroliquido_anual NUMERIC,
 	hascrescimentolucroliquido_tresanos BOOLEAN,
@@ -82,7 +84,7 @@ ALTER TABLE Desempenhofinanceiro ALTER COLUMN id SET DEFAULT nextval('desempenho
 
 CREATE SEQUENCE multiplos_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Multiplosfundamentalistas (
-	id INTEGER PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	preco_lucro NUMERIC,
 	preco_valorpatrimonial NUMERIC,
 	roe NUMERIC,
@@ -99,7 +101,7 @@ ALTER TABLE Multiplosfundamentalistas ALTER COLUMN id SET DEFAULT nextval('multi
 
 CREATE SEQUENCE usuario_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Usuario (
-	id INTEGER PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	apelido VARCHAR(30) NOT NULL,
 	email VARCHAR(70) NOT NULL,
 	senha VARCHAR(100) NOT NULL,

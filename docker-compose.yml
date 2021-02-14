@@ -13,9 +13,11 @@ services:
      - "5432:5432"
     volumes:
      - ./extras/database/ddl.sql:/docker-entrypoint-initdb.d/1-ddl.sql
-     - ./extras/database/populate-setores-acoes-empresas.sql:/docker-entrypoint-initdb.d/2-populate-setores-acoes-empresas.sql
+     - ./extras/database/populate-empresas-e-setores.sql:/docker-entrypoint-initdb.d/2-populate-empresas-e-setores.sql
      - ./extras/database/populate-proventos.sql:/docker-entrypoint-initdb.d/3-populate-proventos.sql
-     - ./extras/database/populate-balancos-cotacoes-update-empresas.sql:/docker-entrypoint-initdb.d/4-populate-balancos-cotacoes-update-empresas.sql
+     - ./extras/database/populate-balancos-empresas.sql:/docker-entrypoint-initdb.d/4-populate-balancos-empresas.sql
+     - ./extras/database/populate-cotacoes.sql:/docker-entrypoint-initdb.d/5-populate-cotacoes.sql
+     - ./extras/database/populate-units.sql:/docker-entrypoint-initdb.d/6-populate-units.sql
     environment:
      - POSTGRES_USER=bruno.mori  
      - POSTGRES_PASSWORD=123456

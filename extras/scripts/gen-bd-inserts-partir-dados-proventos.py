@@ -11,7 +11,7 @@ def gen_proventos(empresas):
             print('Gerando o insert da ação %s da empresa %s' % (a['codigo_negociacao'], e['razao_social']))
             for p in a.get('proventos', []):                
                 query = """insert into Provento (tipo, valor, data_ex, data_pagamento, id_acao)
-                    values ('{}', {}, '{}', {}, (select id from acao where codigo = '{}'));\n"""
+                    select '{}', {}, '{}', {}, id from acao where codigo = '{}';\n"""
                 data_pag = "'" + p['data_pagamento'] + "'" if p.get('data_pagamento', None) is not None else 'NULL'
                 query = query.format(p['tipo'], p['valor'], p['data_ex'], data_pag, a['codigo_negociacao'])
                 inserts.append(query)

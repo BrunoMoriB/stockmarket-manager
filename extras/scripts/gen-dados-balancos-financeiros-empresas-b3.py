@@ -38,6 +38,9 @@ def set_input_text(input, text, enter=True, wait_after=3):
 def find_element(driver, by, value, retries=3, time_between_retries=3, texto_log=None):
     attempt=1
     while True:
+        if attempt > retries:
+            raise Exception('Não foi possível obter o elemento {} pelo {}'.format(value, by))
+        attempt += 1
         try:
             ele = driver.find_element(by, value)
             if not texto_log:
@@ -48,15 +51,34 @@ def find_element(driver, by, value, retries=3, time_between_retries=3, texto_log
             logging.info("Elemento obtido: {}".format(texto_log))
             return ele
         except Exception as ex:            
-            if attempt > retries:
-                raise ex            
             logging.error("Não foi possível localizar o elemento {} pelo {} na {} tentativa".format(value, by, attempt))
+            time.sleep(time_between_retries)            
+
+def find_text_element(driver, by, value, retries=2, time_between_retries=1, texto_log=None, retry_if_empty=False):
+    attempt=1
+    while True:
+        if attempt > retries:
+            raise Exception('Não foi possível obter o texto do elemento {} pelo {}'.format(value, by))
+        attempt += 1
+        try:            
+            text = find_element(driver, by, value, retries=3, time_between_retries=3, texto_log=texto_log).text.strip()
+            
+            if retry_if_empty and text == '':
+                logging.error("Texto do elemento {} obtido pelo {} está vazio na {} tentativa".format(value, by, attempt))
+                time.sleep(time_between_retries)
+                continue
+            else:
+                return text
+        except Exception as ex:            
+            logging.error("Não foi possível localizar o texto do elemento {} pelo {} na {} tentativa".format(value, by, attempt))
             time.sleep(time_between_retries)
-            attempt += 1
 
 def find_elements(driver, by, value, retries=3, time_between_retries=3, texto_log=None):
     attempt=1
     while True:
+        if attempt > retries:
+            raise Exception('Não foi possível obter o elemento {} pelo {}'.format(value, by))
+        attempt += 1
         try:
             elets = driver.find_elements(by, value)
             if len(elets) == 0 and attempt <= retries:
@@ -68,11 +90,8 @@ def find_elements(driver, by, value, retries=3, time_between_retries=3, texto_lo
             logging.info("Elementos obtidos: {}".format(texto_log))
             return elets
         except Exception as ex:            
-            if attempt > retries:
-                raise ex            
             logging.error("Não foi possível localizar o elemento {} pelo {} na {} tentativa".format(value, by, attempt))
-            time.sleep(time_between_retries)
-            attempt += 1
+            time.sleep(time_between_retries)            
 
 def click_element(driver, by, value, retries=3, time_between_retries=3, wait_after_click=3, text_log=None):
     ele = find_element(driver, by, value, retries, time_between_retries)
@@ -143,7 +162,7 @@ def preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, ti
             valor = 0
         else:
             valor = float(valor)            
-        if codigo == "3.09" and "Lucro/Prejuízo Consolidado do Período" == texto:
+        if (codigo == "3.09" or codigo == "3.11") and "Lucro/Prejuízo Consolidado do Período" == texto:
             balanco['lucro_prejuizo_consolidado_do_periodo'] = valor
         elif "3.11" == codigo and "Lucro ou Prejuízo Líquido do Período" == texto:
             balanco['lucro_ou_prejuizo_liquido_do_periodo'] = valor    
@@ -207,8 +226,10 @@ def preencher_balanco_patrimonial_passivo(driver, balanco, tipos_relatorios_trim
             balanco['passivo_nao_circulante'] = valor 
         elif ("2.03.09" == codigo or "2.08.09" == codigo) and "Participação dos Acionistas Não Controladores" == texto:
             balanco['participacao_dos_acionistas_nao_controladores'] = valor
-        elif "2.08" == codigo and "Patrimônio Líquido Consolidado" == texto:
+        elif ("2.03" == codigo or "2.08" == codigo) and "Patrimônio Líquido Consolidado" == texto:
             balanco['patrimonio_liquido_consolidado'] = valor
+        elif "2.05" == codigo and "Patrimônio Líquido" == texto:
+            balanco['patrimonio_liquido'] = valor
         elif ("2.01.04" == codigo or "2.02.01" == codigo) and "Empréstimos e Financiamentos" == texto:
             if balanco.get('emprestimos_e_financiamentos'):
                 balanco['emprestimos_e_financiamentos'] = balanco['emprestimos_e_financiamentos'] + valor
@@ -235,7 +256,7 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
     try:
         click_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr/td[1]/a', text_log="Selecionar empresa")
     except Exception as ex:
-        if find_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[2]/div[1]/span/div').text.strip() == 'Empresa não encontrada':
+        if find_text_element(driver, By.XPATH, '/html/body/form/div[3]/div[1]/div/div/div/div/div[2]/div[1]/span/div') == 'Empresa não encontrada':
             logging.info("Empresa não se encontra mais na bolsa")
             return False
         else:
@@ -272,7 +293,7 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                                 el_tr.click()
                             time.sleep(3)
                             switch_to_window(driver, 1)                                                                                               
-                            data_relatorio = datetime.strptime(find_element(driver, By.XPATH, '/html/body/form/div[3]/div/div[3]/div[1]/div[2]/span[2]').text, '%d/%m/%Y')                        
+                            data_relatorio = datetime.strptime(find_text_element(driver, By.XPATH, '/html/body/form/div[3]/div/div[3]/div[1]/div[2]/span[2]', retry_if_empty=True), '%d/%m/%Y')
                             if ano_obter != data_relatorio.year:
                                 raise Exception("Página não carregou o trimestre selecionado no combobox")
                             balanco = { 'ano': data_relatorio.year, 'trimestre': RELACAO_MES_TRIMESTRE[data_relatorio.month] }
@@ -345,11 +366,11 @@ def obter_empresas_balancos_partir_arquivo_dados_balancos():
 
 def balanco_normal_eh_valido(balanco):
     campos = ['ativo_circulante', 'ativo_nao_circulante', 'passivo_circulante', 'passivo_nao_circulante', 'receita_de_venda_de_bens_e_ou_servicos', 'caixa_e_equivalente_caixa',
-        'aplicacoes_financeiras', 'emprestimos_e_financiamentos', 'resultado_antes_do_resultado_financeiro_e_dos_tributos']
+        'aplicacoes_financeiras', 'emprestimos_e_financiamentos', 'resultado_antes_do_resultado_financeiro_e_dos_tributos', 'patrimonio_liquido_consolidado', 'lucro_prejuizo_consolidado_do_periodo']
     return balanco_contem_todos_campos(balanco, campos)
 
 def balanco_de_banco_eh_valido(balanco):
-    campos = ['ativo_total', 'passivo_total', 'patrimonio_liquido_consolidado', 'participacao_dos_acionistas_nao_controladores']
+    campos = ['ativo_total', 'passivo_total']
     if not balanco_contem_todos_campos(balanco, campos):
         return False
     campos = ['lucro_prejuizo_consolidado_do_periodo', 'lucro_ou_prejuizo_liquido_do_periodo', 'lucro_prejuizo_do_periodo']
@@ -357,6 +378,10 @@ def balanco_de_banco_eh_valido(balanco):
         return False   
     campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro']
     if not balanco_contem_algum_campo(balanco, campos):
+        return False
+
+    campos = ['patrimonio_liquido_consolidado', 'participacao_dos_acionistas_nao_controladores']
+    if not (balanco_contem_todos_campos(balanco, campos) or balanco_contem_todos_campos(balanco, ['patrimonio_liquido'])):
         return False    
     return True
 
@@ -387,15 +412,18 @@ def processar_empresas_faltantes():
                         break
                 except Exception as ex:
                     logging.error(ex)
+                    logging.exception(ex)
                     if attempt > 5:
                         if continuar_falha_obtencao_balanco and ano_sendo_processado:
                             logging.error("Não foi possível obter os balanços do ano {} para a empresa {}. Job seguirá para o próximo ano".format(ano_sendo_processado, e['razao_social']))
                             anos_pular.append(ano_sendo_processado)
                             ano_sendo_processado = None
+                            attempt=1
                         else:
-                            break            
-                    logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
-                    attempt += 1
+                            break
+                    else:        
+                        logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
+                        attempt += 1
 
       
 def processar_empresa(razao_social):
@@ -426,6 +454,7 @@ def processar_empresa(razao_social):
                         break
                 except Exception as ex:
                     logging.error(ex)
+                    logging.exception(ex)
                     if attempt > 5:
                         break            
                     logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
@@ -455,6 +484,7 @@ def processar_empresas_com_balancos_invalidos():
                         break
                 except Exception as ex:
                     logging.error(ex)
+                    logging.exception(ex)
                     if attempt > 5:
                         break            
                     logging.error("Falha no processamento da empresa {} na {} tentativa".format(e['razao_social'], attempt))
