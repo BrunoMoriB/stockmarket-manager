@@ -58,7 +58,7 @@ CREATE SEQUENCE balanco_id_seq START WITH 1 INCREMENT BY 1 CACHE 100;
 CREATE TABLE Balanco (
 	id BIGINT PRIMARY KEY,
 	lucroliq_trimestral BIGINT,
-	id_empresa INTEGER REFERENCES Empresa(id),
+	id_empresa BIGINT REFERENCES Empresa(id),
 	trimestre SMALLINT,
 	lucroliq_anual BIGINT,
 	patrimonioliquido BIGINT,
@@ -78,7 +78,7 @@ CREATE TABLE Desempenhofinanceiro (
 	evolucaolucroliquido_trimestral NUMERIC,
 	evolucaolucroliquido_anual NUMERIC,
 	hascrescimentolucroliquido_tresanos BOOLEAN,
-	id_balanco INTEGER REFERENCES Balanco(id)
+	id_balanco BIGINT REFERENCES Balanco(id)
 );
 ALTER TABLE Desempenhofinanceiro ALTER COLUMN id SET DEFAULT nextval('desempenho_id_seq');
 
@@ -94,7 +94,7 @@ CREATE TABLE Multiplosfundamentalistas (
 	caixadisponivel_dividabruta NUMERIC,
 	nota INTEGER,
 	justificativa_nota VARCHAR(1000),
-	id_balanco INTEGER REFERENCES Balanco(id),
+	id_balanco BIGINT REFERENCES Balanco(id),
 	id_acao INTEGER REFERENCES Acao(id)
 );
 ALTER TABLE Multiplosfundamentalistas ALTER COLUMN id SET DEFAULT nextval('multiplos_id_seq');

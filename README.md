@@ -66,8 +66,6 @@ git push -f && git push origin :refs/tags/{tag-para-deletar} #use somente se voc
 
 ```
 pip3 install selenium
-pip3 install pyautogui
-sudo apt-get install python3-tk python3-dev
 ```
 
 Baixar o geckodriver em uma pasta de preferência e adicionar o caminho da pasta onde estará o executável na variável de ambiente PATH.
