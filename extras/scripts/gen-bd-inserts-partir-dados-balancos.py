@@ -114,8 +114,8 @@ def gen_balancos(empresas):
                     divida_bruta = obter_numero(b, 'emprestimos_e_financiamentos')
                     values = [b['trimestre'], b['ano'], patrimonio_liquido, lucro_liquido, divida_bruta, disponibilidades, ebit, liquidez_corrente, receita_liquida, e['cnpj']]
                     query = '''insert into balanco
-                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, id_empresa, isdailyupdated)
-                        values ({}, {}, {}, {}, {}, {}, {}, {}, {}, (select id from Empresa where cnpj = '{}'), false);\n'''.format(*values)
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select {}, {}, {}, {}, {}, {}, {}, {}, {}, false, id from Empresa where cnpj = '{}';\n'''.format(*values)
                     inserts.append(query)
                 except Exception as ex:
                     logging.error('Erro no processamento da empresa {} do balanco {}'.format(e['razao_social'], b))
