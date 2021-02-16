@@ -31,6 +31,10 @@ public class Cotacao implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="id_acao")
 	private Acao acao;
+	
+	private int trimestre;
+	
+	private int ano;
 
 	public long getId() {
 		return id;
@@ -70,5 +74,21 @@ public class Cotacao implements Serializable {
 
 	public void setDailyUpdated(boolean dailyUpdated) {
 		this.dailyUpdated = dailyUpdated;
+	}
+
+	public int getTrimestre() {
+		return trimestre;
+	}
+
+	public void setTrimestre(int trimestre) {
+		this.trimestre = trimestre;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 }

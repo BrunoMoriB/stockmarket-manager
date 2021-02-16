@@ -3,7 +3,6 @@ package com.bolsavalores.services;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -140,8 +139,7 @@ public class BalancoService{
 			multiplos.setAcao(acao);
 			multiplos.setBalanco(balanco);
 			
-			Date dateWithDayFirst = dataBalancoUtils.getDataDiaUmByTrimestreAndAno(balanco.getTrimestre(), balanco.getAno());
-			Cotacao cotacao = cotacaoRepository.findCotacaoByAcaoIdAndData(acao.getId(), dateWithDayFirst);
+			Cotacao cotacao = cotacaoRepository.findCotacaoByAcaoIdAndAnoAndPeriodo(acao.getId(), balanco.getAno(), balanco.getTrimestre());
 			
 			if(cotacao != null ) {
 				long multiplicador = getMultiplicador(acao);
