@@ -283,7 +283,7 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                     elementos_trimestrais = find_elements(driver, By.XPATH, '/html/body/form/div[3]/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div[2]/p/a', texto_log="Escolhendo os trimestres dos balanços nos links")
                     for el_tr in elementos_trimestrais:
                         tipos_relatorios_trimestrais_ja_lidos = []                        
-                        if hasattr(el_tr, 'text') and el_tr.text not in trimestres_ja_lidos and ("Informações Trimestrais" in el_tr.text or "Demonstrações Financeiras Padronizadas" in el_tr.text) and COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS not in tipos_relatorios_trimestrais_ja_lidos:
+                        if hasattr(el_tr, 'text') and el_tr.text not in trimestres_ja_lidos and ("Informações Trimestrais" in el_tr.text or "Demonstrações Financeiras Padronizadas" in el_tr.text):
                             texto_trimestre_exec = el_tr.text
                             logging.info("Abrindo o trimestre '{}'".format(texto_trimestre_exec))
                             id_ele = el_tr.get_attribute("id")
@@ -298,7 +298,8 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                                 raise Exception("Página não carregou o trimestre selecionado no combobox")
                             balanco = { 'ano': data_relatorio.year, 'trimestre': RELACAO_MES_TRIMESTRE[data_relatorio.month] }
                             logging.info("Data relatório {}".format(data_relatorio))
-                            preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, tipos_relatorios_trimestrais_ja_lidos)
+                            if COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS not in tipos_relatorios_trimestrais_ja_lidos:
+                                preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, tipos_relatorios_trimestrais_ja_lidos)
                             logging.info("Selecionar outros relatórios")
                             
                             while True:
