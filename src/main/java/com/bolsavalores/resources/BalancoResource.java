@@ -430,14 +430,12 @@ public class BalancoResource {
 	}
 	
 	private List<CotacaoResponse> getCotacaoResponse(long acaoId, Set<Cotacao> cotacoes, int trimestre, int ano, boolean isDailyUpdated) {
-		Cotacao cotacao = cotacoes.stream().filter(c -> (isDailyUpdated && isDailyUpdated == c.isDailyUpdated()) || (!isDailyUpdated && comparaDatas(c.getData(), trimestre, ano))).findFirst().orElse(null);
+		Cotacao cotacao = cotacoes.stream().filter(c -> (isDailyUpdated && isDailyUpdated == c.isDailyUpdated()) || (!isDailyUpdated && comparaPeriodos(c.getTrimestre(), c.getAno(), trimestre, ano))).findFirst().orElse(null);
 		return cotacao != null ? Arrays.asList(new CotacaoResponse(cotacao.getId(), cotacao.getData(), cotacao.getValor(), new AcaoResponse(acaoId, "", null, null, null, null, null))) : null;
 	}
 	
-	private boolean comparaDatas(LocalDate dataCotacao, int trimestre, int ano) {
-		Month mes = dataBalancoUtils.getMonthByTrimestre(trimestre);
-		ano = mes == Month.FEBRUARY ? ano + 1 : ano;
-		return dataCotacao.getMonth() == mes && dataCotacao.getYear() == ano;
+	private boolean comparaPeriodos(int trimestre, int ano, int trimestreDois, int anoDois) {
+		return trimestre == trimestreDois && ano == anoDois;
 	}
 	
 	private List<ProventoResponse> getProventosResponse(long acaoId, Set<Provento> proventos){

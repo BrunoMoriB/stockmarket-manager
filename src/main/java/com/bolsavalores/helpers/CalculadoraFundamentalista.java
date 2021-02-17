@@ -28,7 +28,7 @@ public class CalculadoraFundamentalista {
 		double qtdPapeisDouble 	       = qtdPapeis;
 		double lucroLiquidoAnualDouble = lucroLiquidoAnual;
 		
-		double lucroPorAcao    = lucroLiquidoAnualDouble / qtdPapeisDouble;
+		double lucroPorAcao    = (lucroLiquidoAnualDouble * 1000) / qtdPapeisDouble;
 		lucroPorAcao*=multiplicador;
 		double precoSobreLucro = cotacao / lucroPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreLucro)).doubleValue(); 
@@ -41,7 +41,7 @@ public class CalculadoraFundamentalista {
 		double qtdPapeisDouble 	       = qtdPapeis;
 		double patrimonioLiquidoDouble = patrimonioLiquido;
 		
-		double valorPatrimonialPorAcao    = patrimonioLiquidoDouble / qtdPapeisDouble;
+		double valorPatrimonialPorAcao    = (patrimonioLiquidoDouble * 1000) / qtdPapeisDouble;
 		valorPatrimonialPorAcao*=multiplicador;
 		double precoSobreValorPatrimonial = cotacao / valorPatrimonialPorAcao;
 		return NumberFormat.getInstance().parse(new DecimalFormat("##.##").format(precoSobreValorPatrimonial)).doubleValue(); 
@@ -106,8 +106,8 @@ public class CalculadoraFundamentalista {
 		
 		Set<String> setTrimestres = getTrimestresAnteriores(balanco.getTrimestre(), balanco.getAno(), 7, new HashSet<String>());
 		List<Balanco> balancosAnteriores = balancos.stream()
-				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreLucro() != null)
-				.collect(Collectors.toList());
+													.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreLucro() != null)
+													.collect(Collectors.toList());
 		
 		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
 			return null;
@@ -125,8 +125,8 @@ public class CalculadoraFundamentalista {
 		
 		Set<String> setTrimestres = getTrimestresAnteriores(balanco.getTrimestre(), balanco.getAno(), 7, new HashSet<String>());
 		List<Balanco> balancosAnteriores = balancos.stream()
-				.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreValorPatrimonial() != null)
-				.collect(Collectors.toList());
+													.filter(b -> verificaDatasBalancosAnteriores(b, setTrimestres) && b.getMultiplosFundamentalistasByAcaoId(acaoId).getPrecoSobreValorPatrimonial() != null)
+													.collect(Collectors.toList());
 		
 		if(balancosAnteriores == null || balancosAnteriores.size() != 7)
 			return null;
@@ -211,8 +211,8 @@ public class CalculadoraFundamentalista {
 	public Boolean hasLucroCrescenteTresAnos(Balanco balanco, List<Balanco> balancos) {
 		Set<String> setAnosAnteriores = getAnosAnteriores(balanco.getTrimestre(), balanco.getAno(), new HashSet<String>());
 		List<Balanco> balancosAnosAnteriores = balancos.stream()
-					.filter(b -> verificaDatasBalancosAnteriores(b, setAnosAnteriores))
-					.collect(Collectors.toList());
+														.filter(b -> verificaDatasBalancosAnteriores(b, setAnosAnteriores))
+														.collect(Collectors.toList());
 		
 		Collections.sort(balancosAnosAnteriores);
 		
