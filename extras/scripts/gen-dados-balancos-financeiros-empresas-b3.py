@@ -1,4 +1,5 @@
 import sys
+import random
 import json
 import time
 import os
@@ -24,9 +25,18 @@ RELACAO_MES_TRIMESTRE = {
     9: 3,
     12: 4
 }
+RELACAO_TRIMESTRE_MES = {
+    1: 3,
+    2: 6,
+    3: 9,
+    4: 12
+}
 
 continuar_falha_obtencao_balanco = False
 ano_sendo_processado = None
+razao_social_processar = None
+escolha_processar_empresas_balancos_invalidos = None
+continuar_falha_obtencao_balanco = None
 
 def set_input_text(input, text, enter=True, wait_after=3):
     input.clear()
@@ -139,7 +149,7 @@ def switch_to_window(driver, position, close_before_chance=False, retries=3, tim
 def balanco_contem_todos_campos(balanco, campos):
     for campo in campos:
         if balanco.get(campo) is None:
-            logging.info("Campo '{}' inválido no balanco".format(campo))
+            logging.info("Campo '{}' inválido no balanco do ano {} e trimestre {}".format(campo, balanco['ano'], balanco['trimestre']))
             return False
     return True
 
@@ -147,7 +157,7 @@ def balanco_contem_algum_campo(balanco, campos):
     for campo in campos:
         if balanco.get(campo) is not None:
             return True
-    logging.info("Nenhum dos campos '{}' foi encontrado no balanço".format(campos))
+    logging.info("Nenhum dos campos '{}' foi encontrado no balanço do ano {} e trimestre {}".format(campos, balanco['ano'], balanco['trimestre']))
     return False
 
 def preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, tipos_relatorios_trimestrais_ja_lidos):    
@@ -166,7 +176,7 @@ def preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, ti
             balanco['lucro_prejuizo_consolidado_do_periodo'] = valor
         elif "3.11" == codigo and "Lucro ou Prejuízo Líquido do Período" == texto:
             balanco['lucro_ou_prejuizo_liquido_do_periodo'] = valor    
-        elif "3.13" == codigo and "Lucro/Prejuízo do Período" == texto:
+        elif ("3.13" == codigo or "3.11" == codigo ) and "Lucro/Prejuízo do Período" == texto:
             balanco['lucro_prejuizo_do_periodo'] = valor                                    
         elif "3.01" == codigo and "Receita de Venda de Bens e/ou Serviços" == texto:
             balanco['receita_de_venda_de_bens_e_ou_servicos'] = valor
@@ -228,7 +238,7 @@ def preencher_balanco_patrimonial_passivo(driver, balanco, tipos_relatorios_trim
             balanco['participacao_dos_acionistas_nao_controladores'] = valor
         elif ("2.03" == codigo or "2.08" == codigo) and "Patrimônio Líquido Consolidado" == texto:
             balanco['patrimonio_liquido_consolidado'] = valor
-        elif "2.05" == codigo and "Patrimônio Líquido" == texto:
+        elif ("2.05" == codigo or "2.03" == codigo) and "Patrimônio Líquido" == texto:
             balanco['patrimonio_liquido'] = valor
         elif ("2.01.04" == codigo or "2.02.01" == codigo) and "Empréstimos e Financiamentos" == texto:
             if balanco.get('emprestimos_e_financiamentos'):
@@ -238,6 +248,25 @@ def preencher_balanco_patrimonial_passivo(driver, balanco, tipos_relatorios_trim
     tipos_relatorios_trimestrais_ja_lidos.append(COMBO_BALANCO_PATRIMONIAL_PASSIVO)
     logging.info("Dados do balanço obtidos até o momento {}".format(balanco))
     exit_from_iframe(driver)
+
+def empresa_tem_todos_balancos_validos_do_ano(ano, empresa):
+    qtde_balancos_devem_estar_ok = 4 + 3 + 2 + 1
+    qtde_balancos_ok = 0
+    for b in empresa['balancos']:
+        if b['ano'] == ano and balanco_eh_valido(empresa, b):
+            qtde_balancos_ok += b['trimestre']
+    return qtde_balancos_devem_estar_ok == qtde_balancos_ok
+
+def texto_link_corresponde_balanco_ja_valido(empresa, texto_link):
+    for b in empresa['balancos']:
+        texto_ano_mes_trimestre = "%02d/%d" % (RELACAO_TRIMESTRE_MES[b['trimestre']], b['ano'])
+        if texto_ano_mes_trimestre in texto_link:
+            if balanco_eh_valido(empresa, b):
+                logging.info("Empresa já contém o balanço {} válido. Link {} pulado".format(b, texto_link))
+                return True
+            else:
+                return False
+    return False
 
 def obter_balancos_empresa(driver, empresa, anos_pular=[]):
     balancos_preenchidos = False
@@ -266,7 +295,16 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
     logging.info("Anos já lidos da empresa {}: {}".format(empresa['razao_social'], anos_ja_lidos))
     for ano_obter in ANOS_BALANCOS_OBTENCAO:
         if ano_obter in anos_pular:
+            logging.info("Ano {} será pulado".format(ano_obter))
             continue
+        if empresa_tem_todos_balancos_validos_do_ano(ano_obter, empresa):
+            logging.info("Empresa {} com todos os balanços do ano {} válidos. Ano será pulado".format(empresa['razao_social'], ano_obter))
+            continue
+        else:
+            logging.info("Empresa {} com algum balanço do ano {} inválido. Ano será processado".format(empresa['razao_social'], ano_obter))
+            if ano_obter in anos_ja_lidos:
+                anos_ja_lidos.remove(ano_obter)
+            empresa['balancos'] = [b for b in empresa['balancos'] if b['ano'] != ano_obter]
         global ano_sendo_processado
         ano_sendo_processado = ano_obter
         logging.info("Buscando os indicadores do ano {}".format(ano_obter))
@@ -283,7 +321,7 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                     elementos_trimestrais = find_elements(driver, By.XPATH, '/html/body/form/div[3]/div/div[1]/div/div[3]/div[2]/div[2]/div/div/div[2]/p/a', texto_log="Escolhendo os trimestres dos balanços nos links")
                     for el_tr in elementos_trimestrais:
                         tipos_relatorios_trimestrais_ja_lidos = []                        
-                        if hasattr(el_tr, 'text') and el_tr.text not in trimestres_ja_lidos and ("Informações Trimestrais" in el_tr.text or "Demonstrações Financeiras Padronizadas" in el_tr.text):
+                        if hasattr(el_tr, 'text') and el_tr.text not in trimestres_ja_lidos and ("Informações Trimestrais" in el_tr.text or "Demonstrações Financeiras Padronizadas" in el_tr.text) and not texto_link_corresponde_balanco_ja_valido(empresa, el_tr.text):
                             texto_trimestre_exec = el_tr.text
                             logging.info("Abrindo o trimestre '{}'".format(texto_trimestre_exec))
                             id_ele = el_tr.get_attribute("id")
@@ -324,6 +362,8 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                                     break # Para loop leitura dos tipos de relatórios do trimestre em questão
                                 else:
                                     logging.info("Continuado a ler os tipos de relatórios do trimestre")
+                            if not balanco_eh_valido(empresa, balanco):
+                                raise Exception("Balanço {} que acabou de ser obtido é inválido".format(balanco))
                             balancos.append(balanco)
                             logging.info("Todos os dados do relatório do balanço {} foram capturados".format(data_relatorio))
                             switch_to_window(driver, 0, close_before_chance=True)
@@ -337,6 +377,15 @@ def obter_balancos_empresa(driver, empresa, anos_pular=[]):
                         break # Para loop leitura dos trimestres do ano em questão
                     else:
                         logging.info("Continuando a buscar os próximos trimestres do ano {}".format(ano_obter))
+                for i, b in enumerate(empresa['balancos']):
+                    indice_remover = None
+                    for j, bn in enumerate(balancos):
+                        if b['ano'] == bn['ano'] and b['trimestre'] == bn['trimestre']:
+                            empresa['balancos'][i] = bn
+                            indice_remover = j
+                            break
+                    if indice_remover:
+                        balancos.pop(indice_remover)
                 empresa['balancos'].extend(balancos)
                 break # leu o ano, para o loop para continuar
     logging.info("Foi obtido {} anos da empresa {}".format(len(anos_ja_lidos), empresa['razao_social']))
@@ -351,8 +400,8 @@ def salvar_arquivo_dados_balancos(empresas):
     logging.info('Arquivo atualizado')
 
 def obter_empresas_partir_arquivo_dados_b3():
-    jsonfile = open(ARQUIVO_DADOS_B3, "r")
-    return json.loads(jsonfile.read())
+    with open(ARQUIVO_DADOS_B3, "r") as jsonfile:
+        return json.loads(jsonfile.read())
 
 def obter_empresas_balancos_partir_arquivo_dados_balancos():
     empresa_balancos = []
@@ -365,12 +414,21 @@ def obter_empresas_balancos_partir_arquivo_dados_balancos():
     return empresa_balancos
 
 
-def balanco_normal_eh_valido(balanco):
+def balanco_normal_eh_valido(empresa, balanco):
+    if 'Bancos' in empresa['classificacao_setorial']:
+        return False
     campos = ['ativo_circulante', 'ativo_nao_circulante', 'passivo_circulante', 'passivo_nao_circulante', 'receita_de_venda_de_bens_e_ou_servicos', 'caixa_e_equivalente_caixa',
-        'aplicacoes_financeiras', 'emprestimos_e_financiamentos', 'resultado_antes_do_resultado_financeiro_e_dos_tributos', 'patrimonio_liquido_consolidado', 'lucro_prejuizo_consolidado_do_periodo']
-    return balanco_contem_todos_campos(balanco, campos)
+        'aplicacoes_financeiras', 'emprestimos_e_financiamentos', 'resultado_antes_do_resultado_financeiro_e_dos_tributos']
+    if not balanco_contem_todos_campos(balanco, campos):
+        return False
+    campos = ['lucro_prejuizo_consolidado_do_periodo', 'lucro_prejuizo_do_periodo']
+    if not balanco_contem_algum_campo(balanco, campos):
+        return False
+    return True
 
-def balanco_de_banco_eh_valido(balanco):
+def balanco_de_banco_eh_valido(empresa, balanco):
+    if 'Bancos' not in empresa['classificacao_setorial']:
+        return False
     campos = ['ativo_total', 'passivo_total']
     if not balanco_contem_todos_campos(balanco, campos):
         return False
@@ -385,6 +443,9 @@ def balanco_de_banco_eh_valido(balanco):
     if not (balanco_contem_todos_campos(balanco, campos) or balanco_contem_todos_campos(balanco, ['patrimonio_liquido'])):
         return False    
     return True
+
+def balanco_eh_valido(empresa, balanco):
+    return balanco_normal_eh_valido(empresa, balanco) or balanco_de_banco_eh_valido(empresa, balanco)
 
 def processar_empresas_faltantes():
     logging.info('Processar empresas faltantes')    
@@ -402,7 +463,7 @@ def processar_empresas_faltantes():
         if empresa_balanco is None:
             logging.info('Balanco da empresa %s ainda não capturado' % e['razao_social'])
             attempt=1            
-            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}    
+            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes'], 'classificacao_setorial': e['classificacao_setorial']}    
             anos_pular = []
             while True:
                 try:             
@@ -435,7 +496,7 @@ def processar_empresa(razao_social):
     for e in empresas:
         if razao_social.upper() in e['razao_social']:
             attempt=1
-            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}
+            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes'], 'classificacao_setorial': e['classificacao_setorial']}
             while True:
                 try:              
                     with webdriver.Firefox() as driver:      
@@ -465,23 +526,30 @@ def processar_empresas_com_balancos_invalidos():
     logging.info('Processar empresas com dados de balanços inválidos')
     empresa_balancos = obter_empresas_balancos_partir_arquivo_dados_balancos()
     empresa_balancos_novo = empresa_balancos[:]
-    for i, e in enumerate(empresa_balancos):
+    random.shuffle(empresa_balancos)
+    for e in empresa_balancos:
         tem_balanco_invalido = False
         for b in e['balancos']:
-            if not balanco_normal_eh_valido(b) and not balanco_de_banco_eh_valido(b):
+            if not balanco_eh_valido(e, b):
                 tem_balanco_invalido = True
                 break
         if tem_balanco_invalido:
+            logging.info("Empresa {} tem balanços inválidos, será processada".format(e['razao_social']))
             attempt=1
-            empresa_balanco = {'razao_social': e['razao_social'], 'cnpj': e['cnpj'], 'acoes': e['acoes']}
+            empresa_balanco = e.copy()
             while True:
                 try:              
                     with webdriver.Firefox() as driver:      
-                        if obter_balancos_empresa(driver, empresa_balanco):                            
-                            logging.info('Empresa com balanços corrigidos, será atualizada')
-                            empresa_balancos_novo[i] = empresa_balanco
-                            salvar_arquivo_dados_balancos(empresa_balancos_novo)
-                            break
+                        if obter_balancos_empresa(driver, empresa_balanco):
+                            index = None
+                            for i, en in enumerate(empresa_balancos_novo):
+                                if empresa_balanco['cnpj'] == en['cnpj']:
+                                    index = i
+                                    break
+                            if index:
+                                logging.info('Empresa com balanços corrigidos, será atualizada')
+                                empresa_balancos_novo[index] = empresa_balanco
+                                salvar_arquivo_dados_balancos(empresa_balancos_novo)
                         break
                 except Exception as ex:
                     logging.error(ex)
