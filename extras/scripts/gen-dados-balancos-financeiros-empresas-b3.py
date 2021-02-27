@@ -186,6 +186,8 @@ def preencher_balanco_demonstracoes_financeiras_padronizadas(driver, balanco, ti
             balanco['resultado_antes_do_resultado_financeiro_e_dos_tributos'] = valor
         elif "3.05" == codigo and "Resultado Antes dos Tributos sobre o Lucro" == texto:
             balanco['resultado_antes_dos_tributos_sobre_o_lucro'] = valor
+        elif "3.07" == codigo and "Resultado Antes Tributação/Participações" == texto:
+            balanco['resultado_antes_tributacao_participacoes'] = valor
     tipos_relatorios_trimestrais_ja_lidos.append(COMBO_DEMONSTRACOES_FINANCEIRAS_PADRONIZADAS)
     exit_from_iframe(driver)
     logging.info("Dados do balanço obtidos até o momento {}".format(balanco))
@@ -435,7 +437,7 @@ def balanco_de_banco_eh_valido(empresa, balanco):
     campos = ['lucro_prejuizo_consolidado_do_periodo', 'lucro_ou_prejuizo_liquido_do_periodo', 'lucro_prejuizo_do_periodo']
     if not balanco_contem_algum_campo(balanco, campos):
         return False   
-    campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro']
+    campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro', 'resultado_antes_tributacao_participacoes']
     if not balanco_contem_algum_campo(balanco, campos):
         return False
 

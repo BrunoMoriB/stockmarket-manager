@@ -94,7 +94,7 @@ def obter_receita_liquida(empresa, balanco):
     return 0
 
 def obter_ebit(balanco):
-    return obter_primeiro_numero_diferente_de_zero(balanco, ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro'])
+    return obter_primeiro_numero_diferente_de_zero(balanco, ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro', 'resultado_antes_tributacao_participacoes'])
 
 def obter_liquidez_corrente(empresa, balanco):    
     if balanco_normal_eh_valido(empresa, balanco):
