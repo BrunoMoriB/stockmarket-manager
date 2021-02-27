@@ -52,9 +52,13 @@ def balanco_de_banco_eh_valido(empresa, balanco):
     campos = ['lucro_prejuizo_consolidado_do_periodo', 'lucro_ou_prejuizo_liquido_do_periodo', 'lucro_prejuizo_do_periodo']
     if not balanco_contem_algum_campo(balanco, campos):
         return False   
-    campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro']
+    campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro', 'resultado_antes_tributacao_participacoes']
     if not balanco_contem_algum_campo(balanco, campos):
         return False
+    campos = ['patrimonio_liquido_consolidado', 'participacao_dos_acionistas_nao_controladores']
+    if not (balanco_contem_todos_campos(balanco, campos) or balanco_contem_todos_campos(balanco, ['patrimonio_liquido'])):
+        return False    
+    return True
 
 def balanco_eh_valido(empresa, balanco):
     return balanco_normal_eh_valido(empresa, balanco) or balanco_de_banco_eh_valido(empresa, balanco)

@@ -440,7 +440,6 @@ def balanco_de_banco_eh_valido(empresa, balanco):
     campos = ['resultado_antes_do_resultado_financeiro_e_dos_tributos', 'resultado_antes_dos_tributos_sobre_o_lucro', 'resultado_antes_tributacao_participacoes']
     if not balanco_contem_algum_campo(balanco, campos):
         return False
-
     campos = ['patrimonio_liquido_consolidado', 'participacao_dos_acionistas_nao_controladores']
     if not (balanco_contem_todos_campos(balanco, campos) or balanco_contem_todos_campos(balanco, ['patrimonio_liquido'])):
         return False    
