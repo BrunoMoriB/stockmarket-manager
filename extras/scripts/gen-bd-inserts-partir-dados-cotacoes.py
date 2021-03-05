@@ -57,8 +57,8 @@ def gen_cotacoes(empresas):
                 if deve_capturar_cotacao(a, c):
                     data = converter_str_para_date(c['data'])
                     trimestre = obter_trimestre(data)
-                    query = '''insert into cotacao (data, valor, ano, trimestre, id_acao)
-                        values ('{}', {}, {}, {}, (select id from acao where codigo = '{}'));\n'''.format(c['data'], c['preco'], data.year, trimestre, a['codigo_negociacao'])
+                    query = '''insert into cotacao (data, valor, ano, trimestre, isdailyupdated, id_acao)
+                        values ('{}', {}, {}, {}, false, (select id from acao where codigo = '{}'));\n'''.format(c['data'], c['preco'], data.year, trimestre, a['codigo_negociacao'])
                     inserts.append(query)
                     registrar_periodo_ja_foi_capturada(a, c)
     return inserts

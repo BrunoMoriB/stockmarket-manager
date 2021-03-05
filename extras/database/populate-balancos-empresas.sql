@@ -240,6 +240,123 @@ insert into balanco
                         select 4, 2020, 187459, 747, 739, 31209, 19171, 7.911688684663986, 9008, false, id from Empresa where cnpj = '10338320000100';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 643462, 15796, 0, 1900300, -10754, null, 2866, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 621890, 11674, 0, 1424552, -13792, null, 3051, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 613593, 8249, 0, 1583384, -10192, null, 2527, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 652428, 12116, 0, 1435776, -45229, null, 2746, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 685168, 11708, 0, 1836124, -15273, null, 612, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 673227, 6605, 0, 1618458, -27224, null, 3217, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 664882, 13720, 0, 1408219, -10989, null, 3862, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 704176, 20373, 0, 1608669, -51533, null, 2444, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 0, 7028, 0, 2504, 5562, null, 67, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 0, 12779, 0, 3375, 12749, null, 73, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 0, 11290, 0, 938, 11263, null, 18, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 0, 13826, 0, 629, 44819, null, 51, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 0, 11784, 0, 3130, 11678, null, 51, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 0, 3947, 0, 2280, 3763, null, 57, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 0, 8174, 0, 3161, 8047, null, 72, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 0, 8923, 0, 1652, 32575, null, 47, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 13299, 0, 7181, 12972, null, 46, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 12778, 0, 7407, 12357, null, 47, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 9743, 0, 3913, 9640, null, 47, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 0, 15717, 0, 5773, 50877, null, 49, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 14430, 0, 1733, 14380, null, 52, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 10923, 0, 1396, 10813, null, 53, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 12432, 0, 2294, 12274, null, 57, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 0, 12998, 0, 2839, 50394, null, 77, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 9529, 0, 6792, 6345, null, 80, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 9524, 0, 7379, 9327, null, 76, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 7341, 0, 8186, 7217, null, 77, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 0, 17142, 0, 19511, 40469, null, 75, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 12050, 0, 14295, 11822, null, 80, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 9557, 0, 14573, 9325, null, 80, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 11368, 0, 15365, 11069, null, 79, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 0, 10037, 0, 12022, 42065, null, 85, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 13287, 0, 5828, 13195, null, 72, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 6457, 0, 6273, 6353, null, 76, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 10943, 0, 7344, 10774, null, 81, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 0, 10193, 0, 4618, 40457, null, 51, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 9663, 0, 7393, 9625, null, 0, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 9339, 0, 8260, 9273, null, 26, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 11993, 0, 9566, 11930, null, 71, false, id from Empresa where cnpj = '17167396000169';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 1906513, 92675, 332259, 440065, 109427, 6.378758525516838, 54752, false, id from Empresa where cnpj = '05878397000132';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -1851,6 +1968,108 @@ insert into balanco
                         select 1, 2020, 98985, 0, 24789, 40233, -8811, 0.6897107442913176, 38431, false, id from Empresa where cnpj = '45987245000192';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 2799468, 12176, 0, 0, -16224, null, 2609391, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 2725032, 83836, 0, 0, 128625, null, 762775, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 2640700, 46831, 0, 0, 67348, null, 710441, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 2571708, 31219, 0, 0, 45667, null, 671073, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 2626737, 57956, 0, 0, 386110, null, 776865, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 2745506, 75337, 0, 0, 91914, null, 906338, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 2702854, 76562, 0, 0, 107709, null, 863421, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 2661465, 76074, 0, 0, 98202, null, 813717, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 4084867, 161836, 0, 0, 144823, null, 928661, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 4116890, 93341, 0, 0, 115925, null, 1029202, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 4089240, 96221, 0, 0, 164154, null, 973045, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 4010086, 59765, 0, 0, 9792, null, 951035, false, id from Empresa where cnpj = '61186680000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 391587, 47681, 0, 0, 52763, null, 497227, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 18719, 0, 0, 24774, null, 177115, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 17118, 0, 0, 22546, null, 151751, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 10911, 0, 0, 16870, null, 137120, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 932440, 9025, 0, 0, 69448, null, 148077, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 10609, 0, 0, 7487, null, 216692, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 32926, 0, 0, 43620, null, 204465, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 12076, 0, 0, 3801, null, 171659, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 0, 23269, 0, 0, 74355, null, 252233, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 0, 0, 0, -23603, null, 226728, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 299, 0, 0, -13039, null, 212264, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 0, 0, 0, -34365, null, 204025, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 0, 0, 0, 0, -73526, null, 287880, false, id from Empresa where cnpj = '00416968000101';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 839361, 80285, 0, 3577085, 103002, null, 1241922, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 876415, 81704, 0, 181340, 102348, null, 1214090, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 971991, 113476, 0, 1119132, 153285, null, 1368555, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 1075185, 142849, 0, 168570, 192501, null, 1752613, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 1178606, 156364, 0, 253849, 175512, null, 2238017, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1265355, 145748, 0, 212826, 219947, null, 2898343, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 1387856, 167367, 0, 150179, 258572, null, 2651708, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 1473103, 153733, 0, 182215, 230956, null, 2164884, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 1589630, 215186, 0, 253417, 252186, null, 2100564, false, id from Empresa where cnpj = '28127603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 452732, 5423, 154906, 15389, 15075, 1.5152355172114298, 160766, false, id from Empresa where cnpj = '60851615000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -2202,6 +2421,303 @@ insert into balanco
                         select 1, 2020, 105487, 2312, 33916, 16116, 915, 1.9084128018920845, 31112, false, id from Empresa where cnpj = '61374161000130';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 1384341, 56680, 0, 0, 82456, null, 254642, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 1539616, 178919, 0, 0, 329315, null, 1056355, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 1735481, 240919, 0, 0, 311698, null, 1470226, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 1973838, 265417, 0, 0, 308066, null, 1682149, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 2284769, 328379, 0, 0, 370065, null, 1666916, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 2633973, 388557, 0, 0, 217989, null, 2240732, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 2994121, 391716, 0, 0, 579599, null, 2010847, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 3401295, 427417, 0, 0, 452491, null, 2156854, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 3738848, 416475, 0, 0, 313210, null, 2391943, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 4067582, 497394, 0, 0, 439606, null, 2247643, false, id from Empresa where cnpj = '28195667000106';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 63988502, 12736912, 0, 0, 17795255, null, 106919760, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 70771950, 11438200, 0, 0, 15269892, null, 107931378, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 79571695, 11288834, 0, 0, 12858994, null, 104582211, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 89095348, 13343496, 0, 0, 15604517, null, 137778601, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 89902737, 15798039, 0, 0, 10137504, null, 182368871, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 93777146, 8659577, 0, 0, 10890427, null, 168039236, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 105120023, 12275303, 0, 0, 15930461, null, 139763614, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 107187027, 15086101, 0, 0, 20414199, null, 120250344, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 112208020, 18888318, 0, 0, 11139512, null, 123105325, false, id from Empresa where cnpj = '00000000000191';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 0, 173372, 0, 0, 172087, null, 1490927, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 0, 225955, 0, 0, 394777, null, 1289478, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 0, 208289, 0, 0, 416239, null, 1360370, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 6757692, 731948, 0, 0, 1119367, null, 1127084, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 0, 425385, 0, 0, 812886, null, 1760529, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 0, 522679, 0, 0, 650231, null, 1520633, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 0, 400832, 0, 0, 837770, null, 1998511, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 10530837, 805230, 0, 0, 2960917, null, 2788143, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 0, 614790, 0, 0, 727640, null, 2500866, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 0, 742190, 0, 0, 459903, null, 1499448, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 0, 482606, 0, 0, 931098, null, 2103639, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 13150759, 745235, 0, 0, 3010900, null, 2722462, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 0, 803742, 0, 0, 385059, null, 2454535, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 0, 871121, 0, 0, 897360, null, 3251826, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 0, 935652, 0, 0, 1308552, null, 2494707, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 16087876, -709367, 0, 0, 1786014, null, 3425472, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 1848047, 0, 0, -1013284, null, 6143211, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 1294204, 0, 0, 1849400, null, 1145093, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 937274, 0, 0, -476012, null, 4626672, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 20475147, -3503507, 0, 0, -3365789, null, -245631, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 717079, 0, 0, 980364, null, 2480577, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 1003209, 0, 0, 1475126, null, 4293414, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 1008510, 0, 0, 1342509, null, 2439609, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 17284762, 1986160, 0, 0, 6971821, null, 3786816, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 709196, 0, 0, 2039730, null, 2647350, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 124250, 0, 0, -371621, null, 1766170, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 872633, 0, 0, 1318689, null, 2970894, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 19009838, 661319, 0, 0, 1727067, null, 1487261, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 266839, 0, 0, -220949, null, 2320256, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 0, 0, 0, -1082035, null, 2154408, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 477551, 0, 0, 522520, null, 1676765, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 19219732, 1945844, 0, 0, 2586267, null, 2522037, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 621137, 0, 0, 571934, null, 3538718, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 1052482, 0, 0, 1546199, null, 3261389, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 618845, 0, 0, 710886, null, 2448301, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 22302707, 1760953, 0, 0, 5055630, null, 2429694, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 1029393, 0, 0, 1224462, null, 3353472, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 1271863, 0, 0, 1125788, null, 3568537, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 0, 0, 0, -2739781, null, 4217901, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 0, 1886658, 0, 0, 2388120, null, 2056405, false, id from Empresa where cnpj = '30306294000145';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 0, 26600, 0, 0, 44490, null, 126469, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 0, 21944, 0, 0, 39124, null, 117693, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 0, 21646, 0, 0, 39278, null, 111668, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 0, 20773, 0, 0, 163283, null, 127455, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 0, 26024, 0, 0, 43828, null, 127253, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 0, 18430, 0, 0, 38711, null, 127269, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 0, 21503, 0, 0, 39145, null, 127788, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 0, 22034, 0, 0, 163322, null, 125998, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 0, 14511, 0, 0, 23249, null, 115582, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 0, 9682, 0, 0, 20729, null, 108866, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 0, 22878, 0, 0, 41059, null, 123614, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 0, 11269, 0, 0, 103995, null, 121338, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 0, 3885, 0, 0, 9023, null, 131723, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 0, 10709, 0, 0, 19239, null, 128517, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 0, 11414, 0, 0, 21417, null, 123715, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 0, -19030, 0, 0, 17917, null, 133781, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 20139, 0, 0, 23296, null, 161581, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 20232, 0, 0, 33710, null, 151361, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 4266, 0, 0, 10622, null, 136318, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 0, -17483, 0, 0, 57003, null, 161705, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 18127, 0, 0, 26605, null, 170277, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 9999, 0, 0, 21511, null, 166963, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 12452, 0, 0, 23472, null, 160352, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 0, 24946, 0, 0, 103646, null, 172596, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 21594, 0, 0, 35080, null, 171733, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 20930, 0, 0, 40706, null, 172817, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 15366, 0, 0, 28461, null, 172467, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 0, 35771, 0, 0, 169151, null, 188167, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 18447, 0, 0, 28270, null, 159052, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 11595, 0, 0, 24056, null, 153942, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 18301, 0, 0, 32996, null, 159286, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 0, 14197, 0, 0, 127012, null, 166610, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 16342, 0, 0, 25208, null, 170094, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 22325, 0, 0, 35225, null, 172928, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 19035, 0, 0, 34136, null, 162618, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 0, 25912, 0, 0, 116532, null, 176246, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 9044, 0, 0, 13468, null, 149102, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 8876, 0, 0, 19792, null, 151585, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 16655, 0, 0, 30470, null, 159658, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 0, 19764, 0, 0, 77892, null, 173703, false, id from Empresa where cnpj = '13009717000146';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2017, 68231, 3105, 89389, 45302, 14679, 1.253713467260986, 289750, false, id from Empresa where cnpj = '01107327000120';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -2236,6 +2752,549 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2020, 118091, 0, 211864, 35495, 3079, 0.9900469205156047, 226773, false, id from Empresa where cnpj = '01107327000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 1323555, 73333, 0, 0, 104831, null, 1128407, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 1160861, 96912, 0, 0, 149037, null, 1051166, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 1201631, 91107, 0, 0, 148964, null, 1117849, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 1248381, 66080, 0, 0, 87215, null, 1359210, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 1305868, 84799, 0, 0, 119156, null, 1616781, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1397828, 91545, 0, 0, 129529, null, 1555932, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 1422449, 49685, 0, 0, 44757, null, 1156330, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 1457109, 53141, 0, 0, 74757, null, 894617, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 1504201, 68881, 0, 0, 98984, null, 986292, false, id from Empresa where cnpj = '60770336000165';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 59625142, 11089442, 0, 0, 14683469, null, 82124304, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 71555071, 11351694, 0, 0, 15502232, null, 87139803, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 72321546, 12486138, 0, 0, 14319169, null, 77698157, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 82415869, 15416478, 0, 0, 19330791, null, 99723519, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 91040097, 18237905, 0, 0, 9603583, null, 114601292, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 105655970, 17992726, 0, 0, 31905456, null, 162912502, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 117983577, 17314603, 0, 0, 23743559, null, 137794231, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 125076785, 16748439, 0, 0, 19442015, null, 112546955, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 135987682, 21173207, 0, 0, 13381078, null, 124306394, false, id from Empresa where cnpj = '60746948000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 0, 1240, 0, 0, 2053, null, 28380, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 0, 1462, 0, 0, 1833, null, 31487, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 0, 1165, 0, 0, 1931, null, 34664, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 0, 1494, 0, 0, 7671, null, 21981, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 0, 1037, 0, 0, 1706, null, 9754, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 0, 2073, 0, 0, 2741, null, 13387, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 0, 1158, 0, 0, 1921, null, 17219, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 0, 1163, 0, 0, 7725, null, 6286, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 0, 0, 0, 0, -143, null, 2890, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 0, 870, 0, 0, 950, null, 3415, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 0, 569, 0, 0, 938, null, 4651, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 0, 764, 0, 0, 2603, null, 2562, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 0, 550, 0, 0, 1090, null, 2544, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 0, 1028, 0, 0, 1194, null, 2224, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 0, 608, 0, 0, 1003, null, 2327, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 0, 1308, 0, 0, 4912, null, 2953, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 489, 0, 0, 648, null, 3000, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 1203, 0, 0, 1510, null, 3158, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 1339, 0, 0, 2054, null, 3372, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 0, 1027, 0, 0, 5377, null, 2738, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 4273, 0, 0, 7767, null, 9203, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 3882, 0, 0, 6951, null, 8828, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 73, 0, 0, 234, null, 4613, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 0, 4861, 0, 0, 21030, null, 8775, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 0, 0, 0, -584, null, 2247, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 0, 0, 0, -26734, null, 6186, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 2777, 0, 0, 5098, null, 8290, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 0, 0, 0, 0, -22745, null, 2362, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 750, 0, 0, 1295, null, 3749, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 1366, 0, 0, 2733, null, 3505, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 1122, 0, 0, 1988, null, 3333, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 0, 888, 0, 0, 7444, null, 4045, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 911, 0, 0, 1494, null, 4030, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 380, 0, 0, 648, null, 2818, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 0, 0, 0, -211, null, 2904, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 0, 1065, 0, 0, 2583, null, 3343, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 517, 0, 0, 1001, null, 3313, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 0, 0, 0, -330, null, 2296, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 504, 0, 0, 917, null, 2958, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 0, 1851, 0, 0, 4177, null, 2643, false, id from Empresa where cnpj = '34169557000172';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 0, 18854, 0, 0, 28179, null, 713268, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 0, 49380, 0, 0, 27696, null, 414654, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 0, 12583, 0, 0, -3270, null, 349163, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 715894, -7059, 0, 0, 40518, null, 987243, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 0, 13705, 0, 0, 21056, null, 596984, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 0, 16829, 0, 0, 24212, null, 615801, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 0, 10456, 0, 0, 13958, null, 490242, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 909859, 95137, 0, 0, 203174, null, 945147, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 0, 0, 0, 0, -80167, null, 592160, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 0, 5602, 0, 0, -1534, null, 624662, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 0, 8693, 0, 0, 8765, null, 539099, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 1018782, 120799, 0, 0, 118249, null, 1056720, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 0, 0, 0, 0, -51497, null, 705645, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 0, 0, 0, 0, -90346, null, 640289, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 0, 0, 0, 0, -70391, null, 634683, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 789738, 0, 0, 0, -351239, null, 1079343, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 14511, 0, 0, -54005, null, 895925, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 45396, 0, 0, 74675, null, 756995, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 6023, 0, 0, 7223, null, 895392, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 857646, 38343, 0, 0, 69370, null, 1364600, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 1625, 0, 0, -1541, null, 746192, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 7647, 0, 0, 9147, null, 770097, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 9529, 0, 0, 22209, null, 759443, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1152896, 4713, 0, 0, 38485, null, 1044301, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 524, 0, 0, 1045, null, 645872, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 9073, 0, 0, 16948, null, 653328, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 1040, 0, 0, -1344, null, 644767, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 937997, 38745, 0, 0, 104531, null, 806382, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 11862, 0, 0, 25185, null, 536892, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 7841, 0, 0, 15513, null, 604148, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 19683, 0, 0, 36628, null, 519839, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 904322, 22906, 0, 0, 135641, null, 615705, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 28084, 0, 0, 40086, null, 584477, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 24023, 0, 0, 47107, null, 551361, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 28048, 0, 0, 39207, null, 525315, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 975385, 32895, 0, 0, 65211, null, 568475, false, id from Empresa where cnpj = '17184037000110';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 972626, 231068, 0, 0, -322313, null, 5210106, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 2366003, 0, 0, 0, -648801, null, 5051853, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 2239230, 0, 0, 0, -22258, null, 6571279, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 3643546, 82515, 0, 0, 81824, null, 6889029, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 3790910, 143893, 0, 0, 49163, null, 7205511, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 3684323, 0, 0, 0, -272240, null, 7714794, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 3858672, 243293, 0, 0, 321862, null, 8101814, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 4245036, 198289, 0, 0, 398484, null, 7059552, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 5178638, 621815, 0, 0, 563758, null, 7845785, false, id from Empresa where cnpj = '59285411000113';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 976825, 41028, 0, 0, 54724, null, 216390, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 894272, 37522, 0, 0, 56448, null, 181405, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 869189, 33934, 0, 0, 46771, null, 162082, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 1025914, 71707, 0, 0, 265617, null, 194680, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 1242524, 43621, 0, 0, 54872, null, 168585, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 1083893, 49583, 0, 0, 60711, null, 195970, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 1051710, 58139, 0, 0, 84550, null, 207621, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 1249362, 43203, 0, 0, 257268, null, 168311, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 1277111, 35812, 0, 0, 43864, null, 216187, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 1275952, 34136, 0, 0, 23348, null, 179923, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 1282711, 46201, 0, 0, 65615, null, 141176, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 1277973, 31155, 0, 0, 168792, null, 217316, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 1276636, 24379, 0, 0, 20861, null, 245670, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 1266059, 35943, 0, 0, 47750, null, 224209, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 1269249, 26290, 0, 0, 32668, null, 219137, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 1262420, 9149, 0, 0, 87608, null, 254129, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 0, 10363, 0, 0, -131397, null, 695825, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 0, 10113, 0, 0, 22352, null, 188103, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 0, 10060, 0, 0, -50042, null, 598255, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 1189753, 10221, 0, 0, -155705, null, -513853, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 0, 0, 0, 0, -8519, null, 236852, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 0, 0, 0, 0, -2605, null, 91742, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 0, 8299, 0, 0, 9595, null, 134890, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1173513, 0, 0, 0, -27731, null, 504040, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 0, 0, 0, 0, -394352, null, 102299, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 0, 0, 0, 0, -41265, null, 238894, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 0, 652, 0, 0, 14044, null, 181797, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 976850, 0, 0, 0, -369351, null, 458985, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 0, 4838, 0, 0, -4377, null, 154206, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 0, 5264, 0, 0, -20573, null, 177892, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 0, 5199, 0, 0, 11696, null, 146009, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 868737, 0, 0, 0, -50608, null, 280546, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 0, 0, 0, 0, -39209, null, 175922, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 0, 0, 0, 0, -43657, null, 104317, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 0, 0, 0, 0, -34234, null, 139227, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 881239, 0, 0, 0, -275958, null, 473977, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 0, 0, 0, 0, -15607, null, 145314, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 0, 3164, 0, 0, 18367, null, 178498, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 0, 0, 0, 0, -47434, null, 175125, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 0, 0, 0, 0, -120537, null, 160522, false, id from Empresa where cnpj = '62144175000120';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 77003649, 1802241, 0, 0, 411161, null, 13276525, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 75290165, 2082743, 0, 0, 3038802, null, 12683080, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 74726386, 2071171, 0, 0, 2921732, null, 11802091, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 78050952, 1799698, 0, 0, 8910536, null, 13974384, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 81129818, 1465881, 0, 0, 1928265, null, 13166293, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 80232956, 1459116, 0, 0, 376536, null, 13525403, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 79474028, 1723208, 0, 0, 2573644, null, 13672820, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 81815371, 811073, 0, 0, 5510751, null, 12296166, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 81866328, 1350310, 0, 0, 1741933, null, 12971030, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 81322007, 1478534, 0, 0, 381962, null, 12388830, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 80053329, 1576822, 0, 0, 2452594, null, 12144262, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 81944403, 1442458, 0, 0, 4018257, null, 13712924, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 79384644, 1323015, 0, 0, 523213, null, 15110049, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 78903307, 1539199, 0, 0, 2553345, null, 14040815, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 77252472, 1417061, 0, 0, 2586240, null, 13877585, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 79063466, 1428501, 0, 0, 6443329, null, 15895467, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 82580820, 1717285, 0, 0, -5485803, null, 18729053, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 85460079, 4932413, 0, 0, 2979048, null, 17135031, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 80164563, 1637284, 0, 0, -2220965, null, 16051887, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 80270346, 1546844, 0, 0, -3215718, null, 17954229, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 89222272, 2300734, 0, 0, 3110869, null, 19644273, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 86202644, 1815789, 0, 0, 6731892, null, 19155709, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 83756290, 1830677, 0, 0, 6259763, null, 18868432, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 85538063, 1517718, 0, 0, 16383902, null, 19477663, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 91409941, 2382936, 0, 0, 5597622, null, 17708273, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 89366391, 2263488, 0, 0, 2129953, null, 17982659, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 88717720, 2007813, 0, 0, 4340671, null, 19123901, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 87524495, 2483811, 0, 0, 14513684, null, 16603516, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 92287020, 3240802, 0, 0, 4357031, null, 18275321, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 89842165, 2921514, 0, 0, -115390, null, 18387613, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 88744069, 2872666, 0, 0, 4866592, null, 17041038, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 92188045, 3764936, 0, 0, 15909771, null, 16774421, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 100877104, 3962138, 0, 0, 3653723, null, 18660727, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 97143080, 3487894, 0, 0, 6517713, null, 18360977, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 94763618, 3673589, 0, 0, 5838478, null, 18331205, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 97767742, 5507829, 0, 0, 22273149, null, 17488151, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 101496138, 2059627, 0, 0, 178439, null, 14645513, false, id from Empresa where cnpj = '90400888000142';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 99994998, 3866268, 0, 0, -6325770, null, 18617110, false, id from Empresa where cnpj = '90400888000142';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 206268, 5002, 0, 204069, 2329, 14.919117647058824, 11545, false, id from Empresa where cnpj = '56992423000190';
@@ -3225,6 +4284,33 @@ insert into balanco
                         select 1, 2020, -1000158, 0, 38845253, 12347398, 376922, 1.293309530601799, 12624645, false, id from Empresa where cnpj = '42150391000170';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 969205, 128936, 0, 0, 181830, null, 1679097, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 1113900, 195644, 0, 0, 282712, null, 1749823, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 1278171, 211225, 0, 0, 318848, null, 1910786, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 1488631, 226876, 0, 0, 322632, null, 2181587, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 1616508, 151027, 0, 0, 148029, null, 2742848, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1557423, 170443, 0, 0, 195853, null, 2929559, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 1607842, 219070, 0, 0, 343029, null, 2748523, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 1751526, 324211, 0, 0, 568671, null, 3012804, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 2086297, 417146, 0, 0, 580210, null, 3101881, false, id from Empresa where cnpj = '00000208000100';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2014, 75295, 930, 14905, 28222, 4748, 1.6675933882626497, 425830, false, id from Empresa where cnpj = '36542025000164';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -3970,6 +5056,33 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2020, 7206213, 1595676, 1825562, 713384, 812726, 1.0649766370040539, 500649, false, id from Empresa where cnpj = '60933603000178';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 4585250, 934171, 0, 0, 1369027, null, 5711197, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 5103040, 833709, 0, 0, 1158104, null, 5973979, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 5335751, 748970, 0, 0, 1058299, null, 6232784, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 5810636, 621015, 0, 0, 770540, null, 7433175, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 6478147, 880218, 0, 0, 1044378, null, 9666650, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 6728598, 728875, 0, 0, 1087358, null, 10458584, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 7362427, 1095506, 0, 0, 1550875, null, 9317842, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 7369895, 908597, 0, 0, 1423615, null, 8454424, false, id from Empresa where cnpj = '92702067000196';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 7808525, 1269947, 0, 0, 1321734, null, 8063609, false, id from Empresa where cnpj = '92702067000196';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2012, 1990533, 0, 4863552, 192942, -128526, 0.665306695012665, -4630392, false, id from Empresa where cnpj = '15527906000136';
@@ -6012,10 +7125,13 @@ insert into balanco
                         select 3, 2015, 447325, 5994, 0, 188654, 3051, 4.319472393675488, 72542, false, id from Empresa where cnpj = '01938783000111';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 455390, 2519, 0, 189722, 117, 4.641348773841962, 69418, false, id from Empresa where cnpj = '01938783000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2015, 475870, 4604, 500, 209015, 2101, 5.0266132235583, 67213, false, id from Empresa where cnpj = '01938783000111';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2015, 445384, 15358, 0, 186115, 15547, 4.416552494037652, 147453, false, id from Empresa where cnpj = '01938783000111';
+                        select 4, 2015, 445384, 12839, 0, 186115, 15547, 4.416552494037652, 78035, false, id from Empresa where cnpj = '01938783000111';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2016, 481054, 14412, 0, 211075, 14247, 4.800541805591177, 81550, false, id from Empresa where cnpj = '01938783000111';
@@ -8038,6 +9154,51 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2016, 193430, 11003, 63724, 18725, 57979, 0.9052889150392722, 111814, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 220538, 10719, 64122, 43266, 18130, 1.1532029942078628, 122632, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 209704, 9076, 58031, 23194, 15782, 0.9888812405590929, 120959, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 201766, 8311, 61107, 3312, 14742, 0.9394192854582387, 118421, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 223877, 17093, 69554, 63728, 68649, 1.1967189741670454, 124840, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 241803, 7021, 58568, 34337, 11804, 1.2732847747039178, 102746, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 234676, 8402, 62980, 33333, 13911, 1.1737585112118367, 104729, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 232081, 8104, 66483, 49346, 13025, 1.224411389031369, 108490, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 240835, 9272, 54977, 29149, 47973, 1.192849392704021, 103806, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 251518, 8022, 124172, 33227, 12993, 0.9652179191453198, 108922, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 245935, 4619, 137918, 25812, 7016, 0.9653032628277841, 106854, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 245532, 4514, 148312, 28629, 8002, 0.9774292539187139, 104523, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 257266, 9677, 117578, 28542, 44614, 0.9553156169950915, 113403, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 282506, 12199, 114737, 87106, 18990, 1.1456870814169289, 113640, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 273147, 11214, 124086, 76835, 16301, 1.1188740873574996, 111615, false, id from Empresa where cnpj = '01896779000138';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 264422, 9313, 107300, 26263, 15274, 0.9737683941138836, 114086, false, id from Empresa where cnpj = '01896779000138';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2016, 546801, 1865, 237501, 218808, 4289, 3.6226516040084777, -79832, false, id from Empresa where cnpj = '06981381000113';
@@ -10881,6 +12042,18 @@ insert into balanco
                         select 4, 2019, 71747, 3401, 16, 35377, 15985, 1.4595379509127435, 48604, false, id from Empresa where cnpj = '95426862000197';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 82353, 4107, 0, 33308, 4980, 1.4504289325451325, 48963, false, id from Empresa where cnpj = '95426862000197';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 78246, 2290, 0, 32311, 2229, 1.5671686297897718, 42536, false, id from Empresa where cnpj = '95426862000197';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 75956, 4209, 0, 35333, 5010, 1.4731762641501358, 47030, false, id from Empresa where cnpj = '95426862000197';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 91838, 12829, 0, 25205, 24745, 1.2023648901881419, 52330, false, id from Empresa where cnpj = '95426862000197';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 1380912, 76790, 39329, 314031, 67775, 5.628297215722182, 169294, false, id from Empresa where cnpj = '08312229000173';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -12102,6 +13275,27 @@ insert into balanco
                         select 4, 2018, 191464, 148748, 358625, 242818, 179947, 0.8940618515532665, 2275057, false, id from Empresa where cnpj = '13217485000111';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 991151, 38413, 35039, 45432, 60918, 1.2505669824322674, 621003, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 953788, 111829, 36744, 102102, 122636, 1.231622159351397, 545533, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 187697, 0, 389941, 5084, 28437, 0.7862739316678207, 527177, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 1169800, 163628, 34590, 105308, 468691, 1.4269702065325627, 851709, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 1920947, 0, 1768026, 1455159, -26282, 2.419298205042224, 569038, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 1952576, 0, 1538348, 1289943, -105172, 2.642147475583019, 239372, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 1181789, 8140, 16644, 308127, -6341, 1.237964299837225, 505615, false, id from Empresa where cnpj = '13217485000111';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, -105273223, 1344490, 71433597, 16715348, 1850447, 0.9718186149192339, 8842289, false, id from Empresa where cnpj = '30540991000166';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -13167,6 +14361,126 @@ insert into balanco
                         select 4, 2020, 231086, 621, 0, 79611, 5462, 595.6423357664233, 2732, false, id from Empresa where cnpj = '01548981000179';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 72214097, 3997764, 0, 0, 2872457, null, 29356110, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 72701410, 3812938, 0, 0, 4885194, null, 23448881, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 70581112, 3707831, 0, 0, 5177506, null, 22361060, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 76731000, 3091467, 0, 0, 18251000, null, 28434949, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 0, 2776157, 0, 0, 2463457, null, 788050, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 0, 2705231, 0, 0, 2485472, null, 828344, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 76292893, 3616227, 0, 0, 5402252, null, 26035514, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 76094000, 4093385, 0, 0, 17416000, null, 73930092, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 82260000, 4319000, 0, 0, 6043000, null, 26785000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 79602000, 3767000, 0, 0, 4019000, null, 27105000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 78099000, 3490000, 0, 0, 4810000, null, 23477000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 85161000, 4946000, 0, 0, 20865000, null, 17430000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 96153000, 5984000, 0, 0, 6772000, null, 36815000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 90412000, 4843000, 0, 0, 7370000, null, 31725000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 86493000, 4601000, 0, 0, 7194000, null, 30243000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 101974000, 6433000, 0, 0, 28808000, null, 30252000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 113483000, 9298000, 0, 0, -1354000, null, 32124000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 107511000, 5934000, 0, 0, 9150000, null, 39098000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 103755000, 5783000, 0, 0, 2873000, null, 26756000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 115866000, 5141000, 0, 0, 18265000, null, 31596000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 149188000, 5622000, 0, 0, 7154000, null, 43011000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 144657000, 6322000, 0, 0, 12289000, null, 52214000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 116633000, 5698000, 0, 0, 10675000, null, 41790000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 147046000, 5940000, 0, 0, 38192000, null, 37304000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 155972000, 5918000, 0, 0, 10143000, null, 37407000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 151040000, 6792000, 0, 0, 7779000, null, 47454000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 146155000, 5878000, 0, 0, 9405000, null, 42236000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 161172000, 5680000, 0, 0, 32211000, null, 20518000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 159935000, 6331000, 0, 0, 8292000, null, 35332000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 155214000, 5894000, 0, 0, 2375000, null, 38057000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 149747000, 6557000, 0, 0, 9563000, null, 33287000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 164150000, 6857000, 0, 0, 30608000, null, 24641000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 158344000, 5505000, 0, 0, 4295000, null, 49517000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 157712000, 6690000, 0, 0, 9591000, null, 49113000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 152564000, 6903000, 0, 0, 9538000, null, 17010000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 162005000, 8715000, 0, 0, 31243000, null, 77397000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 160031000, 5099000, 0, 0, 4861000, null, 37651000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 154185000, 0, 0, 0, -4235000, null, 23476000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 157226000, 3678000, 0, 0, -9287000, null, 43716000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 166057000, 8190000, 0, 0, 5230000, null, 68914000, false, id from Empresa where cnpj = '60872504000123';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 20925662, 0, 19235537, 5581014, 442766, 1.7988332694186457, 15567759, false, id from Empresa where cnpj = '02916265000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -13731,6 +15045,9 @@ insert into balanco
                         select 1, 2017, 2303190, 120266, 3521670, 1484711, 230069, 1.41761537941894, 1339578, false, id from Empresa where cnpj = '16670085000155';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 2600725, 132967, 6477679, 2613894, 969134, 1.5357374654110965, 1809535, false, id from Empresa where cnpj = '16670085000155';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2018, 2959256, 159852, 7416389, 2666252, 300338, 1.3738996580402183, 2073105, false, id from Empresa where cnpj = '16670085000155';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -13762,6 +15079,9 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2020, 5429417, 230871, 11063819, 3893677, 434362, 1.4498001560143647, 2794632, false, id from Empresa where cnpj = '16670085000155';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 6052659, 401822, 10497723, 3966604, 1801734, 1.2963498641184177, 2875332, false, id from Empresa where cnpj = '16670085000155';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2018, 61087, 10886, 82501, 27879, 36352, 0.6547330174992617, 314983, false, id from Empresa where cnpj = '02351877000152';
@@ -15222,13 +16542,16 @@ insert into balanco
                         select 4, 2014, 4066877, 124210, 2119051, 325937, 629459, 1.771549875719718, 317721, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 4176068, 58429, 2021668, 251735, 141242, 0.9670267689862967, 257707, false, id from Empresa where cnpj = '07816890000153';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 2, 2015, 4149563, 96240, 2047101, 262212, 145479, 1.4092995369261967, 253737, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2015, 4154566, 69611, 2087903, 399170, 153385, 1.8372559364621173, 260118, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2015, 4181259, 196108, 2173064, 372312, 627562, 1.4556656264229313, 551175, false, id from Empresa where cnpj = '07816890000153';
+                        select 4, 2015, 4181259, 137679, 2173064, 372312, 627562, 1.4556656264229313, 293468, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2016, 4362511, 58070, 2523520, 670862, 144885, 2.2751705149199224, 265288, false, id from Empresa where cnpj = '07816890000153';
@@ -15279,13 +16602,16 @@ insert into balanco
                         select 4, 2019, 5587669, 142246, 3103437, 907969, 704523, 1.4206161877421453, 360849, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 6408240, 568703, 3531509, 1828048, 643132, 2.5476544685272398, 210743, false, id from Empresa where cnpj = '07816890000153';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 2, 2020, 5884371, 70736, 3527398, 1092821, 121911, 1.7320459396495755, 254049, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2020, 5806036, 177723, 3346875, 1140803, 284675, 1.33199549327789, 320674, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2020, 6229725, 715519, 3121299, 1223414, 1146450, 1.8410426219393714, 506853, false, id from Empresa where cnpj = '07816890000153';
+                        select 4, 2020, 6229725, 146816, 3121299, 1223414, 1146450, 1.8410426219393714, 296110, false, id from Empresa where cnpj = '07816890000153';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 68914, 0, 202225, 7059, 9437, 0.5567804834014127, 96929, false, id from Empresa where cnpj = '88610191000154';
@@ -18408,6 +19734,9 @@ insert into balanco
                         select 1, 2012, 166589, 7913, 747872, 187228, 33317, 1.3900841096820429, 94880, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 301795, 10782, 681473, 237274, 74352, 2.0978045994138976, 118135, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2013, 314080, 3610, 699477, 176595, 19763, 2.916737677415919, 133298, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -18432,13 +19761,40 @@ insert into balanco
                         select 4, 2014, 307946, 7477, 878341, 206114, 116737, 2.312637638406621, 178133, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 325606, 4363, 1018887, 325235, 31772, 1.5422611956643677, 178415, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 318541, 5483, 879703, 156277, 29798, 1.3408426094980073, 177057, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 312307, 6362, 891592, 230521, 30008, 2.204448670042231, 173878, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 325596, 2353, 926440, 292400, 124310, 1.0526833739739807, 178866, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 318906, 8028, 845703, 223318, 38480, 1.7420207574870372, 201707, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 318438, 7578, 825316, 209083, 37292, 0.9774985173708963, 191306, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 318190, 5504, 1002490, 295409, 36197, 1.2024727545005867, 172840, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 300893, 7797, 823623, 202022, 150325, 1.2829127907559739, 188861, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2017, 461596, 15239, 1232438, 292867, 66929, 0.9497551578901644, 305036, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 2, 2017, 454232, 9866, 1256967, 337676, 47871, 1.0454052886498677, 263101, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2017, 483281, 35493, 1433405, 424005, 223791, 1.0941983474473709, 526477, false, id from Empresa where cnpj = '10215988000160';
+                        select 1, 2017, 303548, 12442, 790881, 191986, 41671, 1.0985786915694677, 204902, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 483281, 23051, 1433405, 424005, 223791, 1.0941983474473709, 321575, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2018, 1600663, 60707, 3974089, 1155065, 156883, 1.0009622473577442, 832578, false, id from Empresa where cnpj = '10215988000160';
@@ -18462,6 +19818,9 @@ insert into balanco
                         select 1, 2019, 2619927, 73804, 3466962, 661124, 188403, 0.8074851942866275, 1052111, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 3904411, 96004, 4672525, 2013354, 798825, 1.370302519046244, 1260945, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2020, 4049793, 123470, 5217575, 2365652, 233043, 1.1410942064229495, 1787054, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -18469,6 +19828,9 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2020, 3959762, 79570, 4896992, 1156075, 167096, 1.3603319129146625, 1240193, false, id from Empresa where cnpj = '10215988000160';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2020, 4186288, 197127, 7113787, 3690522, 776663, 1.3419787220236365, 1643777, false, id from Empresa where cnpj = '10215988000160';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 530653, 6670, 20876, 411, 9652, 1.1945404782483433, 21424, false, id from Empresa where cnpj = '60730348000166';
@@ -19237,6 +20599,87 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2013, 394859, 32576, 718049, 265399, 215074, 1.8062234815630933, 940605, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 428655, 20962, 816693, 152402, 61464, 1.794130666111647, 1124264, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 407693, 19726, 786727, 174324, 52951, 1.709117320690003, 1003334, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 387967, 21874, 720465, 167478, 51751, 1.888006482166493, 955538, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 464098, 53737, 972972, 290799, 266450, 1.8223882898892336, 1132495, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 526172, 18776, 1196325, 175609, 69029, 1.489752024291498, 1203440, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 507396, 41990, 1058354, 287067, 100292, 1.7929055679390242, 1164296, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 465406, 25983, 1040981, 260559, 70929, 1.8883036400006579, 1103353, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 882990, -55810, 1247478, 299721, 216863, 1.6936509685861683, 1159459, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 893395, 36272, 820969, 379545, 57541, 1.4965952779730387, 1451812, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 896546, 21219, 833447, 461376, 89035, 1.4479665730676734, 1383306, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 886718, 3728, 1152511, 310205, 57203, 1.5154651562935464, 1259248, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 877829, -19500, 655987, 144152, 149473, 1.2507695200038338, 1447977, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 939893, 31253, 902307, 359746, 56667, 1.4599913149267238, 1519551, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 908640, 30385, 730185, 212262, 57859, 1.4488136019701205, 1481628, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 884782, 6953, 828099, 258696, 34760, 1.400266582926186, 1461123, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 941267, 12979, 770076, 82019, 169706, 1.4257419825667317, 1500502, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 1097847, 15302, 1042535, 102361, 41325, 1.204271995028356, 1630546, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 1086725, 4659, 1085065, 312546, 19316, 1.2627316772287276, 1550815, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 1081390, 1590, 938275, 155015, 20061, 1.2221809816678026, 1475873, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 1031295, 71422, 954404, 119332, 178532, 1.1864655642100495, 1587816, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 1018054, 39288, 953514, 98719, 84107, 1.3056685184975756, 1641130, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 978766, 0, 952591, 52848, 43377, 1.3792448719810684, 1593380, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 994267, 0, 933000, 69622, 16029, 1.2849846275278647, 1529454, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 1024520, 0, 938988, 124540, 215826, 1.2977225303696076, 1658284, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 1830365, 40153, 954855, 655886, 86881, 1.6473803897709234, 1781765, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 1043288, 9143, 975619, 103218, 77127, 1.3038856923644955, 1583467, false, id from Empresa where cnpj = '06626253000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 1034146, 9204, 973363, 85900, 63007, 1.2564512744609178, 1663887, false, id from Empresa where cnpj = '06626253000151';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2012, 2190026, 61929, 0, 925486, 55308, 10.737901922766198, 127195, false, id from Empresa where cnpj = '11669021000110';
@@ -20142,6 +21585,123 @@ insert into balanco
                         select 1, 2020, -2070188, 0, 678465, 249, -24403, 0.10469606383315758, 1185, false, id from Empresa where cnpj = '76627504000106';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 34215000, 1274000, 0, 147104000, -3350000, null, 1139000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 33550000, 1248000, 0, 143649000, -3081000, null, 1301000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 32321000, 1367000, 0, 143271000, -2688000, null, 1269000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 35239000, 1478000, 0, 106166000, -12206000, null, 1385000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 34905000, 1343000, 0, 109987000, -3085000, null, 1342000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 36520000, 1190000, 0, 103599000, -3398000, null, 1401000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 35615000, 1370000, 0, 110871000, -2945000, null, 1279000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 35391000, 1137000, 0, 123049000, -12832000, null, 1631000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 37911000, 1631000, 2637000, 1431000, 1716000, null, 1327000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 36751000, 1184000, 2564000, 1402000, 1365000, null, 1236000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 35506000, 1378000, 2989000, 1909000, 1473000, null, 1384000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 38817000, 1818000, 2764000, 1625000, 6484000, null, 1342000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 43295000, 2208000, 2851000, 1948000, 2296000, null, 1328000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 41440000, 1794000, 2918000, 1872000, 1808000, null, 1182000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 39628000, 1784000, 3003000, 1973000, 1853000, null, 1220000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 45252000, 2375000, 3025000, 2187000, 8323000, null, 1291000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 49976000, 3350000, 3184000, 2392000, 3318000, null, 1307000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 47702000, 1891000, 3028000, 2249000, 2051000, null, 1170000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 46107000, 1974000, 3043000, 2286000, 1964000, null, 1220000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 50894000, 1779000, 3098000, 2456000, 9068000, null, 1188000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 53855000, 2133000, 3620000, 2595000, 2143000, null, 1162000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 52547000, 2231000, 3653000, 2651000, 2236000, null, 1201000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 50960000, 1949000, 3119000, 2046000, 1980000, null, 1109000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 53629000, 1903000, 3712000, 2744000, 8229000, null, 1215000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 57622000, 2403000, 4685000, 2597000, 2396000, null, 1290000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 55569000, 2206000, 4564000, 3826000, 2228000, null, 1139000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 53704000, 1916000, 3471000, 3044000, 2115000, null, 1178000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 59215000, 1997000, 4756000, 2657000, 8590000, null, 1362000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 59521000, 2721000, 4220000, 3240000, 2931000, null, 1511000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 57411000, 2153000, 4198000, 3013000, 2261000, null, 1340000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 54556000, 2420000, 4414000, 3115000, 2471000, null, 1262000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 61015000, 2416000, 4071000, 3451000, 9927000, null, 1262000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 58168000, 1958000, 4436000, 3122000, 2029000, null, 1308000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 58352000, 2479000, 4485000, 3287000, 2632000, null, 1143000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 56320000, 2501000, 3872000, 2930000, 2443000, null, 1071000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 61482000, 3631000, 4155000, 3582000, 10994000, null, 1486000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 60682000, 1864000, 4654000, 3814000, 2002000, null, 1778000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 58886000, 582000, 4981000, 3821000, 632000, null, 1046000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 58018000, 1045000, 4607000, 3590000, 1425000, null, 1162000, false, id from Empresa where cnpj = '61532644000115';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 1730284, 77508, 6760723, 3359760, 226130, 1.7354223857360696, 1304999, false, id from Empresa where cnpj = '60543816000193';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -20686,6 +22246,63 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2020, 1377411, 0, 3887644, 1081336, -44808, 3.5533359850326307, 213522, false, id from Empresa where cnpj = '12648327000153';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2011, 23214, 660, 7160, 0, -1852, 2.469382716049383, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2011, 16165, 0, 7013, 0, -5760, 1.8536661710618985, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2011, 22163, 0, 2303, 0, -363, 2.930144267274108, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2011, 25571, 0, 7335, 0, -15117, 2.7085244346038273, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2012, 23906, 1542, 7921, 0, -226, 2.0715892053973013, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2012, 22364, 1143, 7763, 0, 1335, 2.6435052169968243, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2012, 21221, 0, 7592, 0, -6319, 2.665895775516497, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2012, 35071, 0, 8115, 1, -8565, 2.687308608370194, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 50580, 0, 8643, 0, -2049, 2.3437910477922603, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 45137, 0, 8513, 0, -2772, 2.108347762212078, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 45185, 10114, 8327, 0, 11786, 2.1921146953405017, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 42441, -7581, 8813, 0, -4163, 2.927648259229485, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 46782, 0, 10282, 0, -2612, 3.249062097541856, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 40799, 0, 10077, 0, 0, 2.849024940686303, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 41171, 0, 9717, 0, -1451, 2.8049134626553607, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 40290, 0, 10573, 0, -13053, 3.151252773418475, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 36477, 0, 11585, 0, -2745, 3.0434183321847, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 37631, 0, 11218, 0, -3633, 3.0707261146496814, 0, false, id from Empresa where cnpj = '60637238000154';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 39678, 0, 10888, 0, -1695, 3.122051335342409, 0, false, id from Empresa where cnpj = '60637238000154';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2015, 36069, 0, 11960, 2, -9669, 1.6267080457640466, 0, false, id from Empresa where cnpj = '60637238000154';
@@ -21885,13 +23502,61 @@ insert into balanco
                         select 4, 2015, 36696, 0, 64994, 14306, 6194, 1.3336880804953561, 17311, false, id from Empresa where cnpj = '08795211000170';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2018, 48742, 0, 144491, 35018, 13893, 1.0179768841341101, 63073, false, id from Empresa where cnpj = '08795211000170';
+                        select 3, 2016, 33545, 0, 74689, 10346, 3427, 0.9402825814997424, 14232, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 34517, 0, 78748, 13135, 2688, 1.0329213483146067, 12594, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 35398, 0, 64695, 17124, 2156, 1.424625468164794, 19289, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 49520, 15975, 69071, 6366, 11073, 0.8038780739664206, 13868, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 50138, 132, 69236, 11580, 3060, 0.6505248323452231, 18876, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 50006, 105, 68909, 9373, 2785, 0.8278626301885647, 16642, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 49901, 0, 67646, 9063, 0, 0.915380625081053, 0, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 49902, 145, 76570, 12139, 11866, 0.5719212631677733, 35471, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 49426, 0, 103588, 16172, 3638, 0.686910723942536, 15775, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 49893, 0, 116122, 43271, 2660, 1.0008701520102288, 14199, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 50629, 727, 74480, 7338, 3536, 0.5009136863089446, 16319, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 48742, 0, 144491, 35018, 13893, 1.0179768841341101, 16780, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 49985, 552, 151903, 33173, 5478, 0.7030877511635827, 27867, false, id from Empresa where cnpj = '08795211000170';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 2, 2019, 49433, 0, 158287, 36941, 4862, 0.7165079404808089, 28776, false, id from Empresa where cnpj = '08795211000170';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2019, 49533, 791, 143975, 34023, 5437, 0.843916349809886, 23140, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 49658, -326, 182468, 43071, 21248, 0.9490885312408253, 12165, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 50606, 634, 151019, 39495, 4797, 0.7145162091049, 38675, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 49974, 76, 159486, 26775, 4741, 0.6759603794350401, 26254, false, id from Empresa where cnpj = '08795211000170';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 49898, 240, 170234, 30008, 4926, 0.7386347642505278, 29127, false, id from Empresa where cnpj = '08795211000170';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, -172450, 0, 65214, 19314, 6828, 0.35455047277897134, 39168, false, id from Empresa where cnpj = '61082004000150';
@@ -22444,6 +24109,63 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2015, 202686772, 3470009, 183795715, 207936642, 10852932, 2.108416000365516, 45747222, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 212697263, 4940040, 76075442, 114859875, 4255063, 2.2302296125763403, 61084556, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 207757223, 2713721, 125944003, 156353308, 1337135, 2.4877722130568882, 64403477, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 205043502, 2356730, 138223318, 166520554, -1182687, 2.3729690221480966, 49166345, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 211494127, 3425800, 78659645, 108654657, 2684572, 2.3414799668574378, 43363896, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 220227936, 4787909, 18720977, 59397838, 4609914, 3.9706774339701396, 70390340, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 215440027, 2706748, 68577135, 98718623, 2758094, 2.4533973139673884, 62197348, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 212733279, 1239152, 53602425, 87488624, -753097, 2.7554613432483333, 51849196, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 219916914, 4409115, 26301653, 62938268, 7566817, 4.293442179241524, 55739770, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 233498927, 6044018, 32113872, 59457853, 7931334, 3.20618947277708, 81870577, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 227454909, 4585098, 27702661, 71319243, 8365730, 3.6216023175122913, 74538887, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 222869811, 2952897, 22816391, 68157906, 1837999, 4.078475952664854, 57508662, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 230640157, 2753453, 21438261, 59845396, 16330520, 4.822839128013487, 56812217, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 239897356, 4686633, 51621688, 94787439, 7994215, 2.985480662405153, 82800356, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 235232587, 4125836, 23003110, 70769683, 3161671, 3.9845761027181235, 78745474, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 234667110, 4096528, 18453998, 69195994, 3990012, 4.125656952034136, 65807711, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 241512232, 5091785, 38056112, 89119660, 17253995, 3.7988270119158587, 61443323, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 279083686, 13418141, 49445256, 111376249, 18536316, 3.127955966871998, 107303258, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 271320060, 30277122, 44583215, 80300110, 29538909, 2.95719799733282, 90497227, false, id from Empresa where cnpj = '86375425000109';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 241115196, 0, 56692320, 78763497, 9700041, 2.9119054208521034, 71474707, false, id from Empresa where cnpj = '86375425000109';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 703057, 17877, 402277, 72241, 30725, 1.6753900970635214, 175059, false, id from Empresa where cnpj = '27093558000115';
@@ -23694,6 +25416,51 @@ insert into balanco
                         select 4, 2016, 15725, 846, 0, 2239, 1366, 3.387291981845688, 0, false, id from Empresa where cnpj = '59789545000171';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 19558, 26, 0, 1955, -20, 251.125, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 16157, 418, 0, 1943, 367, 332.8333333333333, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 14907, 0, 0, 1984, -99, 4.984924623115578, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 19870, 135, 0, 2129, 383, 16.380597014925375, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 43736, 92, 0, 2187, 52, 156.33333333333334, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 41164, 250, 0, 2175, 217, 225.6, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 31629, 0, 0, 2104, -89, 12.235955056179776, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 35679, 24, 0, 2277, 171, 24.6875, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 32584, 33, 0, 2594, -10, 2704.0, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 31922, 465, 0, 2575, 433, 892.3333333333334, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 42419, 0, 0, 2252, -101, 16.319444444444443, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 37315, 19, 0, 2606, 313, 24.94495412844037, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 41934, 22, 0, 2377, -10, 248.9, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 34909, 0, 0, 2361, -34, 205.91666666666666, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 34125, 0, 0, 2527, -114, 17.844594594594593, 0, false, id from Empresa where cnpj = '59789545000171';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 50663, 0, 87392, 3190, -1791, 0.6857228938349715, 14252, false, id from Empresa where cnpj = '86550951000150';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -24309,7 +26076,16 @@ insert into balanco
                         select 4, 2013, 156121, 0, 634723, 285750, 57566, 1.9120020679457013, 189607, false, id from Empresa where cnpj = '49669856000143';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
-                        select 4, 2014, 1803791, 0, 1158587, 544070, 99398, 1.2917747455988213, 765717, false, id from Empresa where cnpj = '49669856000143';
+                        select 3, 2014, 135350, 117, 847835, 353831, 25561, 1.371014566893888, 178132, false, id from Empresa where cnpj = '49669856000143';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 138330, 1780, 842813, 426778, 26566, 1.4746420839745569, 176385, false, id from Empresa where cnpj = '49669856000143';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 145575, 0, 663723, 270661, 19223, 1.2912425811662585, 174086, false, id from Empresa where cnpj = '49669856000143';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 1803791, 0, 1158587, 544070, 99398, 1.2917747455988213, 237114, false, id from Empresa where cnpj = '49669856000143';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2015, 1753698, 0, 1092422, 220000, 20555, 1.0375238477884101, 282498, false, id from Empresa where cnpj = '49669856000143';
@@ -26181,6 +27957,42 @@ insert into balanco
                         select 4, 2016, 3467541, -448834, 14013738, 3735193, 1310771, 2.0938891807825946, 2497792, false, id from Empresa where cnpj = '60651809000105';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 3954858, 801064, 13133420, 3894540, 807900, 2.326699773733672, 2594753, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 3692664, 198554, 13643090, 3688218, 807216, 2.1164588915287235, 2529837, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 3616709, 448530, 13816266, 4103876, 466202, 2.536000498108743, 2254011, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 3940242, 334739, 12192213, 2751517, 3243378, 1.8076484634707761, 3142409, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 3605707, 0, 23818734, 13008105, 1731925, 3.1882516468137068, 4005608, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 3630346, 0, 17962523, 8064633, 1164619, 3.0873334431431023, 3203491, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 4213811, 812109, 12646310, 3432156, 1131211, 2.5205563851307207, 2998958, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 4067689, 1460592, 35737509, 25503569, 4991621, 5.083014477992261, 3229600, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 4687303, 0, 67969010, 8677127, 996974, 1.6887473228035412, 6599996, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 5611622, 699752, 64304307, 7861440, 881553, 1.7920051100971945, 6665176, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 5541308, 0, 64783538, 6798277, 182464, 1.4305482980243402, 5699094, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 4972852, 0, 63684326, 9464521, 2620813, 1.6501624221115214, 7049078, false, id from Empresa where cnpj = '60651809000105';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 9588749, 0, 8250363, 2958938, 83148, 1.9057988665637036, 1229979, false, id from Empresa where cnpj = '16404287000155';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -26311,6 +28123,75 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2014, 248957, 0, 43717, 96448, -61474, 1.09613050820324, 98062, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2015, 257759, 8814, 69533, 153301, 8438, 1.1853169743119094, 86026, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2015, 249759, 2158, 76344, 106495, 8948, 1.313453397286997, 103658, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2015, 248191, 0, 82186, 80476, -337, 1.3298677626461404, 131882, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2015, 269368, 12236, 60588, 252785, 30403, 1.1391198870042698, 229413, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 284680, 6083, 41949, 115099, 8503, 1.4320461206153472, 100486, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 279254, 3167, 52284, 127298, 13525, 1.4021942934444738, 223535, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 279002, 10463, 52873, 182679, 22021, 1.3061845411768673, 333988, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 285473, 6312, 43534, 143185, 53285, 1.460836262795996, 134445, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 312801, 13353, 25094, 223379, 20941, 1.3815646375743602, 133266, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 300779, 7156, 34570, 179469, 16638, 1.3498317260530328, 170908, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 290904, 5807, 33543, 130101, 9539, 1.3846411357815556, 137517, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 323523, 18950, 25709, 204788, 68120, 1.435457312812536, 211204, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 334640, 14782, 8349, 115522, 17763, 1.524082448991776, 108629, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 321788, 3739, 17074, 173654, -88, 1.616102843413464, 71698, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 316485, 4855, 16740, 245660, 14596, 1.3948779035139964, 194347, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 329169, -12753, 120896, 206088, 32170, 2.23423362755237, 223709, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 279348, 0, 160667, 235982, -7458, 2.1251853521394084, 54612, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 290253, 0, 153776, 224110, -22622, 2.4110970806650434, 132415, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 311172, 0, 157846, 263545, -19396, 2.0738631702385377, 120604, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 277467, 0, 156062, 209650, -47616, 1.5977726443331866, 86063, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 254211, 0, 160850, 211746, -8242, 1.4539669667017288, 2729, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 257677, 0, 160732, 217938, -20902, 1.4354714628142005, 2647, false, id from Empresa where cnpj = '02860694000162';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 275141, 0, 163571, 222507, -10430, 1.4900789805692771, 32493, false, id from Empresa where cnpj = '02860694000162';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 323120, 16473, 473871, 169429, 27142, 1.8246230390414784, 139988, false, id from Empresa where cnpj = '92781335000102';
@@ -26617,6 +28498,51 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2016, 463773, 0, 101519, 18031, 8545, 3.1506356558588746, 116615, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 449002, 0, 88986, 12001, -2892, 3.301506922809032, 76812, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 455541, 3958, 103488, 36758, 4311, 2.105620009040229, 88890, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 450970, 0, 98750, 25195, -14229, 2.9289237218908464, 57343, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 463950, 0, 92044, 14829, -2921, 3.255074886397479, 117032, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 453869, 0, 113474, 63767, -3758, 2.8193114429637567, 71168, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 457224, 7485, 115836, 57954, 2989, 2.5103542383806245, 70118, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 449345, 0, 91113, 26761, -13692, 2.9076541274817136, 55100, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 465688, 25633, 106324, 77401, -2902, 2.865402567094516, 109310, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 417917, 0, 125814, 82862, -1307, 2.6401388870587303, 72978, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 420060, 0, 71079, 35752, -51612, 2.6824208210535057, 75536, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 456157, 0, 77515, 54363, -7069, 3.2246355869443493, 62973, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 344485, 0, 101952, 60937, -126645, 2.4085169535700923, 104738, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 313466, 3688, 170886, 85087, 7822, 2.66825446425169, 66869, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 309598, 0, 157046, 68133, -19357, 2.2102130698726343, 17831, false, id from Empresa where cnpj = '08065557000112';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 326951, 0, 137841, 52995, -14961, 2.359906575004407, 41915, false, id from Empresa where cnpj = '08065557000112';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 419218, 28880, 293444, 104986, 49507, 2.496168751656841, 397630, false, id from Empresa where cnpj = '02351144000118';
@@ -27606,6 +29532,63 @@ insert into balanco
                         select 4, 2015, 2627916, -303042, 2372256, 77891, 470770, 0.3678208370574333, 86047, false, id from Empresa where cnpj = '08534605000174';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2016, 2330193, 0, 2766812, 43959, -13732, 0.09059086914937757, 132013, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2016, 2357979, 0, 2692592, 93465, -34624, 0.12028648462906996, 124339, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2016, 2276392, 0, 2787217, 238208, -425148, 0.22925865231362974, 96058, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2016, 1955598, 0, 2808882, 35786, -752504, 0.04059277522699357, 130727, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 1718811, 0, 1259981, 18360, -116065, 0.14534689426811295, 189215, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 1957842, 134197, 1582118, 49762, 145299, 0.559869808843836, 184890, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2017, 1925357, 0, 1711050, 25238, 34620, 0.524369045286578, 152345, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 779808, 0, 1293338, 24750, -788310, 0.08197786783754518, 207648, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 292852, 0, 400761, 50102, -104749, 0.9196835472578763, 193860, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 534119, 0, 390137, 26954, -61065, 0.9708482810385282, 205869, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 659265, 0, 383544, 22315, -51122, 1.0309591034845182, 173402, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, -76489, 0, 412256, 28707, -534109, 0.7915322740438859, 136664, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, -851318, 0, 1494157, 7491, -36866, 0.011274186176425779, 10451, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, -685314, 0, 425577, 14957, -346978, 0.6095143040335984, 15645, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, -258775, 0, 426880, 11629, -72194, 0.7270015195586405, 60962, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, -1130428, 0, 1562298, 6059, -562596, 0.00723675649311726, 11132, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, -1351088, 0, 1681053, 74463, -29599, 0.03915797317436662, 25080, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, -1235947, 0, 1637669, 34901, 24795, 0.018401893260370474, 11260, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, -1143713, 0, 1601034, 53902, 24918, 0.02566615657046994, 12332, false, id from Empresa where cnpj = '08534605000174';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2016, 333114, 24684, 162578, 39541, 33307, 2.9772609773836543, 562531, false, id from Empresa where cnpj = '91495499000100';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
@@ -28572,7 +30555,49 @@ insert into balanco
                         select 4, 2016, 421779, 80282, 50625, 84275, 47856, 3.4192200668789043, 368956, false, id from Empresa where cnpj = '15115504000124';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2017, 466674, 23587, 4364, 96062, 26366, 4.9664032918207885, 155571, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2017, 441465, 14137, 8353, 64311, 12969, 4.868484023835218, 127896, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2017, 428693, 7964, 7306, 45810, 7736, 5.523638513903311, 112338, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2017, 450537, 33308, 2439, 80736, 94499, 6.207903580947966, 172425, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2018, 483008, 49648, 1313, 45243, 50825, 5.71958767287007, 181626, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2018, 472197, 36368, 1498, 100303, 35049, 5.968556367335615, 132647, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2018, 474855, 23975, 1679, 121746, 26317, 5.3701953721784355, 144025, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2018, 509054, 45681, 1128, 59693, 153546, 9.414209815398468, 177747, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2019, 582094, 49827, 2620, 181920, 49681, 9.158857968252992, 145109, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2019, 530778, 18092, 1996, 109367, 20085, 9.249291075896581, 152174, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2019, 513456, 19921, 3598, 32379, 22657, 8.925999632088566, 145998, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 577532, 22070, 8181, 204810, 107550, 6.197912987314434, 146054, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2020, 674424, 69414, 5807, 204071, 76457, 6.438167665589592, 226763, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2020, 605213, 15991, 6387, 120621, 19400, 6.4790917397305545, 78015, false, id from Empresa where cnpj = '15115504000124';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2020, 586862, 13354, 7224, 125297, 13344, 6.508070317645271, 145027, false, id from Empresa where cnpj = '15115504000124';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2011, 5476563, 224702, 5614441, 2575356, 397922, 2.2091720393525223, 12909294, false, id from Empresa where cnpj = '33256439000139';
@@ -29257,6 +31282,9 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 1, 2019, 1994000, 0, 4318000, 1296000, 239000, 0.787891617273497, 6330000, false, id from Empresa where cnpj = '33041260065290';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2019, 578000, 0, 5901000, 1364000, -1042000, 0.7914574461323333, 7613000, false, id from Empresa where cnpj = '33041260065290';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2020, 5632000, 590000, 8135000, 2122000, 887000, 1.150638957015619, 7812000, false, id from Empresa where cnpj = '33041260065290';
@@ -31042,6 +33070,30 @@ insert into balanco
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 4, 2012, 491965, 33720, 0, 151383, 59104, 2.8068473609129816, 286034, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2013, 493990, 8983, 0, 180170, 13585, 2.6917103832128464, 264673, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2013, 485007, 2631, 0, 164613, 8964, 2.380822106131427, 326830, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2013, 495712, 3747, 0, 144302, 5413, 2.8183422917714758, 244797, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2013, 479303, 4001, 0, 161750, 35785, 2.2209523095755577, 298415, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 3, 2014, 492866, 8010, 0, 124079, 9922, 3.498845816083302, 244027, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 2, 2014, 484856, 386, 0, 123932, 1793, 3.9384953322350356, 224006, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 1, 2014, 486975, 7664, 0, 136636, 8755, 3.335036312949425, 196383, false, id from Empresa where cnpj = '33228024000151';
+insert into balanco
+                        (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
+                        select 4, 2014, 483892, -3853, 0, 138877, 13518, 4.886264859393916, 200460, false, id from Empresa where cnpj = '33228024000151';
 insert into balanco
                         (trimestre, ano, patrimonioliquido, lucroliq_trimestral, dividabruta, caixadisponivel, ebit, liquidez_corrente, receita_liquida, isdailyupdated, id_empresa)
                         select 3, 2015, 443965, 1807, 0, 99923, 497, 3.0184878475728807, 133969, false, id from Empresa where cnpj = '33228024000151';
